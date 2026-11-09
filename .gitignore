@@ -1,0 +1,15 @@
+# Settings and secrets
+.env
+
+# Server-only data: saved content, enquiries, caches, secret key
+storage/private/
+storage/.htaccess
+
+# Admin uploads (keep the folder rules)
+uploads/media/*
+!uploads/media/.gitkeep
+
+# System files
+.DS_Store
+Thumbs.db
+*.log

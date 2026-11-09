@@ -1,0 +1,71 @@
+# CRETECH — Apache settings (Hostinger / XAMPP)
+
+Options -Indexes
+DirectoryIndex page.php
+AddDefaultCharset UTF-8
+
+# ---- Site URL ------------------------------------------------------------
+# On the live server, set the real address in .env (SITE_URL=https://cretech.in).
+# Optional: force HTTPS and drop "www" once SSL is active (uncomment both blocks).
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+# RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # ---- Security: private folders and dot-files ------------------------
+    RewriteRule ^(app|storage|database|docs)(/|$) - [F,L]
+    RewriteRule (^|/)\.(?!well-known/) - [F,L]
+
+    # ---- Sitemap ---------------------------------------------------------
+    RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+    # ---- WebP: serve photo.jpg.webp instead of photo.jpg when it exists --
+    RewriteCond %{HTTP_ACCEPT} image/webp
+    RewriteCond %{REQUEST_FILENAME} \.(jpe?g|png)$ [NC]
+    RewriteCond %{REQUEST_FILENAME}.webp -f
+    RewriteRule ^(.+)$ $1.webp [T=image/webp,L]
+
+    # ---- Real files are served directly (except HTML templates) ----------
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteCond %{REQUEST_URI} !\.html$ [NC]
+    RewriteRule ^ - [L]
+
+    # ---- Everything else: clean addresses via page.php -------------------
+    RewriteRule ^ page.php [L,QSA]
+</IfModule>
+
+# ---- Security headers (page.php also sends these) ----------------------
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ---- WebP: tell caches the image depends on the browser ---------------
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpe?g|png)$">
+        Header append Vary Accept
+    </FilesMatch>
+</IfModule>
+AddType image/webp .webp
+
+# ---- Browser cache -----------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType text/javascript "access plus 7 days"
+    ExpiresByType image/webp "access plus 30 days"
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/svg+xml "access plus 30 days"
+</IfModule>
+
+# ---- Upload size (admin image uploads, phase 2) -----------------------
+<IfModule mod_php.c>
+    php_value upload_max_filesize 8M
+    php_value post_max_size 10M
+</IfModule>
