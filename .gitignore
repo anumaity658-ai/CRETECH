@@ -13,3 +13,6 @@ uploads/media/*
 .DS_Store
 Thumbs.db
 *.log
+
+# local demo / test pages
+zz-*

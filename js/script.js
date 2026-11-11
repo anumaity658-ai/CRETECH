@@ -32,52 +32,18 @@
 
   pages.home = function () {
     var h = data.home;
-    var hero = h.hero;
-    var eyebrow = (hero.eyebrow || []).map(esc).join(' <span aria-hidden="true">•</span> ');
+    var heroHtml = C.heroSlider(h.heroSlides, h.heroStats);
 
-    var heroHtml = '<section class="hero"><div class="hero-copy">' +
-      '<p class="eyebrow">' + eyebrow + "</p><h1>" + rich(hero.title) + "</h1>" +
-      '<p class="hero-intro">' + esc(hero.intro) + "</p>" +
-      '<div class="hero-actions">' + C.button(hero.primary, "btn-orange") + C.button(hero.secondary, "btn-outline", false) + "</div>" +
-      '<div class="hero-note"><span class="people-icon" aria-hidden="true">♧</span><span>' + rich(hero.note) + "</span></div></div>" +
-      '<div class="hero-visual" aria-hidden="true"><div class="visual-glow"></div>' +
-      '<img class="hero-person" src="' + esc(image(hero.image, 900)) + '" alt="' + esc(hero.imageAlt) + '" fetchpriority="high">' +
-      '<div class="device laptop"><div class="device-top">' + esc(data.site.name) + " <small>" + esc(hero.laptopTitle) + "</small></div>" +
-      '<div class="device-screen"><span>' + esc(hero.laptopLine1) + "</span><b>" + esc(hero.laptopLine2) + "</b><i></i></div></div>" +
-      '<div class="device phone"><div class="phone-screen"><b>' + esc(data.site.name) + "</b><span>" + esc(hero.phoneLine) + "</span><i></i><i></i><i></i></div></div>" +
-      '<div class="float-chip chip-code">〈/〉</div><div class="float-chip chip-chart">▥</div></div></section>';
+    var services = C.homeServices(h.servicesSection, data.services);
 
-    var services = '<section class="section services-section">' +
-      C.sectionHeading(h.servicesSection.title, h.servicesSection.text, h.servicesSection.button) +
-      '<div class="service-grid">' + (data.services || []).map(function (s) { return C.serviceCard(s); }).join("") + "</div></section>";
+    var journey = C.homeJourney(h.journeySection);
+    var build = C.homeBuild(h.buildSection);
+    var why = C.homeWhy(h.whySection);
+    var different = C.homeDifferent(h.differentSection);
+    var process = C.homeFlow(h.processFlow, "flow-process");
+    var faqSection = C.homeFaq(h.faqSection);
 
-    var solutions = '<section class="section solutions"><div class="solution-copy"><h2>' + rich(h.solutions.title) + "</h2><p>" + esc(h.solutions.text) + "</p>" +
-      '<div class="solution-art" aria-hidden="true"><div class="mini-laptop"><div class="mini-screen">Explore<br><strong>Your World</strong><span></span></div></div><div class="mini-phone"></div></div></div>' +
-      '<div class="category-grid">' + h.solutions.items.map(function (c) {
-        return '<a href="services" class="category"><span aria-hidden="true">' + esc(c.icon) + "</span>" + esc(c.label) + "</a>";
-      }).join("") + "</div></section>";
-
-    var reach = '<section class="section reach"><div class="reach-copy"><h2>' + rich(h.reach.title) + "</h2><p>" + esc(h.reach.text) + "</p></div>" +
-      '<div class="audience-grid">' + h.reach.items.map(function (a) {
-        return '<a class="audience-card" href="contact" style="background-image:linear-gradient(0deg,rgba(0,48,34,.92),transparent 65%),url(\'' +
-          esc(image(a.image, 500)) + '\')"><b>For ' + esc(a.label) + '</b><span aria-hidden="true">↗</span></a>';
-      }).join("") + "</div></section>";
-
-    var why = '<section class="section why"><div><h2>' + rich(h.why.title) + "</h2><p>" + esc(h.why.text) + "</p></div>" +
-      '<div class="why-grid">' + h.why.items.map(function (w) {
-        return '<div class="why-card"><span aria-hidden="true">' + esc(w.icon) + "</span><b>" + esc(w.label) + "</b></div>";
-      }).join("") + "</div></section>";
-
-    var processFaq = '<section class="section process-faq">' +
-      '<div class="process"><h2>' + rich(h.processSection.title) + "</h2><p>" + esc(h.processSection.text) + "</p>" +
-      C.processSteps(data.process.steps) + "</div>" +
-      '<div class="faq"><h2>' + rich(h.faq.title) + "</h2><p>" + esc(h.faq.text) + "</p>" + h.faq.items.map(C.faqItem).join("") + "</div></section>";
-
-    var direct = '<section class="section direct"><div class="direct-copy"><h2>' + rich(h.direct.title) + "</h2><p>" + esc(h.direct.text) + "</p></div>" +
-      '<div class="direct-visual"><img src="' + esc(image(h.direct.image, 900)) + '" alt="' + esc(h.direct.imageAlt) + '" loading="lazy">' +
-      "<ul>" + h.direct.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul></div></section>";
-
-    return heroHtml + services + solutions + reach + why + processFaq + direct + C.cta(data);
+    return heroHtml + services + journey + build + why + different + process + faqSection + C.cta(data);
   };
 
   pages.services = function () {
@@ -197,6 +163,110 @@
     nav.addEventListener("click", function (e) { if (e.target.closest("a")) setOpen(false); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
   }
+
+  /* ---------- Hero slider ----------
+     Motion (styles in css/cms.css):
+     - every 5 s the next slide cross-fades in (1.2 s); the old slide gets "is-leaving"
+       so its photo keeps zooming and darkens while its text lifts away
+     - each heading is split into words here, so the words can rise one by one
+     - photos 2+ load, and the rotation starts, 1.5 s after the page has loaded (or after 8 s) */
+
+  var slider = document.querySelector(".hero-slider");
+  if (slider) {
+    var SLIDE_TIME = 5000;
+    var LEAVE_TIME = 1250;
+    var slides = Array.prototype.slice.call(slider.querySelectorAll(".hero-slide"));
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var SVG_NS = "http://www.w3.org/2000/svg";
+
+    // <span class="rv-word"><span style="--i:N">word</span></span>; N sets each word's delay.
+    var wrapWords = function (element, counter) {
+      Array.prototype.slice.call(element.childNodes).forEach(function (node) {
+        if (node.nodeType === 3) {
+          var fragment = document.createDocumentFragment();
+          node.textContent.split(/(\s+)/).forEach(function (part) {
+            if (!part) return;
+            if (/^\s+$/.test(part)) { fragment.appendChild(document.createTextNode(part)); return; }
+            var outer = document.createElement("span");
+            var inner = document.createElement("span");
+            outer.className = "rv-word";
+            inner.textContent = part;
+            inner.style.setProperty("--i", String(counter.value++));
+            outer.appendChild(inner);
+            fragment.appendChild(outer);
+          });
+          node.parentNode.replaceChild(fragment, node);
+        } else if (node.nodeType === 1 && node.namespaceURI !== SVG_NS) {
+          wrapWords(node, counter); // includes the highlighted (script) words
+        }
+      });
+    };
+    slider.querySelectorAll(".hero-title").forEach(function (title) { wrapWords(title, { value: 0 }); });
+
+    var active = 0;
+    var interval = null;
+    var show = function (next) {
+      var previous = active;
+      active = (next + slides.length) % slides.length;
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle("is-active", i === active);
+        slide.classList.remove("is-leaving");
+        slide.setAttribute("aria-hidden", i === active ? "false" : "true");
+      });
+      if (previous !== active) {
+        var leaving = slides[previous];
+        leaving.classList.add("is-leaving");
+        setTimeout(function () { leaving.classList.remove("is-leaving"); }, LEAVE_TIME);
+      }
+    };
+    var rotate = function () {
+      clearInterval(interval);
+      if (!reduceMotion && slides.length > 1) interval = setInterval(function () { show(active + 1); }, SLIDE_TIME);
+    };
+
+    var started = false;
+    var start = function () {
+      if (started) return;
+      started = true;
+      slider.querySelectorAll("[data-srcset]").forEach(function (el) { el.srcset = el.getAttribute("data-srcset"); el.removeAttribute("data-srcset"); });
+      slider.querySelectorAll("img[data-src]").forEach(function (img) { img.src = img.getAttribute("data-src"); img.removeAttribute("data-src"); });
+      rotate();
+    };
+    if (document.readyState === "complete") setTimeout(start, 1500);
+    else window.addEventListener("load", function () { setTimeout(start, 1500); }, { once: true });
+    setTimeout(start, 8000);
+
+    // Let the first photo's slow zoom play from the start (the class is added after the first paint).
+    requestAnimationFrame(function () { requestAnimationFrame(function () { slider.classList.add("is-ready"); }); });
+
+    // Swipe on phones/tablets: jump to the next/previous slide, then keep rotating from there.
+    var go = function (index) { start(); show(index); rotate(); };
+    var touchX = null;
+    slider.addEventListener("touchstart", function (e) { touchX = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener("touchend", function (e) {
+      if (touchX !== null) {
+        var dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 50) go(active + (dx < 0 ? 1 : -1));
+      }
+      touchX = null;
+    }, { passive: true });
+  }
+
+  /* ---------- Homepage FAQ accordion (one answer open at a time) ---------- */
+
+  document.querySelectorAll(".fx-list").forEach(function (list) {
+    function setOpen(btn, open) {
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.closest(".fx-item").classList.toggle("open", open);
+    }
+    list.addEventListener("click", function (e) {
+      var btn = e.target.closest(".fx-q");
+      if (!btn) return;
+      var open = btn.getAttribute("aria-expanded") !== "true";
+      list.querySelectorAll('.fx-q[aria-expanded="true"]').forEach(function (b) { if (b !== btn) setOpen(b, false); });
+      setOpen(btn, open);
+    });
+  });
 
   /* ---------- Enquiry form ---------- */
 

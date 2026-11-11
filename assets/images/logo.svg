@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 262" role="img" aria-label="CRETECH Digital Solutions">
+  <g fill="none" stroke="#1a1a1a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M106 58 A52 52 0 1 0 106 130"/>
+    <path d="M170 40 V148 M170 40 H222 A29 29 0 0 1 222 98 H170 M218 98 L262 148"/>
+    <path d="M325 42 H420 M325 94 H420 M325 146 H420" stroke="#F47721"/>
+    <path d="M470 42 H566 M518 42 V148"/>
+    <path d="M616 42 H712 M616 94 H712 M616 146 H712"/>
+    <path d="M861 58 A52 52 0 1 0 861 130"/>
+    <path d="M922 40 V148 M1012 40 V148 M922 94 H1012"/>
+  </g>
+  <text x="510" y="246" text-anchor="middle" textLength="796" lengthAdjust="spacing" fill="#1a1a1a"
+        font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-size="31" font-weight="700">DIGITAL SOLUTIONS</text>
+</svg>

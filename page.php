@@ -41,6 +41,14 @@ $dataScript = '<script>window.SITE_DATA=' . json_encode($data, $jsonFlags)
     . ';window.PAGE_DATA=' . json_encode($pageData, $jsonFlags) . ';</script>';
 
 $head = '<base href="' . h(url_base()) . '">' . "\n" . seo_head($route, $data);
+
+// Start downloading the first hero photo straight away (it is the largest thing on the homepage).
+$firstSlide = $data['home']['heroSlides'][0] ?? null;
+if ($route['page'] === 'home' && is_array($firstSlide) && !empty($firstSlide['image'])) {
+    $small = (string) ($firstSlide['imageSmall'] ?? '');
+    $head .= "\n" . '<link rel="preload" as="image" href="' . h((string) $firstSlide['image']) . '"'
+        . ($small !== '' ? ' media="(min-width: 761px)">' . "\n" . '<link rel="preload" as="image" href="' . h($small) . '" media="(max-width: 760px)">' : '>');
+}
 $trackingHead = tracking_head();
 if ($trackingHead !== '') {
     $head .= "\n" . $trackingHead;

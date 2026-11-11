@@ -3,7 +3,9 @@ window.SITE_CONFIG = {
 
   "site": {
     "name": "CRETECH",
-    "tagline": "TECHNOLOGY · CREATIVITY · GROWTH",
+    "tagline": "DIGITAL SOLUTIONS",
+    "logo": "assets/images/logo.svg",
+    "logoLight": "assets/images/logo-white.svg",
     "email": "hello@cretech.in",
     "phone": "+91 98765 43210",
     "location": "Noida, India",
@@ -18,9 +20,10 @@ window.SITE_CONFIG = {
 
   "nav": [
     { "label": "Home", "href": "", "page": "home" },
-    { "label": "Services", "href": "services", "page": "services" },
+    { "label": "Services", "href": "services", "page": "services", "dropdown": "services" },
+    { "label": "Work", "href": "services", "page": "work" },
+    { "label": "Process", "href": "process", "page": "process" },
     { "label": "About", "href": "about", "page": "about" },
-    { "label": "Our Process", "href": "process", "page": "process" },
     { "label": "Contact", "href": "contact", "page": "contact" }
   ],
   "headerCta": { "label": "Let’s Talk", "href": "contact" },
@@ -150,94 +153,387 @@ window.SITE_CONFIG = {
   ],
 
   "home": {
-    "hero": {
-      "eyebrow": ["TECHNOLOGY", "CREATIVITY", "GROWTH"],
-      "title": "Your Ideas.\nOur Technology.\nLet’s Build Something *Great.*",
-      "intro": "From website and app development to UI/UX design, digital marketing, SEO, Google Ads, social media marketing and email creation — CRETECH provides technical and digital services to help individuals, graduates, startups and businesses bring their ideas online.",
-      "primary": { "label": "Start Your Project", "href": "contact" },
-      "secondary": { "label": "Explore Services", "href": "services" },
-      "note": "Technical and Digital Services for Every Idea,\nEvery Individual and Every Business.",
-      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=85",
-      "imageAlt": "Creative professional working",
-      "laptopTitle": "Modern Website Solution",
-      "laptopLine1": "Build your online presence.",
-      "laptopLine2": "Creative. Clear. Effective.",
-      "phoneLine": "Web • Design • Growth"
-    },
+    "_heroNote": "heroStats show on every slide (a slide can override them with its own \"stats\"). textTone \"light\" = white text, for dark photos.",
+    "heroStats": [
+      { "value": "7+", "label": "Service Areas" },
+      { "value": "100+", "label": "Projects Delivered" },
+      { "value": "50+", "label": "Happy Clients" }
+    ],
+    "heroSlides": [
+      {
+        "label": "Digital Solutions",
+        "titleLines": ["Your Ideas", "Our Digital"],
+        "script": "Magic",
+        "intro": "Websites, Content, Design, SEO and Digital Marketing — everything your business needs to grow, at one place.",
+        "primary": { "label": "Start Your Project", "href": "contact" },
+        "secondary": { "label": "Explore Services", "href": "services" },
+        "image": "assets/images/hero/hero-1.jpg",
+        "imageSmall": "assets/images/hero/hero-1-mobile.jpg",
+        "imageAlt": "CRETECH services — website development, UI/UX design, SEO, content writing, Google Ads and graphics — around a smiling young woman working on a laptop",
+        "focus": "84% center"
+      },
+      {
+        "label": "Web · Apps · Marketing",
+        "titleLines": ["Our Technology.", "Real Business"],
+        "script": "Growth.",
+        "intro": "From website and app development to UI/UX design, SEO, digital marketing and content creation — CRETECH helps startups, individuals and businesses turn ideas into powerful online brands.",
+        "primary": { "label": "Start Your Project", "href": "contact" },
+        "secondary": { "label": "Explore Services", "href": "services" },
+        "image": "assets/images/hero/hero-2.jpg",
+        "imageSmall": "assets/images/hero/hero-2-mobile.jpg",
+        "imageAlt": "Young developer with headphones working at a desk, with glowing panels for website development, app development, UI/UX design, code and growth",
+        "focus": "62% center",
+        "zoomFrom": "right center"
+      },
+      {
+        "label": "Digital Marketing • SEO • Brand Growth",
+        "titleLines": ["Make Your Brand Seen.", "Make Your Business"],
+        "script": "Grow.",
+        "intro": "From SEO and social media to content creation and paid campaigns — CRETECH helps your business reach the right audience, build online visibility and turn attention into real growth.",
+        "primary": { "label": "Grow Your Business", "href": "contact" },
+        "secondary": { "label": "Explore Marketing Services", "href": "services" },
+        "image": "assets/images/hero/hero-3.jpg",
+        "imageSmall": "assets/images/hero/hero-3-mobile.jpg",
+        "imageAlt": "Glass globe with a rising orange growth arrow, a target, an SEO magnifying glass and Google, Instagram, Facebook and YouTube icons",
+        "focus": "76% center"
+      }
+    ],
     "servicesSection": {
       "title": "What We Can Do *for You*",
       "text": "From building websites and mobile applications to creating your online presence, we provide technical and digital services under one roof.",
-      "button": { "label": "View All Services", "href": "services" }
+      "button": { "label": "View All Services", "href": "services" },
+      "_cardsNote": "Homepage cards, in this order. slug = a service from \"services\". title / text override that service's title and short text on this card (\\n = line break).",
+      "cards": [
+        { "slug": "website-development", "icon": "code", "image": "assets/images/services/website-development.jpg", "title": "Website\nDevelopment", "text": "Responsive, secure and high-performance websites." },
+        { "slug": "app-development", "icon": "phone", "image": "assets/images/services/app-development.jpg", "title": "App\nDevelopment" },
+        { "slug": "ui-ux-design", "icon": "layers", "image": "assets/images/services/ui-ux-design.jpg", "title": "UI/UX\nDesign" },
+        { "slug": "seo-services", "icon": "search", "image": "assets/images/services/seo-services.jpg", "title": "SEO\nServices" },
+        { "slug": "google-ads-services", "icon": "megaphone", "image": "assets/images/services/google-ads-services.jpg", "title": "Google Ads\nServices", "text": "Targeted ad campaigns to reach the right audience." },
+        { "slug": "social-media-marketing", "icon": "share", "image": "assets/images/services/social-media-marketing.jpg", "title": "Social Media\nMarketing" },
+        { "slug": "content-writing", "icon": "document", "image": "assets/images/services/content-writing.jpg", "title": "Content\nWriting" },
+        { "slug": "graphic-design-creative-content", "icon": "image", "image": "assets/images/services/graphic-design-creative-content.jpg", "title": "Graphic Design &\nCreative Content", "text": "Banners, creatives and visuals for your brand." }
+      ]
     },
-    "solutions": {
+    "journeySection": {
+      "_note": "\"For Every Step of Your Journey\". Card and milestone positions are px on the 1672 x 941 desktop canvas (the background image size). photoAt = where the photo starts, in % of the card width. Card icons: graduation, user, rocket, store, building.",
+      "background": {
+        "image": "assets/images/journey/journey-bg.jpg",
+        "imageSmall": "assets/images/journey/journey-bg-mobile.jpg",
+        "color": "#FFF4E9",
+        "gradientTop": "#FFF4E9"
+      },
+      "eyebrow": "Services for Everyone",
+      "title": "For Every Step\nOf *Your Journey*",
+      "paragraphs": [
+        "Whether you are starting with an idea, building your career, running a small business or managing an established organisation you can approach CRETECH for the services you need.",
+        "We believe good technical and digital services should not be limited to a particular group of people. Our aim is to understand each client’s requirements and suggest suitable services according to their needs and budget."
+      ],
+      "cards": [
+        {
+          "icon": "graduation", "title": "For Students &\nGraduates",
+          "text": "Build your personal portfolio, showcase your projects, create a professional online identity or discuss your own website and application ideas.",
+          "image": "assets/images/journey/students.jpg", "imageAlt": "Smiling student holding an orange notebook",
+          "cta": { "label": "Get Started", "href": "contact" },
+          "box": { "x": 63, "y": 563, "w": 425, "h": 292 }, "photoAt": 58.6
+        },
+        {
+          "icon": "user", "title": "For Individuals &\nFreelancers",
+          "text": "Create a personal website, portfolio, professional email or online presence to present your skills and work.",
+          "image": "assets/images/journey/individuals.jpg", "imageAlt": "Freelancer thinking while working on a laptop",
+          "cta": { "label": "Get Started", "href": "contact" },
+          "box": { "x": 567, "y": 594, "w": 436, "h": 266 }, "photoAt": 52.5
+        },
+        {
+          "icon": "rocket", "title": "For Startups",
+          "text": "Turn your ideas into websites, applications and digital platforms that support your business plans.",
+          "image": "assets/images/journey/startups.jpg", "imageAlt": "Startup founder smiling at his laptop",
+          "cta": { "label": "Get Started", "href": "contact" },
+          "box": { "x": 680, "y": 214, "w": 408, "h": 236 }, "photoAt": 48.5
+        },
+        {
+          "icon": "store", "title": "For Small\nBusinesses",
+          "text": "Build your online presence, reach potential customers and manage your business through suitable technical and digital services.",
+          "image": "assets/images/journey/small-businesses.jpg", "imageAlt": "Small business owner standing in her shop",
+          "cta": { "label": "Get Started", "href": "contact" },
+          "box": { "x": 1055, "y": 497, "w": 403, "h": 260 }, "photoAt": 57.8
+        },
+        {
+          "icon": "building", "title": "For Companies &\nOrganisations",
+          "text": "Get website development, application development, design and digital marketing support according to your project requirements.",
+          "image": "assets/images/journey/companies.jpg", "imageAlt": "Modern glass office building",
+          "cta": { "label": "Get Started", "href": "contact" },
+          "box": { "x": 1221, "y": 139, "w": 399, "h": 267 }, "photoAt": 61
+        }
+      ],
+      "milestones": [
+        { "label": "Learn", "x": 547, "y": 606, "side": "right" },
+        { "label": "Build", "x": 760, "y": 567, "side": "right" },
+        { "label": "Launch", "x": 888, "y": 506, "side": "left" },
+        { "label": "Grow", "x": 1239, "y": 457, "side": "left" },
+        { "label": "Achieve", "x": 1400, "y": 437, "side": "below" }
+      ]
+    },
+    "buildSection": {
+      "_note": "\"What We Build\". Positions are px on the 1671 x 941 desktop canvas (the background image size): box = card, imageBox = the picture inside the card, marker = the numbered circle on the orange path, textWidth (optional) = max width of the description. The path runs from path.start through every marker to path.end.",
+      "background": {
+        "image": "assets/images/build/build-bg.jpg",
+        "imageSmall": "assets/images/build/build-bg-mobile.jpg",
+        "color": "#FFF6EE",
+        "gradientTop": "#FFF6EE",
+        "gradientBottom": "#FFE8D9"
+      },
+      "eyebrow": "What We Build",
       "title": "Turning Ideas into Working\n*Websites & Applications*",
       "text": "Every idea has a different purpose. We work on different types of websites and applications based on the requirements of each project.",
-      "items": [
-        { "icon": "▦", "label": "Business & Corporate Websites" },
-        { "icon": "♧", "label": "Education Websites" },
-        { "icon": "🛒", "label": "E-commerce Websites" },
-        { "icon": "✈", "label": "Travel & Real Estate Websites" },
-        { "icon": "♙", "label": "Personal & Portfolio Websites" },
-        { "icon": "▤", "label": "Blogs & News Portals" },
-        { "icon": "✚", "label": "Healthcare Websites" },
-        { "icon": "▱", "label": "Custom Web & Mobile Applications" }
+      "path": {
+        "start": [0, 758],
+        "end": [1665, 456],
+        "colors": ["#FFC93C", "#FF7A00", "#FFB21A", "#FF7A00", "#FFC93C", "#FF7A00"],
+        "width": 5,
+        "flag": { "x": 1590, "y": 452, "color": "#FF7A00" }
+      },
+      "cards": [
+        {
+          "number": "01", "title": "Business &\nCorporate Websites",
+          "text": "Professional websites for businesses, companies and service providers.",
+          "image": "assets/images/build/business.jpg", "imageAlt": "Modern glass office building",
+          "box": { "x": 62, "y": 413, "w": 268, "h": 271 }, "imageBox": { "x": 128, "y": 418, "w": 194, "h": 96 },
+          "marker": { "x": 195, "y": 711 }
+        },
+        {
+          "number": "02", "title": "E-commerce\nWebsites",
+          "text": "Online shopping platforms where businesses can display and sell their products.",
+          "image": "assets/images/build/ecommerce.jpg", "imageAlt": "Shopping cart with product boxes and bags",
+          "box": { "x": 370, "y": 340, "w": 263, "h": 262 }, "imageBox": { "x": 436, "y": 341, "w": 162, "h": 81 },
+          "marker": { "x": 411, "y": 616 }
+        },
+        {
+          "number": "03", "title": "Personal &\nPortfolio Websites",
+          "text": "Websites for individuals, graduates, freelancers and professionals who want to present their work, skills and achievements online.",
+          "image": "assets/images/build/portfolio.jpg", "imageAlt": "Laptop showing a portfolio website",
+          "box": { "x": 484, "y": 642, "w": 314, "h": 248 }, "imageBox": { "x": 636, "y": 616, "w": 160, "h": 80 },
+          "marker": { "x": 584, "y": 636 }
+        },
+        {
+          "number": "04", "title": "Healthcare\nWebsites",
+          "text": "Websites for clinics, healthcare providers and medical organisations.",
+          "image": "assets/images/build/healthcare.jpg", "imageAlt": "Stethoscope",
+          "box": { "x": 686, "y": 253, "w": 265, "h": 279 }, "textWidth": 186, "imageBox": { "x": 752, "y": 255, "w": 172, "h": 92 },
+          "marker": { "x": 740, "y": 550 }
+        },
+        {
+          "number": "05", "title": "Education\nWebsites",
+          "text": "Websites for educational institutions, training centres and learning platforms.",
+          "image": "assets/images/build/education.jpg", "imageAlt": "Graduation cap on a stack of books",
+          "box": { "x": 866, "y": 584, "w": 305, "h": 268 }, "imageBox": { "x": 996, "y": 585, "w": 146, "h": 98 },
+          "marker": { "x": 922, "y": 587 }
+        },
+        {
+          "number": "06", "title": "Travel &\nReal Estate Websites",
+          "text": "Websites for travel businesses, property listings and related services.",
+          "image": "assets/images/build/travel.jpg", "imageAlt": "Airplane flying over a modern house",
+          "box": { "x": 993, "y": 177, "w": 274, "h": 304 }, "imageBox": { "x": 1062, "y": 186, "w": 194, "h": 106 },
+          "marker": { "x": 1061, "y": 499 }
+        },
+        {
+          "number": "07", "title": "Blogs &\nNews Portals",
+          "text": "Content-based platforms for publishing articles, news and information.",
+          "image": "assets/images/build/blogs.jpg", "imageAlt": "Folded newspaper",
+          "box": { "x": 1231, "y": 562, "w": 301, "h": 259 }, "imageBox": { "x": 1322, "y": 576, "w": 172, "h": 87 },
+          "marker": { "x": 1284, "y": 543 }
+        },
+        {
+          "number": "08", "title": "Custom Web &\nMobile Applications",
+          "text": "Applications developed around specific requirements, features and business needs.",
+          "image": "assets/images/build/custom.jpg", "imageAlt": "Laptop showing code",
+          "box": { "x": 1318, "y": 132, "w": 273, "h": 301 }, "imageBox": { "x": 1362, "y": 135, "w": 175, "h": 103 },
+          "marker": { "x": 1458, "y": 463 }
+        }
       ]
     },
-    "reach": {
-      "title": "Technology Should Be Within\n*Everyone’s Reach*",
-      "text": "Whether you are starting with an idea, building your career, running a small business or managing an established organisation, you can approach CRETECH for the services you need.",
-      "items": [
-        { "label": "Students & Graduates", "image": "photo-1521737711867-e3b97375f902" },
-        { "label": "Individuals & Freelancers", "image": "photo-1500648767791-00dcc994a43e" },
-        { "label": "Startups", "image": "photo-1560250097-0b93528c311a" },
-        { "label": "Small Businesses", "image": "photo-1556761175-b413da4baf72" },
-        { "label": "Companies & Organisations", "image": "photo-1573496359142-b8d87734a5a2" }
+    "whySection": {
+      "_note": "\"Why Choose CRETECH\". Positions are px on the 1670 x 941 desktop canvas (the background image size): box = glass box, line = SVG path from the box to the centre picture, node = the dot at the box end. titleSize / textSize / textWidth (optional) are px on the same canvas, lineHeight (optional) a multiplier. In box texts \n is a line break on desktop only (phones wrap normally). The checklist words are part of the centre picture; changing them needs a new picture.",
+      "background": {
+        "image": "assets/images/why/why-bg.jpg",
+        "imageSmall": "assets/images/why/why-bg-mobile.jpg",
+        "color": "#FFF6EE",
+        "gradientTop": "#FFF6EE",
+        "gradientBottom": "#FFE8D9"
+      },
+      "eyebrow": "5. Why Choose CRETECH?",
+      "title": "A Practical Approach to *Every Project*",
+      "text": "We take time to understand your needs and focus on work that makes sense for your project.\nEvery client has different requirements and we treat each project accordingly.",
+      "visual": {
+        "image": "assets/images/why/project-folder.jpg",
+        "imageAlt": "CRETECH project folder with a Project Approach checklist: Understand, Plan, Develop, Deliver, a growth chart note, a CRETECH mug, a notebook and a pen",
+        "checklist": ["Understand", "Plan", "Develop", "Deliver"],
+        "box": { "x": 510, "y": 295, "w": 665, "h": 585 }
+      },
+      "line": { "color": "#FF7A00", "width": 2.4, "node": "#FF8A1E" },
+      "boxes": [
+        {
+          "title": "Direct Communication",
+          "text": "Discuss your project directly\nwith our team. Share your ideas,\nask questions and understand\nthe proposed work.",
+          "box": { "x": 53, "y": 261, "w": 441, "h": 198 },
+          "node": { "x": 497, "y": 352 }, "line": "M497 352C535 352 556 380 566 420C572 446 580 462 596 472"
+        },
+        {
+          "title": "Services Under One Roof",
+          "text": "Website development, app\ndevelopment, design, marketing\nand creative services — you can\ndiscuss different requirements\nwith one team.",
+          "box": { "x": 53, "y": 477, "w": 441, "h": 194 }, "textSize": 19.4, "lineHeight": 1.1,
+          "node": { "x": 497, "y": 553 }, "line": "M497 553C530 553 552 566 570 586C580 597 590 603 604 606"
+        },
+        {
+          "title": "Support for\nDifferent Budgets",
+          "text": "Whether you have a small personal\nproject or a larger business requirement,\nwe are open to discussing suitable options.",
+          "box": { "x": 53, "y": 686, "w": 441, "h": 190 }, "textSize": 18.2, "lineHeight": 1.22,
+          "node": { "x": 497, "y": 757 }, "line": "M497 757C530 757 548 738 560 712C570 690 584 672 612 664"
+        },
+        {
+          "title": "Solutions Based on\nYour Requirements",
+          "text": "We do not follow the same approach\nfor every client. Each project is considered\naccording to its purpose, scope and\ntechnical requirements.",
+          "box": { "x": 1195, "y": 261, "w": 428, "h": 198 }, "titleSize": 27.5, "textSize": 17.6, "lineHeight": 1.22,
+          "node": { "x": 1188, "y": 350 }, "line": "M1188 350C1150 350 1128 372 1114 404C1102 430 1092 446 1076 456"
+        },
+        {
+          "title": "Clear Pricing",
+          "text": "We discuss the project cost according\nto the work involved, its complexity\nand your requirements before starting.",
+          "box": { "x": 1195, "y": 477, "w": 428, "h": 194 },
+          "node": { "x": 1188, "y": 550 }, "line": "M1188 550C1150 550 1120 556 1098 574C1080 589 1062 596 1040 598"
+        },
+        {
+          "title": "Focus on Quality",
+          "text": "We aim to deliver work that is\nfunctional, user-friendly and\naligned with the agreed project\nrequirements.",
+          "box": { "x": 1195, "y": 686, "w": 428, "h": 190 },
+          "node": { "x": 1192, "y": 757 }, "line": "M1192 757C1170 757 1158 744 1152 728C1148 716 1146 712 1142 708"
+        }
       ]
     },
-    "why": {
-      "title": "Why Choose *CRETECH?*",
-      "text": "A practical approach to every project. We focus on understanding what you need and providing services that match your requirements.",
-      "items": [
-        { "icon": "▣", "label": "Direct Communication" },
-        { "icon": "▱", "label": "Solutions Based on Your Requirements" },
-        { "icon": "▦", "label": "Services Under One Roof" },
-        { "icon": "◇", "label": "Clear Pricing" },
-        { "icon": "＄", "label": "Support for Different Budgets" },
-        { "icon": "♢", "label": "Focus on Quality" }
+    "differentSection": {
+      "_note": "\"What Makes CRETECH Different?\". Cards show in this order. box / imageBox are px on the 1774 x 887 desktop canvas (the background image size); canvasHeight = shown height of that canvas (lower = less space under the cards). tint = three glass colours (top, middle, bottom), edge = the coloured glass edge. glass = transparency (0-1) and blur (px) for all cards. titleSize / textSize / lineHeight optional (canvas px). \\n in titles and texts is a line break on desktop only.",
+      "background": {
+        "image": "assets/images/different/different-bg.jpg",
+        "imageSmall": "assets/images/different/different-bg-mobile.jpg",
+        "color": "#FFFCFA",
+        "gradientTop": "#FFFCFA",
+        "gradientBottom": "#FFE5D5"
+      },
+      "canvasHeight": 845,
+      "title": "What Makes CRETECH *Different?*",
+      "glass": { "opacity": 0.72, "blur": 20 },
+      "cards": [
+        {
+          "title": "No Third-Party\nInvolvement",
+          "text": "You can speak directly with\nour team and discuss your\nproject without involving\nany outside agency or\nsalesperson.",
+          "image": "assets/images/different/direct-team.jpg", "imageAlt": "Laptop showing CRETECH next to a glass team symbol",
+          "tint": ["#F5F0F4", "#FDE1D0", "#FCD9BC"], "edge": "#FFC9A6",
+          "box": { "x": 61, "y": 200, "w": 389, "h": 560 }, "imageBox": { "x": 70, "y": 208, "w": 372, "h": 250 }
+        },
+        {
+          "title": "Flexible\nService Options",
+          "text": "Choose individual services or\na complete range of services\naccording to your project\nrequirements and budget.",
+          "image": "assets/images/different/flexible-services.jpg", "imageAlt": "Glass blocks with code, design, marketing and layers symbols",
+          "tint": ["#DEDFF7", "#E1DEE6", "#EDE2ED"], "edge": "#C9CCF5",
+          "box": { "x": 483, "y": 200, "w": 391, "h": 560 }, "imageBox": { "x": 492, "y": 208, "w": 374, "h": 250 }
+        },
+        {
+          "title": "No Fixed\nPackages",
+          "text": "Our pricing depends on the\ntype of work, project size and\nrequirements. We offer reasonable\nrates for both small and large\nprojects, keeping our pricing\naffordable without compromising\non quality.",
+          "image": "assets/images/different/no-fixed-packages.jpg", "imageAlt": "Glass price tag with a rupee symbol beside gold coin stacks",
+          "tint": ["#E0EEEE", "#E0E3E6", "#F1E4DC"], "edge": "#BFE3DF",
+          "box": { "x": 906, "y": 200, "w": 399, "h": 560 }, "imageBox": { "x": 915, "y": 208, "w": 382, "h": 250 },
+          "textSize": 20, "lineHeight": 1.15
+        },
+        {
+          "title": "Clear Terms\nFrom the Start",
+          "text": "We discuss the work, price\nand payment details before\nstarting the project so\neverything is clear from\nthe beginning.",
+          "image": "assets/images/different/clear-terms.jpg", "imageAlt": "Clipboard with three orange checkboxes and a black pen",
+          "tint": ["#E8DDF7", "#E6D9EF", "#F2DADF"], "edge": "#DCC8F2",
+          "box": { "x": 1337, "y": 200, "w": 385, "h": 560 }, "imageBox": { "x": 1346, "y": 208, "w": 368, "h": 250 }
+        }
       ]
     },
-    "processSection": {
-      "title": "Our Working Process",
-      "text": "From Your First Idea to Final Delivery"
-    },
-    "faq": {
-      "title": "Frequently Read *Questions*",
-      "text": "Find answers to some common questions about our services.",
-      "items": [
-        { "q": "What services does CRETECH provide?", "a": "We provide website and app development, UI/UX design, SEO, Google Ads, social media marketing, email setup, content writing and creative design." },
-        { "q": "Can I request only one service?", "a": "Yes. You can choose a single service or combine multiple services based on your project needs." },
-        { "q": "Do you work with students and fresh graduates?", "a": "Yes. We support students, fresh graduates, individuals, startups and established businesses." },
-        { "q": "Do you work with small businesses and startups?", "a": "Yes. We work with businesses of different sizes and understand that every project has different goals and budgets." },
-        { "q": "How much do your services cost?", "a": "Pricing depends on the work, features, timeline and project requirements. We discuss the scope before sharing a quotation." },
-        { "q": "Can I discuss my idea before starting a project?", "a": "Of course. Share your idea and requirements with us so we can discuss a suitable approach." },
-        { "q": "How long will my project take?", "a": "The timeline depends on the project size and requirements. We confirm an estimated timeline before work begins." },
-        { "q": "How can I get started?", "a": "Use the contact form or email us with a short description of your requirement. We will get back to you." }
+    "_flowNote": "processFlow = \"Our Working Process\" (zigzag glass layout). box / node are px on the 1752 x 897 desktop canvas (the background image size); canvasHeight = shown height of that canvas (lower = less space under the cards); line = SVG path of the orange connector that starts at the node. tint = three glass colours (top, middle, bottom), edge = coloured glass edge, titleColor optional. glass = transparency (0-1) and blur (px). titleSize / textSize / lineHeight optional (canvas px). \\n is a line break on desktop only. glassImage (optional) = picture of the glass card (transparent PNG) drawn on desktop at glassBox; without it the glass is drawn by CSS from tint / edge. Cards show in list order.",
+    "processFlow": {
+      "background": {
+        "image": "assets/images/process/process-bg.jpg",
+        "imageSmall": "assets/images/process/process-bg-mobile.jpg",
+        "color": "#FFFAF7",
+        "gradientTop": "#FFFAF7",
+        "gradientBottom": "#FFE5D5"
+      },
+      "canvasHeight": 848,
+      "eyebrow": "Our Working Process",
+      "title": "A Simple Process, *From Start to Finish*",
+      "text": "Every project starts with a conversation. We take time to understand your requirements,\ndiscuss the details and keep you informed throughout the work.",
+      "glass": { "opacity": 0.85, "blur": 20 },
+      "line": { "color": "#FF7A00", "width": 3 },
+      "cards": [
+        {
+          "number": "01.", "title": "Initial\nDiscussion",
+          "text": "Get in touch with us and\nshare your ideas, project\nrequirements and\nexpectations. We will\ndiscuss the details with you.",
+          "tint": ["#F9DCD6", "#F6D6CE", "#FED2BE"], "edge": "#FFC2A0",
+          "box": { "x": 70, "y": 260, "w": 350, "h": 402 },
+          "glassImage": "assets/images/process/card-1.png", "glassBox": { "x": 44, "y": 234, "w": 402, "h": 468 },
+          "node": { "x": 425, "y": 367 }, "line": "M425 367C462 367 478 392 486 420C490 436 493 450 497 462"
+        },
+        {
+          "number": "02.", "title": "Planning &\nSuggestions",
+          "text": "We review your\nrequirements and suggest\nsuitable services, features\nand ideas based on your\nproject needs.",
+          "tint": ["#E6D6FB", "#E0D6F5", "#EAD4F8"], "edge": "#CDB8F5", "titleColor": "#1A2268",
+          "box": { "x": 500, "y": 385, "w": 343, "h": 385 },
+          "glassImage": "assets/images/process/card-2.png", "glassBox": { "x": 474, "y": 359, "w": 395, "h": 451 },
+          "node": { "x": 847, "y": 510 }, "line": "M847 510C866 508 870 490 876 474C882 458 890 450 902 450"
+        },
+        {
+          "number": "03.", "title": "Cost & Project\nConfirmation",
+          "text": "We share the estimated\ncost, payment details and\nexpected time for the work.\nOnce everything is agreed\nupon, we move ahead.",
+          "tint": ["#D6EFF0", "#DAEDEC", "#F4EDDA"], "edge": "#B8E2E2",
+          "box": { "x": 902, "y": 262, "w": 354, "h": 402 },
+          "glassImage": "assets/images/process/card-3.png", "glassBox": { "x": 876, "y": 236, "w": 406, "h": 468 },
+          "node": { "x": 1258, "y": 380 }, "line": "M1258 380C1296 380 1312 410 1320 440C1325 460 1328 476 1331 490"
+        },
+        {
+          "number": "04.", "title": "Work &\nFinal Project",
+          "text": "Our team works on the\nproject as planned, keeps\nyou updated, makes the\nagreed changes and\nprovides the completed\nproject to you.",
+          "tint": ["#F2D8D0", "#F6D8CC", "#FED6BA"], "edge": "#FFC6A2",
+          "box": { "x": 1332, "y": 385, "w": 352, "h": 391 },
+          "glassImage": "assets/images/process/card-4.png", "glassBox": { "x": 1306, "y": 359, "w": 404, "h": 457 }
+        }
       ]
     },
-    "direct": {
-      "title": "Your Project. Direct Communication.\n*Clear Decisions.*",
-      "text": "At CRETECH, you communicate directly with the people handling your project. There are no third-party agencies or salespeople between you and our team.",
-      "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85",
-      "imageAlt": "Team discussing a project",
-      "points": ["Understand your requirements", "Discuss the best approach", "Agree on scope, pricing and timeline", "Stay directly connected throughout the project"]
+    "faqSection": {
+      "_note": "Homepage \"Frequently Asked Questions\" (glass accordion). Rows show in list order. glassImage = picture of the row's glass (transparent PNG, 16 px glow margin), drawn as a 9-slice so the row can grow; without it the glass is CSS from tint / edge. glass = transparency (0-1) and blur (px) for the CSS glass. button = plus/minus colour and button background. \\n is a line break on desktop only.",
+      "background": {
+        "image": "assets/images/faq/faq-bg.jpg",
+        "imageSmall": "assets/images/faq/faq-bg-mobile.jpg",
+        "color": "#FFFCFA",
+        "gradientTop": "#FFFCFA",
+        "gradientBottom": "#FFE5D5"
+      },
+      "title": "Frequently Asked\n*Questions*",
+      "text": "Have a question? Here are some\nquick answers to help you\nunderstand our services, process\nand how we work.",
+      "glass": { "opacity": 0.6, "blur": 20 },
+      "button": { "color": "#FF7900", "background": "#FFFFFF" },
+      "items": [
+        { "number": "01.", "q": "What services does CRETECH provide?", "a": "CRETECH provides website development, app development, UI/UX design, SEO, Google Ads, social media marketing, email creation, content writing, graphic design & many more services.", "tint": ["#FCE3D6", "#FDE0CF"], "edge": "#FFC7A6", "glassImage": "assets/images/faq/faq-row-1.png" },
+        { "number": "02.", "q": "Can I request only one service?", "a": "Yes. You can contact us for an individual service without taking all our services together.", "tint": ["#EEDCFB", "#E6D3FA"], "edge": "#CDB4F5", "glassImage": "assets/images/faq/faq-row-2.png" },
+        { "number": "03.", "q": "Do you work with students and fresh graduates?", "a": "Yes. We welcome individuals, students and graduates who need personal websites, portfolios, professional email setups or other technical services.", "tint": ["#DDF2F2", "#D6EEEE"], "edge": "#AEE0E0", "glassImage": "assets/images/faq/faq-row-3.png" },
+        { "number": "04.", "q": "Do you work with small businesses and startups?", "a": "Yes. We work with individuals, startups, small businesses, companies and organisations based on their project requirements.", "tint": ["#FCE3D6", "#FDE0CF"], "edge": "#FFC7A6", "glassImage": "assets/images/faq/faq-row-4.png" },
+        { "number": "05.", "q": "How much do your services cost?", "a": "Pricing depends on the type of service, project requirements, complexity and amount of work involved. We discuss the quotation before starting.", "tint": ["#F7DDF6", "#F0D4F7"], "edge": "#E6B6EE", "glassImage": "assets/images/faq/faq-row-5.png" },
+        { "number": "06.", "q": "Can I discuss my idea before starting a project?", "a": "Yes. You can contact us to discuss your idea, requirements and possible approaches.", "tint": ["#DCEAFF", "#DAF0F6"], "edge": "#AFCDF2", "glassImage": "assets/images/faq/faq-row-6.png" },
+        { "number": "07.", "q": "How long will my project take?", "a": "The timeline depends on the project scope and requirements. We discuss the estimated delivery time before starting the work.", "tint": ["#FBE6D6", "#F9E3CF"], "edge": "#F5C9A0", "glassImage": "assets/images/faq/faq-row-7.png" },
+        { "number": "08.", "q": "How can I get started?", "a": "You can contact us through our website enquiry form, email or phone to discuss your requirements.", "tint": ["#E6DCFB", "#DCE6FA"], "edge": "#C2C4F2", "glassImage": "assets/images/faq/faq-row-8.png" }
+      ]
     }
   },
 
   "cta": {
-    "title": "Have an Idea?\nLet’s *Make It Happen.*",
+    "_note": "Bottom CTA on every page. title + script (the orange handwriting word) + text + one button.",
+    "title": "Have an Idea? Let’s Make It",
+    "script": "Happen.",
     "text": "Whether you need a website, a mobile application, a professional design or support with digital marketing, we are ready to discuss your requirements.",
-    "primary": { "label": "Start Your Project", "href": "contact" },
-    "secondary": { "label": "Contact Us", "href": "contact" }
+    "button": { "label": "Let’s Talk", "href": "contact" }
   },
 
   "process": {
