@@ -216,6 +216,9 @@ h1 em, h2 em, h3 em { color: var(--orange); font-style: italic; }
 }
 .cta-talk .icon { color: var(--accent); }
 .cta-talk:hover { background: #000; transform: translateY(-2px); }
+.cta-btns { flex-shrink: 0; display: flex; flex-wrap: wrap; gap: 14px; }
+.cta-outline { display: inline-flex; align-items: center; height: 56px; padding: 0 28px; border-radius: 3px; border: 1.5px solid var(--charcoal); color: var(--charcoal); font-size: 17px; font-weight: 600; white-space: nowrap; transition: background .2s, color .2s; }
+.cta-outline:hover { background: var(--charcoal); color: #fff; }
 
 /* ---------- Footer ---------- */
 

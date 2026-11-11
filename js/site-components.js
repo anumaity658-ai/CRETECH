@@ -552,6 +552,79 @@
       '<div class="fx-list">' + (section.items || []).map(faqRow).join("") + "</div></div></section>";
   }
 
+  /* ---------- About page (recreated from a 1024 px wide reference; sizes n * --u in css/cms.css) ---------- */
+
+  // orange line icons, 24 x 24
+  var ABOUT_ICONS = {
+    team: '<circle cx="12" cy="7.5" r="3"/><circle cx="5.5" cy="9" r="2.3"/><circle cx="18.5" cy="9" r="2.3"/><path d="M6.5 19.5v-1.3a5.5 5.5 0 0 1 11 0v1.3M1.8 18v-.8a3.7 3.7 0 0 1 5-3.4M22.2 18v-.8a3.7 3.7 0 0 0-5-3.4"/>',
+    sprout: '<path d="M12 21v-9"/><path d="M12 12c0-4 2.6-7 7-7 0 4.3-2.8 7-7 7Z"/><path d="M12 14.5C12 11 9.7 8.5 5.5 8.5c0 3.8 2.4 6 6.5 6Z"/>',
+    chart: '<path d="M4 20h17"/><path d="M6 20v-4M10.5 20v-7M15 20v-10M19.5 20V6"/><path d="M5 11 10 7l3.5 2.5L20 4"/><path d="M16.5 4H20v3.5"/>',
+    bulb: '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.4 1.1 2.2v.5h5V16c0-.8.4-1.6 1.1-2.2A6 6 0 0 0 12 3Z"/><path d="M12 0v1M4 3l.8.8M20 3l-.8.8M1 10h1M22 10h1"/>',
+    target: '<circle cx="11" cy="13" r="8"/><circle cx="11" cy="13" r="4.5"/><circle cx="11" cy="13" r="1.2"/><path d="m11 13 8-8M16 5h3v3"/>',
+    laptop: '<rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19.5h20l-1.5-3.5h-17Z"/>',
+    handplant: '<path d="M12 12V7"/><path d="M12 8c0-2.5 1.7-4.5 4.5-4.5 0 2.7-1.8 4.5-4.5 4.5ZM12 9.5C12 7.3 10.5 5.5 8 5.5c0 2.3 1.6 4 4 4Z"/><path d="M2 15.5h3.5l3 2h4a1.5 1.5 0 0 0 0-3h-3"/><path d="M8.5 17.5h6.2l5.6-3.1a1.6 1.6 0 0 1 1.7 2.7L15 21.5H8L5.5 20H2"/>',
+    trust: '<path d="M12 2.5 4.5 5.5v6c0 4.6 3.2 8.6 7.5 10 4.3-1.4 7.5-5.4 7.5-10v-6Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/>',
+    responsibility: '<rect x="5" y="4" width="14" height="17.5" rx="2"/><path d="M9 4V2.5h6V4"/><path d="m8.5 11.5 1.8 1.8 3.2-3.3M8.5 17h7"/>',
+    creativity: '<path d="M12 3c-5 0-9 3.6-9 8.2 0 3.3 2.6 5.3 5.4 5.3 1.5 0 2.1 1 2.1 2.3 0 1.4 1 2.2 2.4 2.2 4.6 0 7.1-4.5 7.1-9.5S16.8 3 12 3Z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="11" cy="7.5" r="1.2"/><circle cx="15.5" cy="8.5" r="1.2"/>',
+    quality: '<circle cx="12" cy="9" r="6"/><path d="m12 6 1 2 2.2.3-1.6 1.5.4 2.2-2-1-2 1 .4-2.2L8.8 8.3 11 8Z"/><path d="M8.5 14 7 21.5l5-2.5 5 2.5-1.5-7.5"/>',
+    signature: '<path d="M3 17c3-1 5.5-5 6.5-9.5.5-2.2-1.6-2.7-2.2-.4-1 4 .2 9.5 2.7 9.5 1.8 0 2.4-3.7 3.6-3.7 1.3 0 .4 3.4 2 3.4 1.2 0 2-1.5 3-2.6"/><path d="M2 21h20"/>'
+  };
+  function aboutIcon(name, cls) {
+    return '<span class="' + (cls || "ab-ic") + '" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' +
+      (ABOUT_ICONS[name] || "") + "</svg></span>";
+  }
+  function aboutDash() { return '<span class="ab-dash" aria-hidden="true"></span>'; }
+  function paras(list, cls) { return (list || []).map(function (p) { return '<p class="' + (cls || "") + '">' + rich(p) + "</p>"; }).join(""); }
+
+  function aboutPage(a) {
+    a = a || {};
+    var b = a.banner || {}, intro = a.intro || {}, why = a.why || {}, be = a.belief || {}, rq = a.requirements || {},
+      th = a.think || {}, pe = a.people || {}, pa = a.partner || {}, va = a.values || {}, fu = a.future || {};
+
+    var banner = '<section class="ab-banner" style="--ab-banner:' + cssUrl(b.image) + '"><div class="ab-wrap ab-banner-in">' +
+      '<p class="ab-eyebrow">' + esc(b.eyebrow) + "</p><h1>" + softRich(b.title) + '<svg class="ab-swash" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 19C55 6 120 3 197 9M40 22C80 15 130 13 170 15" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg></h1>' +
+      (b.text ? '<p class="ab-banner-text">' + esc(b.text) + "</p>" : "") + "</div></section>";
+
+    var introHtml = '<section class="ab-intro"><div class="ab-wrap ab-intro-in"><h2>' + softRich(intro.title) + '</h2><span class="ab-vline" aria-hidden="true"></span><p>' + esc(intro.text) + "</p></div></section>";
+
+    var whyHtml = '<section class="ab-why"><div class="ab-wrap ab-why-in">' +
+      '<img class="ab-why-img" src="' + esc(image(why.image, 1000)) + '" alt="' + esc(why.imageAlt || "") + '" loading="lazy" decoding="async">' +
+      '<div class="ab-why-copy">' + aboutDash() + "<h2>" + rich(why.title) + '</h2><p class="ab-lead">' + esc(why.lead) + "</p><p>" + esc(why.text) + "</p>" +
+      '<ul class="ab-points">' + (why.points || []).map(function (p) { return "<li>" + aboutIcon(p.icon, "ab-box") + "<b>" + softRich(p.title) + "</b></li>"; }).join("") + "</ul></div></div></section>";
+
+    var beliefHtml = '<section class="ab-belief"><div class="ab-wrap">' + aboutDash() + '<p class="ab-kicker">' + esc(be.eyebrow) + "</p>" +
+      '<blockquote class="ab-quote"><span class="ab-qmark" aria-hidden="true">“</span>' + rich(be.quote) + "</blockquote>" +
+      '<div class="ab-belief-cols">' + paras(be.paragraphs) + "</div></div></section>";
+
+    var reqHtml = '<section class="ab-req"><div class="ab-wrap ab-req-in"><div class="ab-req-copy">' + aboutDash() + "<h2>" + rich(rq.title) + "</h2><p>" + esc(rq.text) + "</p></div>" +
+      '<ol class="ab-req-list">' + (rq.items || []).map(function (it, i) {
+        return '<li><span class="ab-req-num">' + String(i + 1).padStart(2, "0") + "</span><div><h3>" + esc(it.title) + "</h3><p>" + esc(it.text) + "</p></div></li>";
+      }).join("") + "</ol></div></section>";
+
+    // dashed connectors between the circles: curve up, down, up (like the reference)
+    var thinkHtml = '<section class="ab-think" style="--ab-think:' + cssUrl(th.background) + '"><div class="ab-wrap">' + aboutDash() + "<h2>" + rich(th.title) + "</h2><p class=\"ab-sub\">" + esc(th.text) + "</p>" +
+      '<ol class="ab-steps">' + (th.steps || []).map(function (s, i) {
+        var arrow = i ? '<svg class="ab-arrow ' + (i % 2 ? "up" : "down") + '" viewBox="0 0 120 30" aria-hidden="true"><path d="M4 ' + (i % 2 ? "22C40 4 80 4 112 18" : "8C40 26 80 26 112 12") + '" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" stroke-linecap="round"/><path d="' + (i % 2 ? "M104 12l9 6-10 3" : "M103 6l10 6-9 6") + '" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : "";
+        return "<li>" + arrow + aboutIcon(s.icon, "ab-circle") + "<h3>" + softRich(s.title) + "</h3><p>" + esc(s.text) + "</p></li>";
+      }).join("") + "</ol></div></section>";
+
+    var peopleHtml = '<section class="ab-people"><div class="ab-wrap ab-people-in">' +
+      '<img class="ab-people-img" src="' + esc(image(pe.image, 1000)) + '" alt="' + esc(pe.imageAlt || "") + '" loading="lazy" decoding="async">' +
+      '<div class="ab-people-copy">' + aboutDash() + "<h2>" + rich(pe.title) + "</h2>" + paras(pe.paragraphs) + "</div></div>" +
+      '<div class="ab-wrap"><div class="ab-partner">' + aboutIcon("signature", "ab-sign") + '<div class="ab-partner-copy"><h3>' + rich(pa.title) + "</h3><p>" + esc(pa.text) + '</p></div><span class="ab-vline" aria-hidden="true"></span>' +
+      (pa.button ? '<a class="ab-partner-btn" href="' + link(pa.button.href) + '">' + esc(pa.button.label) + " " + ICONS.arrowUpRight + "</a>" : "") + "</div></div></section>";
+
+    var valuesHtml = '<section class="ab-values"><div class="ab-wrap">' + aboutDash() + "<h2>" + rich(va.title) + "</h2><p class=\"ab-sub\">" + esc(va.text) + "</p>" +
+      '<ul class="ab-values-list">' + (va.items || []).map(function (v) {
+        return "<li>" + aboutIcon(v.icon, "ab-box") + "<h3>" + esc(v.title) + "</h3><p>" + esc(v.text) + "</p></li>";
+      }).join("") + "</ul></div></section>";
+
+    var futureHtml = '<section class="ab-future"><div class="ab-wrap"><div class="ab-future-panel"><div class="ab-future-head"><p class="ab-kicker">' + esc(fu.eyebrow) + "</p><h2>" + rich(fu.title) + "</h2></div>" +
+      '<div class="ab-future-copy">' + paras(fu.paragraphs) + "</div></div></div></section>";
+
+    return '<div class="about-page">' + banner + introHtml + whyHtml + beliefHtml + reqHtml + thinkHtml + peopleHtml + valuesHtml + futureHtml + "</div>";
+  }
+
   function plainCard(title, text, extra) {
     return '<article class="plain-card"><h3>' + rich(title) + "</h3><p>" + rich(text) + "</p>" + (extra || "") + "</article>";
   }
@@ -568,13 +641,17 @@
     }).join("") + "</div>";
   }
 
-  function cta(data) {
+  function cta(data, override) {
     // "Have an Idea? Let's Make It Happen." — cream band, script word like the hero, charcoal button like the header
-    var c = data.cta || {}, btn = c.button || c.primary;
+    // override: a page can pass its own CTA content (same design), e.g. the About page with two buttons
+    var c = override || data.cta || {}, btn = c.button || c.primary;
+    var buttons = c.buttons || (btn ? [btn] : []);
     var script = c.script ? ' <span class="cta-script">' + SCRIPT_SPARK + "<span>" + esc(c.script) + "</span>" + SCRIPT_SWASH + "</span>" : "";
     return '<section class="cta"><div class="cta-in"><div class="cta-copy"><h2>' + rich(c.title) + script + "</h2>" +
       (c.text ? "<p>" + esc(c.text) + "</p>" : "") + "</div>" +
-      (btn && btn.label ? '<a class="cta-talk" href="' + link(btn.href) + '">' + esc(btn.label) + " " + ICONS.arrowUpRight + "</a>" : "") +
+      (buttons.length ? '<div class="cta-btns">' + buttons.map(function (b, i) {
+        return '<a class="' + (i ? "cta-outline" : "cta-talk") + '" href="' + link(b.href) + '">' + esc(b.label) + (i ? "" : " " + ICONS.arrowUpRight) + "</a>";
+      }).join("") + "</div>" : "") +
       "</div></section>";
   }
 
@@ -585,7 +662,7 @@
   window.SiteComponents = {
     esc: esc, rich: rich, link: link, image: image, button: button, brand: brand,
     header: header, footer: footer, heroSlider: heroSlider, subHero: subHero, sectionHeading: sectionHeading,
-    serviceCard: serviceCard, homeServices: homeServices, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
+    serviceCard: serviceCard, homeServices: homeServices, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
     cta: cta, notice: notice
   };
 })();

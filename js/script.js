@@ -73,13 +73,9 @@
   };
 
   pages.about = function () {
-    var a = data.about;
-    return C.subHero(a.hero) +
-      '<section class="content-page"><h2>' + rich(a.title) + "</h2><p>" + esc(a.text) + "</p>" +
-      '<div class="plain-grid">' + a.cards.map(function (c) { return C.plainCard(c.title, c.text); }).join("") + "</div></section>" +
-      C.cta(data);
+    var a = data.about || {};
+    return C.aboutPage(a) + (a.faq ? C.homeFaq(Object.assign({ background: { color: "#FFF7F0" } }, a.faq)) : "") + C.cta(data, a.cta);
   };
-
   pages.process = function () {
     var p = data.process;
     return C.subHero(p.hero) +

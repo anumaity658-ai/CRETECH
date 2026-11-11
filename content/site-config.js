@@ -22,10 +22,10 @@ window.SITE_CONFIG = {
 
   "nav": [
     { "label": "Home", "href": "", "page": "home" },
+    { "label": "About", "href": "about", "page": "about" },
     { "label": "Services", "href": "services", "page": "services", "dropdown": "services" },
     { "label": "Work", "href": "services", "page": "work" },
     { "label": "Process", "href": "process", "page": "process" },
-    { "label": "About", "href": "about", "page": "about" },
     { "label": "Contact", "href": "contact", "page": "contact" }
   ],
   "headerCta": { "label": "Let’s Talk", "href": "contact" },
@@ -562,14 +562,108 @@ window.SITE_CONFIG = {
   },
 
   "about": {
-    "hero": { "title": "Technology. Creativity.\n*Growth.*", "text": "CRETECH brings website development, design and digital services together to help people and businesses build a clear and useful online presence." },
-    "title": "About CRETECH",
-    "text": "We believe every good idea deserves a practical digital presence. CRETECH works with individuals, students, graduates, startups, small businesses and organisations to understand their needs and deliver suitable digital solutions.",
-    "cards": [
-      { "title": "Our Approach", "text": "We begin by understanding your goals, audience and project requirements before suggesting a suitable solution." },
-      { "title": "Direct Communication", "text": "You can discuss your project directly with the people handling the work. We keep decisions and updates clear." },
-      { "title": "Our Focus", "text": "We focus on useful design, clear communication, quality work and solutions that match the project scope." }
-    ]
+    "_note": "About page, section by section in page order. Icons: team, sprout, chart, bulb, target, laptop, handplant, trust, responsibility, creativity, quality. \\n = line break on desktop, *word* = orange.",
+    "banner": {
+      "eyebrow": "About CRETECH",
+      "title": "Technology, Creativity &\nIdeas That Move Forward.",
+      "text": "We bring technical skills, creative thinking and digital solutions together to help individuals and businesses build their online presence and turn their ideas into practical work.",
+      "image": "assets/images/about/about-banner.jpg"
+    },
+    "intro": {
+      "title": "A Digital Partner for\nIdeas, Projects and Businesses",
+      "text": "Every project begins with an idea. Some people want to build their first website, some want to take their business online, while others need technical support to improve the way they work. CRETECH was created to make these digital requirements easier to approach — with clear communication, practical suggestions and work that is done properly."
+    },
+    "why": {
+      "title": "Why CRETECH Exists",
+      "lead": "CRETECH was founded with a simple purpose — to make reliable and practical digital solutions accessible to more people.",
+      "text": "We know that individuals, students, startups and businesses often have ideas and goals, but turning them into a working digital platform can feel complicated or out of reach. CRETECH bridges this gap by bringing technical skills, creative thinking and a clear, approachable process together.",
+      "image": "assets/images/about/about-why.jpg", "imageAlt": "CRETECH office building at sunset",
+      "points": [
+        { "icon": "team", "title": "Make technology\neasier to use" },
+        { "icon": "sprout", "title": "Support ideas\nat every stage" },
+        { "icon": "chart", "title": "Help people and\nbusinesses grow online" }
+      ]
+    },
+    "belief": {
+      "eyebrow": "Our Belief",
+      "quote": "Technology is most valuable when it solves a *real problem* for a real person.",
+      "paragraphs": [
+        "We believe good digital work is a balance of technology and creativity. Technology makes things work; creativity makes them clear, attractive and easy to use. When both are done with care, a website, an application or a campaign becomes a useful tool rather than just something that looks good.",
+        "We also believe that no two projects are the same. A student building a portfolio, a shop owner going online and a company planning a new platform all need different things. That is why we listen first, ask questions and only then suggest what should be built."
+      ]
+    },
+    "requirements": {
+      "title": "Built Around *Real Requirements*",
+      "text": "Every client and every project has different needs. Before suggesting any solution, we take time to understand what the work is meant to achieve, who it is for and how it will be used. This helps us recommend only what is genuinely useful — no unnecessary features, no fixed templates forced onto every project.",
+      "items": [
+        { "title": "The purpose", "text": "What should this project achieve for you, your customers or your organisation?" },
+        { "title": "The requirements", "text": "Which features, content and integrations are truly needed — and which can wait?" },
+        { "title": "The intended use", "text": "Who will use it, on which devices, and how will it be managed after it goes live?" }
+      ]
+    },
+    "think": {
+      "title": "How We Think",
+      "text": "A simple, thoughtful approach guides the way we work on every project.",
+      "background": "assets/images/about/about-think-bg.jpg",
+      "steps": [
+        { "icon": "bulb", "title": "Understand\nthe Idea", "text": "We start by listening and understanding what you want to achieve." },
+        { "icon": "target", "title": "Plan a\nPractical Approach", "text": "We discuss the possibilities, requirements and the right way forward." },
+        { "icon": "laptop", "title": "Build with\nCare", "text": "We work with attention to detail and keep you updated along the way." },
+        { "icon": "handplant", "title": "Deliver\nReal Value", "text": "We aim for a result that works for you and supports your long-term goals." }
+      ]
+    },
+    "people": {
+      "title": "People Behind the Projects",
+      "paragraphs": [
+        "Behind every project at CRETECH is a small, dedicated team that genuinely enjoys working with ideas, solving problems and creating useful digital work.",
+        "We are developers, designers, writers and digital specialists who work together, share ideas and focus on what each client actually needs. For us, it is not just about completing a project, but about building something that serves a real purpose."
+      ],
+      "image": "assets/images/about/about-people.jpg", "imageAlt": "CRETECH team working together around a laptop"
+    },
+    "partner": {
+      "title": "More Than a Service Provider",
+      "text": "A partner who understands your idea, values your goals and works with you to make them real.",
+      "button": { "label": "Let’s Work Together", "href": "contact" }
+    },
+    "values": {
+      "title": "What We *Value*",
+      "text": "The principles that shape how we work with every client.",
+      "items": [
+        { "icon": "trust", "title": "Trust", "text": "Honest communication, clear pricing and no hidden surprises." },
+        { "icon": "responsibility", "title": "Responsibility", "text": "We take ownership of the work we agree to and deliver it properly." },
+        { "icon": "creativity", "title": "Creativity", "text": "Fresh, thoughtful ideas that make each project clear and memorable." },
+        { "icon": "quality", "title": "Quality", "text": "Careful work that is functional, user-friendly and built to last." }
+      ]
+    },
+    "future": {
+      "eyebrow": "What We Are Building Towards",
+      "title": "A Trusted Digital Partner for *Every Kind of Client*",
+      "paragraphs": [
+        "We want CRETECH to be the place people think of when they need dependable digital support — whether it is their first website or the next stage of an established business.",
+        "To get there, we keep learning new tools and methods, improve our process with every project and stay focused on long-term relationships rather than one-time jobs. Our aim is simple: to grow alongside the people and businesses we work with."
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked\n*Questions*",
+      "text": "A few common questions about who we are and how we work.",
+      "items": [
+        { "q": "What does CRETECH do?", "a": "CRETECH provides technical and digital services such as website development, app development, UI/UX design, SEO, Google Ads, social media marketing, email setup, content writing and graphic design." },
+        { "q": "Who does CRETECH work with?", "a": "We work with individuals, students, graduates, freelancers, startups, small businesses, companies and organisations, based on their project requirements." },
+        { "q": "What makes CRETECH different?", "a": "You speak directly with the people working on your project. We do not use fixed packages; we suggest what fits your purpose and budget, and we agree on the work, price and payment details before starting." },
+        { "q": "Can I discuss an idea that is not fully planned yet?", "a": "Yes. Many projects start as a rough idea. We can help you think through the requirements and suggest a practical way to begin." },
+        { "q": "Do you only take large projects?", "a": "No. We work on small and large projects alike, from a single portfolio page to a complete business platform." },
+        { "q": "How do I get started with CRETECH?", "a": "Contact us through the enquiry form, email or phone and share your requirements. We will get back to you to discuss the next steps." }
+      ]
+    },
+    "cta": {
+      "title": "Have an Idea? Let’s Make It",
+      "script": "Happen.",
+      "text": "Whether you are planning a new project, building your business online or looking for the right digital support, CRETECH is here to discuss your requirements.",
+      "buttons": [
+        { "label": "Start Your Project", "href": "contact" },
+        { "label": "Contact Us", "href": "contact" }
+      ]
+    }
   },
 
   "servicesPage": {
