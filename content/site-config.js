@@ -9,12 +9,14 @@ window.SITE_CONFIG = {
     "email": "hello@cretech.in",
     "phone": "+91 98765 43210",
     "location": "Noida, India",
-    "footerText": "Technical and digital services for individuals, graduates, startups and businesses. From website and app development to design and digital growth, we help turn ideas into practical work.",
+    "footerTagline": "Technology • Creativity • Growth",
+    "footerText": "Technical and digital services for individuals, graduates, startups and businesses. From website and app development to design and digital marketing, we help turn ideas into practical work.",
+    "_socialsNote": "Footer social icons. Put the real profile address in url; while url is \"#\" the icon shows without a link.",
     "socials": [
-      { "label": "LinkedIn", "short": "in", "url": "#" },
-      { "label": "Facebook", "short": "f", "url": "#" },
-      { "label": "Instagram", "short": "◎", "url": "#" },
-      { "label": "X", "short": "𝕏", "url": "#" }
+      { "label": "LinkedIn", "icon": "linkedin", "url": "#" },
+      { "label": "Facebook", "icon": "facebook", "url": "#" },
+      { "label": "Instagram", "icon": "instagram", "url": "#" },
+      { "label": "X", "icon": "x", "url": "#" }
     ]
   },
 
@@ -35,6 +37,16 @@ window.SITE_CONFIG = {
       { "label": "Services", "href": "services" },
       { "label": "Our Process", "href": "process" },
       { "label": "Contact Us", "href": "contact" }
+    ],
+    "services": [
+      { "label": "Website Development", "href": "services/website-development" },
+      { "label": "App Development", "href": "services/app-development" },
+      { "label": "UI/UX Design", "href": "services/ui-ux-design" },
+      { "label": "SEO Services", "href": "services/seo-services" },
+      { "label": "Google Ads", "href": "services/google-ads-services" },
+      { "label": "Social Media Marketing", "href": "services/social-media-marketing" },
+      { "label": "Email Creation", "href": "services/email-creation-setup" },
+      { "label": "Content & Graphic Design", "href": "services/graphic-design-creative-content" }
     ],
     "legal": [
       { "label": "Privacy Policy", "href": "privacy-policy" },

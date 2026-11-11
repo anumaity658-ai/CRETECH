@@ -134,31 +134,44 @@
       slides.map(function (s, i) { return heroSlide(s, i, slides.length, stats); }).join("") + "</section>";
   }
 
+  /* Footer: cream/peach band, 4 columns with thin dividers, orange chevrons, outlined social squares.
+     Text and links come from site.footerTagline / site.footerText / footerLinks / site.socials. */
+  var SOCIAL_ICONS = {
+    linkedin: '<path d="M6.5 10v8.5M6.5 6.3v.01M11 18.5v-5.3a2.8 2.8 0 0 1 5.6 0v5.3M11 10v8.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>',
+    facebook: '<path d="M13.6 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z" fill="currentColor"/>',
+    instagram: '<rect x="3.6" y="3.6" width="16.8" height="16.8" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="3.9" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/>',
+    x: '<path d="M4.2 4h4.6l11 16h-4.6z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M19.6 4l-6.3 7.2M10.7 12.8 4.4 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>'
+  };
+  var CHEVRON = '<svg class="ft-chev" viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3.5 4.5 4.5L6 12.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
   function footer(data) {
     var site = data.site || {};
     var links = data.footerLinks || {};
     var list = function (items) {
-      return (items || []).map(function (l) { return '<a href="' + link(l.href) + '">' + esc(l.label) + "</a>"; }).join("");
+      return "<ul>" + (items || []).map(function (l) { return '<li><a href="' + link(l.href) + '">' + CHEVRON + "<span>" + esc(l.label) + "</span></a></li>"; }).join("") + "</ul>";
     };
-    var services = (data.services || []).slice(0, 6).map(function (s) {
-      return '<a href="services/' + esc(s.slug) + '">' + esc(s.title) + "</a>";
-    }).join("");
+    var services = links.services || (data.services || []).map(function (s) { return { label: s.title, href: "services/" + s.slug }; });
+    // a social with no real address is shown as an icon only (no made-up link)
     var socials = (site.socials || []).map(function (s) {
-      var ext = isExternal(s.url) ? ' target="_blank" rel="noopener"' : "";
-      return '<a href="' + link(s.url) + '" aria-label="' + esc(s.label) + '"' + ext + ">" + esc(s.short) + "</a>";
+      var key = String(s.icon || s.label || "").toLowerCase().replace(/[^a-z]/g, "");
+      var svg = '<svg viewBox="0 0 24 24" aria-hidden="true">' + (SOCIAL_ICONS[key] || "") + "</svg>";
+      var real = s.url && s.url !== "#";
+      return real ? '<a class="ft-social" href="' + link(s.url) + '" aria-label="' + esc(s.label) + '"' + (isExternal(s.url) ? ' target="_blank" rel="noopener"' : "") + ">" + svg + "</a>"
+        : '<span class="ft-social" role="img" aria-label="' + esc(s.label) + '">' + svg + "</span>";
     }).join("");
-    return '<footer class="site-footer">' +
-      '<div class="footer-brand">' + brand(site, true, "brand-footer") + "<p>" + esc(site.footerText) + "</p>" +
-      "<small>Copyright © " + new Date().getFullYear() + " " + esc(site.name) + ". All Rights Reserved.</small></div>" +
-      "<div><h3>Quick Links</h3>" + list(links.quick) + "</div>" +
-      "<div><h3>Our Services</h3>" + services + "</div>" +
-      "<div><h3>Contact Us</h3>" +
-      '<p>✉ Email: <a class="inline-link" href="mailto:' + esc(site.email) + '">' + esc(site.email) + "</a></p>" +
-      '<p>☎ Phone: <a class="inline-link" href="tel:' + esc(String(site.phone || "").replace(/[^0-9+]/g, "")) + '">' + esc(site.phone) + "</a></p>" +
-      "<p>⌖ Location: " + esc(site.location) + "</p>" +
-      '<h3 class="follow-title">Follow Us</h3><div class="socials">' + socials + "</div></div>" +
-      '<div class="footer-bottom">' + list(links.legal) + "</div>" +
-      "</footer>";
+    var legal = (links.legal || []).map(function (l) { return '<a href="' + link(l.href) + '">' + esc(l.label) + "</a>"; }).join('<span class="ft-sep" aria-hidden="true"></span>');
+    return '<footer class="site-footer"><div class="ft-in">' +
+      '<div class="ft-cols">' +
+      '<div class="ft-col ft-brand"><a class="ft-logo" href="./" aria-label="' + esc(site.name) + ' home"><img src="' + esc(site.logo) + '" alt="' + esc(site.name) + '" width="1020" height="262" loading="lazy"></a>' +
+      (site.footerTagline ? '<p class="ft-tag">' + esc(site.footerTagline) + "</p>" : "") +
+      "<p class=\"ft-text\">" + esc(site.footerText) + '</p><span class="ft-dash" aria-hidden="true"></span></div>' +
+      '<div class="ft-col ft-quick"><h3>Quick Links</h3>' + list(links.quick) + "</div>" +
+      '<div class="ft-col ft-services"><h3>Our Services</h3>' + list(services) + "</div>" +
+      '<div class="ft-col ft-follow"><h3>Follow Us</h3><div class="ft-socials">' + socials + "</div></div>" +
+      "</div>" +
+      '<div class="ft-bottom"><p class="ft-copy">Copyright © ' + new Date().getFullYear() + " " + esc(site.name) + ". All Rights Reserved.</p>" +
+      '<nav class="ft-legal" aria-label="Legal">' + legal + "</nav></div>" +
+      "</div></footer>";
   }
 
   function subHero(hero) {
