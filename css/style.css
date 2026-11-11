@@ -222,14 +222,14 @@ h1 em, h2 em, h3 em { color: var(--orange); font-style: italic; }
 /* Recreated from a 2000 x 667 reference: every size is n * --u (1 reference px).
    --ft-scale shrinks the whole footer evenly (1 = reference size at full width). */
 .site-footer {
-  --ft-scale: .9;
+  --ft-scale: .72;
   --u: min(calc(100vw / 2000 * var(--ft-scale)), .9px);
   --ft-ink: #191c1d;
   position: relative; overflow: hidden; color: var(--ft-ink);
   background: #fde9da url("../assets/images/footer/footer-bg.jpg") center / cover no-repeat;
 }
-.ft-in { width: calc(2000 * var(--u)); max-width: 100%; margin: 0 auto; padding: calc(70 * var(--u)) 0 calc(60 * var(--u)); }
-.ft-cols { display: grid; grid-template-columns: calc(558 * var(--u)) calc(362 * var(--u)) calc(502 * var(--u)) 1fr; padding-left: calc(95 * var(--u)); }
+.ft-in { width: min(90vw, 1500px); margin: 0 auto; padding: calc(70 * var(--u)) 0 calc(60 * var(--u)); }
+.ft-cols { display: grid; grid-template-columns: 540fr 362fr 502fr 430fr; padding-left: calc(20 * var(--u)); }
 .ft-col + .ft-col { border-left: 1.5px solid rgba(25, 28, 29, .14); margin: calc(15 * var(--u)) 0 calc(-12 * var(--u)); padding-top: 0; }
 .ft-quick { padding-left: calc(62 * var(--u)); }
 .ft-services { padding-left: calc(73 * var(--u)); }
@@ -266,7 +266,7 @@ a.ft-social:hover { background: var(--accent); color: #fff; }
 
 .ft-bottom {
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
-  margin: calc(48 * var(--u)) calc(55 * var(--u)) 0 calc(75 * var(--u)); padding-top: calc(32 * var(--u));
+  margin: calc(48 * var(--u)) 0 0; padding-top: calc(32 * var(--u));
   border-top: 1px solid rgba(25, 28, 29, .14);
 }
 .ft-copy { display: flex; align-items: center; gap: calc(25 * var(--u)); margin: 0; font: 700 calc(28 * var(--u))/1.2 var(--font-body); color: var(--ft-ink); }
