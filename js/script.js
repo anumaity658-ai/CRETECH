@@ -74,7 +74,7 @@
 
   pages.about = function () {
     var a = data.about || {};
-    return C.aboutPage(a) + (a.faq ? C.homeFaq(Object.assign({ background: { color: "#FFF7F0" } }, a.faq)) : "") + C.cta(data, a.cta);
+    return C.aboutPage(a);
   };
   pages.process = function () {
     var p = data.process;

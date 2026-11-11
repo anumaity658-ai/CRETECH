@@ -579,7 +579,7 @@
   function aboutPage(a) {
     a = a || {};
     var b = a.banner || {}, intro = a.intro || {}, why = a.why || {}, be = a.belief || {}, rq = a.requirements || {},
-      th = a.think || {}, pe = a.people || {}, pa = a.partner || {}, va = a.values || {}, fu = a.future || {};
+      th = a.think || {}, pe = a.people || {}, pa = a.partner || {};
 
     var banner = '<section class="ab-banner" style="--ab-banner:' + cssUrl(b.image) + '"><div class="ab-wrap ab-banner-in">' +
       '<p class="ab-eyebrow">' + esc(b.eyebrow) + "</p><h1>" + softRich(b.title) + '<svg class="ab-swash" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 19C55 6 120 3 197 9M40 22C80 15 130 13 170 15" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg></h1>' +
@@ -614,15 +614,7 @@
       '<div class="ab-wrap"><div class="ab-partner">' + aboutIcon("signature", "ab-sign") + '<div class="ab-partner-copy"><h3>' + rich(pa.title) + "</h3><p>" + esc(pa.text) + '</p></div><span class="ab-vline" aria-hidden="true"></span>' +
       (pa.button ? '<a class="ab-partner-btn" href="' + link(pa.button.href) + '">' + esc(pa.button.label) + " " + ICONS.arrowUpRight + "</a>" : "") + "</div></div></section>";
 
-    var valuesHtml = '<section class="ab-values"><div class="ab-wrap">' + aboutDash() + "<h2>" + rich(va.title) + "</h2><p class=\"ab-sub\">" + esc(va.text) + "</p>" +
-      '<ul class="ab-values-list">' + (va.items || []).map(function (v) {
-        return "<li>" + aboutIcon(v.icon, "ab-box") + "<h3>" + esc(v.title) + "</h3><p>" + esc(v.text) + "</p></li>";
-      }).join("") + "</ul></div></section>";
-
-    var futureHtml = '<section class="ab-future"><div class="ab-wrap"><div class="ab-future-panel"><div class="ab-future-head"><p class="ab-kicker">' + esc(fu.eyebrow) + "</p><h2>" + rich(fu.title) + "</h2></div>" +
-      '<div class="ab-future-copy">' + paras(fu.paragraphs) + "</div></div></div></section>";
-
-    return '<div class="about-page">' + banner + introHtml + whyHtml + beliefHtml + reqHtml + thinkHtml + peopleHtml + valuesHtml + futureHtml + "</div>";
+    return '<div class="about-page">' + banner + introHtml + whyHtml + beliefHtml + reqHtml + thinkHtml + peopleHtml + "</div>";
   }
 
   function plainCard(title, text, extra) {

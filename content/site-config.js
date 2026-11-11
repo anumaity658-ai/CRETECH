@@ -624,45 +624,6 @@ window.SITE_CONFIG = {
       "title": "More Than a Service Provider",
       "text": "A partner who understands your idea, values your goals and works with you to make them real.",
       "button": { "label": "Let’s Work Together", "href": "contact" }
-    },
-    "values": {
-      "title": "What We *Value*",
-      "text": "The principles that shape how we work with every client.",
-      "items": [
-        { "icon": "trust", "title": "Trust", "text": "Honest communication, clear pricing and no hidden surprises." },
-        { "icon": "responsibility", "title": "Responsibility", "text": "We take ownership of the work we agree to and deliver it properly." },
-        { "icon": "creativity", "title": "Creativity", "text": "Fresh, thoughtful ideas that make each project clear and memorable." },
-        { "icon": "quality", "title": "Quality", "text": "Careful work that is functional, user-friendly and built to last." }
-      ]
-    },
-    "future": {
-      "eyebrow": "What We Are Building Towards",
-      "title": "A Trusted Digital Partner for *Every Kind of Client*",
-      "paragraphs": [
-        "We want CRETECH to be the place people think of when they need dependable digital support — whether it is their first website or the next stage of an established business.",
-        "To get there, we keep learning new tools and methods, improve our process with every project and stay focused on long-term relationships rather than one-time jobs. Our aim is simple: to grow alongside the people and businesses we work with."
-      ]
-    },
-    "faq": {
-      "title": "Frequently Asked\n*Questions*",
-      "text": "A few common questions about who we are and how we work.",
-      "items": [
-        { "q": "What does CRETECH do?", "a": "CRETECH provides technical and digital services such as website development, app development, UI/UX design, SEO, Google Ads, social media marketing, email setup, content writing and graphic design." },
-        { "q": "Who does CRETECH work with?", "a": "We work with individuals, students, graduates, freelancers, startups, small businesses, companies and organisations, based on their project requirements." },
-        { "q": "What makes CRETECH different?", "a": "You speak directly with the people working on your project. We do not use fixed packages; we suggest what fits your purpose and budget, and we agree on the work, price and payment details before starting." },
-        { "q": "Can I discuss an idea that is not fully planned yet?", "a": "Yes. Many projects start as a rough idea. We can help you think through the requirements and suggest a practical way to begin." },
-        { "q": "Do you only take large projects?", "a": "No. We work on small and large projects alike, from a single portfolio page to a complete business platform." },
-        { "q": "How do I get started with CRETECH?", "a": "Contact us through the enquiry form, email or phone and share your requirements. We will get back to you to discuss the next steps." }
-      ]
-    },
-    "cta": {
-      "title": "Have an Idea? Let’s Make It",
-      "script": "Happen.",
-      "text": "Whether you are planning a new project, building your business online or looking for the right digital support, CRETECH is here to discuss your requirements.",
-      "buttons": [
-        { "label": "Start Your Project", "href": "contact" },
-        { "label": "Contact Us", "href": "contact" }
-      ]
     }
   },
 
