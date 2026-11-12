@@ -1233,10 +1233,15 @@
 
 /* 01 banner: the picture on the right is the section background; header sits on top */
 .svp-banner {
+  position: relative; isolation: isolate;
   padding-top: calc(clamp(64px, 5.3vw, 94px) + 4px);
-  background: #fbe3d4 var(--svp-banner) center bottom / 100% auto no-repeat;
+  background: #fbe3d4;
   min-height: calc(clamp(64px, 5.3vw, 94px) + 4px + 100vw * 260 / 1024);
 }
+/* real <img> (replaceable from the admin): fills the area under the header, subject on the right */
+.svp-banner-img { position: absolute; z-index: -2; left: 0; right: 0; bottom: 0; top: calc(clamp(64px, 5.3vw, 94px) + 4px); width: 100%; height: calc(100% - clamp(64px, 5.3vw, 94px) - 4px); object-fit: cover; object-position: right center; }
+/* peach fade on the left keeps the heading readable on any uploaded picture */
+.svp-banner::after { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(251, 227, 212, .9) 0%, rgba(251, 227, 212, .6) 32%, rgba(251, 227, 212, 0) 48%); }
 .svp-banner-in { padding: calc(24 * var(--u)) 0 calc(26 * var(--u)) calc(72 * var(--u)); }
 .svp-eyebrow { display: flex; align-items: center; gap: calc(7 * var(--u)); font: 800 max(calc(11.5 * var(--u)), 12px)/1 var(--font-body); letter-spacing: .02em; text-transform: uppercase; color: var(--svp-o); }
 .svp-eyebrow::before { content: ""; width: calc(18 * var(--u)); height: 2px; background: var(--svp-o); }
@@ -1254,10 +1259,12 @@
   position: relative; display: block; isolation: isolate; overflow: hidden;
   width: calc((100% - 40 * var(--u)) / 3); height: calc(222 * var(--u));
   border-radius: calc(12 * var(--u)); border: 1.5px solid rgba(255, 255, 255, .8);
-  background: color-mix(in srgb, var(--tone) 30%, #fbe3d4) var(--svp-img) center top / cover no-repeat;
+  background: color-mix(in srgb, var(--tone) 30%, #fbe3d4);
   box-shadow: 0 calc(10 * var(--u)) calc(24 * var(--u)) rgba(176, 92, 40, .2), 0 0 0 1px rgba(255, 255, 255, .25), inset 0 1px 0 rgba(255, 255, 255, .7);
   color: #fff; transition: transform .25s, box-shadow .25s;
 }
+/* real <img> (replaceable from the admin) under the glass layers */
+.svp-img { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .svp-grid.last-2 .svp-card:nth-last-child(-n+2) { width: calc(391 * var(--u)); }
 .svp-grid.last-1 .svp-card:last-child { width: calc(391 * var(--u)); }
 /* glossy glass: top sheen, soft tone wash at the bottom, thin inner edge */
@@ -1320,7 +1327,8 @@ a.svp-card:hover { transform: translateY(-4px); box-shadow: 0 calc(16 * var(--u)
 @media (max-width: 980px) {
   .services-page { --u: 1px; }
   .svp-wrap { width: auto; padding: 0 5%; }
-  .svp-banner { background-size: auto 100%; background-position: 80% bottom; min-height: 0; }
+  .svp-banner { min-height: 0; }
+  .svp-banner-img { object-position: 80% bottom; }
   .svp-banner-in.svp-wrap { padding: 34px 6% 40px; background: linear-gradient(90deg, rgba(251, 227, 212, .96) 55%, rgba(251, 227, 212, .6)); }
   .svp-banner h1 { font-size: clamp(30px, 6vw, 40px); }
   .svp-banner-text { max-width: 440px; }

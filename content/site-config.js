@@ -628,7 +628,7 @@ window.SITE_CONFIG = {
   },
 
   "servicesPage": {
-    "_note": "Services page. Each card: icon (code, phone, layers, search, ads, megaphone, document, image, gear, server, gauge, shield, window, nodes), tone (orange, purple, blue, green, amber, pink, teal) and an optional href. Leave href empty when no detail page exists.",
+    "_note": "Services page. Each card: icon (code, phone, layers, search, ads, megaphone, document, image, gear, server, gauge, shield, window, nodes), tone (orange, purple, blue, green, amber, pink, teal) and an optional href. Leave href empty when no detail page exists. Banner and card pictures are real images (replaceable from the admin): banner about 2048x520 with the subject on the right, cards about 900x700.",
     "banner": {
       "eyebrow": "Our Services",
       "title": "Complete Technical and\nDigital Solutions\nfor Your *Business*",

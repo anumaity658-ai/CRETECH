@@ -677,7 +677,9 @@
     var lastRow = cards.length % 3 === 0 ? 0 : cards.length % 3; // the short last row gets wider cards, centred
 
     var title = rich(b.title).replace(/<em>(.*?)<\/em>/, '<em><span>$1</span><svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9C60 3 140 2 197 6" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg></em>');
-    var banner = '<section class="svp-banner" style="--svp-banner:' + cssUrl(b.image) + '"><div class="svp-wrap svp-banner-in">' +
+    var banner = '<section class="svp-banner">' +
+      (b.image ? '<img class="svp-banner-img" src="' + esc(image(b.image, 2000)) + '" alt="' + esc(b.imageAlt || "") + '" decoding="async" fetchpriority="high">' : "") +
+      '<div class="svp-wrap svp-banner-in">' +
       '<p class="svp-eyebrow">' + esc(b.eyebrow) + "</p><h1>" + title + "</h1>" +
       (b.text ? '<p class="svp-banner-text">' + esc(b.text) + "</p>" : "") +
       '<div class="svp-btns">' +
@@ -688,7 +690,8 @@
     var grid = '<section class="svp-grid-sec" id="all-services"><div class="svp-wrap"><div class="svp-grid' + (lastRow ? " last-" + lastRow : "") + '">' + cards.map(function (s, i) {
       var tone = tones.indexOf(s.tone) !== -1 ? s.tone : "orange";
       var tag = s.href ? "a" : "div";
-      return "<" + tag + ' class="svp-card t-' + tone + '"' + (s.href ? ' href="' + link(s.href) + '"' : "") + ' style="--svp-img:' + cssUrl(s.image) + '">' +
+      return "<" + tag + ' class="svp-card t-' + tone + '"' + (s.href ? ' href="' + link(s.href) + '"' : "") + ">" +
+        (s.image ? '<img class="svp-img" src="' + esc(image(s.image, 900)) + '" alt="' + esc(s.imageAlt || String(s.title || "").replace(/\n/g, " ")) + '" loading="lazy" decoding="async">' : "") +
         '<div class="svp-body">' + svcIcon(s.icon) +
         '<span class="svp-num">' + String(i + 1).padStart(2, "0") + "</span>" +
         "<h2>" + rich(s.title) + "</h2><p>" + esc(s.text) + "</p></div>" +
