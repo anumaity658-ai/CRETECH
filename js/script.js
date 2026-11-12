@@ -47,10 +47,7 @@
   };
 
   pages.services = function () {
-    return C.subHero(data.servicesPage.hero) +
-      '<section class="section services-section"><div class="service-grid wide">' +
-      (data.services || []).map(function (s) { return C.serviceCard(s, true); }).join("") +
-      "</div></section>" + C.cta(data);
+    return C.servicesPage(data.servicesPage);
   };
 
   pages["service-detail"] = function () {
