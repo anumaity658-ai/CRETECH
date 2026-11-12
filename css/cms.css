@@ -1252,7 +1252,20 @@
 .svp-banner .svp-btns { margin-top: calc(16 * var(--u)); }
 
 /* 02 the 14 cards: 3 per row, a short last row is wider and centred */
-.svp-grid-sec { padding: calc(8 * var(--u)) 0 calc(26 * var(--u)); }
+.svp-grid-sec { position: relative; isolation: isolate; padding: calc(30 * var(--u)) 0 calc(40 * var(--u)); }
+/* aurora background behind the cards: soft colour clouds + a glossy diagonal shine */
+.svp-grid-sec::before, .svp-grid-sec::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.svp-grid-sec::before {
+  background:
+    radial-gradient(35% 28% at 12% 18%, rgba(255, 138, 76, .55), transparent 70%),
+    radial-gradient(32% 26% at 88% 22%, rgba(168, 120, 255, .45), transparent 70%),
+    radial-gradient(34% 26% at 22% 62%, rgba(64, 200, 190, .38), transparent 70%),
+    radial-gradient(34% 28% at 82% 66%, rgba(255, 96, 140, .4), transparent 70%),
+    radial-gradient(40% 24% at 50% 96%, rgba(255, 180, 60, .45), transparent 70%),
+    linear-gradient(180deg, #fde7da, #fbe1ea 50%, #fde6d6);
+  filter: saturate(1.1);
+}
+.svp-grid-sec::after { background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, .45) 45%, transparent 58%); mix-blend-mode: soft-light; }
 .svp-grid-sec .svp-wrap { width: auto; max-width: 1600px; padding: 0 5vw; } /* cards spread wider: 5% side space (capped on very wide screens) */
 .svp-grid { --cw: calc((100% - 60 * var(--u)) / 3); display: flex; flex-wrap: wrap; justify-content: center; gap: calc(27 * var(--u)) calc(30 * var(--u)); }
 .svp-card {
