@@ -24,8 +24,7 @@ window.SITE_CONFIG = {
     { "label": "Home", "href": "", "page": "home" },
     { "label": "About", "href": "about", "page": "about" },
     { "label": "Services", "href": "services", "page": "services", "dropdown": "services" },
-    { "label": "Work", "href": "services", "page": "work" },
-    { "label": "Process", "href": "process", "page": "process" },
+    { "label": "Work Process", "href": "process", "page": "process" },
     { "label": "Contact", "href": "contact", "page": "contact" }
   ],
   "headerCta": { "label": "Let’s Talk", "href": "contact" },
