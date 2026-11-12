@@ -565,22 +565,22 @@ window.SITE_CONFIG = {
     "hero": {
       "eyebrow": "Our Process",
       "title": "Our Project *Journey*",
-      "subtitle": "A Clear Process for Every Project",
-      "text": "Every project has its own requirements, details and expectations. We keep each stage organised so that the work moves in the right direction and you stay informed about its progress.",
+      "subtitle": "A Clear Process for Every Project.",
+      "text": "From understanding your idea to final delivery, we follow a simple, transparent and collaborative process that keeps you involved at every step and ensures a high-quality result.",
       "image": "assets/images/process-page/process-hero.jpg"
     },
     "stages": [
-      { "title": "Getting Started", "text": "Once you contact us, we begin with a discussion about your project. You can share your ideas, available details and any specific requirements you have in mind.", "tone": "orange", "image": "assets/images/process-page/process-01.jpg" },
-      { "title": "Project Planning", "text": "After the initial discussion, we organise the project details and prepare a clear plan. The required work, important features and expected outcomes are considered before moving forward.", "tone": "pink", "image": "assets/images/process-page/process-02.jpg" },
-      { "title": "Work & Cost Agreement", "text": "We share the estimated cost, payment terms and expected timeline based on the project requirements. Work begins once the details are discussed and confirmed.", "tone": "mauve", "image": "assets/images/process-page/process-03.jpg" },
-      { "title": "Project Development", "text": "The agreed work moves into its actual development stage. Our team works on the project while keeping the project requirements and planned details in focus.", "tone": "blue", "image": "assets/images/process-page/process-04.jpg" },
-      { "title": "Progress & Coordination", "text": "You can stay connected with our team during the project. We share relevant updates, discuss important points and take your feedback at suitable stages.", "tone": "coral", "image": "assets/images/process-page/process-05.jpg" },
-      { "title": "Review & Improvements", "text": "The completed work is checked against the agreed requirements. We discuss feedback and make the agreed changes before preparing the final version.", "tone": "rose", "image": "assets/images/process-page/process-06.jpg" },
-      { "title": "Project Completion", "text": "After the final review, we provide the completed work along with the agreed files, details and access. The project is handed over according to the terms discussed earlier.", "tone": "brown", "image": "assets/images/process-page/process-07.jpg" }
+      { "title": "Getting Started", "text": "We connect with you to understand your idea, goals and requirements.", "tone": "orange", "image": "assets/images/process-page/process-01.jpg" },
+      { "title": "Planning & Strategy", "text": "We analyse your needs, suggest the right approach and finalise the project plan with clear timelines.", "tone": "pink", "image": "assets/images/process-page/process-02.jpg" },
+      { "title": "Design & Prototype", "text": "We create the design, layout and prototype to give you a clear vision of the final solution.", "tone": "mauve", "image": "assets/images/process-page/process-03.jpg" },
+      { "title": "Development", "text": "We build your solution with clean, secure and performance-focused development.", "tone": "blue", "image": "assets/images/process-page/process-04.jpg" },
+      { "title": "Testing & Review", "text": "We thoroughly test the project, fix any issues and share it with you for review and feedback.", "tone": "coral", "image": "assets/images/process-page/process-05.jpg" },
+      { "title": "Finalization & Launch", "text": "We make the final updates, set everything live and ensure a smooth and successful launch.", "tone": "rose", "image": "assets/images/process-page/process-06.jpg" },
+      { "title": "Project Completion", "text": "We deliver the final project, share all the essentials and stay connected for future support.", "tone": "brown", "image": "assets/images/process-page/process-07.jpg" }
     ],
     "clear": {
       "title": "Keeping Every *Stage Clear*",
-      "text": "We believe a good project experience depends on clear discussions, proper planning and regular communication. Our focus stays on keeping the work organised and making each stage easy for clients to follow.",
+      "text": "Our process is built on transparency, collaboration and quality, so you always know what’s happening and what comes next.",
       "points": [
         { "title": "Transparent Process", "text": "Clear updates at every stage." },
         { "title": "Collaborative Approach", "text": "Your input matters throughout the journey." },
@@ -601,7 +601,7 @@ window.SITE_CONFIG = {
     },
     "cta": {
       "title": "Have a Project in Mind?",
-      "text": "Share your requirements with CRETECH and start a discussion with our team. We will review your project details and help you take the next step.",
+      "text": "Let’s turn your idea into a real and impactful digital solution.",
       "button": { "label": "Let’s Discuss Your Project", "href": "contact" }
     }
   },
