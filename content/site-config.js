@@ -628,7 +628,7 @@ window.SITE_CONFIG = {
   },
 
   "servicesPage": {
-    "_note": "Services page. Each card: icon (code, phone, layers, search, ads, megaphone, document, image, gear, server, gauge, shield, window, nodes), tone (orange, purple, blue, green, amber, pink, teal) and an optional href. Leave href empty when no detail page exists. Banner and card pictures are real images (replaceable from the admin): banner about 2048x520 with the subject on the right, cards about 900x700.",
+    "_note": "Services page. Each card: tone (orange, purple, blue, green, amber, pink, teal) and an optional href. Leave href empty when no detail page exists. Banner and card pictures are real images (replaceable from the admin): banner about 2048x520 with the subject on the right, cards about 900x700.",
     "banner": {
       "eyebrow": "Our Services",
       "title": "Complete Technical and\nDigital Solutions\nfor Your *Business*",
@@ -638,20 +638,20 @@ window.SITE_CONFIG = {
       "secondary": { "label": "Get a Free Consultation", "href": "contact" }
     },
     "cards": [
-      { "title": "Website Development", "text": "Build responsive, modern and business-focused websites that create a strong online presence.", "icon": "code", "tone": "orange", "image": "assets/images/services-page/svc-01.jpg", "href": "services/website-development" },
-      { "title": "App Development", "text": "Develop custom, user-friendly mobile applications for your business needs.", "icon": "phone", "tone": "purple", "image": "assets/images/services-page/svc-02.jpg", "href": "services/app-development" },
-      { "title": "UI/UX Design", "text": "Create clean, intuitive and engaging designs for a better user experience.", "icon": "layers", "tone": "blue", "image": "assets/images/services-page/svc-03.jpg", "href": "services/ui-ux-design" },
-      { "title": "SEO Services", "text": "Improve visibility, rank higher and get quality traffic to your website.", "icon": "search", "tone": "green", "image": "assets/images/services-page/svc-04.jpg", "href": "services/seo-services" },
-      { "title": "Google Ads Services", "text": "Run targeted ad campaigns to reach the right audience and get better results.", "icon": "ads", "tone": "amber", "image": "assets/images/services-page/svc-05.jpg", "href": "services/google-ads-services" },
-      { "title": "Social Media Marketing", "text": "Build brand presence, engage your audience and grow across social media platforms.", "icon": "megaphone", "tone": "pink", "image": "assets/images/services-page/svc-06.jpg", "href": "services/social-media-marketing" },
-      { "title": "Content Writing", "text": "Create clear, relevant and SEO-friendly content that informs, engages and builds trust with your audience.", "icon": "document", "tone": "purple", "image": "assets/images/services-page/svc-07.jpg", "href": "services/content-writing" },
-      { "title": "Graphic Design &\nCreative Content", "text": "Design impactful visuals, creatives and brand assets that communicate your message effectively.", "icon": "image", "tone": "teal", "image": "assets/images/services-page/svc-08.jpg", "href": "services/graphic-design-creative-content" },
-      { "title": "Website Maintenance &\nSupport", "text": "Keep your website updated, secure and running smoothly with reliable technical support.", "icon": "gear", "tone": "orange", "image": "assets/images/services-page/svc-09.jpg", "href": "" },
-      { "title": "Domain & Hosting Setup", "text": "Get your domain, hosting and complete setup done hassle-free.", "icon": "server", "tone": "purple", "image": "assets/images/services-page/svc-10.jpg", "href": "" },
-      { "title": "Website Speed Optimization", "text": "Improve your website’s loading speed and overall performance.", "icon": "gauge", "tone": "orange", "image": "assets/images/services-page/svc-11.jpg", "href": "" },
-      { "title": "Website Security & Backup", "text": "Protect your website with strong security measures and reliable backup solutions.", "icon": "shield", "tone": "green", "image": "assets/images/services-page/svc-12.jpg", "href": "" },
-      { "title": "Landing Page Development", "text": "Create high-converting landing pages for campaigns, products and lead generation.", "icon": "window", "tone": "orange", "image": "assets/images/services-page/svc-13.jpg", "href": "" },
-      { "title": "Business Automation &\nIntegration", "text": "Automate your processes and integrate the right tools to save time and improve efficiency.", "icon": "nodes", "tone": "purple", "image": "assets/images/services-page/svc-14.jpg", "href": "" }
+      { "title": "Website Development", "text": "Build responsive, modern and business-focused websites that create a strong online presence.", "tone": "orange", "image": "assets/images/services-page/svc-01.jpg", "href": "services/website-development" },
+      { "title": "App Development", "text": "Develop custom, user-friendly mobile applications for your business needs.", "tone": "purple", "image": "assets/images/services-page/svc-02.jpg", "href": "services/app-development" },
+      { "title": "UI/UX Design", "text": "Create clean, intuitive and engaging designs for a better user experience.", "tone": "blue", "image": "assets/images/services-page/svc-03.jpg", "href": "services/ui-ux-design" },
+      { "title": "SEO Services", "text": "Improve visibility, rank higher and get quality traffic to your website.", "tone": "green", "image": "assets/images/services-page/svc-04.jpg", "href": "services/seo-services" },
+      { "title": "Google Ads Services", "text": "Run targeted ad campaigns to reach the right audience and get better results.", "tone": "amber", "image": "assets/images/services-page/svc-05.jpg", "href": "services/google-ads-services" },
+      { "title": "Social Media Marketing", "text": "Build brand presence, engage your audience and grow across social media platforms.", "tone": "pink", "image": "assets/images/services-page/svc-06.jpg", "href": "services/social-media-marketing" },
+      { "title": "Content Writing", "text": "Create clear, relevant and SEO-friendly content that informs, engages and builds trust with your audience.", "tone": "purple", "image": "assets/images/services-page/svc-07.jpg", "href": "services/content-writing" },
+      { "title": "Graphic Design &\nCreative Content", "text": "Design impactful visuals, creatives and brand assets that communicate your message effectively.", "tone": "teal", "image": "assets/images/services-page/svc-08.jpg", "href": "services/graphic-design-creative-content" },
+      { "title": "Website Maintenance &\nSupport", "text": "Keep your website updated, secure and running smoothly with reliable technical support.", "tone": "orange", "image": "assets/images/services-page/svc-09.jpg", "href": "" },
+      { "title": "Domain & Hosting Setup", "text": "Get your domain, hosting and complete setup done hassle-free.", "tone": "purple", "image": "assets/images/services-page/svc-10.jpg", "href": "" },
+      { "title": "Website Speed Optimization", "text": "Improve your website’s loading speed and overall performance.", "tone": "orange", "image": "assets/images/services-page/svc-11.jpg", "href": "" },
+      { "title": "Website Security & Backup", "text": "Protect your website with strong security measures and reliable backup solutions.", "tone": "green", "image": "assets/images/services-page/svc-12.jpg", "href": "" },
+      { "title": "Landing Page Development", "text": "Create high-converting landing pages for campaigns, products and lead generation.", "tone": "orange", "image": "assets/images/services-page/svc-13.jpg", "href": "" },
+      { "title": "Business Automation &\nIntegration", "text": "Automate your processes and integrate the right tools to save time and improve efficiency.", "tone": "purple", "image": "assets/images/services-page/svc-14.jpg", "href": "" }
     ],
     "cta": {
       "title": "Have an Idea?",

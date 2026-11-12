@@ -648,27 +648,7 @@
   }
 
   /* ---------- Services page (from the 1024 px reference) ---------- */
-  var SVC_ICONS = {
-    code: '<path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/>',
-    phone: '<rect x="6.5" y="2.5" width="11" height="19" rx="2.2"/><path d="M10.5 18.5h3"/>',
-    layers: '<path d="m12 3 9 4.5-9 4.5-9-4.5Z"/><path d="m3 12 9 4.5 9-4.5M3 16.5 12 21l9-4.5"/>',
-    search: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/>',
-    ads: '<path d="M9.5 4.5 3.6 15a3 3 0 0 0 5.2 3l5.9-10.4"/><path d="m14.5 4.5 5.9 10.5a3 3 0 0 1-5.2 3L9.3 7.6a2.2 2.2 0 0 1 5.2-3.1Z"/>',
-    megaphone: '<path d="M3.5 10v4a1 1 0 0 0 1 1H7l7 4.5v-15L7 9H4.5a1 1 0 0 0-1 1Z"/><path d="M7.5 15.2 9 21h2.5M17.5 9.5a3.5 3.5 0 0 1 0 5M19.5 7a7 7 0 0 1 0 10"/>',
-    document: '<path d="M6 2.5h8.5L19 7v14.5H6Z"/><path d="M14 2.5V7.5h5M9 11.5h7M9 14.5h7M9 17.5h5"/>',
-    image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.8"/><path d="m3.5 18 5.5-5.5 4 4 3-3 4.5 4.5"/>',
-    gear: '<circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v2.6M12 18.9v2.6M21.5 12h-2.6M5.1 12H2.5M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9M18.7 18.7l-1.9-1.9M7.2 7.2 5.3 5.3"/><circle cx="12" cy="12" r="6.6"/>',
-    server: '<rect x="3.5" y="3.5" width="17" height="5" rx="2.5"/><rect x="3.5" y="9.5" width="17" height="5" rx="2.5"/><rect x="3.5" y="15.5" width="17" height="5" rx="2.5"/>',
-    gauge: '<path d="M3.5 17a8.5 8.5 0 1 1 17 0"/><path d="m12 15 4-5.5M6 15h1.5M16.5 15H18M7.5 9.5l1 1M12 6.5V8"/><circle cx="12" cy="15.5" r="1.4"/>',
-    shield: '<path d="M12 2.5 4.5 5.5v6c0 4.6 3.2 8.6 7.5 10 4.3-1.4 7.5-5.4 7.5-10v-6Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/>',
-    window: '<rect x="3" y="3.5" width="18" height="17" rx="2"/><path d="M3 8.5h18M7.5 12.5h4M7.5 16h9"/>',
-    nodes: '<circle cx="5.5" cy="5.5" r="2.5"/><circle cx="18.5" cy="5.5" r="2.5"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/><path d="M7.5 7.5l3.2 3.2M16.5 7.5l-3.2 3.2M7.5 16.5l3.2-3.2M16.5 16.5l-3.2-3.2"/>'
-  };
   var SVC_ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6.5 18.5 12 13 17.5"/></svg>';
-
-  function svcIcon(name) {
-    return '<span class="svp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + (SVC_ICONS[name] || "") + "</svg></span>";
-  }
 
   function servicesPage(sp) {
     sp = sp || {};
@@ -692,7 +672,7 @@
       var tag = s.href ? "a" : "div";
       return "<" + tag + ' class="svp-card t-' + tone + '"' + (s.href ? ' href="' + link(s.href) + '"' : "") + ">" +
         (s.image ? '<img class="svp-img" src="' + esc(image(s.image, 900)) + '" alt="' + esc(s.imageAlt || String(s.title || "").replace(/\n/g, " ")) + '" loading="lazy" decoding="async">' : "") +
-        '<div class="svp-body">' + svcIcon(s.icon) +
+        '<div class="svp-body">' +
         '<span class="svp-num">' + String(i + 1).padStart(2, "0") + "</span>" +
         "<h2>" + rich(s.title) + "</h2><p>" + esc(s.text) + "</p></div>" +
         '<span class="svp-go" aria-hidden="true">' + SVC_ARROW + "</span></" + tag + ">";
