@@ -1397,21 +1397,31 @@ a.svp-card:hover { transform: translateY(-4px); box-shadow: 0 calc(16 * var(--u)
 .pp-card {
   --tone: #ff8a3d; --tone2: #e8611c;
   position: relative; display: block; isolation: isolate; overflow: hidden; flex-shrink: 0;
-  width: calc(224 * var(--u)); height: calc(292 * var(--u));
-  border-radius: calc(14 * var(--u)); border: 1.5px solid rgba(255, 255, 255, .85);
+  width: calc(224 * var(--u)); height: calc(258 * var(--u));
+  border-radius: calc(15 * var(--u)); border: 1.5px solid rgba(255, 255, 255, .9);
   background: color-mix(in srgb, var(--tone) 35%, #fbe3d4);
-  box-shadow: 0 calc(10 * var(--u)) calc(24 * var(--u)) rgba(176, 92, 40, .2), 0 0 0 1px rgba(255, 190, 150, .45), inset 0 1px 0 rgba(255, 255, 255, .7);
+  box-shadow: 0 calc(12 * var(--u)) calc(26 * var(--u)) rgba(170, 90, 40, .24), 0 0 0 2px rgba(255, 255, 255, .35), 0 0 0 3px rgba(255, 178, 128, .4), 0 0 calc(16 * var(--u)) rgba(255, 150, 90, .3);
   color: #fff; transition: transform .25s, box-shadow .25s;
 }
-.pp-row-2 .pp-card { width: calc(268 * var(--u)); height: calc(272 * var(--u)); }
+.pp-row-2 .pp-card { width: calc(268 * var(--u)); height: calc(248 * var(--u)); }
 .pp-card-img { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+/* frosted milky glass over the lower part of the photo (real blur of the picture behind it) */
 .pp-card::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background:
-    linear-gradient(155deg, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, .05) 30%, transparent 46%),
-    linear-gradient(0deg, color-mix(in srgb, var(--tone2) 42%, rgba(40, 16, 20, .32)) 0%, color-mix(in srgb, var(--tone2) 26%, rgba(40, 16, 20, .14)) 48%, transparent 78%);
+  -webkit-backdrop-filter: blur(6px) saturate(120%); backdrop-filter: blur(6px) saturate(120%);
+  background: linear-gradient(0deg, color-mix(in srgb, var(--tone) 42%, rgba(120, 50, 32, .2)) 0%, color-mix(in srgb, var(--tone) 30%, rgba(255, 236, 226, .32)) 55%, rgba(255, 240, 232, .22) 100%);
+  -webkit-mask-image: linear-gradient(0deg, #000 46%, transparent 74%); mask-image: linear-gradient(0deg, #000 46%, transparent 74%);
 }
-.pp-card::after { content: ""; position: absolute; inset: calc(4 * var(--u)); border-radius: calc(11 * var(--u)); border: 1px solid rgba(255, 255, 255, .3); pointer-events: none; }
+/* 3D glass slab: photo runs to the edge; thin glowing inner edge, top gloss, warm glow along the bottom */
+.pp-card::after {
+  content: ""; position: absolute; inset: calc(5 * var(--u)); border-radius: calc(11 * var(--u)); pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, .55);
+  background: linear-gradient(155deg, rgba(255, 255, 255, .24) 0%, rgba(255, 255, 255, .05) 28%, transparent 44%);
+  box-shadow:
+    0 0 calc(6 * var(--u)) rgba(255, 255, 255, .35),
+    inset 0 0 calc(8 * var(--u)) rgba(255, 255, 255, .2),
+    inset 0 calc(-14 * var(--u)) calc(22 * var(--u)) calc(-8 * var(--u)) rgba(255, 140, 60, .55);
+}
 a.pp-card:hover { transform: translateY(-4px); }
 .pp-card.t-pink { --tone: #f27a9a; --tone2: #d9506f; }
 .pp-card.t-mauve { --tone: #c97f9c; --tone2: #9c5a78; }
@@ -1419,15 +1429,15 @@ a.pp-card:hover { transform: translateY(-4px); }
 .pp-card.t-coral { --tone: #f28c6c; --tone2: #d8603f; }
 .pp-card.t-rose { --tone: #ea7080; --tone2: #c54a5a; }
 .pp-card.t-brown { --tone: #bf8462; --tone2: #7d4f38; }
-.pp-card-body { position: absolute; left: calc(18 * var(--u)); right: calc(16 * var(--u)); bottom: calc(14 * var(--u)); text-shadow: 0 1px 3px rgba(0, 0, 0, .3); }
-.pp-num { display: block; font: 800 max(calc(22 * var(--u)), 20px)/1 var(--font-head); }
-.pp-card h2 { margin-top: calc(5 * var(--u)); font: 800 max(calc(18.5 * var(--u)), 17px)/1.1 var(--font-head); letter-spacing: -.015em; color: #fff; }
-.pp-card p { margin-top: calc(6 * var(--u)); padding-right: calc(30 * var(--u)); font: 500 max(calc(11.4 * var(--u)), 13px)/1.35 var(--font-body); color: rgba(255, 255, 255, .96); }
+.pp-card-body { position: absolute; left: calc(19 * var(--u)); right: calc(16 * var(--u)); bottom: calc(14 * var(--u)); text-shadow: 0 1px 3px rgba(0, 0, 0, .3); }
+.pp-num { display: block; font: 800 max(calc(20 * var(--u)), 19px)/1 var(--font-head); }
+.pp-card h2 { margin-top: calc(5 * var(--u)); font: 700 max(calc(17.5 * var(--u)), 16px)/1.1 var(--font-head); letter-spacing: -.015em; color: #fff; }
+.pp-card p { margin-top: calc(6 * var(--u)); padding-right: calc(26 * var(--u)); font: 400 max(calc(11.2 * var(--u)), 12.5px)/1.33 var(--font-body); color: rgba(255, 255, 255, .96); }
 .pp-go {
   position: absolute; right: calc(12 * var(--u)); bottom: calc(13 * var(--u));
-  display: grid; place-items: center; width: calc(26 * var(--u)); height: calc(26 * var(--u)); min-width: 26px; min-height: 26px;
-  border-radius: 50%; background: linear-gradient(160deg, #ff9a4a, #f0601a); border: 1.5px solid rgba(255, 255, 255, .85); color: #fff;
-  box-shadow: 0 3px 10px rgba(240, 96, 26, .35);
+  display: grid; place-items: center; width: calc(29 * var(--u)); height: calc(29 * var(--u)); min-width: 28px; min-height: 28px;
+  border-radius: 50%; background: radial-gradient(circle at 35% 30%, #ffb06a, #f0601a 72%); border: 2px solid rgba(255, 255, 255, .9); color: #fff;
+  box-shadow: 0 3px 10px rgba(240, 96, 26, .45), inset 0 1px 1px rgba(255, 255, 255, .6);
 }
 .pp-go svg { width: 55%; height: 55%; }
 .pp-path { position: relative; z-index: 2; display: block; width: calc(1024 * var(--u)); height: calc(75 * var(--u)); margin: calc(-5 * var(--u)) 0; overflow: visible; }
