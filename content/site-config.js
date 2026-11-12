@@ -561,6 +561,52 @@ window.SITE_CONFIG = {
     ]
   },
 
+  "processPage": {
+    "_note": "Process page. Pictures are real images (replaceable from the admin). *word* = orange. Stages: tone (orange, pink, mauve, blue, coral, rose, brown) and an optional href.",
+    "hero": {
+      "eyebrow": "Our Process",
+      "title": "Our Project *Journey*",
+      "subtitle": "A Clear Process for Every Project",
+      "text": "Every project has its own requirements, details and expectations. We keep each stage organised so that the work moves in the right direction and you stay informed about its progress.",
+      "image": "assets/images/process-page/process-hero.jpg"
+    },
+    "stages": [
+      { "title": "Getting Started", "text": "Once you contact us, we begin with a discussion about your project. You can share your ideas, available details and any specific requirements you have in mind.", "tone": "orange", "image": "assets/images/process-page/process-01.jpg" },
+      { "title": "Project Planning", "text": "After the initial discussion, we organise the project details and prepare a clear plan. The required work, important features and expected outcomes are considered before moving forward.", "tone": "pink", "image": "assets/images/process-page/process-02.jpg" },
+      { "title": "Work & Cost Agreement", "text": "We share the estimated cost, payment terms and expected timeline based on the project requirements. Work begins once the details are discussed and confirmed.", "tone": "mauve", "image": "assets/images/process-page/process-03.jpg" },
+      { "title": "Project Development", "text": "The agreed work moves into its actual development stage. Our team works on the project while keeping the project requirements and planned details in focus.", "tone": "blue", "image": "assets/images/process-page/process-04.jpg" },
+      { "title": "Progress & Coordination", "text": "You can stay connected with our team during the project. We share relevant updates, discuss important points and take your feedback at suitable stages.", "tone": "coral", "image": "assets/images/process-page/process-05.jpg" },
+      { "title": "Review & Improvements", "text": "The completed work is checked against the agreed requirements. We discuss feedback and make the agreed changes before preparing the final version.", "tone": "rose", "image": "assets/images/process-page/process-06.jpg" },
+      { "title": "Project Completion", "text": "After the final review, we provide the completed work along with the agreed files, details and access. The project is handed over according to the terms discussed earlier.", "tone": "brown", "image": "assets/images/process-page/process-07.jpg" }
+    ],
+    "clear": {
+      "title": "Keeping Every *Stage Clear*",
+      "text": "We believe a good project experience depends on clear discussions, proper planning and regular communication. Our focus stays on keeping the work organised and making each stage easy for clients to follow.",
+      "points": [
+        { "title": "Transparent Process", "text": "Clear updates at every stage." },
+        { "title": "Collaborative Approach", "text": "Your input matters throughout the journey." },
+        { "title": "Quality Assurance", "text": "Thorough testing for a reliable, high-quality result." }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQs",
+      "title": "Frequently Asked *Questions*",
+      "image": "assets/images/process-page/process-faq.jpg",
+      "items": [
+        { "q": "Can I discuss my project before confirming it?", "a": "Yes. You can contact us and discuss your requirements before making a decision." },
+        { "q": "Will I receive updates during the project?", "a": "Yes. We keep you informed about important progress and discuss relevant project details along the way." },
+        { "q": "Can I request changes after reviewing the work?", "a": "Yes. Agreed changes can be discussed and handled according to the project scope." },
+        { "q": "When do you confirm the project cost?", "a": "The estimated cost and payment terms are discussed before the work begins." },
+        { "q": "What happens after the project is completed?", "a": "We provide the agreed final work, files and access as part of the project handover." }
+      ]
+    },
+    "cta": {
+      "title": "Have a Project in Mind?",
+      "text": "Share your requirements with CRETECH and start a discussion with our team. We will review your project details and help you take the next step.",
+      "button": { "label": "Let’s Discuss Your Project", "href": "contact" }
+    }
+  },
+
   "about": {
     "_note": "About page, section by section in page order. Icons: team, sprout, chart, bulb, target, laptop, handplant, trust, responsibility, creativity, quality. \\n = line break on desktop, *word* = orange.",
     "banner": {

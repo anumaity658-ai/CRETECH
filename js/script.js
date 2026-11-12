@@ -74,12 +74,7 @@
     return C.aboutPage(a);
   };
   pages.process = function () {
-    var p = data.process;
-    return C.subHero(p.hero) +
-      '<section class="content-page"><div class="plain-grid">' + p.steps.map(function (s, i) {
-        return '<article class="plain-card step-card"><span class="step-number">' + String(i + 1).padStart(2, "0") + "</span>" +
-          "<h3>" + esc(s.title) + "</h3><p>" + esc(s.text) + "</p></article>";
-      }).join("") + "</div></section>" + C.cta(data);
+    return C.processPage(data.processPage);
   };
 
   pages.contact = function () {

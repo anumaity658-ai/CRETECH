@@ -691,6 +691,65 @@
     return '<div class="services-page">' + banner + grid + ctaHtml + "</div>";
   }
 
+  /* ---------- Process page (from the 1024 px reference) ---------- */
+  function processPage(pp) {
+    pp = pp || {};
+    var h = pp.hero || {}, stages = pp.stages || [], cl = pp.clear || {}, fq = pp.faq || {}, c = pp.cta || {};
+    var tones = ["orange", "pink", "mauve", "blue", "coral", "rose", "brown"];
+    function img(src, cls, alt, eager) {
+      return src ? '<img class="' + cls + '" src="' + esc(image(src, 1400)) + '" alt="' + esc(alt || "") + '"' + (eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">' : "";
+    }
+
+    var hero = '<section class="pp-hero">' + img(h.image, "pp-hero-img", "", true) +
+      '<div class="pp-wrap pp-hero-in"><p class="pp-eyebrow">' + esc(h.eyebrow) + "</p>" +
+      "<h1>" + rich(h.title) + "</h1>" +
+      (h.subtitle ? '<p class="pp-sub">' + esc(h.subtitle) + "</p>" : "") +
+      (h.text ? '<p class="pp-hero-text">' + esc(h.text) + "</p>" : "") + "</div></section>";
+
+    function stage(s, i) {
+      var tone = tones.indexOf(s.tone) !== -1 ? s.tone : "orange";
+      var tag = s.href ? "a" : "div";
+      return "<" + tag + ' class="pp-card t-' + tone + '"' + (s.href ? ' href="' + link(s.href) + '"' : "") + ">" +
+        img(s.image, "pp-card-img", s.title) +
+        '<div class="pp-card-body"><span class="pp-num">' + String(i + 1).padStart(2, "0") + ".</span>" +
+        "<h2>" + esc(s.title) + "</h2><p>" + esc(s.text) + "</p></div>" +
+        '<span class="pp-go" aria-hidden="true">' + SVC_ARROW + "</span></" + tag + ">";
+    }
+    // the orange path between the two rows, drawn on the 1024 px reference grid
+    var dots1 = [148, 392, 635, 873], dots2 = [246, 517, 791];
+    var path = '<svg class="pp-path" viewBox="0 0 1024 75" aria-hidden="true">' +
+      '<path d="M148 5Q148 37 173 37H221Q246 37 246 70Q246 37 271 37H367Q392 37 392 5Q392 37 417 37H492Q517 37 517 70Q517 37 542 37H610Q635 37 635 5Q635 37 660 37H766Q791 37 791 70Q791 37 816 37H848Q873 37 873 5"/>' +
+      dots1.map(function (x) { return '<circle cx="' + x + '" cy="5" r="5.5"/><circle class="pp-dot" cx="' + x + '" cy="5" r="2.2"/>'; }).join("") +
+      dots2.map(function (x) { return '<circle cx="' + x + '" cy="70" r="5.5"/><circle class="pp-dot" cx="' + x + '" cy="70" r="2.2"/>'; }).join("") +
+      "</svg>";
+    var journey = '<section class="pp-journey"><div class="pp-wrap">' +
+      '<div class="pp-row pp-row-1">' + stages.slice(0, 4).map(stage).join("") + "</div>" + path +
+      '<div class="pp-row pp-row-2">' + stages.slice(4).map(function (s, i) { return stage(s, i + 4); }).join("") + "</div>" +
+      "</div></section>";
+
+    var clear = '<section class="pp-clear-sec"><div class="pp-wrap"><div class="pp-clear">' +
+      '<div class="pp-clear-copy"><h2>' + rich(cl.title) + "</h2><p>" + esc(cl.text) + "</p></div>" +
+      '<span class="pp-vline" aria-hidden="true"></span>' +
+      '<ul class="pp-points">' + (cl.points || []).map(function (p, i) {
+        return '<li class="pp-point p' + (i % 3 + 1) + '"><b>' + esc(p.title) + "</b><span>" + esc(p.text) + "</span></li>";
+      }).join("") + "</ul></div></div></section>";
+
+    var faq = '<section class="pp-faq-sec"><div class="pp-wrap pp-faq-in">' + img(fq.image, "pp-faq-img", "") +
+      '<div class="pp-faq-copy"><p class="pp-eyebrow pp-eyebrow-l">' + esc(fq.eyebrow) + "</p><h2>" + rich(fq.title) + "</h2>" +
+      '<div class="pp-faq-list">' + (fq.items || []).map(function (it, i) {
+        return "<details" + (i === 0 ? " open" : "") + "><summary>" + esc(it.q) + "</summary><p>" + esc(it.a) + "</p></details>";
+      }).join("") + "</div></div></div></section>";
+
+    var cta = '<section class="pp-cta-sec"><div class="pp-wrap"><div class="pp-cta">' +
+      '<span class="pp-plane" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M44 5 4 21l14 6 4 15 7-10 11 7Z"/><path d="m18 27 26-22-22 37"/></svg></span>' +
+      "<h2>" + esc(c.title) + "</h2>" + '<span class="pp-cta-line" aria-hidden="true"></span>' +
+      '<p class="pp-cta-text">' + esc(c.text) + "</p>" +
+      (c.button && c.button.label ? '<a class="pp-cta-btn" href="' + link(c.button.href) + '">' + esc(c.button.label) + " " + SVC_ARROW + "</a>" : "") +
+      "</div></div></section>";
+
+    return '<div class="process-page">' + hero + journey + clear + faq + cta + "</div>";
+  }
+
   function notice(message, isError) {
     return '<div class="notice' + (isError ? " error" : "") + '" role="' + (isError ? "alert" : "status") + '">' + esc(message) + "</div>";
   }
@@ -698,7 +757,7 @@
   window.SiteComponents = {
     esc: esc, rich: rich, link: link, image: image, button: button, brand: brand,
     header: header, footer: footer, heroSlider: heroSlider, subHero: subHero, sectionHeading: sectionHeading,
-    serviceCard: serviceCard, homeServices: homeServices, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
+    serviceCard: serviceCard, homeServices: homeServices, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
     cta: cta, notice: notice
   };
 })();
