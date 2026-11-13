@@ -570,13 +570,13 @@ window.SITE_CONFIG = {
       "image": "assets/images/process-page/process-hero.jpg"
     },
     "stages": [
-      { "title": "Getting Started", "text": "We connect with you to understand your idea, goals and requirements.", "tone": "orange", "image": "assets/images/process-page/process-01.jpg" },
-      { "title": "Planning & Strategy", "text": "We analyse your needs, suggest the right approach and finalise the project plan with clear timelines.", "tone": "pink", "image": "assets/images/process-page/process-02.jpg" },
-      { "title": "Design & Prototype", "text": "We create the design, layout and prototype to give you a clear vision of the final solution.", "tone": "mauve", "image": "assets/images/process-page/process-03.jpg" },
-      { "title": "Development", "text": "We build your solution with clean, secure and performance-focused development.", "tone": "blue", "image": "assets/images/process-page/process-04.jpg" },
-      { "title": "Testing & Review", "text": "We thoroughly test the project, fix any issues and share it with you for review and feedback.", "tone": "coral", "image": "assets/images/process-page/process-05.jpg" },
-      { "title": "Finalization & Launch", "text": "We make the final updates, set everything live and ensure a smooth and successful launch.", "tone": "rose", "image": "assets/images/process-page/process-06.jpg" },
-      { "title": "Project Completion", "text": "We deliver the final project, share all the essentials and stay connected for future support.", "tone": "brown", "image": "assets/images/process-page/process-07.jpg" }
+      { "title": "Getting Started", "text": "We connect with you to understand your idea, goals and requirements.", "tone": "orange", "image": "assets/images/process-page/stage-01.jpg" },
+      { "title": "Planning & Strategy", "text": "We analyse your needs, suggest the right approach and finalise the project plan with clear timelines.", "tone": "pink", "image": "assets/images/process-page/stage-02.jpg" },
+      { "title": "Design & Prototype", "text": "We create the design, layout and prototype to give you a clear vision of the final solution.", "tone": "mauve", "image": "assets/images/process-page/stage-03.jpg" },
+      { "title": "Development", "text": "We build your solution with clean, secure and performance-focused development.", "tone": "blue", "image": "assets/images/process-page/stage-04.jpg" },
+      { "title": "Testing & Review", "text": "We thoroughly test the project, fix any issues and share it with you for review and feedback.", "tone": "coral", "image": "assets/images/process-page/stage-05.jpg" },
+      { "title": "Finalization & Launch", "text": "We make the final updates, set everything live and ensure a smooth and successful launch.", "tone": "rose", "image": "assets/images/process-page/stage-06.jpg" },
+      { "title": "Project Completion", "text": "We deliver the final project, share all the essentials and stay connected for future support.", "tone": "brown", "image": "assets/images/process-page/stage-07.jpg" }
     ],
     "clear": {
       "title": "Keeping Every *Stage Clear*",
