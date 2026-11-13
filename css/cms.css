@@ -1397,29 +1397,23 @@ a.svp-card:hover { transform: translateY(-4px); box-shadow: 0 calc(16 * var(--u)
   --tone: #ff8a3d; --tone2: #e8611c;
   position: relative; display: block; isolation: isolate; overflow: hidden; flex-shrink: 0;
   width: calc(224 * var(--u)); height: calc(258 * var(--u));
-  border-radius: calc(15 * var(--u)); border: 1.5px solid rgba(255, 255, 255, .9);
+  border-radius: calc(15 * var(--u)); border: 1px solid rgba(255, 255, 255, .85);
   background: color-mix(in srgb, var(--tone) 35%, #fbe3d4);
-  box-shadow: 0 calc(12 * var(--u)) calc(26 * var(--u)) rgba(170, 90, 40, .24), 0 0 0 2px rgba(255, 255, 255, .35), 0 0 0 3px rgba(255, 178, 128, .4), 0 0 calc(16 * var(--u)) rgba(255, 150, 90, .3);
+  box-shadow: 0 calc(16 * var(--u)) calc(32 * var(--u)) rgba(170, 90, 40, .22), 0 0 0 1px rgba(255, 190, 150, .35);
   color: #fff; transition: transform .25s, box-shadow .25s;
 }
 .pp-row-2 .pp-card { width: calc(268 * var(--u)); height: calc(248 * var(--u)); }
 .pp-card-img { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-/* frosted milky glass over the lower part of the photo (real blur of the picture behind it) */
+/* see-through colour glass tint behind the text (no blur), photo stays clear above it */
 .pp-card::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  -webkit-backdrop-filter: blur(6px) saturate(120%); backdrop-filter: blur(6px) saturate(120%);
-  background: linear-gradient(0deg, color-mix(in srgb, var(--tone) 42%, rgba(120, 50, 32, .2)) 0%, color-mix(in srgb, var(--tone) 28%, rgba(255, 236, 226, .2)) 55%, transparent 100%);
-  -webkit-mask-image: linear-gradient(0deg, #000 40%, transparent 66%); mask-image: linear-gradient(0deg, #000 40%, transparent 66%);
+  background: linear-gradient(0deg, color-mix(in srgb, var(--tone2) 82%, transparent) 0%, color-mix(in srgb, var(--tone2) 50%, transparent) 42%, transparent 66%);
 }
-/* 3D glass slab: photo runs to the edge; thin glowing inner edge, top gloss, warm glow along the bottom */
+/* soft glossy shine and a crisp top edge; no inner white box */
 .pp-card::after {
-  content: ""; position: absolute; inset: calc(5 * var(--u)); border-radius: calc(11 * var(--u)); pointer-events: none;
-  border: 1px solid rgba(255, 255, 255, .55);
-  background: linear-gradient(155deg, rgba(255, 255, 255, .1) 0%, transparent 26%);
-  box-shadow:
-    0 0 calc(6 * var(--u)) rgba(255, 255, 255, .35),
-    inset 0 0 calc(8 * var(--u)) rgba(255, 255, 255, .2),
-    inset 0 calc(-14 * var(--u)) calc(22 * var(--u)) calc(-8 * var(--u)) rgba(255, 140, 60, .55);
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: linear-gradient(160deg, rgba(255, 255, 255, .18) 0%, transparent 36%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9);
 }
 a.pp-card:hover { transform: translateY(-4px); }
 .pp-card.t-pink { --tone: #f27a9a; --tone2: #d9506f; }
