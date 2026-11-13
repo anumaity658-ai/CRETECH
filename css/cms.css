@@ -1407,7 +1407,8 @@ a.svp-card:hover { transform: translateY(-4px); box-shadow: 0 calc(16 * var(--u)
 /* see-through colour glass tint behind the text (no blur), photo stays clear above it */
 .pp-card::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: linear-gradient(0deg, color-mix(in srgb, var(--tone2) 82%, transparent) 0%, color-mix(in srgb, var(--tone2) 50%, transparent) 42%, transparent 66%);
+  /* solid enough over the lower part to fully cover the soft area of the picture, then a short fade into the clear photo */
+  background: linear-gradient(0deg, var(--tone2) 0%, color-mix(in srgb, var(--tone2) 82%, var(--tone)) 45%, color-mix(in srgb, var(--tone) 88%, transparent) 57%, color-mix(in srgb, var(--tone) 30%, transparent) 63%, transparent 67%);
 }
 /* soft glossy shine and a crisp top edge; no inner white box */
 .pp-card::after {
