@@ -164,12 +164,7 @@ window.SITE_CONFIG = {
   ],
 
   "home": {
-    "_heroNote": "heroStats show on every slide (a slide can override them with its own \"stats\"). textTone \"light\" = white text, for dark photos.",
-    "heroStats": [
-      { "value": "7+", "label": "Service Areas" },
-      { "value": "100+", "label": "Projects Delivered" },
-      { "value": "50+", "label": "Happy Clients" }
-    ],
+    "_heroNote": "Optional numbers under the buttons: add \"heroStats\" here (all slides) or \"stats\" on a slide. Only use real numbers. textTone \"light\" = white text, for dark photos.",
     "heroSlides": [
       {
         "label": "Digital Solutions",

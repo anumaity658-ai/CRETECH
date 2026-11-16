@@ -1825,3 +1825,10 @@ a.wk-btn:hover { transform: translateY(-2px); }
 .wk-tags li { padding: 5px 10px; border-radius: 999px; font: 700 11.5px/1 var(--font-body); color: #b4470a; background: rgba(255, 122, 40, .12); border: 1px solid rgba(255, 122, 40, .25); }
 .wk-card .wk-btn { align-self: flex-start; }
 @media (max-width: 980px) { .wk-grid { grid-template-columns: 1fr; max-width: 560px; } }
+
+/* Hero text block: same size on every slide, so the text does not jump when the slide changes.
+   Heading lines stay on one line; the paragraph always takes the same width and five lines of height. */
+@media (min-width: 761px) {
+  .hero-line { white-space: nowrap; }
+  .hero-intro { width: 22em; max-width: 100%; min-height: calc(5 * 1.38em); }
+}
