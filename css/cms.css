@@ -1625,7 +1625,8 @@ a.pp-card:hover { transform: translateY(-4px); }
 .ct-select select:invalid { color: transparent; }
 .ct-select option { color: var(--ct-ink); }
 .ct-chev { position: absolute; right: calc(16 * var(--u)); top: 50%; transform: translateY(-50%); width: calc(20 * var(--u)); height: calc(20 * var(--u)); min-width: 16px; min-height: 16px; color: var(--ct-o); pointer-events: none; }
-.ct-area { grid-column: 1 / -1; height: calc(135 * var(--u)); }
+.ct-area, .ct-wide { grid-column: 1 / -1; }
+.ct-area { height: calc(135 * var(--u)); }
 .ct-area .ct-fic { top: calc(15 * var(--u)); }
 .ct-area textarea { padding: calc(14 * var(--u)) calc(16 * var(--u)) calc(10 * var(--u)) calc(55 * var(--u)); resize: vertical; min-height: 100%; }
 .ct-area .ct-ph { left: calc(55 * var(--u)); top: calc(15 * var(--u)); transform: none; }

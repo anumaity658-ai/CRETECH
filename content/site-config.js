@@ -733,7 +733,6 @@ window.SITE_CONFIG = {
       "name": "Your Name",
       "email": "Your Email",
       "phone": "Your Phone Number",
-      "service": "Service Interested In",
       "message": "Project Details",
       "messageHelp": "(Tell us about your idea, requirements or any specific details.)",
       "button": "Submit Request"

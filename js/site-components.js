@@ -783,16 +783,11 @@
         return "<li>" + img(x.icon, "ct-tile", "") + "<b>" + lines(x.title) + "</b></li>";
       }).join("") + "</ul></div></div>";
 
-    var services = (opts.services || []).concat(["Other"]);
     var form = '<div class="ct-form-card"><h2>' + rich(f.title) + '</h2><p class="ct-form-sub">' + esc(f.text) + "</p>" +
       '<form class="contact-form ct-form" action="admin/public.php?action=enquiry" method="post">' +
       field("text", "name", f.name, "user", 'maxlength="100" autocomplete="name"') +
       field("email", "email", f.email, "mail", 'maxlength="150" autocomplete="email"') +
-      field("tel", "phone", f.phone, "phone", 'maxlength="20" autocomplete="tel" pattern="[0-9+()\\-. ]{7,20}" inputmode="tel"') +
-      '<label class="ct-field ct-select">' + ctIcon("case") + '<select name="service" required>' +
-      '<option value="" disabled' + (opts.chosen ? "" : " selected") + " hidden></option>" +
-      services.map(function (s) { return "<option" + (s === opts.chosen ? " selected" : "") + ">" + esc(s) + "</option>"; }).join("") +
-      '</select><span class="ct-ph">' + esc(f.service) + ' <i>*</i></span><svg class="ct-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></label>' +
+      field("tel", "phone", f.phone, "phone", 'maxlength="20" autocomplete="tel" pattern="[0-9+()\\-. ]{7,20}" inputmode="tel"').replace('class="ct-field"', 'class="ct-field ct-wide"') +
       '<label class="ct-field ct-area">' + ctIcon("chat") + '<textarea name="message" required maxlength="4000" placeholder=" "></textarea>' +
       '<span class="ct-ph">' + esc(f.message) + " <i>*</i><small>" + esc(f.messageHelp) + "</small></span></label>" +
       '<div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>' +
