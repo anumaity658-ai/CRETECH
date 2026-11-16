@@ -717,7 +717,7 @@
 .flow { --fv: 100vw; }
 @media (min-width: 981px) {
   .flow { --fv: 82vw; background: var(--fl-color) var(--fl-bg) center bottom / cover no-repeat; }
-  .flow .fl-stage { width: var(--fv); margin: 0 auto; background: none; }
+  .flow .fl-stage { width: min(100vw, calc(var(--fv) * var(--k, 1))); margin: 0 auto; background: none; } /* --k = spread from content */
 }
 .fl-stage { position: relative; aspect-ratio: var(--cw) / var(--ch); background: var(--fl-color) var(--fl-bg) center bottom / cover no-repeat; }
 

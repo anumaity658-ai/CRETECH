@@ -511,6 +511,7 @@ window.SITE_CONFIG = {
         "gradientBottom": "#FFE5D5"
       },
       "canvasHeight": 848,
+      "spread": 1.15,
       "eyebrow": "Our Working Process",
       "title": "A Simple Process, *From Start to Finish*",
       "text": "Every project starts with a conversation. We take time to understand your requirements,\ndiscuss the details and keep you informed throughout the work.",

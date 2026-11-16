@@ -514,6 +514,28 @@
     if (!section) return "";
     var bg = section.background || {}, glass = section.glass || {}, ln = section.line || {};
     var cards = section.cards || [];
+    // spread (> 1): wider gaps between the cards, card sizes unchanged. Every card moves by
+    // centre * (spread - 1); each connector is stretched between its two cards' moves.
+    var k = Math.max(1, +section.spread || 1), W = Math.round(FLOW_W * k);
+    if (k > 1) {
+      var offs = cards.map(function (c) { var b = c.box || {}; return ((+b.x || 0) + (+b.w || 350) / 2) * (k - 1); });
+      cards = cards.map(function (c, i) {
+        var o = offs[i], o2 = offs[i + 1] != null ? offs[i + 1] : o, n = JSON.parse(JSON.stringify(c));
+        if (n.box) n.box.x = (+n.box.x || 0) + o;
+        if (n.glassBox) n.glassBox.x = (+n.glassBox.x || 0) + o;
+        if (n.node) n.node.x = (+n.node.x || 0) + o;
+        var d = svgPathData(c.line);
+        if (d) {
+          var nums = d.match(/-?\d*\.?\d+/g) || [], xs = +nums[0], xe = +nums[nums.length - 2], idx = 0;
+          n.line = d.replace(/-?\d*\.?\d+/g, function (v) {
+            var isX = idx++ % 2 === 0; if (!isX) return v;
+            var x = +v, t = xe !== xs ? (x - xs) / (xe - xs) : 0;
+            return String(Math.round((x + o + t * (o2 - o)) * 10) / 10);
+          });
+        }
+        return n;
+      });
+    }
     var style = "--fl-bg:" + cssUrl(bg.image) + ";--fl-bg-sm:" + cssUrl(bg.imageSmall || bg.image) +
       (cssColor(bg.color) ? ";--fl-color:" + bg.color : "") +
       (cssColor(bg.gradientTop) ? ";--fl-top:" + bg.gradientTop : "") +
@@ -528,10 +550,10 @@
         (n ? '<circle cx="' + (+n.x) + '" cy="' + (+n.y) + '" r="15" fill="' + color + '" opacity=".16"/><circle cx="' + (+n.x) + '" cy="' + (+n.y) + '" r="8.5" fill="url(#flNode-' + gid + ')"/>' : "");
     }).join("");
     var ch = +section.canvasHeight || FLOW_H; // shorter canvas = less empty space under the cards, same card sizes
-    return '<section class="flow ' + esc(cls || "") + '" style="' + style + '"><div class="fl-stage" style="--cw:' + FLOW_W + ";--ch:" + ch + '">' +
+    return '<section class="flow ' + esc(cls || "") + '" style="' + style + '"><div class="fl-stage" style="--cw:' + W + ";--ch:" + ch + ";--k:" + k + '">' +
       '<div class="fl-intro">' + (section.eyebrow ? '<p class="fl-eyebrow"><span aria-hidden="true"></span>' + esc(section.eyebrow) + '<span aria-hidden="true"></span></p>' : "") +
       "<h2>" + rich(section.title) + "</h2>" + (section.text ? '<p class="fl-text">' + softRich(section.text) + "</p>" : "") + "</div>" +
-      '<svg class="fl-lines" viewBox="0 0 ' + FLOW_W + " " + ch + '" preserveAspectRatio="none" aria-hidden="true"><defs>' +
+      '<svg class="fl-lines" viewBox="0 0 ' + W + " " + ch + '" preserveAspectRatio="none" aria-hidden="true"><defs>' +
       '<radialGradient id="flNode-' + gid + '" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#ffd08a"/><stop offset=".45" stop-color="#ff9a2e"/><stop offset="1" stop-color="' + color + '"/></radialGradient></defs>' + lines + "</svg>" +
       '<ol class="fl-cards">' + cards.map(flowCard).join("") + "</ol></div></section>";
   }
