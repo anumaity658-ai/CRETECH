@@ -1705,3 +1705,77 @@ a.pp-card:hover { transform: translateY(-4px); }
   .ct-touch-img { position: relative; height: 240px; object-position: 75% bottom;
     -webkit-mask-image: linear-gradient(180deg, transparent, #000 25%); mask-image: linear-gradient(180deg, transparent, #000 25%); }
 }
+
+/* Contact page, desktop: layout spreads to 90% of the screen (max 1500px); text, icons, form and cards at 78% of the reference
+   so the page does not look zoomed. --u = size unit, --ux = width unit. Lighter glow around the cards. */
+@media (min-width:981px){
+  .contact-page{
+  --u:min(calc(100vw / 1199 * 0.78), 0.78px)!important;
+  --cw:min(90vw, 1500px);
+  --ux:calc(var(--cw) / 1199);
+  padding-top:calc(clamp(64px,5.3vw,94px) + 34px)!important;
+}
+.ct-canvas{
+  width:var(--cw)!important;
+  height:calc(872 * var(--u) + 400 * var(--u) + 110 * var(--u))!important;
+}
+.ct-hero{
+  width:calc(612 * var(--ux))!important;
+}
+.ct-hero-img{
+  object-position:62% 78%;
+}
+.ct-form-card{
+  left:calc(615 * var(--ux))!important;
+  width:calc(555 * var(--ux))!important;
+  padding-left:calc(34 * var(--ux))!important;
+  padding-right:calc(29 * var(--ux))!important;
+}
+.ct-form{
+  grid-template-columns:calc(229 * var(--ux)) calc(244 * var(--ux))!important;
+  column-gap:calc(19 * var(--ux))!important;
+}
+.ct-submit{
+  width:calc(458 * var(--ux))!important;
+}
+.ct-features{
+  top:calc(668 * var(--u))!important;
+  left:calc(40 * var(--ux))!important;
+  width:calc(1121 * var(--ux))!important;
+  gap:calc(24 * var(--ux))!important;
+}
+.ct-touch{
+  top:calc(872 * var(--u))!important;
+  left:calc(40 * var(--ux))!important;
+  width:calc(495 * var(--ux))!important;
+  height:calc(400 * var(--u))!important;
+}
+.ct-touch-copy{
+  left:calc(40 * var(--ux))!important;
+  top:calc(44 * var(--u))!important;
+}
+.ct-touch-img{
+  object-position:center 70%;
+}
+.ct-details{
+  top:calc(872 * var(--u) + 20 * var(--u))!important;
+  left:calc(558 * var(--ux))!important;
+  width:calc(604 * var(--ux))!important;
+  grid-template-columns:calc(296 * var(--ux)) calc(290 * var(--ux))!important;
+  gap:calc(18 * var(--u)) calc(18 * var(--ux))!important;
+}
+.ct-detail{
+  height:calc(171 * var(--u))!important;
+  padding-left:calc(26 * var(--ux))!important;
+}
+.ct-glass{
+  box-shadow:0 calc(8 * var(--u)) calc(22 * var(--u)) rgba(196,108,56,.10),inset 0 1px 0 #fff!important;
+}
+.ct-form-card{
+  box-shadow:0 calc(14 * var(--u)) calc(34 * var(--u)) rgba(196,108,56,.14),inset 0 2px 0 #fff,inset 0 0 calc(24 * var(--u)) rgba(255,255,255,.4)!important;
+}
+.ct-touch{
+  box-shadow:0 calc(12 * var(--u)) calc(28 * var(--u)) rgba(196,108,56,.14)!important;
+}
+
+}
