@@ -44,3 +44,14 @@
     if (e.target.matches("[data-autosubmit]")) e.target.form.submit();
   });
 })();
+
+/* Show / hide password */
+document.addEventListener("click", function (e) {
+  var b = e.target.closest("[data-peek]");
+  if (!b) return;
+  var input = b.parentNode.querySelector("input");
+  var show = input.type === "password";
+  input.type = show ? "text" : "password";
+  b.classList.toggle("on", show);
+  b.setAttribute("aria-label", show ? "Hide password" : "Show password");
+});

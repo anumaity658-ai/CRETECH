@@ -99,7 +99,7 @@ function view_head(string $title, string $bodyClass = ''): void
 <title><?= h($title) ?> · CRETECH Admin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap">
 <link rel="stylesheet" href="<?= h(asset('admin.css')) ?>">
 <link rel="icon" href="<?= h(site_base()) ?>/assets/images/favicon.svg" type="image/svg+xml">
 <script src="<?= h(asset('admin.js')) ?>" defer></script>
@@ -158,7 +158,7 @@ function view_page(string $page, array $me): void
       <div class="welcome">
         <svg class="sun" viewBox="0 0 140 80" aria-hidden="true"><defs><linearGradient id="sunG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb24a"/><stop offset="1" stop-color="#f47721"/></linearGradient></defs><circle cx="86" cy="48" r="28" fill="url(#sunG)"/><path d="M0 70c22-14 40-20 62-12s40 6 78-6v28H0z" fill="#fbd3b5"/><path d="M0 76c30-10 56-12 80-6s40 4 60-2v12H0z" fill="#f8bf95"/></svg>
         <div>
-          <h1><?= $page === 'dashboard' ? 'Welcome Back, ' . h(explode(' ', $me['name'])[0]) . '!' : h($pages[$page][0]) ?></h1>
+          <h1><?= $page === 'dashboard' ? 'Welcome Back, ' . h(ucfirst($me['name'])) . '!' : h($pages[$page][0]) ?></h1>
           <p><?= $page === 'dashboard' ? 'Manage and update your CRETECH website from here.' : h(page_intro($page)) ?></p>
         </div>
       </div>
@@ -182,7 +182,7 @@ function view_page(string $page, array $me): void
       <div class="pop">
         <button class="who" type="button" data-pop aria-expanded="false">
           <span class="avatar"><?= icon('user') ?></span>
-          <span class="who-txt"><b><?= h($me['name']) ?></b><small><?= h(admin_role_label($me)) ?></small></span>
+          <span class="who-txt"><b><?= h(ucfirst($me['name'])) ?></b><small><?= h(admin_role_label($me)) ?></small></span>
           <?= icon('chevron', 'ic chev') ?>
         </button>
         <div class="pop-box pop-menu" hidden>
@@ -567,13 +567,12 @@ function page_account(array $me): void
       <div class="panel-head"><h2><?= icon('user', 'ic head-ic') ?> My Account</h2></div>
       <form method="post" action="<?= h(admin_url('account')) ?>" class="form">
         <input type="hidden" name="csrf" value="<?= h(csrf_token()) ?>">
-        <label>Name<input name="name" value="<?= h($me['name']) ?>" required maxlength="60"></label>
-        <label>Email<input value="<?= h($me['email']) ?>" disabled></label>
+        <label>Username<input value="<?= h($me['username'] ?? $me['name']) ?>" disabled></label>
         <label>Role<input value="<?= h(admin_role_label($me)) ?>" disabled></label>
-        <label>New password <small>(leave empty to keep the current one)</small><input type="password" name="new_password" autocomplete="new-password" minlength="10"></label>
-        <label>Repeat new password<input type="password" name="confirm_password" autocomplete="new-password"></label>
-        <label>Current password <small>(needed to save)</small><input type="password" name="current_password" autocomplete="current-password" required></label>
-        <button class="btn" type="submit">Save</button>
+        <label>New password <small>(min 10 characters, letters and numbers)</small><input type="password" name="new_password" autocomplete="new-password" minlength="10" required></label>
+        <label>Repeat new password<input type="password" name="confirm_password" autocomplete="new-password" required></label>
+        <label>Current password<input type="password" name="current_password" autocomplete="current-password" required></label>
+        <button class="btn" type="submit">Change password</button>
       </form>
     </div>
     <?php
@@ -597,7 +596,7 @@ function page_settings(array $me): void
         <div class="panel-head"><h2><?= icon('users', 'ic head-ic') ?> Admin users</h2></div>
         <ul class="list users">
           <?php foreach (admins_all() as $a): ?>
-          <li><b><?= h($a['name']) ?> <em>(<?= h(admin_role_label($a)) ?>)</em><?= !empty($a['disabled']) ? ' <span class="off">disabled</span>' : '' ?></b><span><?= h($a['email']) ?></span>
+          <li><b><?= h($a['name']) ?> <em>(<?= h(admin_role_label($a)) ?>)</em><?= !empty($a['disabled']) ? ' <span class="off">disabled</span>' : '' ?></b><span>@<?= h($a['username'] ?? '') ?></span>
             <?php if ($super && $a['id'] !== $me['id']): ?>
             <form method="post" action="<?= h(admin_url('settings')) ?>"><input type="hidden" name="csrf" value="<?= h(csrf_token()) ?>"><input type="hidden" name="do" value="toggle-admin"><input type="hidden" name="id" value="<?= h($a['id']) ?>"><button class="link-btn" type="submit"><?= empty($a['disabled']) ? 'Disable' : 'Enable' ?></button></form>
             <?php endif; ?>
@@ -608,8 +607,7 @@ function page_settings(array $me): void
         <form method="post" action="<?= h(admin_url('settings')) ?>" class="form">
           <input type="hidden" name="csrf" value="<?= h(csrf_token()) ?>"><input type="hidden" name="do" value="add-admin">
           <p class="form-title">Add an admin</p>
-          <label>Name<input name="name" required maxlength="60"></label>
-          <label>Email<input type="email" name="email" required></label>
+          <label>Username <small>(3–30 characters: letters, numbers, dot, dash or underscore)</small><input name="username" required pattern="[A-Za-z0-9._\-]{3,30}" autocomplete="off"></label>
           <label>Role<select name="role"><option value="admin">Admin</option><option value="editor">Content Editor</option><option value="super">Super Admin</option></select></label>
           <label>Password <small>(min 10 characters, letters and numbers)</small><input type="password" name="password" required minlength="10" autocomplete="new-password"></label>
           <button class="btn" type="submit">Add admin</button>
@@ -688,25 +686,57 @@ function page_search(array $me): void
 
 /* ---------- Login & first-run setup ---------- */
 
-function auth_shell(string $title, callable $body): void
+function auth_shell(string $title, string $eyebrow, string $heading, string $lead, callable $body): void
 {
     view_head($title, 'auth');
-    echo '<main class="auth-wrap"><div class="card auth-card">' . logo() . '<p class="side-tag"><span>Admin Panel</span></p>';
-    $body();
-    echo '</div>' . waves('main-waves') . '</main></body></html>';
+    ?>
+<main class="auth-wrap">
+  <div class="auth-card">
+    <section class="auth-art" aria-hidden="true">
+      <img class="auth-logo" src="<?= h(site_base()) ?>/assets/images/logo-white.svg" alt="">
+      <div class="auth-art-copy">
+        <span class="auth-rule"></span>
+        <p class="auth-quote">Your website,<br><em>beautifully</em> in control.</p>
+        <p class="auth-sub">Pages, services, images and enquiries — managed from one quiet place.</p>
+      </div>
+      <p class="auth-mark">CRETECH · Admin Console</p>
+      <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+    </section>
+    <section class="auth-form">
+      <img class="auth-logo-sm" src="<?= h(site_base()) ?>/assets/images/logo.svg" alt="CRETECH Digital Solutions">
+      <p class="auth-eyebrow"><?= h($eyebrow) ?></p>
+      <h1><?= h($heading) ?></h1>
+      <p class="auth-lead"><?= h($lead) ?></p>
+      <?php $body(); ?>
+      <p class="auth-foot"><?= icon('lock') ?> Secure, private area · <?= date('Y') ?> CRETECH</p>
+    </section>
+  </div>
+</main>
+</body>
+</html>
+<?php
 }
 
-function view_login(?string $error, string $email): void
+function auth_field(string $label, string $name, string $type, string $icon, string $value = '', string $extra = ''): string
 {
-    auth_shell('Log in', static function () use ($error, $email): void {
+    $id = 'f-' . $name;
+    $toggle = $type === 'password'
+        ? '<button type="button" class="peek" data-peek aria-label="Show password">' . icon('eye') . '</button>'
+        : '';
+    return '<div class="field"><label for="' . $id . '">' . h($label) . '</label><div class="field-box">' . icon($icon)
+        . '<input id="' . $id . '" type="' . $type . '" name="' . $name . '" value="' . h($value) . '" ' . $extra . '>' . $toggle . '</div></div>';
+}
+
+function view_login(?string $error, string $username): void
+{
+    auth_shell('Log in', 'Admin Panel', 'Welcome back', 'Sign in to manage the CRETECH website.', static function () use ($error, $username): void {
         ?>
-        <h1>Log in</h1>
-        <?php if ($error): ?><p class="flash err" role="alert"><?= h($error) ?></p><?php endif; ?>
-        <form method="post" action="<?= h(admin_url('login')) ?>" class="form">
+        <?php if ($error): ?><p class="auth-alert" role="alert"><?= h($error) ?></p><?php endif; ?>
+        <form method="post" action="<?= h(admin_url('login')) ?>" class="auth-fields">
           <input type="hidden" name="csrf" value="<?= h(csrf_token()) ?>">
-          <label>Email<input type="email" name="email" value="<?= h($email) ?>" required autocomplete="username" autofocus></label>
-          <label>Password<input type="password" name="password" required autocomplete="current-password"></label>
-          <button class="btn wide" type="submit"><?= icon('lock') ?> Log in</button>
+          <?= auth_field('Username', 'username', 'text', 'user', $username, 'required autocomplete="username" autocapitalize="none" spellcheck="false"' . ($username === '' ? ' autofocus' : '')) ?>
+          <?= auth_field('Password', 'password', 'password', 'lock', '', 'required autocomplete="current-password"' . ($username !== '' ? ' autofocus' : '')) ?>
+          <button class="auth-btn" type="submit">Sign in <?= icon('arrow') ?></button>
         </form>
         <?php
     });
@@ -714,23 +744,21 @@ function view_login(?string $error, string $email): void
 
 function view_setup(bool $allowed, ?string $error, string $key): void
 {
-    auth_shell('Set up', static function () use ($allowed, $error, $key): void {
+    auth_shell('Set up', 'First-time setup', 'Create your access', 'Choose the username and password for the Super Admin.', static function () use ($allowed, $error, $key): void {
+        if (!$allowed) {
+            echo '<p class="auth-alert">The admin panel is not set up yet. Open it on the computer running the website, or add ADMIN_SETUP_KEY to the .env file.</p>';
+            return;
+        }
         ?>
-        <h1>Create the Super Admin</h1>
-        <?php if (!$allowed): ?>
-          <p class="flash err">The admin panel is not set up yet. Open it on the computer running the website, or add ADMIN_SETUP_KEY to the .env file.</p>
-        <?php else: ?>
-          <p class="auth-note">This is the first login of the admin panel. The account you create here is the Super Admin.</p>
-          <?php if ($error): ?><p class="flash err" role="alert"><?= h($error) ?></p><?php endif; ?>
-          <form method="post" action="<?= h(admin_url('setup')) ?>" class="form">
-            <input type="hidden" name="csrf" value="<?= h(csrf_token()) ?>">
-            <?php if (app_env('ADMIN_SETUP_KEY') !== null): ?><label>Setup key<input type="password" name="setup_key" value="<?= h($key) ?>" required></label><?php endif; ?>
-            <label>Your name<input name="name" required maxlength="60"></label>
-            <label>Email<input type="email" name="email" required autocomplete="username"></label>
-            <label>Password <small>(min 10 characters, letters and numbers)</small><input type="password" name="password" required minlength="10" autocomplete="new-password"></label>
-            <button class="btn wide" type="submit">Create account</button>
-          </form>
-        <?php endif; ?>
+        <?php if ($error): ?><p class="auth-alert" role="alert"><?= h($error) ?></p><?php endif; ?>
+        <form method="post" action="<?= h(admin_url('setup')) ?>" class="auth-fields">
+          <input type="hidden" name="csrf" value="<?= h(csrf_token()) ?>">
+          <?php if (app_env('ADMIN_SETUP_KEY') !== null): ?><?= auth_field('Setup key', 'setup_key', 'password', 'shield', $key, 'required') ?><?php endif; ?>
+          <?= auth_field('Username', 'username', 'text', 'user', (string) ($_POST['username'] ?? ''), 'required autofocus autocomplete="username" autocapitalize="none" spellcheck="false" pattern="[A-Za-z0-9._\-]{3,30}"') ?>
+          <?= auth_field('Password', 'password', 'password', 'lock', '', 'required minlength="10" autocomplete="new-password"') ?>
+          <p class="auth-hint">At least 10 characters, with letters and numbers.</p>
+          <button class="auth-btn" type="submit">Create account <?= icon('arrow') ?></button>
+        </form>
         <?php
     });
 }

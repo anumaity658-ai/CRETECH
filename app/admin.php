@@ -115,12 +115,11 @@ function admin_password_problem(string $password): ?string
 }
 
 /** @return array|string the new admin, or an error message */
-function admin_create(string $name, string $email, string $password, string $role)
+function admin_create(string $username, string $password, string $role)
 {
-    $name = clean_text($name, 60);
-    $email = strtolower(clean_text($email, 150));
-    if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        return 'Please enter a name and a valid email address.';
+    $username = strtolower(trim($username));
+    if (!preg_match('/^[a-z0-9._-]{3,30}$/', $username)) {
+        return 'Username must be 3–30 characters: letters, numbers, dot, dash or underscore.';
     }
     if (!isset(ADMIN_ROLES[$role])) {
         return 'Please choose a role.';
@@ -131,16 +130,16 @@ function admin_create(string $name, string $email, string $password, string $rol
     $error = null;
     $admin = [
         'id' => bin2hex(random_bytes(8)),
-        'name' => $name,
-        'email' => $email,
+        'name' => $username,
+        'username' => $username,
         'role' => $role,
         'hash' => password_hash($password, PASSWORD_DEFAULT),
         'created_at' => date('c'),
     ];
     store_update('admins', static function (array $all) use ($admin, &$error): array {
         foreach ($all as $a) {
-            if (($a['email'] ?? '') === $admin['email']) {
-                $error = 'An admin with this email already exists.';
+            if (($a['username'] ?? '') === $admin['username']) {
+                $error = 'This username is already taken.';
                 return $all;
             }
         }
@@ -205,23 +204,23 @@ function login_failed(): void
 }
 
 /** @return string|null error message, null on success */
-function admin_login(string $email, string $password): ?string
+function admin_login(string $username, string $password): ?string
 {
     if (login_blocked()) {
         return 'Too many wrong attempts. Please wait 15 minutes and try again.';
     }
-    $email = strtolower(trim($email));
+    $username = strtolower(trim($username));
     $found = null;
     foreach (admins_all() as $a) {
-        if (($a['email'] ?? '') === $email) {
+        if (($a['username'] ?? '') === $username) {
             $found = $a;
         }
     }
-    // Always run password_verify so wrong emails take as long as wrong passwords.
+    // Always run password_verify so wrong usernames take as long as wrong passwords.
     $ok = password_verify($password, $found['hash'] ?? password_hash('no-such-admin', PASSWORD_DEFAULT));
     if (!$found || !$ok || !empty($found['disabled'])) {
         login_failed();
-        return 'Email or password is incorrect.';
+        return 'Username or password is incorrect.';
     }
     if (password_needs_rehash($found['hash'], PASSWORD_DEFAULT)) {
         $hash = password_hash($password, PASSWORD_DEFAULT);

@@ -36,9 +36,9 @@ if (!admins_all()) {
         if (!admin_setup_allowed($key)) {
             $error = 'Setup is not allowed from here.';
         } else {
-            $made = admin_create((string) $_POST['name'], (string) $_POST['email'], (string) $_POST['password'], 'super');
+            $made = admin_create((string) ($_POST['username'] ?? ''), (string) ($_POST['password'] ?? ''), 'super');
             if (is_array($made)) {
-                admin_login((string) $_POST['email'], (string) $_POST['password']);
+                admin_login((string) $_POST['username'], (string) $_POST['password']);
                 activity_log('work', 'Admin panel set up', 'Super Admin account created');
                 header('Location: ' . $self, true, 303);
                 exit;
@@ -52,12 +52,12 @@ if (!admins_all()) {
 
 /* ---------- Login / logout ---------- */
 if ($page === 'login' && $post) {
-    $error = admin_login((string) ($_POST['email'] ?? ''), (string) ($_POST['password'] ?? ''));
+    $error = admin_login((string) ($_POST['username'] ?? ''), (string) ($_POST['password'] ?? ''));
     if ($error === null) {
         header('Location: ' . $self, true, 303);
         exit;
     }
-    view_login($error, (string) ($_POST['email'] ?? ''));
+    view_login($error, (string) ($_POST['username'] ?? ''));
     exit;
 }
 if ($page === 'logout' && $post) {
@@ -78,21 +78,18 @@ if ($post) {
     $back = admin_url($page);
     switch ($page) {
         case 'account':
-            $name = clean_text((string) ($_POST['name'] ?? ''), 60);
             $new = (string) ($_POST['new_password'] ?? '');
             if (!password_verify((string) ($_POST['current_password'] ?? ''), $me['hash'])) {
                 flash('Current password is not correct.');
-            } elseif ($name === '') {
-                flash('Please enter your name.');
-            } elseif ($new !== '' && ($problem = admin_password_problem($new))) {
+            } elseif ($problem = admin_password_problem($new)) {
                 flash($problem);
-            } elseif ($new !== '' && $new !== (string) ($_POST['confirm_password'] ?? '')) {
+            } elseif ($new !== (string) ($_POST['confirm_password'] ?? '')) {
                 flash('The two new passwords do not match.');
             } else {
-                $hash = $new !== '' ? password_hash($new, PASSWORD_DEFAULT) : $me['hash'];
-                admin_update($me['id'], static fn ($a) => ['name' => $name, 'hash' => $hash] + $a);
-                activity_log('update', 'My Account updated', $new !== '' ? 'Name and password' : 'Name');
-                flash('Your account has been saved.');
+                $hash = password_hash($new, PASSWORD_DEFAULT);
+                admin_update($me['id'], static fn ($a) => ['hash' => $hash] + $a);
+                activity_log('update', 'My Account updated', 'Password changed');
+                flash('Your password has been changed.');
             }
             break;
 
@@ -102,10 +99,10 @@ if ($post) {
                     flash('Only the Super Admin can add admins.');
                     break;
                 }
-                $made = admin_create((string) $_POST['name'], (string) $_POST['email'], (string) $_POST['password'], (string) $_POST['role']);
+                $made = admin_create((string) ($_POST['username'] ?? ''), (string) ($_POST['password'] ?? ''), (string) ($_POST['role'] ?? ''));
                 if (is_array($made)) {
                     activity_log('work', 'New admin – Added', $made['name'] . ' (' . admin_role_label($made) . ')');
-                    flash('Admin added. They can now log in with that email and password.');
+                    flash('Admin added. They can now log in with that username and password.');
                 } else {
                     flash($made);
                 }
