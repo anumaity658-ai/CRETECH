@@ -285,6 +285,27 @@
       '<span class="jr-pin-label"><b>' + String(i + 1).padStart(2, "0") + "</b>" + esc(m.label) + "</span></li>";
   }
 
+  // "Our Work": three equal glass cards with a browser-framed screenshot of each real project
+  function homeWork(section) {
+    if (!section || !(section.projects || []).length) return "";
+    var s = section;
+    var cards = s.projects.map(function (p) {
+      var l = p.link || {}, ext = /^https?:/i.test(l.href || "");
+      var btn = l.label ? (l.href ? '<a class="wk-btn" href="' + link(l.href) + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ">" + esc(l.label) + "</a>"
+        : '<span class="wk-btn">' + esc(l.label) + "</span>") : "";
+      return '<article class="wk-card">' +
+        '<div class="wk-browser"><div class="wk-bar" aria-hidden="true"><i></i><i></i><i></i><span>' + esc(p.url) + "</span></div>" +
+        '<img src="' + esc(image(p.image, 1200)) + '" alt="' + esc(p.title) + ' website" loading="lazy" decoding="async"></div>' +
+        '<div class="wk-body"><p class="wk-kind">' + esc(p.kind) + "</p><h3>" + esc(p.title) + '</h3><p class="wk-desc">' + esc(p.text) + "</p>" +
+        '<p class="wk-did">' + esc(s.doneLabel) + '</p><ul class="wk-tags">' + (p.done || []).map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>" +
+        btn + "</div></article>";
+    }).join("");
+    var b = s.button || {};
+    return '<section class="wk-sec"><div class="wk-wrap"><div class="wk-head"><div><p class="wk-eyebrow">' + esc(s.eyebrow) + "</p><h2>" + rich(s.title) + '</h2><p class="wk-lead">' + esc(s.text) + "</p></div>" +
+      (b.label ? '<a class="wk-btn wk-ghost" href="' + link(b.href) + '">' + esc(b.label) + "</a>" : "") + "</div>" +
+      '<div class="wk-grid">' + cards + "</div></div></section>";
+  }
+
   function homeJourney(section) {
     if (!section) return "";
     var bg = section.background || {};
@@ -819,7 +840,7 @@
   window.SiteComponents = {
     esc: esc, rich: rich, link: link, image: image, button: button, brand: brand,
     header: header, footer: footer, heroSlider: heroSlider, subHero: subHero, sectionHeading: sectionHeading,
-    serviceCard: serviceCard, homeServices: homeServices, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, contactPage: contactPage, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
+    serviceCard: serviceCard, homeServices: homeServices, homeWork: homeWork, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, contactPage: contactPage, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
     cta: cta, notice: notice
   };
 })();

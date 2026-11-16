@@ -225,6 +225,43 @@ window.SITE_CONFIG = {
         { "slug": "graphic-design-creative-content", "icon": "image", "image": "assets/images/services/graphic-design-creative-content.jpg", "title": "Graphic Design &\nCreative Content", "text": "Banners, creatives and visuals for your brand." }
       ]
     },
+    "workSection": {
+      "_note": "Our Work section (after What We Can Do for You). Each project: image, url (shown in the browser bar), href, kind, title, text, done (chips), button. Leave href empty for no link.",
+      "eyebrow": "Our Work",
+      "title": "Real Projects, *Built End to End*",
+      "text": "Websites we planned, designed, wrote and developed from start to finish.",
+      "button": { "label": "Start Your Project →", "href": "contact" },
+      "doneLabel": "What we did",
+      "projects": [
+        {
+          "kind": "Detective Agency Website",
+          "title": "National Detectives",
+          "text": "A complete website for a private detective agency in India. The purpose of the website is to provide people with investigation services from corporate and personal investigations to surveillance services, with complete confidentiality. We handled the entire project, including website design and development, admin panel, SEO optimisation and social media management.",
+          "image": "assets/images/work/national-detectives.jpg",
+          "url": "nationaldetectives.in",
+          "link": { "label": "View Live Website ↗", "href": "https://nationaldetectives.in/" },
+          "done": ["UI/UX Design", "Website Development", "Admin Panel", "Testing", "SEO: On-page · Off-page · Technical", "Social Media Marketing", "Content Writing", "Images & Graphics"]
+        },
+        {
+          "kind": "Online Puja & Pandit Booking",
+          "title": "Hindu.International",
+          "text": "Hindu.International is a digital spiritual website that connects people with Hindu traditions, religious practices and spiritual services. It providing Hindu rituals and religious services virtually while also promoting donation initiatives and spiritual awareness. We handled the project end to end, including website design and development, admin panel, content writing, SEO, digital promotion and social media marketing.",
+          "image": "assets/images/work/hindu-international.jpg",
+          "url": "hindu.international",
+          "link": { "label": "View Live Website ↗", "href": "https://hindu.international/" },
+          "done": ["UI/UX Design", "Website Development", "Admin Panel", "Testing", "SEO: On-page · Off-page · Technical", "Social Media Marketing", "Content Writing", "Images & Graphics"]
+        },
+        {
+          "kind": "Our Own Website",
+          "title": "CRETECH",
+          "text": "The website you are on right now. Its design, development, content and images are all our own work.",
+          "image": "assets/images/work/cretech.jpg",
+          "url": "cretech.in",
+          "link": { "label": "You Are Here ✓", "href": "" },
+          "done": ["UI/UX Design", "Website Development", "Admin Panel", "Testing", "SEO: On-page · Off-page · Technical", "Social Media Marketing", "Content Writing", "Images & Graphics"]
+        }
+      ]
+    },
     "journeySection": {
       "_note": "\"For Every Step of Your Journey\". Card and milestone positions are px on the 1672 x 941 desktop canvas (the background image size). photoAt = where the photo starts, in % of the card width. Card icons: graduation, user, rocket, store, building.",
       "background": {

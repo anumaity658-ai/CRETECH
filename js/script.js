@@ -36,6 +36,7 @@
 
     var services = C.homeServices(h.servicesSection, data.services);
 
+    var work = C.homeWork(h.workSection);
     var journey = C.homeJourney(h.journeySection);
     var build = C.homeBuild(h.buildSection);
     var why = C.homeWhy(h.whySection);
@@ -43,7 +44,7 @@
     var process = C.homeFlow(h.processFlow, "flow-process");
     var faqSection = C.homeFaq(h.faqSection);
 
-    return heroHtml + services + journey + build + why + different + process + faqSection + C.cta(data);
+    return heroHtml + services + work + journey + build + why + different + process + faqSection + C.cta(data);
   };
 
   pages.services = function () {
