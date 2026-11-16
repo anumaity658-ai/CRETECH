@@ -750,6 +750,73 @@
     return '<div class="process-page">' + hero + journey + clear + faq + cta + "</div>";
   }
 
+  /* ---------- Contact page (from the 1199 px reference) ---------- */
+  var CT_ICONS = {
+    user: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>',
+    mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/>',
+    phone: '<path d="M6.6 3.5 9.4 7a1.4 1.4 0 0 1-.1 1.8l-1.6 1.7a12 12 0 0 0 5.8 5.8l1.7-1.6a1.4 1.4 0 0 1 1.8-.1l3.5 2.8a1.4 1.4 0 0 1 .2 2l-1.6 1.9c-.6.7-1.6 1-2.5.7A18.6 18.6 0 0 1 3.1 6.6c-.3-.9 0-1.9.7-2.5l1.9-1.6a1.4 1.4 0 0 1 2 .2Z" fill="currentColor" stroke="none"/>',
+    case: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8.5 7V5.5A1.5 1.5 0 0 1 10 4h4a1.5 1.5 0 0 1 1.5 1.5V7M3 12.5h18"/>',
+    chat: '<path d="M4 5h16v11H9l-5 4Z"/><circle cx="8.5" cy="10.5" r=".6" fill="currentColor"/><circle cx="12" cy="10.5" r=".6" fill="currentColor"/><circle cx="15.5" cy="10.5" r=".6" fill="currentColor"/>'
+  };
+  function ctIcon(name) {
+    return '<svg class="ct-fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (CT_ICONS[name] || "") + "</svg>";
+  }
+  function lines(v) { return esc(v).replace(/\n/g, "<br> "); }
+
+  // opts: { services: [titles], chosen, token, status }
+  function contactPage(cp, opts) {
+    cp = cp || {}; opts = opts || {};
+    var h = cp.hero || {}, f = cp.form || {}, t = cp.touch || {};
+    function img(src, cls, alt, eager) {
+      return src ? '<img class="' + cls + '" src="' + esc(image(src, 1400)) + '" alt="' + esc(alt || "") + '"' + (eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">' : "";
+    }
+    function field(type, name, label, icon, extra) {
+      return '<label class="ct-field">' + ctIcon(icon) +
+        '<input type="' + type + '" name="' + name + '" placeholder=" " required ' + extra + ">" +
+        '<span class="ct-ph">' + esc(label) + " <i>*</i></span></label>";
+    }
+
+    var hero = '<div class="ct-hero">' + img(h.image, "ct-hero-img", "", true) +
+      '<div class="ct-hero-copy"><p class="ct-eyebrow">' + esc(h.eyebrow) + "</p>" +
+      "<h1>" + rich(h.title) + "</h1>" + '<p class="ct-hero-text">' + lines(h.text) + "</p>" +
+      '<ul class="ct-hl">' + (h.highlights || []).map(function (x) {
+        return "<li>" + img(x.icon, "ct-tile", "") + "<b>" + lines(x.title) + "</b></li>";
+      }).join("") + "</ul></div></div>";
+
+    var services = (opts.services || []).concat(["Other"]);
+    var form = '<div class="ct-form-card"><h2>' + rich(f.title) + '</h2><p class="ct-form-sub">' + esc(f.text) + "</p>" +
+      '<form class="contact-form ct-form" action="admin/public.php?action=enquiry" method="post">' +
+      field("text", "name", f.name, "user", 'maxlength="100" autocomplete="name"') +
+      field("email", "email", f.email, "mail", 'maxlength="150" autocomplete="email"') +
+      field("tel", "phone", f.phone, "phone", 'maxlength="20" autocomplete="tel" pattern="[0-9+()\\-. ]{7,20}" inputmode="tel"') +
+      '<label class="ct-field ct-select">' + ctIcon("case") + '<select name="service" required>' +
+      '<option value="" disabled' + (opts.chosen ? "" : " selected") + " hidden></option>" +
+      services.map(function (s) { return "<option" + (s === opts.chosen ? " selected" : "") + ">" + esc(s) + "</option>"; }).join("") +
+      '</select><span class="ct-ph">' + esc(f.service) + ' <i>*</i></span><svg class="ct-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></label>' +
+      '<label class="ct-field ct-area">' + ctIcon("chat") + '<textarea name="message" required maxlength="4000" placeholder=" "></textarea>' +
+      '<span class="ct-ph">' + esc(f.message) + " <i>*</i><small>" + esc(f.messageHelp) + "</small></span></label>" +
+      '<div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>' +
+      '<input type="hidden" name="token" value="' + esc(opts.token || "") + '">' +
+      '<div class="form-status ct-status" aria-live="polite">' + (opts.status || "") + "</div>" +
+      '<button class="ct-submit" type="submit">' + esc(f.button) + ' <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button>' +
+      "</form></div>";
+
+    var features = '<div class="ct-features">' + (cp.features || []).map(function (x) {
+      return '<div class="ct-glass ct-feature">' + img(x.icon, "ct-tile", "") + "<div><h3>" + esc(x.title) + "</h3><p>" + lines(x.text) + "</p></div></div>";
+    }).join("") + "</div>";
+
+    var touch = '<div class="ct-touch">' + img(t.image, "ct-touch-img", "") +
+      '<div class="ct-touch-copy"><h2>' + esc(t.title) + '</h2><span class="ct-bar" aria-hidden="true"></span><p>' + lines(t.text) + "</p></div></div>";
+
+    var details = '<div class="ct-details">' + (cp.details || []).map(function (x) {
+      var val = x.href ? '<a href="' + link(x.href) + '">' + lines(x.text) + "</a>" : lines(x.text);
+      return '<div class="ct-glass ct-detail">' + img(x.icon, "ct-tile", "") + "<div><h3>" + esc(x.title) + "</h3><p>" + val + "</p></div></div>";
+    }).join("") + "</div>";
+
+    return '<div class="contact-page" style="--ct-ribbon:' + cssUrl(cp.ribbon) + '"><div class="ct-canvas">' +
+      hero + form + features + touch + details + "</div></div>";
+  }
+
   function notice(message, isError) {
     return '<div class="notice' + (isError ? " error" : "") + '" role="' + (isError ? "alert" : "status") + '">' + esc(message) + "</div>";
   }
@@ -757,7 +824,7 @@
   window.SiteComponents = {
     esc: esc, rich: rich, link: link, image: image, button: button, brand: brand,
     header: header, footer: footer, heroSlider: heroSlider, subHero: subHero, sectionHeading: sectionHeading,
-    serviceCard: serviceCard, homeServices: homeServices, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
+    serviceCard: serviceCard, homeServices: homeServices, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, contactPage: contactPage, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
     cta: cta, notice: notice
   };
 })();

@@ -78,32 +78,16 @@
   };
 
   pages.contact = function () {
-    var c = data.contact;
-    var site = data.site;
-    var options = (data.services || []).map(function (s) { return s.title; }).concat(["Other"]);
-    var chosen = params.get("service") || "";
-
+    var c = data.contact || {};
     var status = "";
     if (params.has("sent")) status = C.notice(c.success);
     else if (params.has("error")) status = C.notice(c.error, true);
-
-    return C.subHero(c.hero) +
-      '<section class="content-page contact-layout"><div><h2>' + rich(c.title) + "</h2><p>" + esc(c.text) + "</p>" +
-      '<p><b>Email:</b> <a class="inline-link" href="mailto:' + esc(site.email) + '">' + esc(site.email) + "</a></p>" +
-      "<p><b>Phone:</b> " + esc(site.phone) + "</p><p><b>Location:</b> " + esc(site.location) + "</p></div>" +
-      '<div><div class="form-status" aria-live="polite">' + status + "</div>" +
-      '<form class="contact-form" action="admin/public.php?action=enquiry" method="post">' +
-      '<label>Your Name<input name="name" required maxlength="100" autocomplete="name" placeholder="Enter your name"></label>' +
-      '<label>Email Address<input type="email" name="email" required maxlength="150" autocomplete="email" placeholder="name@example.com"></label>' +
-      '<label>Phone Number<input type="tel" name="phone" maxlength="30" autocomplete="tel" placeholder="Optional"></label>' +
-      '<label>Service Required<select name="service"><option value="">Select a service</option>' +
-      options.map(function (o) { return "<option" + (o === chosen ? " selected" : "") + ">" + esc(o) + "</option>"; }).join("") +
-      "</select></label>" +
-      '<label>Tell Us About Your Project<textarea name="message" required maxlength="4000" placeholder="Write a short description of your requirement..."></textarea></label>' +
-      '<div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>' +
-      '<input type="hidden" name="token" value="' + esc(pageData.formToken || "") + '">' +
-      '<button class="btn btn-orange" type="submit">Send Enquiry <span aria-hidden="true">→</span></button>' +
-      "</form></div></section>";
+    return C.contactPage(data.contactPage, {
+      services: (data.services || []).map(function (s) { return s.title; }),
+      chosen: params.get("service") || "",
+      token: pageData.formToken || "",
+      status: status
+    });
   };
 
   function legalPage(key) {

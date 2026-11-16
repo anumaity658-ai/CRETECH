@@ -714,6 +714,49 @@ window.SITE_CONFIG = {
     "button": "Discuss this service"
   },
 
+  "contactPage": {
+    "_note": "Contact page. Pictures are real images (replaceable from the admin). *word* = orange. The form posts to admin/public.php?action=enquiry; its messages come from \"contact\" below.",
+    "hero": {
+      "eyebrow": "Contact Us",
+      "title": "Let’s Discuss\n*Your Project*",
+      "text": "Have an idea, a new requirement or a project in mind?\nShare the details with us and our team will get back\nto you with the best possible way forward.",
+      "image": "assets/images/contact-page/contact-hero.jpg",
+      "highlights": [
+        { "title": "Website & App\nDevelopment", "icon": "assets/images/contact-page/ic-code.png" },
+        { "title": "Design & Content\nSolutions", "icon": "assets/images/contact-page/ic-pen.png" },
+        { "title": "SEO & Digital\nGrowth", "icon": "assets/images/contact-page/ic-chart.png" }
+      ]
+    },
+    "form": {
+      "title": "Send Us Your *Project Details*",
+      "text": "Fill in the form below and we’ll get in touch with you soon.",
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Your Phone Number",
+      "service": "Service Interested In",
+      "message": "Project Details",
+      "messageHelp": "(Tell us about your idea, requirements or any specific details.)",
+      "button": "Submit Request"
+    },
+    "features": [
+      { "title": "Quick Response", "text": "We usually get back\nwithin 24 hours.", "icon": "assets/images/contact-page/ic-bolt.png" },
+      { "title": "Expert Support", "text": "Get guidance from our\nexperienced team.", "icon": "assets/images/contact-page/ic-team.png" },
+      { "title": "Project Assistance", "text": "From idea to launch, we’re\nwith you at every step.", "icon": "assets/images/contact-page/ic-layers.png" }
+    ],
+    "touch": {
+      "title": "Get in Touch",
+      "text": "We’re here to help you turn\nyour ideas into a powerful\ndigital solution.",
+      "image": "assets/images/contact-page/contact-touch.jpg"
+    },
+    "details": [
+      { "title": "Call Us", "text": "+91 8800462341", "href": "tel:+918800462341", "icon": "assets/images/contact-page/ic-phone.png" },
+      { "title": "Email Us", "text": "hello@cretech.in", "href": "mailto:hello@cretech.in", "icon": "assets/images/contact-page/ic-mail.png" },
+      { "title": "Our Location", "text": "Noida, Uttar Pradesh, India", "href": "", "icon": "assets/images/contact-page/ic-pin.png" },
+      { "title": "Our Availability", "text": "Monday – Saturday\n10:00 AM – 7:00 PM (IST)", "href": "", "icon": "assets/images/contact-page/ic-cal.png" }
+    ],
+    "ribbon": "assets/images/contact-page/contact-ribbon.jpg"
+  },
+
   "contact": {
     "hero": { "title": "Have an Idea?\n*Let’s Talk.*", "text": "Tell us a little about your requirement. We will review your message and get back to you." },
     "title": "Let’s discuss your project",
