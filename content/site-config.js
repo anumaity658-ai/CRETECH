@@ -254,7 +254,7 @@ window.SITE_CONFIG = {
         {
           "kind": "Our Own Website",
           "title": "CRETECH",
-          "text": "The website you are on right now. Its design, development, content and images are all our own work.",
+          "text": "The website you are on right now is our own brand, CRETECH. Every part of it, from the UI/UX design and page layouts to the admin-ready structure, content, images and graphics, was planned and built by us. It reflects the same care and attention to detail we bring to every client project, and we handle its SEO, testing and social media growth ourselves as well.",
           "image": "assets/images/work/cretech.jpg",
           "url": "cretech.in",
           "link": { "label": "You Are Here ✓", "href": "" },
