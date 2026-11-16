@@ -9,7 +9,9 @@ declare(strict_types=1);
 const CRETECH_ADMIN = true;
 
 require_once __DIR__ . '/../app/admin.php';
+require_once __DIR__ . '/../app/admin-forms.php';
 require_once __DIR__ . '/views.php';
+require_once __DIR__ . '/forms-view.php';
 
 send_security_headers();
 header('Cache-Control: no-store');
@@ -23,7 +25,8 @@ $post = ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST';
 $self = admin_url();
 
 if ($post && !csrf_ok()) {
-    flash('Your session expired. Please try again.');
+    $tooBig = empty($_POST) && (int) ($_SERVER['CONTENT_LENGTH'] ?? 0) > 0;
+    flash($tooBig ? 'The photos were too large to upload together. Please upload fewer or smaller photos at a time.' : 'Your session expired. Please try again.');
     header('Location: ' . admin_url($page === 'dashboard' ? null : $page), true, 303);
     exit;
 }
@@ -74,6 +77,9 @@ if ($me === null) {
 }
 
 /* ---------- Actions (POST) ---------- */
+if ($post && in_array($page, ['home', 'about', 'services', 'service', 'process', 'contact', 'layout', 'history'], true)) {
+    admin_cms_post($page);
+}
 if ($post) {
     $back = admin_url($page);
     switch ($page) {
@@ -134,7 +140,8 @@ if ($post) {
             break;
 
         case 'media':
-            flash(media_upload($_FILES['image'] ?? null));
+            $up = admin_save_upload($_FILES['image'] ?? null);
+            flash(is_array($up) ? 'Image uploaded: ' . basename($up['path']) . ' (' . $up['w'] . ' × ' . $up['h'] . ' px)' : $up);
             break;
     }
     header('Location: ' . $back, true, 303);
@@ -147,29 +154,118 @@ if (!isset(admin_pages()[$page])) {
 }
 view_page($page, $me);
 
-/* ---------- Media upload ---------- */
-function media_upload(?array $file): string
+/* ---------- Content forms (POST) ---------- */
+function admin_cms_post(string $page): void
 {
-    if (!$file || ($file['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK || !is_uploaded_file($file['tmp_name'])) {
-        return 'Please choose an image to upload (max 8 MB).';
+    $version = (int) ($_POST['version'] ?? -1);
+    $do = (string) ($_POST['do'] ?? '');
+    $i = (int) ($_GET['i'] ?? -1);
+    $pageName = admin_pages()[$page][0] ?? 'Website';
+    $back = admin_url($page, $page === 'service' ? ['i' => $i] : []);
+
+    try {
+        if ($page === 'history') {
+            $label = history_restore((string) ($_POST['id'] ?? ''), $version);
+            if ($label !== null) {
+                activity_log('update', 'Website restored', 'to before: ' . $label);
+                flash('Done. The website is back to how it was before “' . $label . '”.');
+            }
+            redirect_to(admin_url('history'));
+        }
+
+        if ($do === 'save') {
+            $id = (string) ($_POST['section'] ?? '');
+            $sections = $page === 'service' ? service_sections($i) : (form_pages()[$page] ?? []);
+            if (!isset($sections[$id])) {
+                flash('This section was not found.');
+                redirect_to($back);
+            }
+            [$path, $title] = $sections[$id];
+            $posted = json_decode((string) ($_POST['payload'] ?? ''), true);
+            if (json_last_error() !== JSON_ERROR_NONE) {
+                flash('The form could not be read. Please try again.');
+                redirect_to($back);
+            }
+            $current = path_get(cms_data(), $path);
+            $new = form_apply($current, $posted);
+            if ($page === 'service') {
+                $name = str_replace("\n", ' ', (string) (cms_data()['servicesPage']['cards'][$i]['title'] ?? 'Service'));
+                $label = 'Service “' . $name . '” – ' . $title;
+            } else {
+                $label = $pageName . ' – ' . $title;
+            }
+            if ($new === $current) {
+                flash(FormUploads::$errors ? implode(' ', FormUploads::$errors) : 'No changes to save in “' . $title . '”.');
+            } else {
+                cms_save_path($path, $new, $version, $label);
+                activity_log('update', $label . ' updated');
+                flash('Saved. “' . $title . '” is now live on the website.' . (FormUploads::$errors ? ' Note: ' . implode(' ', FormUploads::$errors) : ''));
+            }
+            redirect_to($back . (str_contains($back, '?') ? '&' : '?') . 'open=' . rawurlencode($id) . '#sec-' . rawurlencode($id));
+        }
+
+        $data = cms_data();
+        $cards = $data['servicesPage']['cards'] ?? [];
+        $details = $data['services'] ?? [];
+
+        if ($page === 'services' && $do === 'add-service' && $cards) {
+            $new = end($cards);
+            $new['title'] = 'New Service';
+            $new['text'] = '';
+            $new['href'] = '';
+            $cards[] = $new;
+            cms_save_parts([[['servicesPage', 'cards'], $cards]], $version, 'New service added');
+            activity_log('work', 'New Service – Added');
+            flash('New service added. Fill in its card below and save.');
+            redirect_to(admin_url('service', ['i' => count($cards) - 1]));
+        }
+
+        if ($page === 'service' && isset($cards[$i]) && $do === 'create-detail' && $details) {
+            $title = str_replace("\n", ' ', (string) $cards[$i]['title']);
+            $slug = slugify($title) ?: 'service';
+            $taken = array_column($details, 'slug');
+            for ($n = 2, $base = $slug; in_array($slug, $taken, true); $n++) {
+                $slug = $base . '-' . $n;
+            }
+            $template = $details[0];
+            $detail = ['slug' => $slug, 'title' => $title, 'short' => (string) ($cards[$i]['text'] ?? ''), 'summary' => '', 'intro' => '', 'image' => (string) ($cards[$i]['image'] ?? ''), 'features' => []]
+                + array_map(static fn ($v) => is_string($v) ? '' : (is_array($v) ? [] : $v), $template);
+            $detail['icon'] = (string) ($template['icon'] ?? '');
+            $details[] = $detail;
+            $cards[$i]['href'] = 'services/' . $slug;
+            cms_save_parts([[['services'], $details], [['servicesPage', 'cards'], $cards]], $version, 'Detail page created for “' . $title . '”');
+            activity_log('work', 'Service detail page – Added', $title);
+            flash('Detail page created. Fill in its text and save.');
+            redirect_to(admin_url('service', ['i' => $i, 'open' => 'detail']) . '#sec-detail');
+        }
+
+        if ($page === 'service' && isset($cards[$i]) && $do === 'delete-service') {
+            $title = str_replace("\n", ' ', (string) $cards[$i]['title']);
+            $j = service_detail_index($cards[$i]);
+            array_splice($cards, $i, 1);
+            $parts = [[['servicesPage', 'cards'], $cards]];
+            if ($j !== null) {
+                $slug = $details[$j]['slug'];
+                array_splice($details, $j, 1);
+                $parts[] = [['services'], $details];
+                // Remove footer links to the deleted page.
+                $footer = $data['footerLinks']['services'] ?? [];
+                $parts[] = [['footerLinks', 'services'], array_values(array_filter($footer, static fn ($l) => trim((string) ($l['href'] ?? ''), '/') !== 'services/' . $slug))];
+            }
+            cms_save_parts($parts, $version, 'Service “' . $title . '” deleted');
+            activity_log('work', 'Service – Deleted', $title);
+            flash('“' . $title . '” was deleted. Changed your mind? Use Restore previous version.');
+            redirect_to(admin_url('services'));
+        }
+    } catch (StoreConflict $e) {
+        flash('Someone else saved changes a moment ago. The page has been reloaded — please make your change again.');
+        redirect_to($back);
     }
-    if ($file['size'] > 8 * 1024 * 1024) {
-        return 'This image is larger than 8 MB.';
-    }
-    $info = @getimagesize($file['tmp_name']);
-    $types = [IMAGETYPE_JPEG => 'jpg', IMAGETYPE_PNG => 'png', IMAGETYPE_WEBP => 'webp', IMAGETYPE_GIF => 'gif'];
-    if (!$info || !isset($types[$info[2]])) {
-        return 'Only JPG, PNG, WebP or GIF images can be uploaded.';
-    }
-    $base = slugify(pathinfo((string) $file['name'], PATHINFO_FILENAME)) ?: 'image';
-    $name = substr($base, 0, 60) . '-' . bin2hex(random_bytes(3)) . '.' . $types[$info[2]];
-    $dir = cms_root() . '/uploads/media';
-    if (!is_dir($dir)) {
-        mkdir($dir, 0775, true);
-    }
-    if (!move_uploaded_file($file['tmp_name'], $dir . '/' . $name)) {
-        return 'The image could not be saved. Please try again.';
-    }
-    activity_log('work', 'Media Library – Image uploaded', $name . ' (' . $info[0] . ' × ' . $info[1] . ' px)');
-    return 'Image uploaded: ' . $name;
+    redirect_to($back);
+}
+
+function redirect_to(string $url): never
+{
+    header('Location: ' . $url, true, 303);
+    exit;
 }

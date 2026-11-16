@@ -38,6 +38,7 @@ function admin_pages(): array
         'home' => ['Home Page', 'monitor', true],
         'about' => ['About Page', 'users', true],
         'services' => ['Services', 'layers', true],
+        'process' => ['Work Process', 'chart', true],
         'blog' => ['Blog', 'blog', true],
         'contact' => ['Contact Page', 'mail', true],
         'layout' => ['Header & Footer', 'browser', true],
@@ -49,6 +50,8 @@ function admin_pages(): array
         'activity' => ['Recent Updates', 'refresh', false, 'dashboard'],
         'logins' => ['Login Activity', 'shield', false, 'dashboard'],
         'search' => ['Search', 'search', false, 'dashboard'],
+        'service' => ['Edit Service', 'layers', false, 'services'],
+        'history' => ['Saved Versions', 'refresh', false, 'dashboard'],
     ];
 }
 
@@ -210,11 +213,14 @@ function view_page(string $page, array $me): void
 function page_intro(string $page): string
 {
     return [
-        'home' => 'Sections, text and images of the home page.',
-        'about' => 'Sections, text and images of the About page.',
-        'services' => 'All services shown on the Services page.',
+        'home' => 'Edit text, buttons, lists and photos of the home page.',
+        'process' => 'Edit text and photos of the Work Process page.',
+        'service' => 'Card and detail page of this service.',
+        'history' => 'Bring back an earlier version of the website content.',
+        'about' => 'Edit text and photos of the About page.',
+        'services' => 'Every service has its own form. Below: the Services page itself.',
         'blog' => 'Write and manage blog posts.',
-        'contact' => 'Contact page details and form.',
+        'contact' => 'Edit text, details and photos of the Contact page.',
         'layout' => 'Menu, header button and footer links.',
         'media' => 'Every image of the website, with its size.',
         'style' => 'Brand colours and fonts used on the website.',
@@ -404,89 +410,120 @@ function image_box(string $path): string
         . '<figcaption><span class="size">' . h($label) . '</span><span class="path">' . h(basename($path)) . '</span></figcaption></figure>';
 }
 
-function section_title(string $key): string
-{
-    $key = preg_replace('/(Section|Page)$/', '', $key);
-    return ucfirst(trim((string) preg_replace('/([A-Z])/', ' $1', (string) $key)));
-}
-
-function sections_overview(array $sections, string $viewPath): void
-{
-    ?>
-    <div class="card panel">
-      <div class="panel-head"><h2><?= icon('layers', 'ic head-ic') ?> Sections on this page</h2><a class="all" href="<?= h(site_base() . '/' . $viewPath) ?>" target="_blank" rel="noopener">View page <?= icon('arrow') ?></a></div>
-      <p class="note"><?= icon('info') ?> Editing forms for each section are the next step of the admin panel. For now this page shows every section and the exact size of each image, so new images can be prepared at the right size.</p>
-      <div class="sections">
-      <?php $n = 0; foreach ($sections as $key => $value): if (str_starts_with((string) $key, '_') || !is_array($value)) continue; $imgs = []; images_in($value, $imgs); ?>
-        <details class="sec"<?= $n++ === 0 ? ' open' : '' ?>>
-          <summary><span class="sec-n"><?= $n ?></span> <?= h(section_title((string) $key)) ?> <small><?= count($imgs) ?> image<?= count($imgs) === 1 ? '' : 's' ?></small></summary>
-          <?php if ($imgs): ?><div class="img-grid"><?php foreach (array_keys($imgs) as $img) echo image_box($img); ?></div><?php else: ?><p class="empty">Text only — no images in this section.</p><?php endif; ?>
-        </details>
-      <?php endforeach; ?>
-      </div>
-    </div>
-    <?php
-}
+/* ---------- Edit pages ---------- */
 
 function page_home(array $me): void
 {
-    sections_overview(cms_data()['home'] ?? [], '');
+    f_page('home', form_pages()['home'], [], '');
 }
 
 function page_about(array $me): void
 {
-    $about = cms_data()['about'] ?? [];
-    sections_overview(array_filter($about, 'is_array') ?: ['about' => $about], 'about');
+    f_page('about', form_pages()['about'], [], 'about');
+}
+
+function page_process(array $me): void
+{
+    f_page('process', form_pages()['process'], [], 'process');
 }
 
 function page_contact(array $me): void
 {
-    $cp = cms_data()['contactPage'] ?? [];
-    sections_overview(array_filter($cp, 'is_array'), 'contact');
+    f_page('contact', form_pages()['contact'], [], 'contact');
+    echo '<p class="note under">' . icon('mail') . ' Messages sent from the contact form are in <a href="' . h(admin_url('enquiries')) . '">Enquiries</a>.</p>';
 }
 
 function page_layout(array $me): void
 {
-    $cfg = cms_data();
-    ?>
-    <div class="grid-2">
-      <div class="card panel">
-        <div class="panel-head"><h2><?= icon('browser', 'ic head-ic') ?> Header menu</h2></div>
-        <ul class="list"><?php foreach ($cfg['nav'] ?? [] as $item): ?><li><b><?= h($item['label'] ?? '') ?></b><span><?= h($item['href'] ?? '') ?></span></li><?php endforeach; ?></ul>
-        <?php if (!empty($cfg['headerCta'])): ?><p class="note"><?= icon('info') ?> Header button: <b><?= h($cfg['headerCta']['label'] ?? '') ?></b></p><?php endif; ?>
-      </div>
-      <div class="card panel">
-        <div class="panel-head"><h2><?= icon('browser', 'ic head-ic') ?> Footer links</h2></div>
-        <ul class="list"><?php foreach ($cfg['footerLinks'] ?? [] as $group => $item): ?><li><b><?= h(is_array($item) ? (string) ($item['label'] ?? $item['title'] ?? $group) : (string) $item) ?></b><span><?= h(is_array($item) ? (string) ($item['href'] ?? '') : '') ?></span></li><?php endforeach; ?></ul>
-        <p class="note"><?= icon('info') ?> Logo: <?= image_box('assets/images/logo.svg') ?></p>
-      </div>
-    </div>
-    <?php
+    f_page('layout', form_pages()['layout'], [], '');
 }
 
 function page_services(array $me): void
 {
     $cards = cms_data()['servicesPage']['cards'] ?? [];
+    $linked = [];
     ?>
-    <div class="card panel">
-      <div class="panel-head"><h2><?= icon('layers', 'ic head-ic') ?> <?= count($cards) ?> services</h2><a class="all" href="<?= h(site_base()) ?>/services" target="_blank" rel="noopener">View page <?= icon('arrow') ?></a></div>
-      <p class="note"><?= icon('info') ?> Each service will get its own edit form in the next step.</p>
+    <div class="card panel svc-list">
+      <div class="panel-head"><h2><?= icon('layers', 'ic head-ic') ?> <?= count($cards) ?> services</h2>
+        <form method="post" action="<?= h(admin_url('services')) ?>"><input type="hidden" name="csrf" value="<?= h(csrf_token()) ?>"><input type="hidden" name="do" value="add-service"><input type="hidden" name="version" value="<?= (int) (cms_saved()['version'] ?? 0) ?>"><button class="btn sm" type="submit"><?= icon('plus') ?> Add new service</button></form>
+      </div>
+      <p class="note"><?= icon('info') ?> Each service has its own form: its card on the Services page and its own detail page.</p>
       <div class="table-wrap">
         <table class="tbl svc-tbl">
-          <thead><tr><th>#</th><th>Card image</th><th>Service</th><th>Short text</th><th>Link</th></tr></thead>
+          <thead><tr><th>#</th><th>Photo</th><th>Service</th><th>Detail page</th><th></th></tr></thead>
           <tbody>
-          <?php foreach ($cards as $i => $c): ?>
+          <?php foreach ($cards as $i => $c): $j = service_detail_index($c); if ($j !== null) $linked[$j] = true; ?>
             <tr>
               <td><?= $i + 1 ?></td>
-              <td class="thumb"><?= !empty($c['image']) ? image_box((string) $c['image']) : '' ?></td>
-              <td><b><?= h($c['title'] ?? '') ?></b></td>
-              <td class="msg"><?= h(cut((string) ($c['text'] ?? ''), 110)) ?></td>
-              <td><?php if (!empty($c['href'])): ?><a href="<?= h(site_base() . '/' . ltrim((string) $c['href'], '/')) ?>" target="_blank" rel="noopener">Open</a><?php endif; ?></td>
+              <td class="thumb"><?php if (!empty($c['image'])): ?><img src="<?= h(site_base() . '/' . $c['image']) ?>" alt=""><?php endif; ?></td>
+              <td><b><?= h(str_replace("\n", ' ', (string) ($c['title'] ?? ''))) ?></b><small class="muted"><?= h(cut((string) ($c['text'] ?? ''), 80)) ?></small></td>
+              <td><?= $j !== null ? '<span class="pill ok">Yes</span>' : '<span class="pill">Not made yet</span>' ?></td>
+              <td class="act"><a class="btn sm" href="<?= h(admin_url('service', ['i' => $i])) ?>">Edit</a></td>
             </tr>
           <?php endforeach; ?>
           </tbody>
         </table>
       </div>
+      <?php $orphans = array_diff_key(cms_data()['services'] ?? [], $linked); if ($orphans): ?>
+        <p class="note"><?= icon('info') ?> Detail pages without a card on the Services page: <?= h(implode(', ', array_map(static fn ($s) => str_replace("\n", ' ', (string) $s['title']), $orphans))) ?>. They still show in the header menu.</p>
+      <?php endif; ?>
+    </div>
+    <?php
+    f_page('services', form_pages()['services'], [], 'services');
+}
+
+function page_service(array $me): void
+{
+    $i = (int) ($_GET['i'] ?? -1);
+    $cards = cms_data()['servicesPage']['cards'] ?? [];
+    if (!isset($cards[$i])) {
+        echo '<p class="empty">' . icon('info') . ' This service was not found. <a href="' . h(admin_url('services')) . '">Back to services</a></p>';
+        return;
+    }
+    $card = $cards[$i];
+    $sections = service_sections($i);
+    $version = (int) (cms_saved()['version'] ?? 0);
+    ?>
+    <div class="svc-top">
+      <a class="ghost" href="<?= h(admin_url('services')) ?>">← All services</a>
+      <b><?= h(str_replace("\n", ' ', (string) $card['title'])) ?></b>
+      <span class="muted">Service <?= $i + 1 ?> of <?= count($cards) ?></span>
+      <span class="grow"></span>
+      <?php if ($i > 0): ?><a class="ghost" href="<?= h(admin_url('service', ['i' => $i - 1])) ?>">‹ Previous</a><?php endif; ?>
+      <?php if ($i < count($cards) - 1): ?><a class="ghost" href="<?= h(admin_url('service', ['i' => $i + 1])) ?>">Next ›</a><?php endif; ?>
+    </div>
+    <?php
+    f_page('service', $sections, ['i' => $i], isset($sections['detail']) ? trim((string) $card['href'], '/') : 'services');
+    if (!isset($sections['detail'])): ?>
+      <div class="card panel act-panel">
+        <p><b>No detail page yet.</b> Create one and the card will link to it. It also appears in the header Services menu.</p>
+        <form method="post" action="<?= h(admin_url('service', ['i' => $i])) ?>"><input type="hidden" name="csrf" value="<?= h(csrf_token()) ?>"><input type="hidden" name="do" value="create-detail"><input type="hidden" name="version" value="<?= $version ?>"><button class="btn sm" type="submit"><?= icon('plus') ?> Create detail page</button></form>
+      </div>
+    <?php endif; ?>
+    <div class="card panel act-panel danger">
+      <p><b>Delete this service</b> — removes its card from the Services page<?= isset($sections['detail']) ? ' and its detail page' : '' ?>. You can bring it back with “Restore previous version”.</p>
+      <form method="post" action="<?= h(admin_url('service', ['i' => $i])) ?>" data-confirm="Delete this service?"><input type="hidden" name="csrf" value="<?= h(csrf_token()) ?>"><input type="hidden" name="do" value="delete-service"><input type="hidden" name="version" value="<?= $version ?>"><button class="btn sm red" type="submit">Delete service</button></form>
+    </div>
+    <?php
+}
+
+function page_history(array $me): void
+{
+    $rows = store_read('cms-history');
+    $version = (int) (cms_saved()['version'] ?? 0);
+    ?>
+    <div class="card panel">
+      <div class="panel-head"><h2><?= icon('refresh', 'ic head-ic') ?> Saved versions</h2></div>
+      <p class="note"><?= icon('info') ?> Every save keeps the website as it was just before. “Restore” brings the whole website content back to that moment (your current version is kept here too, so you can undo).</p>
+      <?php if (!$rows): ?><p class="empty"><?= icon('info') ?> Nothing saved yet.</p><?php else: ?>
+      <ul class="list hist">
+        <?php foreach ($rows as $r): ?>
+        <li><span><b>Before: <?= h($r['label']) ?></b><small><?= h(when((string) $r['at'])) ?><?= ($r['admin'] ?? '') !== '' ? ' · by ' . h($r['admin']) : '' ?></small></span>
+          <form method="post" action="<?= h(admin_url('history')) ?>" data-confirm="Bring the website back to how it was before “<?= h($r['label']) ?>”?"><input type="hidden" name="csrf" value="<?= h(csrf_token()) ?>"><input type="hidden" name="id" value="<?= h($r['id']) ?>"><input type="hidden" name="version" value="<?= $version ?>"><button class="ghost" type="submit"><?= icon('refresh') ?> Restore</button></form>
+        </li>
+        <?php endforeach; ?>
+      </ul>
+      <?php endif; ?>
     </div>
     <?php
 }
