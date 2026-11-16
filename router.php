@@ -14,6 +14,12 @@ if (preg_match('#^/(app|storage|database|docs)(/|$)#i', $uri) || preg_match('#/\
     return true;
 }
 
+if (preg_match('#^/admin/?$#', $uri)) {
+    $_SERVER['SCRIPT_NAME'] = '/admin/index.php';
+    require __DIR__ . '/admin/index.php';
+    return true;
+}
+
 if ($uri === '/sitemap.xml') {
     require __DIR__ . '/sitemap.php';
     return true;
