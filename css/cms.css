@@ -2087,3 +2087,125 @@ a.wk-btn:hover { transform: translateY(-2px); }
   .wd-info { flex-direction: column; }
   .wd-lined .wd-line { display: none; }
 }
+
+/* ---------- Service canvas pages (App Development, UI/UX, SEO ... one design each) ----------
+   Data: services[n].page with "layout": "canvas" in content/site-config.js. Every item sits at its
+   reference position (n * --u, 1 reference px); the 1024 px column is centred, the hero picture
+   stretches to the full width. Below 981px the items stack in order. */
+.cv-page {
+  --u: min(calc(100vw / 1040), 1px);
+  --hh: calc(clamp(64px, 5.3vw, 94px) + 4px);
+  --ink: #2b1233; --txt: #1f1b22; --org: #ff5f0f;
+  overflow: hidden; color: var(--txt);
+  background:
+    radial-gradient(30% 5% at 100% 30%, rgba(253, 214, 196, .5), transparent 70%),
+    radial-gradient(35% 6% at 0% 55%, rgba(253, 214, 196, .45), transparent 70%),
+    radial-gradient(35% 6% at 100% 80%, rgba(253, 214, 196, .4), transparent 70%),
+    linear-gradient(180deg, #fbebe2 0, #fcf1ec 10%, #fdf2ee 55%, #fcf0ea 100%);
+}
+.cv-page :where(h1, h2, h3, p, ul) { margin: 0; padding: 0; }
+.cv-wrap { position: relative; width: calc(1024 * var(--u)); height: calc(var(--H) * var(--u)); margin: 0 auto; }
+.cv-i { position: absolute; left: calc(var(--x) * var(--u)); top: calc(var(--y) * var(--u)); width: calc(var(--w) * var(--u)); }
+.cv-i.hh { height: calc(var(--h) * var(--u)); }
+.cv-img { display: block; object-fit: cover; border-radius: calc(var(--r, 0) * var(--u)); }
+.cv-card { border-radius: calc(var(--r, 14) * var(--u)); overflow: hidden; isolation: isolate; box-shadow: 0 calc(5 * var(--u)) calc(14 * var(--u)) rgba(190, 110, 80, .13); }
+.cv-card-img { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cv-kids { position: absolute; inset: 0; }
+.cv-card.flat { border-radius: 0; box-shadow: none; overflow: visible; }
+/* group: picture + labels that always move together (category strips, process strips) */
+.cv-grp { isolation: isolate; }
+.cv-grp > .cv-card-img { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cv-t { white-space: nowrap; font-size: calc(var(--fs) * var(--k, 1) * var(--u)); font-weight: var(--fw); line-height: calc(var(--lh) * var(--u)); letter-spacing: var(--ls, 0); }
+.cv-t.fL { font-family: Lexend, "DM Sans", Arial, sans-serif; }
+.cv-t.fO, .cv-btn.fO { font-family: Outfit, "DM Sans", Arial, sans-serif; }
+.cv-t.fP, .cv-btn.fP { font-family: Poppins, "DM Sans", Arial, sans-serif; }
+.cv-t.th { color: var(--ink); letter-spacing: var(--ls, -.03em); }
+.cv-t.tp { color: var(--txt); }
+.cv-t.fO.tp { letter-spacing: var(--ls, -.01em); }
+.cv-t em { font-style: normal; color: var(--em, var(--org)); }
+.cv-t.ac { text-align: center; }
+.cv-t.ar { text-align: right; }
+.cv-t.up { text-transform: uppercase; }
+.cv-t.ln { white-space: normal; display: flex; align-items: center; justify-content: center; gap: calc(var(--lg) * var(--u)); }
+.cv-t.ln::before, .cv-t.ln::after { content: ""; flex: 0 0 calc(var(--lw) * var(--u)); height: max(calc(1.8 * var(--u)), 1.5px); border-radius: 2px; }
+.cv-t.ln::before { background: linear-gradient(90deg, rgba(255, 95, 15, 0), var(--org)); }
+.cv-t.ln::after { background: linear-gradient(90deg, var(--org), rgba(255, 95, 15, 0)); }
+.cv-list li { display: flex; align-items: center; gap: calc(var(--cg) * var(--u)); height: calc(var(--row) * var(--u)); white-space: nowrap; }
+.cv-list li svg { flex: 0 0 calc(var(--ck) * var(--u)); height: calc(var(--ck) * var(--u)); fill: none; stroke: var(--org); stroke-width: 2.9; stroke-linecap: round; stroke-linejoin: round; }
+.cv-rect { display: block; border-radius: calc(var(--r, 2) * var(--u)); }
+.cv-arrow { display: grid; place-items: center; height: calc(var(--w) * var(--u)); color: var(--org); }
+.cv-arrow svg { width: 100%; height: 100%; }
+.cv-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: calc(6 * var(--u)); border-radius: calc(var(--r, 99) * var(--u));
+  font-size: calc(var(--fs) * var(--u)); font-weight: var(--fw); letter-spacing: -.005em; white-space: nowrap; transition: transform .2s;
+}
+.cv-btn svg { width: 1.1em; height: 1.1em; }
+.cv-btn:hover { transform: translateY(-2px); }
+.cv-btn.k-o { color: #fff; background: linear-gradient(180deg, #ff8a2b, #ec5a10); box-shadow: 0 calc(4 * var(--u)) calc(12 * var(--u)) rgba(240, 100, 20, .35); }
+.cv-btn.k-line { color: #fff; border: 1.5px solid rgba(255, 255, 255, .9); }
+.cv-btn.k-plum { color: #4a1450; border: 1.5px solid #5a2160; background: rgba(255, 255, 255, .35); }
+.cv-btn.k-cream { color: #f1580f; background: linear-gradient(180deg, #fffaf6, #ffeee2); box-shadow: 0 calc(4 * var(--u)) calc(10 * var(--u)) rgba(120, 40, 0, .18); }
+
+/* hero: picture under the header, full width; items on the 1024 px column */
+.cv-hero { position: relative; isolation: isolate; display: flex; align-items: center; padding-top: var(--hh); min-height: calc(var(--hh) + max(var(--H) * var(--u), 100vw * var(--H) / 1024)); background: linear-gradient(180deg, #fbe9df var(--hh), #f6ddd0 var(--hh)); }
+.cv-hero.dark { background: linear-gradient(180deg, #fbe9df var(--hh), #1c1f30 var(--hh)); }
+.cv-hero-img { position: absolute; z-index: -1; left: 0; right: 0; bottom: 0; top: var(--hh); width: 100%; height: calc(100% - var(--hh)); object-fit: cover; object-position: 60% 100%; }
+.cv-hero.dark .cv-t.tp { color: rgba(255, 255, 255, .93); }
+.cv-hero.dark .cv-t.th { color: #fff; }
+
+/* FAQ: real accordions, two columns; the section grows when an answer opens */
+.cv-faq { position: relative; }
+.cv-faq-in { position: relative; width: calc(1024 * var(--u)); margin: 0 auto; padding: calc(var(--pt) * var(--u)) 0 calc(var(--pb) * var(--u)); }
+.cv-faq-grid { display: flex; align-items: flex-start; }
+.cv-faq-col { flex: 0 0 calc(var(--w) * var(--u)); margin-left: calc(var(--ml) * var(--u)); display: grid; row-gap: calc(var(--rg) * var(--u)); }
+.cv-q { border-radius: calc(12 * var(--u)); border: 1px solid rgba(255, 255, 255, .95); background: linear-gradient(180deg, rgba(255, 255, 255, .92), rgba(255, 246, 241, .9)); box-shadow: 0 calc(3 * var(--u)) calc(8 * var(--u)) rgba(206, 130, 92, .13); }
+.cv-q summary { display: flex; align-items: center; justify-content: space-between; gap: 8px; height: calc(var(--rh) * var(--u)); padding: 0 calc(16 * var(--u)) 0 calc(20 * var(--u)); font: var(--fw) calc(var(--fs) * var(--u))/1 Outfit, "DM Sans", Arial, sans-serif; color: #1e1a22; cursor: pointer; list-style: none; letter-spacing: -.01em; }
+.cv-q summary::-webkit-details-marker { display: none; }
+.cv-q summary svg { flex: 0 0 calc(13 * var(--u)); height: calc(13 * var(--u)); fill: none; stroke: #ff5a0c; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s; }
+.cv-q[open] summary svg { transform: rotate(180deg); }
+.cv-q p { padding: 0 calc(20 * var(--u)) calc(9 * var(--u)); font: 400 calc(10.5 * var(--u))/1.4 Lexend, "DM Sans", Arial, sans-serif; color: #3a3340; }
+.cv-q summary:focus-visible { outline: 2px solid var(--org); outline-offset: 2px; border-radius: calc(12 * var(--u)); }
+
+@media (max-width: 980px) {
+  .cv-page { --u: 1px; }
+  .cv-wrap { width: auto; height: auto; display: flex; flex-direction: column; gap: 14px; padding: 28px 20px; }
+  .cv-i, .cv-i.hh { position: relative; left: auto; top: auto; width: auto; height: auto; max-width: 100%; }
+  .cv-i.nm { display: none; }
+  .cv-hero { min-height: 0; padding-bottom: 10px; }
+  .cv-hero::after { content: ""; position: absolute; z-index: -1; inset: var(--hh) 0 0; background: linear-gradient(90deg, rgba(252, 240, 233, .94), rgba(252, 240, 233, .7)); }
+  .cv-hero.dark::after { background: linear-gradient(90deg, rgba(20, 24, 42, .9), rgba(20, 24, 42, .6)); }
+  .cv-hero-img { object-position: 75% 50%; }
+  .cv-hero .cv-wrap { padding-top: 34px; }
+  .cv-t { white-space: normal; }
+  .cv-t.th { font-size: max(calc(var(--fs) * 1px), 19px); line-height: 1.15; }
+  .cv-hero h1.cv-t { font-size: clamp(30px, 7vw, 40px); }
+  .cv-t.tp { font-size: max(calc(var(--fs) * 1px), 14.5px); line-height: 1.45; white-space: normal; }
+  .cv-t.ln::before, .cv-t.ln::after { flex-basis: 20px; }
+  .cv-t br { display: none; }
+  .cv-hero h1 br, .cv-t.th br { display: initial; }
+  .cv-img { width: 100% !important; max-width: 560px; aspect-ratio: var(--w) / var(--h); height: auto !important; }
+  .cv-card { min-height: 150px; padding: 18px 18px 20px; }
+  .cv-card-img { object-position: right center; }
+  .cv-card::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(255, 247, 242, .96) 45%, rgba(255, 247, 242, .55)); }
+  .cv-kids { position: relative; inset: auto; display: flex; flex-direction: column; gap: 8px; }
+  .cv-list li { height: auto; min-height: 28px; white-space: normal; }
+  .cv-list li svg { flex-basis: 14px; height: 14px; }
+  .cv-btn, .cv-btn.hh { align-self: flex-start; height: 42px; padding: 0 22px; font-size: 15px; }
+  .cv-rect, .cv-arrow { display: none; }
+  .cv-card.dk::after { display: none; }
+  .cv-card.dk { background: linear-gradient(135deg, #3f2a5e, #6a2f63 55%, #e8702c); }
+  .cv-card.dk > .cv-card-img { display: none; }
+  .cv-card.dk .cv-t { color: #fff; }
+  /* strips keep their design and scroll sideways */
+  .cv-scroll { position: relative; margin: 0 -20px; padding: 0 20px 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .cv-grp, .cv-grp.hh { --u: .8px; position: relative; width: calc(var(--w) * var(--u)); height: calc(var(--h) * var(--u)); max-width: none; }
+  .cv-grp .cv-i, .cv-grp .cv-i.hh { position: absolute; left: calc(var(--x) * var(--u)); top: calc(var(--y) * var(--u)); width: calc(var(--w) * var(--u)); }
+  .cv-grp .cv-t.tp, .cv-grp .cv-t.th { font-size: calc(var(--fs) * var(--k, 1) * var(--u)); line-height: calc(var(--lh) * var(--u)); white-space: nowrap; }
+  .cv-grp .cv-t br { display: initial; }
+  .cv-faq-in { width: auto; padding: 30px 20px 40px; }
+  .cv-faq-in > .cv-i { margin-bottom: 18px; }
+  .cv-faq-grid { flex-direction: column; gap: 8px; }
+  .cv-faq-col { flex: none; width: 100%; margin: 0; row-gap: 8px; }
+  .cv-q summary { height: auto; min-height: 44px; padding: 10px 14px 10px 16px; font-size: 14px; line-height: 1.3; }
+  .cv-q p { font-size: 14px; padding: 0 16px 12px; }
+}

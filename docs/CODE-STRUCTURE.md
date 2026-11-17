@@ -136,6 +136,13 @@ All text, services, FAQs, steps and image links are in `content/site-config.js`.
   responsive, features, ux, process, audience, cost, cta, faq). Any service with a `page` object uses
   this layout (`serviceLanding()` in js/site-components.js, styles under "Service landing" in
   css/cms.css); the others keep the shared detail layout. Images: `assets/images/webdev/`.
+- The other service pages each have their own design too: `services[n].page` with `"layout": "canvas"`.
+  Every item (text, picture, card, strip, button) sits at its position on the 1024 px reference:
+  `box` = [x, y, w, h] in reference px; text is fitted so its widest line has the reference width.
+  Pictures are cut from the reference with their text removed: `assets/images/svc/<slug>/`.
+  Code: `serviceCanvas()` in js/site-components.js, "Service canvas pages" in css/cms.css, the
+  text fitting at the end of js/script.js. Below 981px the items stack; strips scroll sideways.
+  page.php sends each service's page data only on that service's own page.
 - A new service needs only a new item in `"services"` with a unique `slug`;
   its page, footer link, sitemap entry and contact-form option appear automatically.
 

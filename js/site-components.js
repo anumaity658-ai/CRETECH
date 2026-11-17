@@ -947,6 +947,102 @@
       '<section class="wd-body">' + row1 + row2 + row3 + cta + "</section>" + faq + "</div>";
   }
 
+  /* ---------- Service canvas page (one design per service, from its 1024 px reference) ----------
+     Every item is placed at its reference position: box = [x, y, w, h] in reference px, measured
+     from the top of the reference image. Pictures are cut from the reference (text removed); all
+     text is real HTML. Below 981px the items simply stack in their listed order.
+     Item types: img, card (picture + kids), txt, list, btn, rect, arrow. */
+  var CV_FAM = { L: "fL", O: "fO", P: "fP" };
+  function cvNum(v) { v = Number(v); return isFinite(v) ? Math.round(v * 100) / 100 : 0; }
+  // a space before each line break, so words stay apart where phones hide the breaks
+  function cvLines(text) { return String(text == null ? "" : text).replace(/\n/g, " \n"); }
+  function cvColor(c) { return /^[#a-z0-9(),.%\s-]+$/i.test(String(c || "")) ? String(c) : ""; }
+  function cvBox(box, ox, oy) {
+    box = box || [];
+    var s = "--x:" + cvNum(box[0] - ox) + ";--y:" + cvNum(box[1] - oy) + ";--w:" + cvNum(box[2]) + ";";
+    if (box[3]) s += "--h:" + cvNum(box[3]) + ";";
+    return s;
+  }
+  function cvFont(f) {
+    f = f || [];
+    return "--fs:" + cvNum(f[0] || 12) + ";--fw:" + cvNum(f[1] || 400) + ";--lh:" + cvNum(f[2] || (f[0] || 12) * 1.2) + ";" +
+      (f[4] != null ? "--ls:" + cvNum(f[4]) + "em;" : "");
+  }
+  function cvItem(it, ox, oy) {
+    var t = it.t, box = it.box || [], cls = "cv-i" + (box[3] ? " hh" : "") + (it.m === 0 ? " nm" : "") + (it.cls ? " " + String(it.cls).replace(/[^a-z0-9 _-]/gi, "") : "");
+    var style = cvBox(box, ox, oy), col = cvColor(it.c);
+    if (col) style += "color:" + col + ";";
+    if (it.r != null) style += "--r:" + cvNum(it.r) + ";";
+    if (t === "img") {
+      return '<img class="' + cls + ' cv-img" style="' + style + '" src="' + esc(image(it.src, 1600)) + '" alt="' + esc(it.alt || "") + '" loading="lazy" decoding="async">';
+    }
+    if (t === "card") {
+      return '<div class="' + cls + ' cv-card" style="' + style + '">' +
+        (it.src ? '<img class="cv-card-img" src="' + esc(image(it.src, 1600)) + '" alt="' + esc(it.alt || "") + '" loading="lazy" decoding="async">' : "") +
+        '<div class="cv-kids">' + (it.kids || []).map(function (k) { return cvItem(k, box[0], box[1]); }).join("") + "</div></div>";
+    }
+    if (t === "grp") {
+      return '<div class="cv-scroll"><div class="' + cls + ' cv-grp" style="' + style + '">' +
+        (it.src ? '<img class="cv-card-img" src="' + esc(image(it.src, 2000)) + '" alt="' + esc(it.alt || "") + '" loading="lazy" decoding="async">' : "") +
+        (it.kids || []).map(function (k) { return cvItem(k, box[0], box[1]); }).join("") + "</div></div>";
+    }
+    if (t === "txt") {
+      var tag = /^(h1|h2|h3|p|span)$/.test(it.tag) ? it.tag : "p";
+      var f = it.f || [];
+      cls += " cv-t " + (CV_FAM[f[3]] || (tag === "p" || tag === "span" ? "fL" : "fO")) + (tag === "p" || tag === "span" ? " tp" : " th") +
+        (it.al === "c" ? " ac" : it.al === "r" ? " ar" : "") + (it.lines ? " ln" : "") + (it.up ? " up" : "");
+      if (it.lines) style += "--lw:" + cvNum(it.lines[0]) + ";--lg:" + cvNum(it.lines[1] || 12) + ";";
+      if (it.em) style += "--em:" + cvColor(it.em) + ";";
+      return "<" + tag + ' class="' + cls + '" style="' + style + cvFont(f) + '"' + (it.lines && it.lines[2] ? ' data-tw="' + cvNum(it.lines[2]) + '"' : "") + ">" + (it.lines ? "<span>" + rich(cvLines(it.text)) + "</span>" : rich(cvLines(it.text))) + "</" + tag + ">";
+    }
+    if (t === "list") {
+      var lf = it.f || [];
+      style += cvFont(lf) + "--row:" + cvNum(it.row || 16) + ";--ck:" + cvNum(it.ck || 12) + ";--cg:" + cvNum(it.cg || 8) + ";";
+      return '<ul class="' + cls + ' cv-t cv-list tp ' + (CV_FAM[lf[3]] || "fL") + (it.check === false ? " nock" : "") + '" style="' + style + '">' + (it.items || []).map(function (x) {
+        return "<li>" + (it.check === false ? "" : '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m2.5 8.5 3.5 3.5 7.5-8"/></svg>') + "<span>" + rich(x) + "</span></li>";
+      }).join("") + "</ul>";
+    }
+    if (t === "btn") {
+      var kind = /^(o|line|plum|cream)$/.test(it.kind) ? it.kind : "o";
+      return '<a class="' + cls + " cv-btn k-" + kind + " " + (CV_FAM[(it.f || [])[3]] || "fO") + '" style="' + style + cvFont(it.f || [12, 600]) + '" href="' + link(it.href) + '">' + esc(it.label) + (it.arrow === false ? "" : " " + SVC_ARROW) + "</a>";
+    }
+    if (t === "rect") {
+      var bg = cvColor(it.bg) || "#ff5f0f";
+      return '<span class="' + cls + ' cv-rect" style="' + style + "background:" + bg + ';" aria-hidden="true"></span>';
+    }
+    if (t === "arrow") {
+      return '<span class="' + cls + ' cv-arrow" style="' + style + '" aria-hidden="true">' + SVC_ARROW + "</span>";
+    }
+    return "";
+  }
+
+  function serviceCanvas(service, p) {
+    var h = p.hero || {}, b = p.body || {}, fq = p.faq || {};
+    var hy = h.y || [44, 330], by = b.y || [hy[1], hy[1]];
+    var hero = '<section class="cv-hero' + (h.dark ? " dark" : "") + '" style="--H:' + cvNum(hy[1] - hy[0]) + '">' +
+      (h.image ? '<img class="cv-hero-img" src="' + esc(image(h.image, 2400)) + '" alt="' + esc(h.alt || "") + '" fetchpriority="high" decoding="async">' : "") +
+      '<div class="cv-wrap" style="--H:' + cvNum(hy[1] - hy[0]) + '">' + (h.items || []).map(function (it) { return cvItem(it, 0, hy[0]); }).join("") + "</div></section>";
+
+    var body = '<section class="cv-body"><div class="cv-wrap" style="--H:' + cvNum(by[1] - by[0]) + '">' +
+      (b.items || []).map(function (it) { return cvItem(it, 0, by[0]); }).join("") + "</div></section>";
+
+    var qs = fq.items || [], split = fq.split || Math.ceil(qs.length / 2), cols = fq.cols || [[60, 430], [534, 430]];
+    var fy = fq.y || [by[1], by[1] + 200], rowsY = fq.rowsY || fy[0] + 40;
+    function faqCol(list, c, prev) {
+      var ml = prev ? c[0] - prev[0] - prev[1] : c[0];
+      return '<div class="cv-faq-col" style="--ml:' + cvNum(ml) + ';--w:' + cvNum(c[1]) + '">' + list.map(function (q) {
+        return '<details class="cv-q"><summary>' + esc(q.q) + '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6"/></svg></summary><p>' + esc(q.a) + '</p></details>';
+      }).join('') + '</div>';
+    }
+    var faq = qs.length ? '<section class="cv-faq"><div class="cv-faq-in" style="--pt:' + cvNum(rowsY - fy[0]) + ';--pb:' + cvNum(fq.bottom || 24) +
+      ';--rh:' + cvNum(fq.rowH || 22) + ';--rg:' + cvNum(fq.rowGap || 3) + ';' + cvFont(fq.f || [11.5, 600, 13, 'O']) + '">' +
+      (fq.title ? cvItem(fq.title, 0, fy[0]) : '') +
+      '<div class="cv-faq-grid">' + faqCol(qs.slice(0, split), cols[0]) + faqCol(qs.slice(split), cols[1], cols[0]) + '</div></div>' +
+      (fq.waves ? '<span class="wd-wave l" aria-hidden="true"></span><span class="wd-wave r" aria-hidden="true"></span>' : '') + '</section>' : '';
+
+    return '<div class="cv-page' + (p.theme ? " th-" + String(p.theme).replace(/[^a-z0-9-]/gi, "") : "") + '">' + hero + body + faq + "</div>";
+  }
+
   function notice(message, isError) {
     return '<div class="notice' + (isError ? " error" : "") + '" role="' + (isError ? "alert" : "status") + '">' + esc(message) + "</div>";
   }
@@ -954,7 +1050,7 @@
   window.SiteComponents = {
     esc: esc, rich: rich, link: link, image: image, button: button, brand: brand,
     header: header, footer: footer, heroSlider: heroSlider, subHero: subHero, sectionHeading: sectionHeading,
-    serviceCard: serviceCard, homeServices: homeServices, homeWork: homeWork, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, contactPage: contactPage, serviceLanding: serviceLanding, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
+    serviceCard: serviceCard, homeServices: homeServices, homeWork: homeWork, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, contactPage: contactPage, serviceLanding: serviceLanding, serviceCanvas: serviceCanvas, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
     cta: cta, notice: notice
   };
 })();

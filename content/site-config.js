@@ -79,16 +79,33 @@ window.SITE_CONFIG = {
       "summary": "Business websites, portfolio websites, landing pages and custom web solutions.",
       "image": "photo-1498050108023-c5249f4df085",
       "intro": "A website is often the first place people learn about you. We build websites that are clear, responsive and easy to manage, based on what your project needs.",
-      "features": ["Business and corporate websites", "Personal and portfolio websites", "Landing pages for campaigns and launches", "Responsive layouts for mobile, tablet and desktop", "Custom web solutions for specific requirements"],
+      "features": [
+        "Business and corporate websites",
+        "Personal and portfolio websites",
+        "Landing pages for campaigns and launches",
+        "Responsive layouts for mobile, tablet and desktop",
+        "Custom web solutions for specific requirements"
+      ],
       "page": {
         "_note": "Own design for this service (recreated from the 1024 px reference). *word* = orange. Images in assets/images/webdev/.",
         "hero": {
           "eyebrow": "Website Development",
           "title": "Website Development\nServices for\n*Your Business*",
-          "tagline": ["Design", "Develop", "Launch", "Grow"],
+          "tagline": [
+            "Design",
+            "Develop",
+            "Launch",
+            "Grow"
+          ],
           "text": "Custom, scalable and user-friendly websites that build your brand, engage your audience and support your business goals.",
-          "primary": { "label": "Get Started", "href": "contact?service=Website%20Development" },
-          "secondary": { "label": "Our Services", "href": "services" },
+          "primary": {
+            "label": "Get Started",
+            "href": "contact?service=Website%20Development"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/webdev/wd-hero.jpg",
           "imageAlt": "Desktop monitor showing a website design and code editor on a desk"
         },
@@ -105,14 +122,38 @@ window.SITE_CONFIG = {
         "types": {
           "title": "Custom Website Development for *Different Requirements*",
           "items": [
-            { "icon": "cart", "title": "E-commerce\nWebsites" },
-            { "icon": "business", "title": "Business\nWebsites" },
-            { "icon": "corporate", "title": "Corporate\nWebsites" },
-            { "icon": "education", "title": "Educational\nWebsites" },
-            { "icon": "blog", "title": "Blog &\nContent Websites" },
-            { "icon": "portfolio", "title": "Portfolio\nWebsites" },
-            { "icon": "rocket", "title": "Landing\nPages" },
-            { "icon": "gear", "title": "Service-Based\nWebsites" }
+            {
+              "icon": "cart",
+              "title": "E-commerce\nWebsites"
+            },
+            {
+              "icon": "business",
+              "title": "Business\nWebsites"
+            },
+            {
+              "icon": "corporate",
+              "title": "Corporate\nWebsites"
+            },
+            {
+              "icon": "education",
+              "title": "Educational\nWebsites"
+            },
+            {
+              "icon": "blog",
+              "title": "Blog &\nContent Websites"
+            },
+            {
+              "icon": "portfolio",
+              "title": "Portfolio\nWebsites"
+            },
+            {
+              "icon": "rocket",
+              "title": "Landing\nPages"
+            },
+            {
+              "icon": "gear",
+              "title": "Service-Based\nWebsites"
+            }
           ]
         },
         "brand": {
@@ -150,7 +191,13 @@ window.SITE_CONFIG = {
         },
         "process": {
           "title": "Our Website Development Process",
-          "steps": ["Initial\nDiscussion", "Requirement\nPlanning", "Design &\nDevelopment", "Review &\nTesting", "Final\nHandover"]
+          "steps": [
+            "Initial\nDiscussion",
+            "Requirement\nPlanning",
+            "Design &\nDevelopment",
+            "Review &\nTesting",
+            "Final\nHandover"
+          ]
         },
         "audience": {
           "title": "Website Development for\nIndividuals, Startups and Businesses",
@@ -166,21 +213,54 @@ window.SITE_CONFIG = {
           "title": "Build Your Website with",
           "highlight": "CRETECH",
           "text": "Your website should give visitors a clear understanding of who you are, what you offer and how they can connect with you. CRETECH helps turn your requirements into a practical website that supports your online presence.",
-          "button": { "label": "Get Started Today", "href": "contact?service=Website%20Development" }
+          "button": {
+            "label": "Get Started Today",
+            "href": "contact?service=Website%20Development"
+          }
         },
         "faq": {
           "title": "Frequently *Asked Questions*",
           "items": [
-            { "q": "What types of websites does CRETECH develop?", "a": "We develop business, corporate, e-commerce, educational, blog and content, portfolio, landing page and service-based websites, planned around what your project needs." },
-            { "q": "Can I request a website for my small business or startup?", "a": "Yes. You do not need to be a large company. We build websites for individuals, students, startups, small businesses and established companies." },
-            { "q": "Can you develop a website according to my design reference?", "a": "Yes. Share your reference, and we will discuss the layout, colours and features with you before development begins." },
-            { "q": "Will my website work on mobile phones?", "a": "Yes. Every website is built to be responsive, so it works on desktop computers, laptops, tablets and smartphones." },
-            { "q": "Can I update website content after development?", "a": "Yes. If your website includes an admin panel or content management, you can update text and images yourself. We can also help with updates." },
-            { "q": "Do you provide website domain and hosting?", "a": "We can guide you in choosing a domain and hosting and help set them up for your website. Their cost depends on the provider and plan you choose." },
-            { "q": "How much does website development cost?", "a": "The cost depends on the number of pages, design requirements, functionality, integrations, content requirements and overall complexity. We share an estimate after understanding your requirements." },
-            { "q": "How long does it take to develop a website?", "a": "The timeline depends on the size and complexity of the website. A simple informational website takes less time than a feature-rich e-commerce platform. We confirm the timeline before work begins." },
-            { "q": "Can I request changes during development?", "a": "Yes. We share the work with you during the process so you can review it, and agreed changes are made before the final handover." },
-            { "q": "How can I start my website development project?", "a": "Contact us through the enquiry form, email or phone with your requirements. We will discuss your project and suggest the best way forward." }
+            {
+              "q": "What types of websites does CRETECH develop?",
+              "a": "We develop business, corporate, e-commerce, educational, blog and content, portfolio, landing page and service-based websites, planned around what your project needs."
+            },
+            {
+              "q": "Can I request a website for my small business or startup?",
+              "a": "Yes. You do not need to be a large company. We build websites for individuals, students, startups, small businesses and established companies."
+            },
+            {
+              "q": "Can you develop a website according to my design reference?",
+              "a": "Yes. Share your reference, and we will discuss the layout, colours and features with you before development begins."
+            },
+            {
+              "q": "Will my website work on mobile phones?",
+              "a": "Yes. Every website is built to be responsive, so it works on desktop computers, laptops, tablets and smartphones."
+            },
+            {
+              "q": "Can I update website content after development?",
+              "a": "Yes. If your website includes an admin panel or content management, you can update text and images yourself. We can also help with updates."
+            },
+            {
+              "q": "Do you provide website domain and hosting?",
+              "a": "We can guide you in choosing a domain and hosting and help set them up for your website. Their cost depends on the provider and plan you choose."
+            },
+            {
+              "q": "How much does website development cost?",
+              "a": "The cost depends on the number of pages, design requirements, functionality, integrations, content requirements and overall complexity. We share an estimate after understanding your requirements."
+            },
+            {
+              "q": "How long does it take to develop a website?",
+              "a": "The timeline depends on the size and complexity of the website. A simple informational website takes less time than a feature-rich e-commerce platform. We confirm the timeline before work begins."
+            },
+            {
+              "q": "Can I request changes during development?",
+              "a": "Yes. We share the work with you during the process so you can review it, and agreed changes are made before the final handover."
+            },
+            {
+              "q": "How can I start my website development project?",
+              "a": "Contact us through the enquiry form, email or phone with your requirements. We will discuss your project and suggest the best way forward."
+            }
           ]
         }
       }
@@ -193,7 +273,1075 @@ window.SITE_CONFIG = {
       "summary": "Mobile-friendly application experiences and custom application development.",
       "image": "photo-1512941937669-90a1b58e7e9c",
       "intro": "We plan and develop applications around the features your users actually need, keeping the experience simple and the performance smooth.",
-      "features": ["Requirement discussion and feature planning", "Mobile-friendly application screens", "Custom application development", "Testing before delivery", "Support for agreed refinements"]
+      "features": [
+        "Requirement discussion and feature planning",
+        "Mobile-friendly application screens",
+        "Custom application development",
+        "Testing before delivery",
+        "Support for agreed refinements"
+      ],
+      "page": {
+        "layout": "canvas",
+        "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/app-development/",
+        "theme": "",
+        "hero": {
+          "dark": true,
+          "y": [
+            44,
+            330
+          ],
+          "image": "assets/images/svc/app-development/hero.jpg",
+          "alt": "Two smartphones showing a mobile app with services, booking, products and profile screens",
+          "items": [
+            {
+              "t": "txt",
+              "tag": "p",
+              "up": 1,
+              "box": [
+                114,
+                62,
+                177
+              ],
+              "f": [
+                12,
+                600,
+                15,
+                "P"
+              ],
+              "c": "#ff8a1c",
+              "text": "App Development Services"
+            },
+            {
+              "t": "txt",
+              "tag": "h1",
+              "box": [
+                113,
+                79,
+                333
+              ],
+              "f": [
+                37,
+                600,
+                37.2,
+                "P"
+              ],
+              "em": "#ff8a1c",
+              "text": "App Development\nServices for\n*Your Ideas*"
+            },
+            {
+              "t": "txt",
+              "tag": "p",
+              "box": [
+                114,
+                199,
+                337
+              ],
+              "f": [
+                14.5,
+                400,
+                17.6,
+                "P"
+              ],
+              "c": "#fff",
+              "text": "Turn your app idea into a functional, user-friendly\nand reliable application for your business,\nstartup or organisation."
+            },
+            {
+              "t": "btn",
+              "kind": "o",
+              "box": [
+                113,
+                263,
+                157,
+                33
+              ],
+              "f": [
+                12.6,
+                500,
+                0,
+                "P"
+              ],
+              "label": "Discuss Your Idea",
+              "href": "contact?service=App%20Development"
+            },
+            {
+              "t": "btn",
+              "kind": "line",
+              "box": [
+                299,
+                263,
+                134,
+                32
+              ],
+              "f": [
+                12.6,
+                500,
+                0,
+                "P"
+              ],
+              "label": "Our Services",
+              "href": "services",
+              "arrow": false
+            }
+          ]
+        },
+        "body": {
+          "y": [
+            330,
+            1346
+          ],
+          "items": [
+            {
+              "t": "txt",
+              "tag": "h2",
+              "box": [
+                69,
+                345,
+                438
+              ],
+              "f": [
+                22,
+                700,
+                28,
+                "O"
+              ],
+              "text": "Build a Mobile Presence for *Your Business*"
+            },
+            {
+              "t": "txt",
+              "tag": "p",
+              "box": [
+                69,
+                376,
+                417
+              ],
+              "f": [
+                12,
+                400,
+                14.5,
+                "L"
+              ],
+              "text": "Mobile applications have become an important way for businesses and\norganisations to connect with their users. At CRETECH, we offer app\ndevelopment services for individuals, startups, small businesses and\norganisations that want to turn an idea into a practical application."
+            },
+            {
+              "t": "rect",
+              "box": [
+                69,
+                443,
+                42,
+                1.5
+              ],
+              "bg": "#ff6a1a",
+              "m": 0
+            },
+            {
+              "t": "txt",
+              "tag": "p",
+              "box": [
+                69,
+                450,
+                438
+              ],
+              "f": [
+                12,
+                400,
+                14.5,
+                "L"
+              ],
+              "text": "Every app starts with a purpose. We take time to understand your\nrequirements, plan the solution and develop a user-friendly and functional\napplication that matches the agreed project scope."
+            },
+            {
+              "t": "img",
+              "box": [
+                553,
+                349,
+                418,
+                160
+              ],
+              "src": "assets/images/svc/app-development/intro.jpg",
+              "alt": "A phone showing a welcome screen between two app screen mockups"
+            },
+            {
+              "t": "txt",
+              "tag": "h2",
+              "box": [
+                0,
+                517,
+                1024
+              ],
+              "lines": [
+                66,
+                28,
+                552
+              ],
+              "al": "c",
+              "f": [
+                21,
+                700,
+                26,
+                "O"
+              ],
+              "text": "Custom App Development Based on *Your Requirements*"
+            },
+            {
+              "t": "txt",
+              "tag": "p",
+              "box": [
+                264,
+                544,
+                492
+              ],
+              "al": "c",
+              "f": [
+                12,
+                400,
+                15,
+                "L"
+              ],
+              "text": "Our app development services can cover different application concepts, including:"
+            },
+            {
+              "t": "grp",
+              "box": [
+                36,
+                566,
+                954,
+                94
+              ],
+              "src": "assets/images/svc/app-development/cats.jpg",
+              "kids": [
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    68,
+                    614,
+                    76
+                  ],
+                  "al": "c",
+                  "f": [
+                    12,
+                    600,
+                    15,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Business\nApplications"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    205,
+                    614,
+                    76
+                  ],
+                  "al": "c",
+                  "f": [
+                    12,
+                    600,
+                    15,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "E-commerce\nApplications"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    337,
+                    614,
+                    84
+                  ],
+                  "al": "c",
+                  "f": [
+                    12,
+                    600,
+                    15,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Service\nBooking Apps"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    473,
+                    614,
+                    76
+                  ],
+                  "al": "c",
+                  "f": [
+                    12,
+                    600,
+                    15,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Educational\nApplications"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    591,
+                    614,
+                    107
+                  ],
+                  "al": "c",
+                  "f": [
+                    12,
+                    600,
+                    15,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Personal &\nProfessional Apps"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    730,
+                    614,
+                    103
+                  ],
+                  "al": "c",
+                  "f": [
+                    12,
+                    600,
+                    15,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Customer-Facing\nApplications"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    867,
+                    614,
+                    102
+                  ],
+                  "al": "c",
+                  "f": [
+                    12,
+                    600,
+                    15,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Internal Business\nApplications"
+                }
+              ]
+            },
+            {
+              "t": "card",
+              "cls": "flat",
+              "box": [
+                26,
+                669,
+                480,
+                112
+              ],
+              "src": "assets/images/svc/app-development/c1.jpg",
+              "alt": "Notebook with app screen sketches",
+              "kids": [
+                {
+                  "t": "txt",
+                  "tag": "h2",
+                  "box": [
+                    42,
+                    676,
+                    234
+                  ],
+                  "f": [
+                    16,
+                    700,
+                    20,
+                    "O"
+                  ],
+                  "text": "Understanding *Your App Idea*"
+                },
+                {
+                  "t": "txt",
+                  "tag": "p",
+                  "box": [
+                    42,
+                    698,
+                    248
+                  ],
+                  "f": [
+                    10.5,
+                    400,
+                    13,
+                    "L"
+                  ],
+                  "text": "A successful application begins with a clear\nunderstanding of the problem it is expected\nto address. We discuss the main purpose of\nthe apps, the target users and the activities\nthey should be able to complete."
+                }
+              ]
+            },
+            {
+              "t": "card",
+              "cls": "flat",
+              "box": [
+                519,
+                669,
+                480,
+                112
+              ],
+              "src": "assets/images/svc/app-development/c2.jpg",
+              "alt": "App screen layouts",
+              "kids": [
+                {
+                  "t": "txt",
+                  "tag": "h2",
+                  "box": [
+                    541,
+                    672,
+                    185
+                  ],
+                  "f": [
+                    14,
+                    700,
+                    16.5,
+                    "O"
+                  ],
+                  "text": "User-Friendly App Design\n*and Navigation*"
+                },
+                {
+                  "t": "txt",
+                  "tag": "p",
+                  "box": [
+                    541,
+                    708,
+                    248
+                  ],
+                  "f": [
+                    10.5,
+                    400,
+                    13,
+                    "L"
+                  ],
+                  "text": "An application should be easy to understand\nfrom the moment someone opens it. We plan\nthe screen structure, navigation flow, button\nplacement and overall visual presentation to\nensure a smooth user experience."
+                }
+              ]
+            },
+            {
+              "t": "card",
+              "cls": "flat",
+              "box": [
+                26,
+                789,
+                480,
+                121
+              ],
+              "src": "assets/images/svc/app-development/c3.jpg",
+              "alt": "Phone showing app feature icons",
+              "kids": [
+                {
+                  "t": "txt",
+                  "tag": "h2",
+                  "box": [
+                    43,
+                    795,
+                    141
+                  ],
+                  "f": [
+                    15,
+                    700,
+                    17.5,
+                    "O"
+                  ],
+                  "text": "App Features and\n*Integrations*"
+                },
+                {
+                  "t": "txt",
+                  "tag": "p",
+                  "box": [
+                    43,
+                    834,
+                    251
+                  ],
+                  "f": [
+                    10.5,
+                    400,
+                    12.9,
+                    "L"
+                  ],
+                  "text": "Depending on the project, app development\nmay include user registration, profiles,\nproduct or service listings, search, booking,\nnotifications, admin panel, payment gateway\nand API integration."
+                }
+              ]
+            },
+            {
+              "t": "card",
+              "cls": "flat",
+              "box": [
+                519,
+                789,
+                480,
+                121
+              ],
+              "src": "assets/images/svc/app-development/c4.jpg",
+              "alt": "A phone and a tablet showing the same app",
+              "kids": [
+                {
+                  "t": "txt",
+                  "tag": "h2",
+                  "box": [
+                    541,
+                    795,
+                    175
+                  ],
+                  "f": [
+                    15,
+                    700,
+                    17.5,
+                    "O"
+                  ],
+                  "text": "App Development for\n*Different Devices*"
+                },
+                {
+                  "t": "txt",
+                  "tag": "p",
+                  "box": [
+                    541,
+                    834,
+                    242
+                  ],
+                  "f": [
+                    10.5,
+                    400,
+                    12.9,
+                    "L"
+                  ],
+                  "text": "An application can be planned for Android,\niOS or a suitable cross-platform approach.\nThe choice of technology depends on the\nproject requirements, expected users and\nfuture development plans."
+                }
+              ]
+            },
+            {
+              "t": "card",
+              "cls": "flat",
+              "box": [
+                26,
+                918,
+                480,
+                112
+              ],
+              "src": "assets/images/svc/app-development/c5.jpg",
+              "alt": "Performance gauge showing 98%",
+              "kids": [
+                {
+                  "t": "txt",
+                  "tag": "h2",
+                  "box": [
+                    46,
+                    922,
+                    216
+                  ],
+                  "f": [
+                    15,
+                    700,
+                    17,
+                    "O"
+                  ],
+                  "text": "Performance, Functionality\n*and Testing*"
+                },
+                {
+                  "t": "txt",
+                  "tag": "p",
+                  "box": [
+                    46,
+                    959,
+                    239
+                  ],
+                  "f": [
+                    10.5,
+                    400,
+                    12.7,
+                    "L"
+                  ],
+                  "text": "An application needs to work consistently\nacross its intended screens. We review the\nmain features, navigation and functionality\nto identify and resolve issues before final\nhandover."
+                }
+              ]
+            },
+            {
+              "t": "card",
+              "cls": "flat",
+              "box": [
+                519,
+                918,
+                480,
+                112
+              ],
+              "src": "assets/images/svc/app-development/c6.jpg",
+              "alt": "Laptop showing a growth chart",
+              "kids": [
+                {
+                  "t": "txt",
+                  "tag": "h2",
+                  "box": [
+                    541,
+                    921,
+                    190
+                  ],
+                  "f": [
+                    14,
+                    700,
+                    16.5,
+                    "O"
+                  ],
+                  "text": "App Development for\n*Startups and Businesses*"
+                },
+                {
+                  "t": "txt",
+                  "tag": "p",
+                  "box": [
+                    541,
+                    955,
+                    258
+                  ],
+                  "f": [
+                    10,
+                    400,
+                    12.1,
+                    "L"
+                  ],
+                  "text": "Startups may need an application to introduce\na new service or test a business idea. Established\nbusinesses may want to make their services\naccessible through a dedicated mobile platform.\nWe work with different types of clients and\nproject requirements."
+                }
+              ]
+            },
+            {
+              "t": "card",
+              "cls": "flat",
+              "box": [
+                26,
+                1038,
+                480,
+                124
+              ],
+              "src": "assets/images/svc/app-development/c7.jpg",
+              "alt": "Calendar and calculator",
+              "kids": [
+                {
+                  "t": "txt",
+                  "tag": "h2",
+                  "box": [
+                    46,
+                    1042,
+                    147
+                  ],
+                  "f": [
+                    15,
+                    700,
+                    17,
+                    "O"
+                  ],
+                  "text": "App Development\n*Cost and Timeline*"
+                },
+                {
+                  "t": "txt",
+                  "tag": "p",
+                  "box": [
+                    46,
+                    1079,
+                    236
+                  ],
+                  "f": [
+                    10.3,
+                    400,
+                    12.5,
+                    "L"
+                  ],
+                  "text": "The cost of app development depends on\nseveral factors, including the number of\nscreens, platform, design, integrations and\ncustom functionality. The estimated cost,\npayment terms and project timeline are\ndiscussed before work begins."
+                }
+              ]
+            },
+            {
+              "t": "card",
+              "cls": "flat",
+              "box": [
+                519,
+                1038,
+                480,
+                124
+              ],
+              "src": "assets/images/svc/app-development/c8.jpg",
+              "alt": "Phone showing a rocket launch",
+              "kids": [
+                {
+                  "t": "txt",
+                  "tag": "h2",
+                  "box": [
+                    541,
+                    1041,
+                    189
+                  ],
+                  "f": [
+                    15,
+                    700,
+                    17,
+                    "O"
+                  ],
+                  "text": "Turn Your App Idea into\na *Working Product*"
+                },
+                {
+                  "t": "txt",
+                  "tag": "p",
+                  "box": [
+                    541,
+                    1079,
+                    255
+                  ],
+                  "f": [
+                    10.3,
+                    400,
+                    12.5,
+                    "L"
+                  ],
+                  "text": "CRETECH helps you organise your idea,\nunderstand the required features and plan\nthe development process. Whether you are\nstarting with an initial concept or already have\na detailed requirement document, you can\nshare it with us."
+                }
+              ]
+            },
+            {
+              "t": "txt",
+              "tag": "h2",
+              "box": [
+                0,
+                1165,
+                1024
+              ],
+              "lines": [
+                62,
+                46,
+                263
+              ],
+              "al": "c",
+              "f": [
+                18,
+                700,
+                22,
+                "O"
+              ],
+              "text": "Our App Development Process"
+            },
+            {
+              "t": "grp",
+              "box": [
+                36,
+                1188,
+                955,
+                78
+              ],
+              "src": "assets/images/svc/app-development/proc.jpg",
+              "kids": [
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    75,
+                    1219,
+                    72
+                  ],
+                  "al": "c",
+                  "f": [
+                    10.5,
+                    600,
+                    12,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Idea &\nRequirement\nDiscussion"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    249,
+                    1224,
+                    48
+                  ],
+                  "al": "c",
+                  "f": [
+                    11,
+                    600,
+                    13,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Project\nPlanning"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    398,
+                    1224,
+                    70
+                  ],
+                  "al": "c",
+                  "f": [
+                    11,
+                    600,
+                    13,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Interface &\nDevelopment"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    557,
+                    1224,
+                    74
+                  ],
+                  "al": "c",
+                  "f": [
+                    11,
+                    600,
+                    13,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Integration &\nTesting"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    715,
+                    1224,
+                    80
+                  ],
+                  "al": "c",
+                  "f": [
+                    11,
+                    600,
+                    13,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Review &\nImprovements"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [
+                    893,
+                    1224,
+                    54
+                  ],
+                  "al": "c",
+                  "f": [
+                    11,
+                    600,
+                    13,
+                    "O"
+                  ],
+                  "c": "#1e1a22",
+                  "text": "Final\nHandover"
+                }
+              ]
+            },
+            {
+              "t": "card",
+              "cls": "flat dk",
+              "box": [
+                28,
+                1276,
+                968,
+                70
+              ],
+              "src": "assets/images/svc/app-development/cta.jpg",
+              "kids": [
+                {
+                  "t": "txt",
+                  "tag": "h2",
+                  "box": [
+                    90,
+                    1284,
+                    197
+                  ],
+                  "f": [
+                    19,
+                    700,
+                    23,
+                    "O"
+                  ],
+                  "c": "#fff",
+                  "text": "Build Your App with"
+                },
+                {
+                  "t": "txt",
+                  "tag": "p",
+                  "box": [
+                    90,
+                    1305,
+                    146
+                  ],
+                  "f": [
+                    29,
+                    800,
+                    34,
+                    "O"
+                  ],
+                  "c": "#ff7a1c",
+                  "text": "CRETECH"
+                },
+                {
+                  "t": "rect",
+                  "box": [
+                    345,
+                    1295,
+                    1,
+                    32
+                  ],
+                  "bg": "rgba(255,255,255,.45)",
+                  "m": 0
+                },
+                {
+                  "t": "txt",
+                  "tag": "p",
+                  "box": [
+                    380,
+                    1293,
+                    351
+                  ],
+                  "f": [
+                    11.5,
+                    400,
+                    17,
+                    "L"
+                  ],
+                  "c": "#fff",
+                  "text": "Share your app idea with us and get a clear development plan,\nfeature list, estimated cost and timeline."
+                },
+                {
+                  "t": "btn",
+                  "kind": "cream",
+                  "box": [
+                    787,
+                    1294,
+                    170,
+                    34
+                  ],
+                  "r": 9,
+                  "f": [
+                    13.4,
+                    700,
+                    0,
+                    "O"
+                  ],
+                  "label": "Get Started Today",
+                  "href": "contact?service=App%20Development"
+                }
+              ]
+            }
+          ]
+        },
+        "faq": {
+          "y": [
+            1346,
+            1536
+          ],
+          "title": {
+            "t": "txt",
+            "tag": "h2",
+            "box": [
+              0,
+              1349,
+              1024
+            ],
+            "lines": [
+              60,
+              40,
+              263
+            ],
+            "al": "c",
+            "f": [
+              18,
+              700,
+              24,
+              "O"
+            ],
+            "text": "Frequently *Asked Questions*"
+          },
+          "rowsY": 1377,
+          "rowH": 18.8,
+          "rowGap": 2.4,
+          "bottom": 22,
+          "f": [
+            11.3,
+            700,
+            13,
+            "O"
+          ],
+          "cols": [
+            [
+              57,
+              440
+            ],
+            [
+              534,
+              434
+            ]
+          ],
+          "items": [
+            {
+              "q": "What types of applications can CRETECH develop?",
+              "a": "We develop business, e-commerce, service booking, educational, personal and professional, customer-facing and internal business applications, planned around your requirements."
+            },
+            {
+              "q": "Can I develop an app for my startup?",
+              "a": "Yes. Startups can use an application to introduce a new service or test a business idea. We help you plan the features and scope for your first version."
+            },
+            {
+              "q": "Can you develop Android and iOS applications?",
+              "a": "Yes. An application can be planned for Android, iOS or a suitable cross-platform approach, depending on your requirements, expected users and future plans."
+            },
+            {
+              "q": "Do I need to have a complete app idea before contacting you?",
+              "a": "No. You can start with an initial concept. We discuss the main purpose, the target users and the activities the app should support, and help you organise your idea."
+            },
+            {
+              "q": "Can my app include login and user registration?",
+              "a": "Yes. Depending on the project, the app can include user registration, login and profiles, along with other features you need."
+            },
+            {
+              "q": "Can you connect my app with a database?",
+              "a": "Yes. Apps can be connected with a database, an admin panel and other services through API integration, based on the project requirements."
+            },
+            {
+              "q": "Can you integrate payment gateways and notifications?",
+              "a": "Yes. Payment gateway integration and notifications can be included in the app if they are part of the agreed project scope."
+            },
+            {
+              "q": "Will my app be tested before handover?",
+              "a": "Yes. We review the main features, navigation and functionality to identify and resolve issues before the final handover."
+            },
+            {
+              "q": "How much does app development cost?",
+              "a": "The cost depends on the number of screens, platform, design, integrations and custom functionality. The estimated cost and payment terms are discussed before work begins."
+            },
+            {
+              "q": "How long does it take to develop an application?",
+              "a": "The timeline depends on the size and complexity of the application. We share the expected project timeline after understanding your requirements."
+            },
+            {
+              "q": "Can I add more features to my app later?",
+              "a": "Yes. New features can be planned and added later. We consider future development plans while choosing the technology for your app."
+            },
+            {
+              "q": "How can I get started with CRETECH?",
+              "a": "Share your app idea or requirement document with us through the contact form, email or phone. We will discuss your project and suggest a clear development plan."
+            }
+          ]
+        }
+      }
     },
     {
       "slug": "ui-ux-design",
@@ -203,7 +1351,13 @@ window.SITE_CONFIG = {
       "summary": "User-friendly layouts, wireframes and visual interface design.",
       "image": "photo-1586717791821-3f44a563fa4c",
       "intro": "Good design helps people find what they need without effort. We design layouts and interfaces that look clean and are easy to use.",
-      "features": ["User flows and page structure", "Wireframes", "Visual interface design", "Design for mobile and desktop screens", "Design handover for development"]
+      "features": [
+        "User flows and page structure",
+        "Wireframes",
+        "Visual interface design",
+        "Design for mobile and desktop screens",
+        "Design handover for development"
+      ]
     },
     {
       "slug": "seo-services",
@@ -213,7 +1367,13 @@ window.SITE_CONFIG = {
       "summary": "On-page SEO, technical basics, content optimisation and website visibility support.",
       "image": "photo-1460925895917-afdab827c52f",
       "intro": "SEO helps the right people find your website. We work on the on-page and technical basics that support better visibility in search results.",
-      "features": ["On-page SEO for titles, headings and descriptions", "Technical SEO basics", "Content optimisation", "Keyword research for your services", "Website visibility support"]
+      "features": [
+        "On-page SEO for titles, headings and descriptions",
+        "Technical SEO basics",
+        "Content optimisation",
+        "Keyword research for your services",
+        "Website visibility support"
+      ]
     },
     {
       "slug": "google-ads-services",
@@ -223,7 +1383,13 @@ window.SITE_CONFIG = {
       "summary": "Campaign setup and audience-focused advertising support.",
       "image": "photo-1551288049-bebda4e38f71",
       "intro": "Google Ads can put your business in front of people who are already searching for what you offer. We help set up campaigns around your goals and budget.",
-      "features": ["Campaign planning based on your goals", "Campaign and ad setup", "Audience and keyword targeting", "Budget-focused approach", "Ongoing advertising support"]
+      "features": [
+        "Campaign planning based on your goals",
+        "Campaign and ad setup",
+        "Audience and keyword targeting",
+        "Budget-focused approach",
+        "Ongoing advertising support"
+      ]
     },
     {
       "slug": "social-media-marketing",
@@ -233,7 +1399,13 @@ window.SITE_CONFIG = {
       "summary": "Social media content planning, creative posts and brand communication.",
       "image": "photo-1611162617474-5b21e879e113",
       "intro": "Social media is where many people meet your brand. We help you plan content and communicate consistently with your audience.",
-      "features": ["Social media content planning", "Creative posts", "Brand communication", "Profile setup support", "Consistent posting approach"]
+      "features": [
+        "Social media content planning",
+        "Creative posts",
+        "Brand communication",
+        "Profile setup support",
+        "Consistent posting approach"
+      ]
     },
     {
       "slug": "email-creation-setup",
@@ -243,7 +1415,13 @@ window.SITE_CONFIG = {
       "summary": "Professional business email creation and setup assistance.",
       "image": "photo-1557200134-90327ee9fafa",
       "intro": "A professional email address on your own domain builds trust. We help you create and set up business email accounts.",
-      "features": ["Business email on your own domain", "Account creation and setup", "Setup on phone and computer", "Basic email configuration", "Setup assistance and guidance"]
+      "features": [
+        "Business email on your own domain",
+        "Account creation and setup",
+        "Setup on phone and computer",
+        "Basic email configuration",
+        "Setup assistance and guidance"
+      ]
     },
     {
       "slug": "content-writing",
@@ -253,7 +1431,13 @@ window.SITE_CONFIG = {
       "summary": "Website pages, service descriptions, blogs and SEO-friendly content.",
       "image": "photo-1455390582262-044cdead277a",
       "intro": "Clear words help visitors understand what you do. We write content for your website and marketing that is easy to read and search-friendly.",
-      "features": ["Website page content", "Service descriptions", "Blog articles", "SEO-friendly writing", "Editing and proofreading"]
+      "features": [
+        "Website page content",
+        "Service descriptions",
+        "Blog articles",
+        "SEO-friendly writing",
+        "Editing and proofreading"
+      ]
     },
     {
       "slug": "graphic-design-creative-content",
@@ -263,7 +1447,13 @@ window.SITE_CONFIG = {
       "summary": "Website banners, social media creatives and digital visual assets.",
       "image": "photo-1558655146-d09347e92766",
       "intro": "Visuals shape how people remember your brand. We create graphics that fit your brand and work across your website and social media.",
-      "features": ["Website banners", "Social media creatives", "Digital visual assets", "Graphics that match your brand style", "Files ready for web and social use"]
+      "features": [
+        "Website banners",
+        "Social media creatives",
+        "Digital visual assets",
+        "Graphics that match your brand style",
+        "Files ready for web and social use"
+      ]
     }
   ],
 

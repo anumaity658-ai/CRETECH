@@ -54,6 +54,7 @@
   pages["service-detail"] = function () {
     var service = findService(pageData.slug || params.get("slug"));
     if (!service) return pages["not-found"]();
+    if (service.page && service.page.layout === "canvas") return C.serviceCanvas(service, service.page); // own design, item by item
     if (service.page && service.page.hero) return C.serviceLanding(service, service.page); // service with its own design
     var d = data.serviceDetail;
     var others = (data.services || []).filter(function (s) { return s.slug !== service.slug; }).slice(0, 5);
@@ -122,6 +123,31 @@
   fill("header", C.header(data, page));
   if (main) main.innerHTML = (pages[page] || pages["not-found"])();
   fill("footer", C.footer(data));
+
+  /* ---------- Service canvas pages: fit each text block to its reference width ----------
+     Desktop only: the widest line of every text item is scaled to the width it has in the
+     reference (--k), so line breaks and lengths match the design. Phones use normal sizes. */
+  var canvas = document.querySelector(".cv-page");
+  if (canvas) {
+    var fitText = function () {
+      var wide = window.matchMedia("(min-width: 981px)").matches;
+      var u = Math.min(window.innerWidth / 1040, 1);
+      canvas.querySelectorAll(".cv-t:not(.cv-list)").forEach(function (el) {
+        el.style.removeProperty("--k");
+        if (!wide && !el.closest(".cv-grp")) return;
+        var lined = el.classList.contains("ln");
+        if (lined && !el.getAttribute("data-tw")) return;
+        var range = document.createRange();
+        range.selectNodeContents(lined ? el.firstElementChild : el);
+        var w = range.getBoundingClientRect().width, target = lined ? parseFloat(el.getAttribute("data-tw")) * u : el.getBoundingClientRect().width;
+        if (w > 0 && target > 0) el.style.setProperty("--k", Math.min(1.35, Math.max(.7, target / w)).toFixed(4));
+      });
+    };
+    fitText();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitText);
+    var fitTimer;
+    window.addEventListener("resize", function () { clearTimeout(fitTimer); fitTimer = setTimeout(fitText, 150); });
+  }
 
   /* ---------- Mobile menu ---------- */
 
