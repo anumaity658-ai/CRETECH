@@ -955,7 +955,7 @@
   var CV_FAM = { L: "fL", O: "fO", P: "fP" };
   function cvNum(v) { v = Number(v); return isFinite(v) ? Math.round(v * 100) / 100 : 0; }
   // a space before each line break, so words stay apart where phones hide the breaks
-  function cvLines(text) { return String(text == null ? "" : text).replace(/\n/g, " \n"); }
+  function cvLines(text) { return String(text == null ? "" : text).replace(/([^-])\n/g, "$1 \n"); }
   function cvColor(c) { return /^[#a-z0-9(),.%\s-]+$/i.test(String(c || "")) ? String(c) : ""; }
   function cvBox(box, ox, oy) {
     box = box || [];
@@ -1038,7 +1038,7 @@
       ';--rh:' + cvNum(fq.rowH || 22) + ';--rg:' + cvNum(fq.rowGap || 3) + ';' + cvFont(fq.f || [11.5, 600, 13, 'O']) + '">' +
       (fq.title ? cvItem(fq.title, 0, fy[0]) : '') +
       '<div class="cv-faq-grid">' + faqCol(qs.slice(0, split), cols[0]) + faqCol(qs.slice(split), cols[1], cols[0]) + '</div></div>' +
-      (fq.waves ? '<span class="wd-wave l" aria-hidden="true"></span><span class="wd-wave r" aria-hidden="true"></span>' : '') + '</section>' : '';
+      (fq.waves !== false ? '<span class="wd-wave l" aria-hidden="true"></span><span class="wd-wave r" aria-hidden="true"></span>' : '') + '</section>' : '';
 
     return '<div class="cv-page' + (p.theme ? " th-" + String(p.theme).replace(/[^a-z0-9-]/gi, "") : "") + '">' + hero + body + faq + "</div>";
   }

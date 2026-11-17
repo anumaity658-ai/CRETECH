@@ -2191,7 +2191,10 @@ a.wk-btn:hover { transform: translateY(-2px); }
   .cv-list li { height: auto; min-height: 28px; white-space: normal; }
   .cv-list li svg { flex-basis: 14px; height: 14px; }
   .cv-btn, .cv-btn.hh { align-self: flex-start; height: 42px; padding: 0 22px; font-size: 15px; }
-  .cv-rect, .cv-arrow { display: none; }
+  .cv-rect, .cv-arrow, .cv-faq .wd-wave { display: none; }
+  /* checklist words whose ticks are part of the picture get their own tick on phones */
+  .cv-card .cv-t.ck { position: relative; padding-left: 22px; }
+  .cv-card .cv-t.ck::before { content: ""; position: absolute; left: 2px; top: .25em; width: 12px; height: 7px; border: solid var(--org); border-width: 0 0 2.6px 2.6px; transform: rotate(-45deg); }
   .cv-card.dk::after { display: none; }
   .cv-card.dk { background: linear-gradient(135deg, #3f2a5e, #6a2f63 55%, #e8702c); }
   .cv-card.dk > .cv-card-img { display: none; }
