@@ -138,11 +138,6 @@ if ($post) {
                 return $all;
             });
             break;
-
-        case 'media':
-            $up = admin_save_upload($_FILES['image'] ?? null);
-            flash(is_array($up) ? 'Image uploaded: ' . basename($up['path']) . ' (' . $up['w'] . ' × ' . $up['h'] . ' px)' : $up);
-            break;
     }
     header('Location: ' . $back, true, 303);
     exit;

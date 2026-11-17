@@ -42,7 +42,6 @@ function admin_pages(): array
         'blog' => ['Blog', 'blog', true],
         'contact' => ['Contact Page', 'mail', true],
         'layout' => ['Header & Footer', 'browser', true],
-        'media' => ['Media Library', 'image', true],
         'style' => ['Color & Font', 'palette', true],
         'account' => ['My Account', 'user', true],
         'settings' => ['Site Settings', 'gear', true],
@@ -222,7 +221,6 @@ function page_intro(string $page): string
         'blog' => 'Write and manage blog posts.',
         'contact' => 'Edit text, details and photos of the Contact page.',
         'layout' => 'Menu, header button and footer links.',
-        'media' => 'Every image of the website, with its size.',
         'style' => 'Brand colours and fonts used on the website.',
         'account' => 'Your name and password.',
         'settings' => 'Dashboard numbers and admin users.',
@@ -389,27 +387,6 @@ function login_list(array $rows): void
 
 /* ---------- Content pages (overview; editing forms come in the next step) ---------- */
 
-/** Every image path inside a piece of content. */
-function images_in($value, array &$out): void
-{
-    if (is_array($value)) {
-        foreach ($value as $v) {
-            images_in($v, $out);
-        }
-    } elseif (is_string($value) && preg_match('#^(assets|uploads)/.+\.(jpe?g|png|webp|gif|svg)$#i', $value)) {
-        $out[$value] = true;
-    }
-}
-
-function image_box(string $path): string
-{
-    $file = cms_root() . '/' . $path;
-    $size = is_file($file) ? @getimagesize($file) : false;
-    $label = $size ? $size[0] . ' × ' . $size[1] . ' px' : (str_ends_with($path, '.svg') ? 'SVG (any size)' : 'missing');
-    return '<figure class="img-box"><a href="' . h(site_base() . '/' . $path) . '" target="_blank" rel="noopener"><img src="' . h(site_base() . '/' . $path) . '" alt="" loading="lazy"></a>'
-        . '<figcaption><span class="size">' . h($label) . '</span><span class="path">' . h(basename($path)) . '</span></figcaption></figure>';
-}
-
 /* ---------- Edit pages ---------- */
 
 function page_home(array $me): void
@@ -537,41 +514,6 @@ function page_blog(array $me): void
       <p>The website does not have a blog section yet. Once the blog is added to the website, posts will be written and managed here.</p>
     </div>
     <?php
-}
-
-function page_media(array $me): void
-{
-    $root = cms_root();
-    $files = [];
-    foreach (['assets/images', 'uploads/media'] as $dir) {
-        if (!is_dir($root . '/' . $dir)) {
-            continue;
-        }
-        $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root . '/' . $dir, FilesystemIterator::SKIP_DOTS));
-        foreach ($it as $f) {
-            if (preg_match('/\.(jpe?g|png|webp|gif|svg)$/i', $f->getFilename())) {
-                $rel = str_replace('\\', '/', substr($f->getPathname(), strlen($root) + 1));
-                $files[dirname($rel)][] = $rel;
-            }
-        }
-    }
-    ksort($files);
-    ?>
-    <div class="card panel">
-      <div class="panel-head"><h2><?= icon('plus', 'ic head-ic') ?> Upload an image</h2></div>
-      <form class="upload" method="post" action="<?= h(admin_url('media')) ?>" enctype="multipart/form-data">
-        <input type="hidden" name="csrf" value="<?= h(csrf_token()) ?>">
-        <input type="file" name="image" accept="image/jpeg,image/png,image/webp,image/gif" required>
-        <button class="btn" type="submit">Upload</button>
-        <small>JPG, PNG, WebP or GIF · max 8 MB</small>
-      </form>
-    </div>
-    <?php foreach ($files as $dir => $list): sort($list); ?>
-    <div class="card panel">
-      <div class="panel-head"><h2><?= icon('image', 'ic head-ic') ?> <?= h(str_replace(['assets/images', 'uploads/media'], ['Website images', 'Uploaded images'], $dir)) ?> <small class="count"><?= count($list) ?></small></h2></div>
-      <div class="img-grid"><?php foreach ($list as $img) echo image_box($img); ?></div>
-    </div>
-    <?php endforeach;
 }
 
 function page_style(array $me): void

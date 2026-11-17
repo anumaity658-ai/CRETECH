@@ -302,7 +302,7 @@ function admin_save_upload(?array $file)
     if (!move_uploaded_file($file['tmp_name'], $dir . '/' . $name)) {
         return 'An image could not be saved. Please try again.';
     }
-    activity_log('work', 'Media Library – Image uploaded', $name . ' (' . $info[0] . ' × ' . $info[1] . ' px)');
+    activity_log('work', 'Image uploaded', $name . ' (' . $info[0] . ' × ' . $info[1] . ' px)');
     return ['path' => 'uploads/media/' . $name, 'w' => $info[0], 'h' => $info[1]];
 }
 
