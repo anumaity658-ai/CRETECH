@@ -242,15 +242,15 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": true,
-          "y": [44, 330],
+          "y": [44, 332],
           "image": "assets/images/svc/app-development/hero.jpg",
           "alt": "Two smartphones showing a mobile app with services, booking, products and profile screens",
           "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [114, 62, 177], "f": [12, 600, 15, "P"], "c": "#ff8a1c", "text": "App Development Services" },
+            { "t": "txt", "tag": "p", "up": 1, "box": [114, 63, 177], "f": [12, 600, 15, "P"], "c": "#ff8a1c", "text": "App Development Services" },
             {
               "t": "txt",
               "tag": "h1",
-              "box": [113, 79, 333],
+              "box": [113, 80, 333],
               "f": [37, 600, 37.2, "P"],
               "em": "#ff8a1c",
               "text": "App Development\nServices for\n*Your Ideas*"
@@ -258,7 +258,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "p",
-              "box": [114, 199, 337],
+              "box": [114, 200, 337],
               "f": [14.5, 400, 17.6, "P"],
               "c": "#fff",
               "text": "Turn your app idea into a functional, user-friendly\nand reliable application for your business,\nstartup or organisation."
@@ -266,7 +266,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "o",
-              "box": [113, 263, 157, 33],
+              "box": [113, 264, 157, 33],
               "f": [12.6, 500, 0, "P"],
               "label": "Discuss Your Idea",
               "href": "contact?service=App%20Development"
@@ -274,7 +274,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "line",
-              "box": [299, 263, 134, 32],
+              "box": [299, 264, 134, 32],
               "f": [12.6, 500, 0, "P"],
               "label": "Our Services",
               "href": "services",
@@ -283,7 +283,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [330, 1346],
+          "y": [330, 1474],
           "items": [
             { "t": "txt", "tag": "h2", "box": [69, 345, 438], "f": [22, 700, 28, "O"], "text": "Build a Mobile Presence for *Your Business*" },
             {
@@ -303,14 +303,15 @@ window.SITE_CONFIG = {
             },
             {
               "t": "img",
-              "box": [553, 349, 418, 160],
+              "box": [553, 349, 418, 209],
               "src": "assets/images/svc/app-development/intro.jpg",
-              "alt": "A phone showing a welcome screen between two app screen mockups"
+              "alt": "A phone showing a welcome screen between two app screen mockups",
+              "cls": "rd"
             },
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 517, 1024],
+              "box": [0, 566, 1024],
               "lines": [66, 28, 552],
               "al": "c",
               "f": [21, 700, 26, "O"],
@@ -319,20 +320,20 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "p",
-              "box": [264, 544, 492],
+              "box": [264, 593, 492],
               "al": "c",
               "f": [12, 400, 15, "L"],
               "text": "Our app development services can cover different application concepts, including:"
             },
             {
               "t": "grp",
-              "box": [36, 566, 954, 94],
+              "box": [36, 615, 954, 94],
               "src": "assets/images/svc/app-development/cats.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [68, 614, 76],
+                  "box": [68, 663, 76],
                   "al": "c",
                   "f": [12, 600, 15, "O"],
                   "c": "#1e1a22",
@@ -341,7 +342,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [205, 614, 76],
+                  "box": [205, 663, 76],
                   "al": "c",
                   "f": [12, 600, 15, "O"],
                   "c": "#1e1a22",
@@ -350,7 +351,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [337, 614, 84],
+                  "box": [337, 663, 84],
                   "al": "c",
                   "f": [12, 600, 15, "O"],
                   "c": "#1e1a22",
@@ -359,7 +360,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [473, 614, 76],
+                  "box": [473, 663, 76],
                   "al": "c",
                   "f": [12, 600, 15, "O"],
                   "c": "#1e1a22",
@@ -368,7 +369,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [591, 614, 107],
+                  "box": [591, 663, 107],
                   "al": "c",
                   "f": [12, 600, 15, "O"],
                   "c": "#1e1a22",
@@ -377,7 +378,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [730, 614, 103],
+                  "box": [730, 663, 103],
                   "al": "c",
                   "f": [12, 600, 15, "O"],
                   "c": "#1e1a22",
@@ -386,7 +387,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [867, 614, 102],
+                  "box": [867, 663, 102],
                   "al": "c",
                   "f": [12, 600, 15, "O"],
                   "c": "#1e1a22",
@@ -397,15 +398,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [26, 669, 480, 112],
+              "box": [30, 718, 480, 136],
               "src": "assets/images/svc/app-development/c1.jpg",
               "alt": "Notebook with app screen sketches",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [42, 676, 234], "f": [16, 700, 20, "O"], "text": "Understanding *Your App Idea*" },
+                { "t": "txt", "tag": "h2", "box": [46, 737, 234], "f": [16, 700, 20, "O"], "text": "Understanding *Your App Idea*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [42, 698, 248],
+                  "box": [46, 759, 248],
                   "f": [10.5, 400, 13, "L"],
                   "text": "A successful application begins with a clear\nunderstanding of the problem it is expected\nto address. We discuss the main purpose of\nthe apps, the target users and the activities\nthey should be able to complete."
                 }
@@ -414,15 +415,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [519, 669, 480, 112],
+              "box": [514, 718, 480, 136],
               "src": "assets/images/svc/app-development/c2.jpg",
               "alt": "App screen layouts",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [541, 672, 185], "f": [14, 700, 16.5, "O"], "text": "User-Friendly App Design\n*and Navigation*" },
+                { "t": "txt", "tag": "h2", "box": [536, 733, 185], "f": [14, 700, 16.5, "O"], "text": "User-Friendly App Design\n*and Navigation*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [541, 708, 248],
+                  "box": [536, 769, 248],
                   "f": [10.5, 400, 13, "L"],
                   "text": "An application should be easy to understand\nfrom the moment someone opens it. We plan\nthe screen structure, navigation flow, button\nplacement and overall visual presentation to\nensure a smooth user experience."
                 }
@@ -431,15 +432,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [26, 789, 480, 121],
+              "box": [30, 862, 480, 136],
               "src": "assets/images/svc/app-development/c3.jpg",
               "alt": "Phone showing app feature icons",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [43, 795, 141], "f": [15, 700, 17.5, "O"], "text": "App Features and\n*Integrations*" },
+                { "t": "txt", "tag": "h2", "box": [47, 875.5, 141], "f": [15, 700, 17.5, "O"], "text": "App Features and\n*Integrations*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [43, 834, 251],
+                  "box": [47, 914.5, 251],
                   "f": [10.5, 400, 12.9, "L"],
                   "text": "Depending on the project, app development\nmay include user registration, profiles,\nproduct or service listings, search, booking,\nnotifications, admin panel, payment gateway\nand API integration."
                 }
@@ -448,15 +449,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [519, 789, 480, 121],
+              "box": [514, 862, 480, 136],
               "src": "assets/images/svc/app-development/c4.jpg",
               "alt": "A phone and a tablet showing the same app",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [541, 795, 175], "f": [15, 700, 17.5, "O"], "text": "App Development for\n*Different Devices*" },
+                { "t": "txt", "tag": "h2", "box": [536, 875.5, 175], "f": [15, 700, 17.5, "O"], "text": "App Development for\n*Different Devices*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [541, 834, 242],
+                  "box": [536, 914.5, 242],
                   "f": [10.5, 400, 12.9, "L"],
                   "text": "An application can be planned for Android,\niOS or a suitable cross-platform approach.\nThe choice of technology depends on the\nproject requirements, expected users and\nfuture development plans."
                 }
@@ -465,15 +466,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [26, 918, 480, 112],
+              "box": [30, 1006, 480, 136],
               "src": "assets/images/svc/app-development/c5.jpg",
               "alt": "Performance gauge showing 98%",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [46, 922, 216], "f": [15, 700, 17, "O"], "text": "Performance, Functionality\n*and Testing*" },
+                { "t": "txt", "tag": "h2", "box": [50, 1022, 216], "f": [15, 700, 17, "O"], "text": "Performance, Functionality\n*and Testing*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [46, 959, 239],
+                  "box": [50, 1059, 239],
                   "f": [10.5, 400, 12.7, "L"],
                   "text": "An application needs to work consistently\nacross its intended screens. We review the\nmain features, navigation and functionality\nto identify and resolve issues before final\nhandover."
                 }
@@ -482,21 +483,21 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [519, 918, 480, 112],
+              "box": [514, 1006, 480, 136],
               "src": "assets/images/svc/app-development/c6.jpg",
               "alt": "Laptop showing a growth chart",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [541, 921, 190],
+                  "box": [536, 1021, 190],
                   "f": [14, 700, 16.5, "O"],
                   "text": "App Development for\n*Startups and Businesses*"
                 },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [541, 955, 258],
+                  "box": [536, 1055, 258],
                   "f": [10, 400, 12.1, "L"],
                   "text": "Startups may need an application to introduce\na new service or test a business idea. Established\nbusinesses may want to make their services\naccessible through a dedicated mobile platform.\nWe work with different types of clients and\nproject requirements."
                 }
@@ -505,15 +506,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [26, 1038, 480, 124],
+              "box": [30, 1150, 480, 136],
               "src": "assets/images/svc/app-development/c7.jpg",
               "alt": "Calendar and calculator",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [46, 1042, 147], "f": [15, 700, 17, "O"], "text": "App Development\n*Cost and Timeline*" },
+                { "t": "txt", "tag": "h2", "box": [50, 1160, 147], "f": [15, 700, 17, "O"], "text": "App Development\n*Cost and Timeline*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [46, 1079, 236],
+                  "box": [50, 1197, 236],
                   "f": [10.3, 400, 12.5, "L"],
                   "text": "The cost of app development depends on\nseveral factors, including the number of\nscreens, platform, design, integrations and\ncustom functionality. The estimated cost,\npayment terms and project timeline are\ndiscussed before work begins."
                 }
@@ -522,15 +523,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [519, 1038, 480, 124],
+              "box": [514, 1150, 480, 136],
               "src": "assets/images/svc/app-development/c8.jpg",
               "alt": "Phone showing a rocket launch",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [541, 1041, 189], "f": [15, 700, 17, "O"], "text": "Turn Your App Idea into\na *Working Product*" },
+                { "t": "txt", "tag": "h2", "box": [536, 1159, 189], "f": [15, 700, 17, "O"], "text": "Turn Your App Idea into\na *Working Product*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [541, 1079, 255],
+                  "box": [536, 1197, 255],
                   "f": [10.3, 400, 12.5, "L"],
                   "text": "CRETECH helps you organise your idea,\nunderstand the required features and plan\nthe development process. Whether you are\nstarting with an initial concept or already have\na detailed requirement document, you can\nshare it with us."
                 }
@@ -539,7 +540,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 1165, 1024],
+              "box": [0, 1289, 1024],
               "lines": [62, 46, 263],
               "al": "c",
               "f": [18, 700, 22, "O"],
@@ -547,23 +548,23 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [36, 1188, 955, 78],
+              "box": [36, 1312, 955, 78],
               "src": "assets/images/svc/app-development/proc.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [75, 1219, 72],
+                  "box": [75, 1343, 72],
                   "al": "c",
                   "f": [10.5, 600, 12, "O"],
                   "c": "#1e1a22",
                   "text": "Idea &\nRequirement\nDiscussion"
                 },
-                { "t": "txt", "tag": "h3", "box": [249, 1224, 48], "al": "c", "f": [11, 600, 13, "O"], "c": "#1e1a22", "text": "Project\nPlanning" },
+                { "t": "txt", "tag": "h3", "box": [249, 1348, 48], "al": "c", "f": [11, 600, 13, "O"], "c": "#1e1a22", "text": "Project\nPlanning" },
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [398, 1224, 70],
+                  "box": [398, 1348, 70],
                   "al": "c",
                   "f": [11, 600, 13, "O"],
                   "c": "#1e1a22",
@@ -572,7 +573,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [557, 1224, 74],
+                  "box": [557, 1348, 74],
                   "al": "c",
                   "f": [11, 600, 13, "O"],
                   "c": "#1e1a22",
@@ -581,28 +582,27 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [715, 1224, 80],
+                  "box": [715, 1348, 80],
                   "al": "c",
                   "f": [11, 600, 13, "O"],
                   "c": "#1e1a22",
                   "text": "Review &\nImprovements"
                 },
-                { "t": "txt", "tag": "h3", "box": [893, 1224, 54], "al": "c", "f": [11, 600, 13, "O"], "c": "#1e1a22", "text": "Final\nHandover" }
+                { "t": "txt", "tag": "h3", "box": [893, 1348, 54], "al": "c", "f": [11, 600, 13, "O"], "c": "#1e1a22", "text": "Final\nHandover" }
               ]
             },
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [28, 1276, 968, 70],
-              "src": "assets/images/svc/app-development/cta.jpg",
+              "box": [28, 1400, 968, 74],
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [90, 1284, 197], "f": [19, 700, 23, "O"], "c": "#fff", "text": "Build Your App with" },
-                { "t": "txt", "tag": "p", "box": [90, 1305, 146], "f": [29, 800, 34, "O"], "c": "#ff7a1c", "text": "CRETECH" },
-                { "t": "rect", "box": [345, 1295, 1, 32], "bg": "rgba(255,255,255,.45)", "m": 0 },
+                { "t": "txt", "tag": "h2", "box": [90, 1410, 197], "f": [19, 700, 23, "O"], "c": "#fff", "text": "Build Your App with" },
+                { "t": "txt", "tag": "p", "box": [90, 1431, 146], "f": [29, 800, 34, "O"], "c": "#ff7a1c", "text": "CRETECH" },
+                { "t": "rect", "box": [345, 1421, 1, 32], "bg": "rgba(255,255,255,.45)", "m": 0 },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [380, 1293, 351],
+                  "box": [380, 1419, 351],
                   "f": [11.5, 400, 17, "L"],
                   "c": "#fff",
                   "text": "Share your app idea with us and get a clear development plan,\nfeature list, estimated cost and timeline."
@@ -610,7 +610,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [787, 1294, 170, 34],
+                  "box": [787, 1420, 170, 34],
                   "r": 9,
                   "f": [13.4, 700, 0, "O"],
                   "label": "Get Started Today",
@@ -621,17 +621,17 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1346, 1536],
+          "y": [1474, 1664],
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1349, 1024],
+            "box": [0, 1477, 1024],
             "lines": [60, 40, 263],
             "al": "c",
             "f": [18, 700, 24, "O"],
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1377,
+          "rowsY": 1505,
           "rowH": 18.8,
           "rowGap": 2.4,
           "bottom": 22,
@@ -711,17 +711,17 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": true,
-          "y": [44, 340],
+          "y": [44, 332],
           "image": "assets/images/svc/ui-ux-design/hero.jpg",
           "alt": "Laptop showing a UI design layout with floating UI and UX icons",
           "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [100, 61, 158], "f": [13, 600, 15, "P"], "c": "#f0891c", "text": "UI/UX Design Services" },
-            { "t": "txt", "tag": "h1", "box": [100, 83.5, 379], "f": [33, 600, 32, "P", -0.01], "text": "UI/UX Design Services\nfor Better Digital" },
-            { "t": "txt", "tag": "span", "box": [100, 151, 267], "f": [32, 600, 41, "P", -0.01], "c": "#f8b083", "text": "Experiences" },
+            { "t": "txt", "tag": "p", "up": 1, "box": [100, 57, 158], "f": [13, 600, 15, "P"], "c": "#f0891c", "text": "UI/UX Design Services" },
+            { "t": "txt", "tag": "h1", "box": [100, 79.5, 379], "f": [33, 600, 32, "P", -0.01], "text": "UI/UX Design Services\nfor Better Digital" },
+            { "t": "txt", "tag": "span", "box": [100, 147, 267], "f": [32, 600, 41, "P", -0.01], "c": "#f8b083", "text": "Experiences" },
             {
               "t": "txt",
               "tag": "p",
-              "box": [100, 205, 294],
+              "box": [100, 201, 294],
               "f": [14, 400, 17.3, "P"],
               "c": "#fff",
               "text": "Create clear, attractive and user-friendly\ninterfaces for websites and applications that\nyour users will enjoy and use with ease."
@@ -729,7 +729,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "o",
-              "box": [100, 271, 172, 32],
+              "box": [100, 267, 172, 32],
               "f": [12.6, 500, 0, "P"],
               "label": "Discuss Your Project",
               "href": "contact?service=UI%2FUX%20Design"
@@ -737,7 +737,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "line",
-              "box": [295, 271, 130, 32],
+              "box": [295, 267, 130, 32],
               "f": [12.6, 500, 0, "P"],
               "label": "Our Services",
               "href": "services",
@@ -746,7 +746,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [340, 1298],
+          "y": [340, 1308.2],
           "items": [
             {
               "t": "txt",
@@ -772,14 +772,15 @@ window.SITE_CONFIG = {
             },
             {
               "t": "img",
-              "box": [536, 342, 440, 234],
+              "box": [556, 342, 420, 210],
               "src": "assets/images/svc/ui-ux-design/intro.jpg",
-              "alt": "A phone showing a welcome screen between two app screen mockups"
+              "alt": "A phone showing a welcome screen between two app screen mockups",
+              "cls": "rd"
             },
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 583, 1024],
+              "box": [0, 567.2, 1024],
               "lines": [78, 24, 546],
               "al": "c",
               "f": [23, 700, 26, "O"],
@@ -787,24 +788,40 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [38, 620, 950, 112],
+              "box": [38, 604.2, 950, 112],
               "src": "assets/images/svc/ui-ux-design/cats.jpg",
               "kids": [
-                { "t": "txt", "tag": "h3", "box": [87, 678, 58], "al": "c", "f": [11.5, 600, 15, "O"], "c": "#1e1a22", "text": "Website\nUI Design" },
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [221, 678, 67],
+                  "box": [87, 662.2, 58],
+                  "al": "c",
+                  "f": [11.5, 600, 15, "O"],
+                  "c": "#1e1a22",
+                  "text": "Website\nUI Design"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [221, 662.2, 67],
                   "al": "c",
                   "f": [11.5, 600, 15, "O"],
                   "c": "#1e1a22",
                   "text": "Mobile App\nUI Design"
                 },
-                { "t": "txt", "tag": "h3", "box": [356, 678, 63], "al": "c", "f": [11.5, 600, 15, "O"], "c": "#1e1a22", "text": "Dashboard\nDesign" },
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [485, 678, 72],
+                  "box": [356, 662.2, 63],
+                  "al": "c",
+                  "f": [11.5, 600, 15, "O"],
+                  "c": "#1e1a22",
+                  "text": "Dashboard\nDesign"
+                },
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [485, 662.2, 72],
                   "al": "c",
                   "f": [11.5, 600, 15, "O"],
                   "c": "#1e1a22",
@@ -813,7 +830,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [618, 678, 75],
+                  "box": [618, 662.2, 75],
                   "al": "c",
                   "f": [11.5, 600, 15, "O"],
                   "c": "#1e1a22",
@@ -822,33 +839,41 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [755, 672, 67],
+                  "box": [755, 656.2, 67],
                   "al": "c",
                   "f": [11.5, 600, 14.3, "O"],
                   "c": "#1e1a22",
                   "text": "Web\nApplication\nDesign"
                 },
-                { "t": "txt", "tag": "h3", "box": [895, 678, 53], "al": "c", "f": [11.5, 600, 15, "O"], "c": "#1e1a22", "text": "Website\nRedesign" }
+                {
+                  "t": "txt",
+                  "tag": "h3",
+                  "box": [895, 662.2, 53],
+                  "al": "c",
+                  "f": [11.5, 600, 15, "O"],
+                  "c": "#1e1a22",
+                  "text": "Website\nRedesign"
+                }
               ]
             },
             {
               "t": "img",
-              "box": [48, 742, 433, 127],
+              "box": [30, 726.2, 480, 136],
               "src": "assets/images/svc/ui-ux-design/wire.jpg",
               "alt": "Notebook with wireframe sketches and a pen on a desk"
             },
             {
               "t": "card",
               "cls": "flat",
-              "box": [505, 742, 482, 128],
+              "box": [514, 726.2, 480, 136],
               "src": "assets/images/svc/ui-ux-design/und.jpg",
               "alt": "",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [529, 749, 300], "f": [20, 700, 22, "O"], "text": "Understanding *UI and UX Design*" },
+                { "t": "txt", "tag": "h2", "box": [538, 737.2, 300], "f": [20, 700, 22, "O"], "text": "Understanding *UI and UX Design*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [572, 781, 403],
+                  "box": [581, 769.2, 403],
                   "f": [11, 400, 15, "L"],
                   "bold": "User Interface (UI) Design",
                   "text": "focuses on the visual elements users\nsee and interact with, such as layouts, colours, typography, buttons and icons."
@@ -856,7 +881,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [572, 824, 406],
+                  "box": [581, 812.2, 406],
                   "f": [11, 400, 15, "L"],
                   "bold": "User Experience (UX) Design",
                   "text": "focuses on how users interact with the product,\nincluding navigation, information flow and the ease of completing tasks."
@@ -866,15 +891,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [34, 872, 474, 114],
+              "box": [30, 864.2, 480, 136],
               "src": "assets/images/svc/ui-ux-design/c1.jpg",
               "alt": "Web page layout mockup",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [58, 883, 187], "f": [17, 700, 19, "O"], "text": "Creating Clear and\n*User-Friendly Layouts*" },
+                { "t": "txt", "tag": "h2", "box": [54, 886.2, 187], "f": [17, 700, 19, "O"], "text": "Creating Clear and\n*User-Friendly Layouts*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [58, 927, 242],
+                  "box": [54, 930.2, 242],
                   "f": [12, 400, 14.5, "L"],
                   "text": "We plan layouts that guide users naturally,\nwith well-placed content, easy navigation\nand a clean, organised interface."
                 }
@@ -883,15 +908,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [512, 872, 480, 114],
+              "box": [514, 864.2, 480, 136],
               "src": "assets/images/svc/ui-ux-design/c2.jpg",
               "alt": "Wireframe and prototype screens",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [533, 886, 240], "f": [17, 700, 19, "O"], "text": "Wireframes and *Prototypes*" },
+                { "t": "txt", "tag": "h2", "box": [535, 889.2, 240], "f": [17, 700, 19, "O"], "text": "Wireframes and *Prototypes*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [533, 913, 255],
+                  "box": [535, 916.2, 255],
                   "f": [12, 400, 14, "L"],
                   "text": "We prepare wireframes to plan the structure\nand create interactive prototypes to\nvisualise the user flow before development."
                 }
@@ -900,15 +925,21 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [34, 984, 474, 116],
+              "box": [30, 976.2, 480, 136],
               "src": "assets/images/svc/ui-ux-design/c3.jpg",
               "alt": "A laptop, monitor, tablet and phone showing the same design",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [58, 995, 238], "f": [17, 700, 19, "O"], "text": "Responsive and\n*Consistent Interface Design*" },
+                {
+                  "t": "txt",
+                  "tag": "h2",
+                  "box": [54, 997.2, 238],
+                  "f": [17, 700, 19, "O"],
+                  "text": "Responsive and\n*Consistent Interface Design*"
+                },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [58, 1039, 237],
+                  "box": [54, 1041.2, 237],
                   "f": [12, 400, 14.5, "L"],
                   "text": "We design interfaces that work well across\ndesktop, tablet and mobile devices, with a\nconsistent visual style and user experience."
                 }
@@ -917,15 +948,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [512, 984, 480, 116],
+              "box": [514, 976.2, 480, 136],
               "src": "assets/images/svc/ui-ux-design/c4.jpg",
               "alt": "Growth bar chart with a rising arrow",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [535, 995, 219], "f": [17, 700, 19, "O"], "text": "UI/UX Design for\n*Startups and Businesses*" },
+                { "t": "txt", "tag": "h2", "box": [537, 997.2, 219], "f": [17, 700, 19, "O"], "text": "UI/UX Design for\n*Startups and Businesses*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [535, 1040, 252],
+                  "box": [537, 1042.2, 252],
                   "f": [12, 400, 14.5, "L"],
                   "text": "We work with startups, established\nbusinesses and individuals to create\ninterfaces that match their goals and users."
                 }
@@ -934,7 +965,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 1104, 1024],
+              "box": [0, 1116.2, 1024],
               "lines": [80, 45, 240],
               "al": "c",
               "f": [20, 700, 24, "O"],
@@ -942,13 +973,13 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [36, 1128, 954, 86],
+              "box": [36, 1140.2, 954, 86],
               "src": "assets/images/svc/ui-ux-design/proc.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [97, 1166, 72],
+                  "box": [97, 1178.2, 72],
                   "al": "c",
                   "f": [11.5, 600, 14, "O"],
                   "c": "#1e1a22",
@@ -957,7 +988,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [262, 1166, 72],
+                  "box": [262, 1178.2, 72],
                   "al": "c",
                   "f": [11.5, 600, 14, "O"],
                   "c": "#1e1a22",
@@ -966,7 +997,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [422, 1167, 75],
+                  "box": [422, 1179.2, 75],
                   "al": "c",
                   "f": [11.5, 600, 14, "O"],
                   "c": "#1e1a22",
@@ -975,7 +1006,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [585, 1167, 54],
+                  "box": [585, 1179.2, 54],
                   "al": "c",
                   "f": [11.5, 600, 14, "O"],
                   "c": "#1e1a22",
@@ -984,7 +1015,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [737, 1167, 65],
+                  "box": [737, 1179.2, 65],
                   "al": "c",
                   "f": [11.5, 600, 14, "O"],
                   "c": "#1e1a22",
@@ -993,7 +1024,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [899, 1167, 69],
+                  "box": [899, 1179.2, 69],
                   "al": "c",
                   "f": [11.5, 600, 14, "O"],
                   "c": "#1e1a22",
@@ -1004,13 +1035,12 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [26, 1224, 971, 76],
-              "src": "assets/images/svc/ui-ux-design/cta.jpg",
+              "box": [28, 1236.2, 968, 74],
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [83, 1236.5, 256],
+                  "box": [85, 1247.7, 256],
                   "f": [20, 600, 23, "P", 0],
                   "c": "#fff",
                   "em": "#ff7a1c",
@@ -1019,7 +1049,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [403, 1238, 325],
+                  "box": [405, 1249.2, 325],
                   "f": [11.5, 400, 14.3, "L"],
                   "c": "#fff",
                   "text": "Share your design requirements, project idea or existing\ninterface with us. We will understand your expectations and\ndiscuss a suitable design approach."
@@ -1027,7 +1057,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [788, 1245, 167, 34],
+                  "box": [790, 1256.2, 167, 34],
                   "r": 9,
                   "f": [13.4, 700, 0, "O"],
                   "label": "Get Started Today",
@@ -1038,18 +1068,18 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1298, 1536],
+          "y": [1308.2, 1546.2],
           "waves": true,
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1304, 1024],
+            "box": [0, 1314.2, 1024],
             "lines": [74, 30, 272],
             "al": "c",
             "f": [20, 700, 24, "O"],
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1339,
+          "rowsY": 1349.2,
           "rowH": 20,
           "rowGap": 3.9,
           "bottom": 45,
@@ -1129,17 +1159,17 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": true,
-          "y": [44, 330],
+          "y": [44, 332],
           "image": "assets/images/svc/seo-services/hero.jpg",
           "alt": "Laptop showing a search page with a magnifying glass, a target and a growth chart",
           "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [100, 60, 85], "f": [12, 600, 15, "P"], "c": "#f0891c", "text": "SEO Services" },
-            { "t": "txt", "tag": "h1", "box": [100, 82, 402], "f": [28.5, 600, 27.6, "P", -0.01], "text": "SEO Services to Improve\nYour Website’s" },
-            { "t": "txt", "tag": "span", "box": [100, 146, 326], "f": [32, 600, 37, "P", -0.01], "c": "#f98719", "text": "Search Visibility" },
+            { "t": "txt", "tag": "p", "up": 1, "box": [100, 61, 85], "f": [12, 600, 15, "P"], "c": "#f0891c", "text": "SEO Services" },
+            { "t": "txt", "tag": "h1", "box": [100, 83, 402], "f": [28.5, 600, 27.6, "P", -0.01], "text": "SEO Services to Improve\nYour Website’s" },
+            { "t": "txt", "tag": "span", "box": [100, 147, 326], "f": [32, 600, 37, "P", -0.01], "c": "#f98719", "text": "Search Visibility" },
             {
               "t": "txt",
               "tag": "p",
-              "box": [100, 193, 362],
+              "box": [100, 194, 362],
               "f": [14, 400, 17.2, "P"],
               "c": "#fff",
               "text": "Improve your website’s search presence, reach the\nright audience and build a stronger online foundation\nwith CRETECH’s SEO services."
@@ -1147,7 +1177,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "o",
-              "box": [100, 261, 176, 33],
+              "box": [100, 262, 176, 33],
               "f": [12.6, 500, 0, "P"],
               "label": "Discuss Your Project",
               "href": "contact?service=SEO%20Services"
@@ -1155,7 +1185,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "line",
-              "box": [293, 261, 134, 33],
+              "box": [293, 262, 134, 33],
               "f": [12.6, 500, 0, "P"],
               "label": "Our Services",
               "href": "services",
@@ -1164,7 +1194,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [330, 1310],
+          "y": [330, 1350],
           "items": [
             { "t": "txt", "tag": "h2", "box": [66, 350, 446], "f": [21.5, 700, 24, "O"], "text": "Understanding *Search Engine Optimisation*" },
             {
@@ -1175,11 +1205,17 @@ window.SITE_CONFIG = {
               "text": "Search Engine Optimisation (SEO) helps improve a website so\nthat search engines can better discover, understand and\nevaluate its pages for relevant searches. It involves content,\nstructure, technical checks and a better overall user experience."
             },
             {
-              "t": "card",
-              "cls": "flat",
-              "box": [528, 344, 450, 154],
+              "t": "img",
+              "box": [528, 356.5, 258, 129],
               "src": "assets/images/svc/seo-services/intro.jpg",
               "alt": "Website with an SEO label, a magnifying glass, a bar chart and a target",
+              "cls": "rd"
+            },
+            {
+              "t": "card",
+              "cls": "flat",
+              "box": [796, 344, 182, 154],
+              "src": "assets/images/svc/seo-services/checks.jpg",
               "kids": [
                 {
                   "t": "txt",
@@ -1254,15 +1290,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 638, 488, 130],
+              "box": [30, 638, 480, 136],
               "src": "assets/images/svc/seo-services/k1.jpg",
               "alt": "Tablet showing keyword research with search volume, relevance and user intent",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [60, 651, 164], "f": [19, 700, 20, "O"], "text": "Keyword Research\n*and Search Intent*" },
+                { "t": "txt", "tag": "h2", "box": [58, 654, 164], "f": [19, 700, 20, "O"], "text": "Keyword Research\n*and Search Intent*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [60, 698, 251],
+                  "box": [58, 701, 251],
                   "f": [13, 400, 15.5, "L"],
                   "text": "Identify the right keywords, understand\nuser intent and find relevant opportunities\nfor your website."
                 }
@@ -1271,15 +1307,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [520, 638, 472, 130],
+              "box": [514, 638, 480, 136],
               "src": "assets/images/svc/seo-services/k2.jpg",
               "alt": "Web page showing title, meta description and H1 heading with a check mark",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [550, 652, 196], "f": [19, 700, 20, "O"], "text": "On-Page *SEO Services*" },
+                { "t": "txt", "tag": "h2", "box": [544, 655, 196], "f": [19, 700, 20, "O"], "text": "On-Page *SEO Services*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [550, 681, 210.5],
+                  "box": [544, 684, 210.5],
                   "f": [13, 400, 15, "L"],
                   "text": "Optimise titles, meta descriptions,\nheadings, content, images, URLs\nand internal links for better\nsearch understanding."
                 }
@@ -1288,15 +1324,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 768, 488, 116],
+              "box": [30, 774, 480, 136],
               "src": "assets/images/svc/seo-services/k3.jpg",
               "alt": "Laptop with a code symbol and a checklist for sitemap, robots.txt, indexing and performance",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [60, 778, 129], "f": [19, 700, 20, "O"], "text": "Technical *SEO*" },
+                { "t": "txt", "tag": "h2", "box": [58, 794, 129], "f": [19, 700, 20, "O"], "text": "Technical *SEO*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [60, 805, 218.5],
+                  "box": [58, 821, 218.5],
                   "f": [12.5, 400, 14, "L"],
                   "text": "Review and improve technical factors\nsuch as crawlability, indexing, sitemaps,\nredirects, canonical tags and\nmobile usability."
                 }
@@ -1305,15 +1341,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [520, 768, 472, 116],
+              "box": [514, 774, 480, 136],
               "src": "assets/images/svc/seo-services/k4.jpg",
               "alt": "Content plan notepad with topics, keywords, service pages and blog ideas",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [550, 778, 231.5], "f": [19, 700, 20, "O"], "text": "Content and *SEO Strategy*" },
+                { "t": "txt", "tag": "h2", "box": [544, 794, 231.5], "f": [19, 700, 20, "O"], "text": "Content and *SEO Strategy*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [550, 805, 213],
+                  "box": [544, 821, 213],
                   "f": [12.5, 400, 14, "L"],
                   "text": "Plan and organise useful, relevant\ncontent such as service pages, blog\narticles and FAQs to support\nsearch visibility and user needs."
                 }
@@ -1322,15 +1358,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 884, 488, 112],
+              "box": [30, 910, 480, 136],
               "src": "assets/images/svc/seo-services/k5.jpg",
               "alt": "Web page with a chain link and a globe",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [61, 894, 128], "f": [19, 700, 20, "O"], "text": "Off-Page *SEO*" },
+                { "t": "txt", "tag": "h2", "box": [59, 932, 128], "f": [19, 700, 20, "O"], "text": "Off-Page *SEO*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [61, 919, 204],
+                  "box": [59, 957, 204],
                   "f": [12.5, 400, 14.7, "L"],
                   "text": "Work on relevant online activities\nsuch as quality references, brand\nmentions and suitable backlink\nopportunities."
                 }
@@ -1339,15 +1375,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [520, 884, 472, 112],
+              "box": [514, 910, 480, 136],
               "src": "assets/images/svc/seo-services/k6.jpg",
               "alt": "Map pin, map and a shop with a G sign",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [551, 894, 219], "f": [19, 700, 20, "O"], "text": "Local *SEO for Businesses*" },
+                { "t": "txt", "tag": "h2", "box": [545, 932, 219], "f": [19, 700, 20, "O"], "text": "Local *SEO for Businesses*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [551, 919, 216],
+                  "box": [545, 957, 216],
                   "f": [12.5, 400, 14.7, "L"],
                   "text": "Improve your local presence with\nGoogle Business Profile optimisation,\nlocal keywords, business information\nand location-focused content."
                 }
@@ -1356,7 +1392,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 999, 1024],
+              "box": [0, 1049, 1024],
               "lines": [115, 33, 171],
               "al": "c",
               "f": [21.5, 700, 24, "O"],
@@ -1364,25 +1400,25 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [34, 1030, 956, 76],
+              "box": [34, 1080, 956, 76],
               "src": "assets/images/svc/seo-services/proc.jpg",
               "kids": [
-                { "t": "txt", "tag": "h3", "box": [110, 1063, 45], "al": "c", "f": [12, 600, 13.5, "O"], "c": "#1e1a22", "text": "Website\nReview" },
+                { "t": "txt", "tag": "h3", "box": [110, 1113, 45], "al": "c", "f": [12, 600, 13.5, "O"], "c": "#1e1a22", "text": "Website\nReview" },
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [271, 1063, 48],
+                  "box": [271, 1113, 48],
                   "al": "c",
                   "f": [12, 600, 13.5, "O"],
                   "c": "#1e1a22",
                   "text": "Keyword\nResearch"
                 },
-                { "t": "txt", "tag": "h3", "box": [435, 1063, 47], "al": "c", "f": [12, 600, 13.5, "O"], "c": "#1e1a22", "text": "SEO\nPlanning" },
-                { "t": "txt", "tag": "h3", "box": [574, 1067.5, 81], "al": "c", "f": [12, 600, 13.5, "O"], "c": "#1e1a22", "text": "Implementation" },
+                { "t": "txt", "tag": "h3", "box": [435, 1113, 47], "al": "c", "f": [12, 600, 13.5, "O"], "c": "#1e1a22", "text": "SEO\nPlanning" },
+                { "t": "txt", "tag": "h3", "box": [574, 1117.5, 81], "al": "c", "f": [12, 600, 13.5, "O"], "c": "#1e1a22", "text": "Implementation" },
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [747.5, 1063, 66.5],
+                  "box": [747.5, 1113, 66.5],
                   "al": "c",
                   "f": [12, 600, 13.5, "O"],
                   "c": "#1e1a22",
@@ -1391,7 +1427,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [901.5, 1063, 68.5],
+                  "box": [901.5, 1113, 68.5],
                   "al": "c",
                   "f": [12, 600, 13.5, "O"],
                   "c": "#1e1a22",
@@ -1402,15 +1438,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 1112, 470, 118],
+              "box": [30, 1162, 480, 110],
               "src": "assets/images/svc/seo-services/b1.jpg",
               "alt": "Rising bar chart with an arrow",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [195, 1121, 173], "f": [18, 700, 19, "O"], "text": "SEO Services for\n*Different Businesses*" },
+                { "t": "txt", "tag": "h2", "box": [193, 1167, 173], "f": [18, 700, 19, "O"], "text": "SEO Services for\n*Different Businesses*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [195, 1162, 247.5],
+                  "box": [193, 1208, 247.5],
                   "f": [12.5, 400, 13.8, "L"],
                   "text": "We work with startups, small businesses,\ncorporates, e-commerce websites and\nservice-based platforms, with a strategy\nthat suits their goals and audience."
                 }
@@ -1419,15 +1455,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [512, 1112, 480, 118],
+              "box": [514, 1162, 480, 110],
               "src": "assets/images/svc/seo-services/b2.jpg",
               "alt": "Stacks of gold coins",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [656.5, 1123, 192], "f": [18, 700, 20, "O"], "text": "SEO *Cost and Timeline*" },
+                { "t": "txt", "tag": "h2", "box": [658.5, 1169, 192], "f": [18, 700, 20, "O"], "text": "SEO *Cost and Timeline*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [656.5, 1149.5, 320],
+                  "box": [658.5, 1195.5, 320],
                   "f": [12.5, 400, 14.3, "L"],
                   "text": "The cost depends on the website size, number of\npages, competition, technical work and content needs.\nWe discuss the expected work, cost and a practical\ntimeline before starting."
                 }
@@ -1436,13 +1472,12 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [26, 1236, 970, 76],
-              "src": "assets/images/svc/seo-services/cta.jpg",
+              "box": [28, 1278, 968, 74],
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [86, 1248.5, 313],
+                  "box": [88, 1289.5, 313],
                   "f": [20, 600, 23, "P", 0],
                   "c": "#fff",
                   "em": "#ff8a1c",
@@ -1451,7 +1486,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [472.5, 1249.5, 271.5],
+                  "box": [474.5, 1290.5, 271.5],
                   "f": [11.5, 400, 15, "L"],
                   "c": "#fff",
                   "text": "Share your website and business details with us.\nWe will review your requirements and suggest a\nsuitable SEO approach."
@@ -1459,7 +1494,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [789, 1256, 166, 34],
+                  "box": [791, 1297, 166, 34],
                   "r": 9,
                   "f": [13.4, 700, 0, "O"],
                   "label": "Get Started Today",
@@ -1470,17 +1505,17 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1310, 1536],
+          "y": [1350, 1576],
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1316, 1024],
+            "box": [0, 1356, 1024],
             "lines": [90, 23, 282],
             "al": "c",
             "f": [20, 700, 24, "O"],
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1349,
+          "rowsY": 1389,
           "rowH": 18,
           "rowGap": 4.8,
           "bottom": 43,
@@ -1560,16 +1595,16 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": false,
-          "y": [44, 328],
+          "y": [44, 332],
           "image": "assets/images/svc/google-ads-services/hero.jpg",
           "alt": "Google Ads search screen with a rising bar chart, a target and a note listing Target Audience, Quality Leads, More Enquiries and Business Growth",
           "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [74, 61, 162.5], "f": [13, 600, 16, "O"], "c": "#ff5f0f", "text": "Google Ads Services" },
-            { "t": "rect", "box": [244, 68.5, 106, 1.5], "bg": "#ff8a4c", "m": 0 },
+            { "t": "txt", "tag": "p", "up": 1, "box": [74, 63, 162.5], "f": [13, 600, 16, "O"], "c": "#ff5f0f", "text": "Google Ads Services" },
+            { "t": "rect", "box": [244, 70.5, 106, 1.5], "bg": "#ff8a4c", "m": 0 },
             {
               "t": "txt",
               "tag": "h1",
-              "box": [73.5, 87.5, 332],
+              "box": [73.5, 89.5, 332],
               "f": [33, 700, 36, "O"],
               "c": "#4a0838",
               "text": "Grow Your Business\nwith *Google Ads*"
@@ -1577,7 +1612,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "p",
-              "box": [74, 174, 345],
+              "box": [74, 176, 345],
               "f": [14.5, 500, 19, "L"],
               "c": "#1f1b22",
               "text": "Reach the right audience, generate quality\nenquiries and promote your products\nor services with targeted Google Ads campaigns."
@@ -1585,7 +1620,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "o",
-              "box": [76, 252, 180, 35],
+              "box": [76, 254, 180, 35],
               "f": [13.5, 600, 0, "O"],
               "label": "Discuss Your Project",
               "href": "contact?service=Google%20Ads%20Services"
@@ -1593,7 +1628,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "plum",
-              "box": [272, 252, 118, 35],
+              "box": [272, 254, 118, 35],
               "f": [13.5, 600, 0, "O"],
               "label": "Our Services",
               "href": "services",
@@ -1602,7 +1637,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [328, 1252],
+          "y": [328, 1278],
           "items": [
             {
               "t": "txt",
@@ -1654,15 +1689,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 508, 476, 128],
+              "box": [30, 508, 480, 136],
               "src": "assets/images/svc/google-ads-services/c1.jpg",
               "alt": "Notebook titled Ad Strategy with Goal, Audience, Budget and Campaign Type ticked",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [58, 515, 101], "f": [19, 700, 20.5, "O"], "c": "#4a0838", "text": "Campaign\n*Planning*" },
+                { "t": "txt", "tag": "h2", "box": [58, 519, 101], "f": [19, 700, 20.5, "O"], "c": "#4a0838", "text": "Campaign\n*Planning*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [58, 563, 169],
+                  "box": [58, 567, 169],
                   "f": [13, 500, 16, "L"],
                   "text": "Understand your business\ngoal and plan the right\nGoogle Ads strategy."
                 }
@@ -1671,15 +1706,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [516, 508, 478, 128],
+              "box": [514, 508, 480, 136],
               "src": "assets/images/svc/google-ads-services/c2.jpg",
               "alt": "Magnifying glass over keywords such as website development, digital marketing and business website",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [544, 515, 93], "f": [19, 700, 20.5, "O"], "c": "#4a0838", "text": "Keyword\n*Research*" },
+                { "t": "txt", "tag": "h2", "box": [542, 519, 93], "f": [19, 700, 20.5, "O"], "c": "#4a0838", "text": "Keyword\n*Research*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [544, 563, 171],
+                  "box": [542, 567, 171],
                   "f": [13, 500, 16, "L"],
                   "text": "Find relevant and\nhigh-intent keywords to\nreach the right customers."
                 }
@@ -1688,15 +1723,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 644, 476, 130],
+              "box": [30, 652, 480, 136],
               "src": "assets/images/svc/google-ads-services/c3.jpg",
               "alt": "Ad mockup with an image and colour tiles",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [58, 651, 129.5], "f": [19, 700, 20.5, "O"], "c": "#4a0838", "text": "Ad Copy and\n*Creative*" },
+                { "t": "txt", "tag": "h2", "box": [58, 662, 129.5], "f": [19, 700, 20.5, "O"], "c": "#4a0838", "text": "Ad Copy and\n*Creative*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [58, 698.5, 168.5],
+                  "box": [58, 709.5, 168.5],
                   "f": [13, 500, 16, "L"],
                   "text": "Create clear, relevant and\nattention-grabbing ads\nthat communicate your\nbusiness offering."
                 }
@@ -1705,14 +1740,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [516, 644, 478, 130],
+              "box": [514, 652, 480, 136],
               "src": "assets/images/svc/google-ads-services/c4.jpg",
               "alt": "Location pin on a map",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [544, 651, 191],
+                  "box": [542, 662, 191],
                   "f": [19, 700, 20.5, "O"],
                   "c": "#4a0838",
                   "text": "Audience and\n*Location Targeting*"
@@ -1720,7 +1755,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [544, 698.5, 182.5],
+                  "box": [542, 709.5, 182.5],
                   "f": [13, 500, 16, "L"],
                   "text": "Reach the right people\nbased on location, interests,\ndemographics and business\ngoals."
                 }
@@ -1729,14 +1764,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 782, 476, 136],
+              "box": [30, 796, 480, 136],
               "src": "assets/images/svc/google-ads-services/c5.jpg",
               "alt": "Landing page with an Enquire Now button and a growth chart",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [59, 789, 206.5],
+                  "box": [59, 803, 206.5],
                   "f": [19, 700, 20.5, "O"],
                   "c": "#4a0838",
                   "text": "Landing Page and\n*Conversion Tracking*"
@@ -1744,7 +1779,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [59, 836, 183],
+                  "box": [59, 850, 183],
                   "f": [13, 500, 16, "L"],
                   "text": "Use a relevant landing page\nand tracking setup to\nmeasure important actions\nlike enquiries or purchases."
                 }
@@ -1753,14 +1788,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [516, 782, 478, 136],
+              "box": [514, 796, 480, 136],
               "src": "assets/images/svc/google-ads-services/c6.jpg",
               "alt": "Performance dashboard with a bar chart and a refresh icon",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [544, 788, 209.5],
+                  "box": [542, 802, 209.5],
                   "f": [19, 700, 20.5, "O"],
                   "c": "#4a0838",
                   "text": "Campaign Monitoring\n*and Optimisation*"
@@ -1768,7 +1803,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [544, 834.5, 190],
+                  "box": [542, 848.5, 190],
                   "f": [13, 500, 16, "L"],
                   "text": "Review performance, identify\nimprovements and make\nnecessary changes for\nbetter results."
                 }
@@ -1777,7 +1812,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 919, 1024],
+              "box": [0, 933, 1024],
               "lines": [128, 26, 275],
               "al": "c",
               "f": [21, 700, 26, "O"],
@@ -1786,13 +1821,13 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [30, 952, 966, 112],
+              "box": [30, 966, 966, 112],
               "src": "assets/images/svc/google-ads-services/proc.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [78, 977, 66],
+                  "box": [78, 991, 66],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -1801,7 +1836,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [241, 977, 63],
+                  "box": [241, 991, 63],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -1810,7 +1845,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [392, 977, 83],
+                  "box": [392, 991, 83],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -1819,17 +1854,17 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [554, 977, 78],
+                  "box": [554, 991, 78],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
                   "text": "Tracking and\nReview"
                 },
-                { "t": "txt", "tag": "h3", "box": [724, 977, 63], "al": "c", "f": [13, 700, 13.5, "O"], "c": "#1e1a22", "text": "Campaign\nLaunch" },
+                { "t": "txt", "tag": "h3", "box": [724, 991, 63], "al": "c", "f": [13, 700, 13.5, "O"], "c": "#1e1a22", "text": "Campaign\nLaunch" },
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [872, 977, 94],
+                  "box": [872, 991, 94],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -1838,7 +1873,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [55, 1010, 112],
+                  "box": [55, 1024, 112],
                   "al": "c",
                   "f": [11, 500, 13, "L"],
                   "text": "Understand your\nbusiness, goals\nand target audience."
@@ -1846,7 +1881,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [216, 1010, 113],
+                  "box": [216, 1024, 113],
                   "al": "c",
                   "f": [11, 500, 13, "L"],
                   "text": "Select campaign\ntype, keywords,\nlocations and budget."
@@ -1854,7 +1889,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [374, 1010, 120],
+                  "box": [374, 1024, 120],
                   "al": "c",
                   "f": [11, 500, 13, "L"],
                   "text": "Create ads, set up\ntargeting and configure\nthe campaign."
@@ -1862,7 +1897,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [545, 1010, 97],
+                  "box": [545, 1024, 97],
                   "al": "c",
                   "f": [11, 500, 13, "L"],
                   "text": "Set up conversion\ntracking and review\nthe campaign."
@@ -1870,7 +1905,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [688, 1010, 134],
+                  "box": [688, 1024, 134],
                   "al": "c",
                   "f": [11, 500, 13, "L"],
                   "text": "Submit for Google\nreview and start the\ncampaign (after approval)."
@@ -1878,7 +1913,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [866, 1010, 106],
+                  "box": [866, 1024, 106],
                   "al": "c",
                   "f": [11, 500, 13, "L"],
                   "text": "Regularly review\nperformance and\nmake improvements."
@@ -1888,14 +1923,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 1072, 478, 98],
+              "box": [30, 1086, 480, 110],
               "src": "assets/images/svc/google-ads-services/types2.jpg",
               "alt": "Megaphone",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [187.5, 1083, 280],
+                  "box": [187.5, 1103, 280],
                   "f": [18, 700, 20, "O"],
                   "c": "#4a0838",
                   "text": "Types of *Google Ads Campaigns*"
@@ -1903,7 +1938,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [187.5, 1109, 251.5],
+                  "box": [187.5, 1129, 251.5],
                   "f": [12.5, 500, 14.8, "L"],
                   "text": "Search, Display, Video (YouTube), Shopping,\nPerformance Max and App campaigns,\nbased on your business objectives."
                 }
@@ -1912,15 +1947,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [516, 1072, 478, 98],
+              "box": [514, 1086, 480, 110],
               "src": "assets/images/svc/google-ads-services/who.jpg",
               "alt": "Target with an arrow in the centre",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [684.5, 1081, 165], "f": [19, 700, 21, "O"], "c": "#4a0838", "text": "Who Can *Benefit?*" },
+                { "t": "txt", "tag": "h2", "box": [682.5, 1101, 165], "f": [19, 700, 21, "O"], "c": "#4a0838", "text": "Who Can *Benefit?*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [684.5, 1108, 284],
+                  "box": [682.5, 1128, 284],
                   "f": [12.5, 500, 15.3, "L"],
                   "text": "Startups, small businesses, e-commerce stores,\nlocal service providers, educational institutions,\nreal estate, consultants and more."
                 }
@@ -1929,23 +1964,22 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [28, 1178, 968, 74],
-              "src": "assets/images/svc/google-ads-services/cta.jpg",
+              "box": [28, 1204, 968, 74],
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [74, 1190, 292],
+                  "box": [74, 1216, 292],
                   "f": [21, 700, 25, "O"],
                   "c": "#fff",
                   "em": "#ff9a1c",
                   "text": "Promote Your Business with\nGoogle Ads and *CRETECH*"
                 },
-                { "t": "rect", "box": [396, 1195, 1, 40], "bg": "rgba(255,255,255,.45)", "m": 0 },
+                { "t": "rect", "box": [396, 1221, 1, 40], "bg": "rgba(255,255,255,.45)", "m": 0 },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [424.5, 1191.5, 329],
+                  "box": [424.5, 1217.5, 329],
                   "f": [12.5, 400, 15.3, "L"],
                   "c": "#fff",
                   "text": "Share your business details, target locations and goals\nwith us. We will plan and manage a Google Ads campaign\nthat suits your business."
@@ -1953,7 +1987,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [789, 1198, 180, 37],
+                  "box": [789, 1224, 180, 37],
                   "f": [14.5, 700, 0, "O"],
                   "label": "Get Started Today",
                   "href": "contact?service=Google%20Ads%20Services"
@@ -1963,18 +1997,18 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1252, 1536],
+          "y": [1278, 1562],
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1256, 1024],
+            "box": [0, 1282, 1024],
             "lines": [130, 28, 292],
             "al": "c",
             "f": [21, 700, 26, "O"],
             "c": "#4a0838",
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1290,
+          "rowsY": 1316,
           "rowH": 21,
           "rowGap": 2,
           "bottom": 82,
@@ -2056,7 +2090,7 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": true,
-          "y": [44, 306],
+          "y": [44, 332],
           "image": "assets/images/svc/social-media-marketing/hero.jpg",
           "alt": "Laptop showing a social media marketing dashboard with a phone and social media icons",
           "items": [
@@ -2064,7 +2098,7 @@ window.SITE_CONFIG = {
               "t": "txt",
               "tag": "p",
               "up": 1,
-              "box": [100, 54, 248],
+              "box": [100, 67, 248],
               "f": [12, 600, 15, "P"],
               "c": "#f5a623",
               "text": "Social Media Marketing Services"
@@ -2072,15 +2106,15 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h1",
-              "box": [100, 76, 373],
+              "box": [100, 89, 373],
               "f": [28.5, 600, 27.6, "P", -0.01],
               "text": "Social Media Marketing\nServices to Build Your"
             },
-            { "t": "txt", "tag": "span", "box": [100, 136, 322.4], "f": [32, 600, 36, "P", -0.01], "c": "#fd8604", "text": "Online Presence" },
+            { "t": "txt", "tag": "span", "box": [100, 149, 322.4], "f": [32, 600, 36, "P", -0.01], "c": "#fd8604", "text": "Online Presence" },
             {
               "t": "txt",
               "tag": "p",
-              "box": [100, 180, 341],
+              "box": [100, 193, 341],
               "f": [13, 400, 15.5, "P"],
               "c": "#fff",
               "text": "Plan, create and manage your social media presence\nwith the right content, visuals and communication\nthat reflects your brand and reaches the right audience."
@@ -2088,7 +2122,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "o",
-              "box": [100, 241, 176, 33],
+              "box": [100, 254, 176, 33],
               "f": [12.6, 500, 0, "P"],
               "label": "Discuss Your Project",
               "href": "contact?service=Social%20Media%20Marketing"
@@ -2096,7 +2130,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "line",
-              "box": [290, 241, 129, 33],
+              "box": [290, 254, 129, 33],
               "f": [12.6, 500, 0, "P"],
               "label": "Our Services",
               "href": "services",
@@ -2105,7 +2139,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [306, 1290],
+          "y": [306, 1296],
           "items": [
             {
               "t": "txt",
@@ -2124,9 +2158,10 @@ window.SITE_CONFIG = {
             },
             {
               "t": "img",
-              "box": [482, 319, 243, 151],
+              "box": [482, 319, 250, 125],
               "src": "assets/images/svc/social-media-marketing/intro.jpg",
-              "alt": "Hands holding a phone showing a social media profile"
+              "alt": "Hands holding a phone showing a social media profile",
+              "cls": "rd"
             },
             {
               "t": "card",
@@ -2176,7 +2211,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 475.5, 1024],
+              "box": [0, 473.5, 1024],
               "lines": [75, 19.5, 422.5],
               "al": "c",
               "f": [23, 800, 26, "O"],
@@ -2185,13 +2220,13 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [46, 502, 930, 92],
+              "box": [46, 500, 930, 92],
               "src": "assets/images/svc/social-media-marketing/plat.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [106, 548.5, 65],
+                  "box": [106, 546.5, 65],
                   "al": "c",
                   "f": [13.5, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -2200,7 +2235,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [293.5, 548.5, 64],
+                  "box": [293.5, 546.5, 64],
                   "al": "c",
                   "f": [13.5, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -2209,7 +2244,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [480, 548.5, 64],
+                  "box": [480, 546.5, 64],
                   "al": "c",
                   "f": [13.5, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -2218,7 +2253,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [667.5, 548.5, 63.5],
+                  "box": [667.5, 546.5, 63.5],
                   "al": "c",
                   "f": [13.5, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -2227,7 +2262,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [834, 548.5, 105],
+                  "box": [834, 546.5, 105],
                   "al": "c",
                   "f": [13.5, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -2238,14 +2273,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 600, 478, 142],
+              "box": [30, 598, 480, 136],
               "src": "assets/images/svc/social-media-marketing/s1.jpg",
               "alt": "Laptop showing a social media strategy with goals, audience, platforms and content",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [56, 611, 205],
+                  "box": [56, 606, 205],
                   "f": [18, 800, 18.5, "O"],
                   "c": "#45063c",
                   "text": "Social Media Strategy\n*Based on Your Business*"
@@ -2253,7 +2288,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [56, 653.5, 181],
+                  "box": [56, 648.5, 181],
                   "f": [13, 400, 14.1, "L"],
                   "text": "We understand your business,\naudience and goals to plan a\nsocial media approach that\nmatches your brand and\ncommunication style."
                 }
@@ -2262,14 +2297,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 600, 480, 142],
+              "box": [514, 598, 480, 136],
               "src": "assets/images/svc/social-media-marketing/s2.jpg",
               "alt": "Content plan notepad with post ideas, visuals, captions and schedule",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [543, 611, 183.5],
+                  "box": [543, 606, 183.5],
                   "f": [18, 800, 18.5, "O"],
                   "c": "#45063c",
                   "text": "Social Media *Content*\n*Planning*"
@@ -2277,7 +2312,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [543, 651, 212],
+                  "box": [543, 646, 212],
                   "f": [13, 400, 13, "L"],
                   "text": "We plan different types of content\nsuch as service posts, product\nhighlights, informative content,\nfestival posts, engagement posts\nand more, based on your business\nrequirements."
                 }
@@ -2286,14 +2321,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 742, 478, 132],
+              "box": [30, 734, 480, 136],
               "src": "assets/images/svc/social-media-marketing/s3.jpg",
               "alt": "Tablet showing a design editor and colourful post templates",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [56, 753, 170.5],
+                  "box": [56, 747, 170.5],
                   "f": [18, 800, 18.5, "O"],
                   "c": "#45063c",
                   "text": "Graphic Design and\n*Creative Posts*"
@@ -2301,7 +2336,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [56, 796, 198.5],
+                  "box": [56, 790, 198.5],
                   "f": [13, 400, 13.75, "L"],
                   "text": "We create professional and\nbrand-focused visuals, including\npost designs, banners, carousel\nposts, story creatives and\ncampaign graphics."
                 }
@@ -2310,14 +2345,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 742, 480, 132],
+              "box": [514, 734, 480, 136],
               "src": "assets/images/svc/social-media-marketing/s4.jpg",
               "alt": "Phone showing a caption with hashtags",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [543, 753, 196],
+                  "box": [543, 747, 196],
                   "f": [18, 800, 18.5, "O"],
                   "c": "#45063c",
                   "text": "Social Media Captions\n*and Hashtag Research*"
@@ -2325,7 +2360,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [543, 796, 220.5],
+                  "box": [543, 790, 220.5],
                   "f": [13, 400, 14.5, "L"],
                   "text": "We write clear and relevant captions\nand suggest suitable hashtags to\nimprove the reach and visibility of\nyour posts."
                 }
@@ -2334,14 +2369,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 874, 478, 136],
+              "box": [30, 870, 480, 136],
               "src": "assets/images/svc/social-media-marketing/s5.jpg",
               "alt": "Phone with like and comment notifications",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [56, 884, 231.5],
+                  "box": [56, 880, 231.5],
                   "f": [18, 800, 18.5, "O"],
                   "c": "#45063c",
                   "text": "Brand Awareness\n*and Audience Engagement*"
@@ -2349,7 +2384,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [56, 926, 214],
+                  "box": [56, 922, 214],
                   "f": [13, 400, 14, "L"],
                   "text": "We help you stay connected with\nyour audience through meaningful\nand relevant content, including\nquestions, polls, updates and\nother engagement formats."
                 }
@@ -2358,14 +2393,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 874, 480, 136],
+              "box": [514, 870, 480, 136],
               "src": "assets/images/svc/social-media-marketing/s6.jpg",
               "alt": "Content calendar with a pen",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [543, 884, 167],
+                  "box": [543, 880, 167],
                   "f": [18, 800, 18.5, "O"],
                   "c": "#45063c",
                   "text": "Content Calendar\n*and Publishing Plan*"
@@ -2373,7 +2408,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [543, 926, 208],
+                  "box": [543, 922, 208],
                   "f": [13, 400, 14, "L"],
                   "text": "We organise a monthly or project-\nbased content calendar with post\ntopics, platforms, publishing dates\nand creative requirements to\nmaintain consistency and planning."
                 }
@@ -2382,7 +2417,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 1014.5, 1024],
+              "box": [0, 1010.5, 1024],
               "lines": [88, 21.5, 339.5],
               "al": "c",
               "f": [23, 800, 26, "O"],
@@ -2391,13 +2426,13 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [42, 1040, 936, 72],
+              "box": [42, 1036, 936, 72],
               "src": "assets/images/svc/social-media-marketing/proc.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [94, 1071.5, 62.5],
+                  "box": [94, 1067.5, 62.5],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2406,7 +2441,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [253.5, 1071.5, 55],
+                  "box": [253.5, 1067.5, 55],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2415,7 +2450,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [409, 1071.5, 52],
+                  "box": [409, 1067.5, 52],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2424,7 +2459,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [550, 1071.5, 80],
+                  "box": [550, 1067.5, 80],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2433,7 +2468,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [705, 1071.5, 77.5],
+                  "box": [705, 1067.5, 77.5],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2442,7 +2477,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [865, 1071.5, 74],
+                  "box": [865, 1067.5, 74],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2453,14 +2488,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 1114, 478, 104],
+              "box": [30, 1110, 480, 110],
               "src": "assets/images/svc/social-media-marketing/b1.jpg",
               "alt": "Laptop showing a rising bar chart",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [201, 1125.5, 188],
+                  "box": [201, 1124.5, 188],
                   "f": [16, 800, 17.5, "O"],
                   "c": "#45063c",
                   "text": "Social Media Marketing for\n*Startups and Businesses*"
@@ -2468,7 +2503,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [201, 1165.5, 288],
+                  "box": [201, 1164.5, 288],
                   "f": [12, 400, 13.2, "L"],
                   "text": "We work with startups, small businesses,\nindividuals and established organisations to\nbuild and maintain a strong social media presence."
                 }
@@ -2477,14 +2512,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 1114, 480, 104],
+              "box": [514, 1110, 480, 110],
               "src": "assets/images/svc/social-media-marketing/b2.jpg",
               "alt": "Stacks of gold coins",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [681, 1125.5, 174],
+                  "box": [681, 1124.5, 174],
                   "f": [16, 800, 17.5, "O"],
                   "c": "#45063c",
                   "text": "Social Media Marketing\n*Cost and Timeline*"
@@ -2492,7 +2527,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [681, 1165.5, 286.5],
+                  "box": [681, 1164.5, 286.5],
                   "f": [12, 400, 13.2, "L"],
                   "text": "The cost depends on the number of platforms,\nmonthly content requirements, creative complexity,\nposting frequency and management activities."
                 }
@@ -2501,13 +2536,12 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [26, 1221, 971, 70],
-              "src": "assets/images/svc/social-media-marketing/cta.jpg",
+              "box": [28, 1223, 968, 74],
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [82.5, 1233, 320],
+                  "box": [84.5, 1237, 320],
                   "f": [18.5, 600, 21.5, "P", 0],
                   "c": "#fff",
                   "em": "#ffa21c",
@@ -2516,7 +2550,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [460, 1234.5, 292.5],
+                  "box": [462, 1238.5, 292.5],
                   "f": [11, 400, 13, "L"],
                   "c": "#fff",
                   "text": "Share your business details, preferred platforms and\ncontent requirements with us. We will review your needs\nand discuss a suitable social media marketing plan."
@@ -2524,7 +2558,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [787, 1240, 163, 33],
+                  "box": [789, 1244, 163, 33],
                   "r": 9,
                   "f": [13.4, 700, 0, "O"],
                   "label": "Get Started Today",
@@ -2535,19 +2569,19 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1290, 1536],
+          "y": [1296, 1542],
           "waves": true,
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1293.5, 1024],
+            "box": [0, 1299.5, 1024],
             "lines": [100, 25, 264],
             "al": "c",
             "f": [20, 800, 24, "O"],
             "c": "#45063c",
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1326,
+          "rowsY": 1332,
           "rowH": 17,
           "rowGap": 4.7,
           "bottom": 49,
@@ -2645,25 +2679,25 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": false,
-          "y": [44, 302],
+          "y": [44, 332],
           "image": "assets/images/svc/content-writing/hero.jpg",
           "alt": "Notebook titled Content Writing with ticked items, a pen, a plant and a stack of books",
           "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [95, 52, 187], "f": [13, 600, 16, "O"], "c": "#ff5f0f", "text": "Content Writing Services" },
-            { "t": "rect", "box": [290, 60, 52, 1.5], "bg": "#ff8a4c", "m": 0 },
+            { "t": "txt", "tag": "p", "up": 1, "box": [95, 67, 187], "f": [13, 600, 16, "O"], "c": "#ff5f0f", "text": "Content Writing Services" },
+            { "t": "rect", "box": [290, 75, 52, 1.5], "bg": "#ff8a4c", "m": 0 },
             {
               "t": "txt",
               "tag": "h1",
-              "box": [94, 68, 372],
+              "box": [94, 83, 372],
               "f": [29, 700, 31.5, "O"],
               "c": "#4a0838",
               "text": "Content Writing Services\nfor Websites and"
             },
-            { "t": "txt", "tag": "p", "box": [94, 131, 311], "f": [36, 700, 40, "O", -0.03], "text": "*Digital Platforms*" },
+            { "t": "txt", "tag": "p", "box": [94, 146, 311], "f": [36, 700, 40, "O", -0.03], "text": "*Digital Platforms*" },
             {
               "t": "txt",
               "tag": "p",
-              "box": [95, 180, 310],
+              "box": [95, 195, 310],
               "f": [14.5, 500, 16, "L"],
               "c": "#1f1b22",
               "text": "Well-structured, clear and relevant content that\nexplains your business, engages your audience\nand supports your online goals."
@@ -2671,7 +2705,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "o",
-              "box": [95, 241, 178, 36],
+              "box": [95, 256, 178, 36],
               "f": [13.5, 600, 0, "O"],
               "label": "Discuss Your Project",
               "href": "contact?service=Content%20Writing"
@@ -2679,7 +2713,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "plum",
-              "box": [288, 241, 130, 36],
+              "box": [288, 256, 130, 36],
               "f": [13.5, 600, 0, "O"],
               "label": "Our Services",
               "href": "services",
@@ -2688,7 +2722,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [302, 1298],
+          "y": [302, 1320],
           "items": [
             {
               "t": "txt",
@@ -2707,9 +2741,10 @@ window.SITE_CONFIG = {
             },
             {
               "t": "img",
-              "box": [452, 312, 272, 150],
+              "box": [452, 312, 266, 133],
               "src": "assets/images/svc/content-writing/intro.jpg",
-              "alt": "Stack of books and a pen holder with pens"
+              "alt": "Stack of books and a pen holder with pens",
+              "cls": "rd"
             },
             {
               "t": "card",
@@ -2732,7 +2767,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 461, 1024],
+              "box": [0, 457, 1024],
               "lines": [77, 25, 315],
               "al": "c",
               "f": [21, 700, 26, "O"],
@@ -2741,13 +2776,13 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [46, 496, 936, 68],
+              "box": [46, 492, 936, 68],
               "src": "assets/images/svc/content-writing/cats.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [80, 512, 94],
+                  "box": [80, 508, 94],
                   "al": "c",
                   "f": [12.5, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -2756,7 +2791,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [234, 512, 93],
+                  "box": [234, 508, 93],
                   "al": "c",
                   "f": [12.5, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -2765,7 +2800,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [393, 512, 87],
+                  "box": [393, 508, 87],
                   "al": "c",
                   "f": [12.5, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -2774,7 +2809,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [548, 512, 88],
+                  "box": [548, 508, 88],
                   "al": "c",
                   "f": [12.5, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -2783,7 +2818,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [691, 512, 113],
+                  "box": [691, 508, 113],
                   "al": "c",
                   "f": [12.5, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -2792,7 +2827,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [860, 512, 85],
+                  "box": [860, 508, 85],
                   "al": "c",
                   "f": [12.5, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -2803,15 +2838,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 576, 476, 124],
+              "box": [30, 572, 480, 136],
               "src": "assets/images/svc/content-writing/c1.jpg",
               "alt": "Notebook checklist with Homepage, About Us, Services and FAQ",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [54, 584, 212], "f": [19, 700, 22, "O"], "c": "#4a0838", "text": "Website *Content Writing*" },
+                { "t": "txt", "tag": "h2", "box": [54, 586, 212], "f": [19, 700, 22, "O"], "c": "#4a0838", "text": "Website *Content Writing*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [54, 613, 224],
+                  "box": [54, 615, 224],
                   "f": [13, 500, 15.5, "L"],
                   "text": "We write clear and purpose-driven\nwebsite content, including homepage,\nAbout Us, service pages, contact\npages, landing pages and FAQs."
                 }
@@ -2820,15 +2855,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 576, 480, 124],
+              "box": [514, 572, 480, 136],
               "src": "assets/images/svc/content-writing/c2.jpg",
               "alt": "Magnifying glass over the words SEO Content",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [539, 584, 178], "f": [19, 700, 22, "O"], "c": "#4a0838", "text": "SEO *Content Writing*" },
+                { "t": "txt", "tag": "h2", "box": [539, 586, 178], "f": [19, 700, 22, "O"], "c": "#4a0838", "text": "SEO *Content Writing*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [539, 613, 219],
+                  "box": [539, 615, 219],
                   "f": [13, 500, 15.8, "L"],
                   "text": "We create SEO-friendly content with\nrelevant keywords, proper headings\nand a structured format to improve\nsearch visibility and page relevance."
                 }
@@ -2837,15 +2872,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 702, 476, 114],
+              "box": [30, 710, 480, 136],
               "src": "assets/images/svc/content-writing/c3.jpg",
               "alt": "Books labelled Blog and Article",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [54, 712, 205], "f": [19, 700, 22, "O"], "c": "#4a0838", "text": "Blog and Article *Writing*" },
+                { "t": "txt", "tag": "h2", "box": [54, 731, 205], "f": [19, 700, 22, "O"], "c": "#4a0838", "text": "Blog and Article *Writing*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [54, 741, 237],
+                  "box": [54, 760, 237],
                   "f": [13, 500, 14.8, "L"],
                   "text": "We write informative, educational\nand industry-related blog articles\nthat share useful information, answer\nqueries and add value for your readers."
                 }
@@ -2854,15 +2889,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 702, 480, 114],
+              "box": [514, 710, 480, 136],
               "src": "assets/images/svc/content-writing/c4.jpg",
               "alt": "Card titled Brand Content",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [539, 712, 236], "f": [19, 700, 22, "O"], "c": "#4a0838", "text": "Business and *Brand Content*" },
+                { "t": "txt", "tag": "h2", "box": [539, 731, 236], "f": [19, 700, 22, "O"], "c": "#4a0838", "text": "Business and *Brand Content*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [539, 741, 207],
+                  "box": [539, 760, 207],
                   "f": [13, 500, 14.8, "L"],
                   "text": "We create business profiles, brand\nmessages, service introductions,\nproduct descriptions, promotional\ncontent and other business copy."
                 }
@@ -2871,14 +2906,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 818, 476, 140],
+              "box": [30, 848, 480, 136],
               "src": "assets/images/svc/content-writing/c5.jpg",
               "alt": "Phone showing a post caption with a like icon",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [54, 825, 184],
+                  "box": [54, 853, 184],
                   "f": [19.5, 700, 21, "O"],
                   "c": "#4a0838",
                   "text": "Social Media Content\n*and Captions*"
@@ -2886,7 +2921,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [54, 871.5, 233],
+                  "box": [54, 899.5, 233],
                   "f": [13, 500, 14.75, "L"],
                   "text": "We write short, clear and engaging\ncaptions for Instagram, Facebook,\nLinkedIn and other platforms, including\npromotional, informational and\ncampaign-based content."
                 }
@@ -2895,14 +2930,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 818, 480, 140],
+              "box": [514, 848, 480, 136],
               "src": "assets/images/svc/content-writing/c6.jpg",
               "alt": "Checklist with Clear Headings, Simple Language, Logical Flow and Readable Format",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [539, 825, 165],
+                  "box": [539, 853, 165],
                   "f": [19.5, 700, 21, "O"],
                   "c": "#4a0838",
                   "text": "Content Structure\n*and Readability*"
@@ -2910,7 +2945,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [539, 871.5, 232],
+                  "box": [539, 899.5, 232],
                   "f": [13, 500, 15.5, "L"],
                   "text": "We organise content with clear\nheadings, short paragraphs, logical\nflow and consistent language to\nmake it easy to read and understand."
                 }
@@ -2919,7 +2954,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 961, 1024],
+              "box": [0, 987, 1024],
               "lines": [102, 42, 274],
               "al": "c",
               "f": [21, 700, 26, "O"],
@@ -2928,13 +2963,13 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [36, 992, 952, 114],
+              "box": [36, 1018, 952, 114],
               "src": "assets/images/svc/content-writing/proc.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [81, 1017.5, 75],
+                  "box": [81, 1043.5, 75],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2943,7 +2978,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [253, 1017.5, 51],
+                  "box": [253, 1043.5, 51],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2952,7 +2987,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [399, 1017.5, 75],
+                  "box": [399, 1043.5, 75],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2961,7 +2996,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [571, 1017.5, 46],
+                  "box": [571, 1043.5, 46],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2970,7 +3005,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [720, 1017.5, 58],
+                  "box": [720, 1043.5, 58],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2979,7 +3014,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [882, 1017.5, 49],
+                  "box": [882, 1043.5, 49],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -2988,15 +3023,15 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [57, 1052.5, 112],
+                  "box": [57, 1078.5, 112],
                   "f": [10.5, 500, 12.3, "L"],
                   "text": "We understand your\nbusiness, topic, target"
                 },
-                { "t": "txt", "tag": "p", "box": [56, 1077.1, 135], "f": [9.6, 500, 12.3, "L"], "text": "audience and content purpose." },
+                { "t": "txt", "tag": "p", "box": [56, 1103.1, 135], "f": [9.6, 500, 12.3, "L"], "text": "audience and content purpose." },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [225, 1052.5, 107],
+                  "box": [225, 1078.5, 107],
                   "al": "c",
                   "f": [10.5, 500, 12.3, "L"],
                   "text": "We identify the pages,\ntopics, headings and\ninformation required."
@@ -3004,7 +3039,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [376, 1052.5, 120],
+                  "box": [376, 1078.5, 120],
                   "al": "c",
                   "f": [10.5, 500, 12.3, "L"],
                   "text": "We review the information\nand prepare a suitable\ncontent structure."
@@ -3012,7 +3047,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [536, 1052.5, 116],
+                  "box": [536, 1078.5, 116],
                   "al": "c",
                   "f": [10.5, 500, 12.3, "L"],
                   "text": "We write the content\naccording to the agreed\ntone, length and format."
@@ -3020,7 +3055,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [700, 1052.5, 98],
+                  "box": [700, 1078.5, 98],
                   "al": "c",
                   "f": [10.5, 500, 12.3, "L"],
                   "text": "We check readability,\ngrammar, structure\nand consistency."
@@ -3028,7 +3063,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [845, 1052.5, 123],
+                  "box": [845, 1078.5, 123],
                   "al": "c",
                   "f": [10.5, 500, 12.3, "L"],
                   "text": "We provide the completed\ncontent in the agreed\nformat for publishing."
@@ -3038,14 +3073,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 1108, 478, 112],
+              "box": [30, 1134, 480, 110],
               "src": "assets/images/svc/content-writing/ind.jpg",
               "alt": "Stacked books with reading glasses",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [227, 1121, 151],
+                  "box": [227, 1146, 151],
                   "f": [17, 700, 18.5, "O"],
                   "c": "#4a0838",
                   "text": "Content Writing for\n*Different Industries*"
@@ -3053,7 +3088,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [227, 1162, 248],
+                  "box": [227, 1187, 248],
                   "f": [12, 500, 14, "L"],
                   "text": "We prepare content for various industries,\nincluding technology, education, e-commerce,\nservice-based businesses and more."
                 }
@@ -3062,14 +3097,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 1108, 478, 112],
+              "box": [514, 1134, 480, 110],
               "src": "assets/images/svc/content-writing/cost.jpg",
               "alt": "Hourglass",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [662, 1121, 273],
+                  "box": [662, 1146, 273],
                   "f": [18, 700, 21, "O"],
                   "c": "#4a0838",
                   "text": "Content Writing *Cost and Timeline*"
@@ -3077,7 +3112,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [662, 1149.5, 308],
+                  "box": [662, 1174.5, 308],
                   "f": [12, 500, 13.5, "L"],
                   "text": "The cost depends on the type of content, word count,\nresearch needs, subject complexity and number of pages.\nThe expected cost, deliverables and timeline are discussed\nbefore the project begins."
                 }
@@ -3086,24 +3121,23 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [26, 1222, 972, 76],
-              "src": "assets/images/svc/content-writing/cta.jpg",
+              "box": [28, 1246, 968, 74],
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [87, 1232, 270], "f": [22, 700, 24, "O"], "c": "#fff", "text": "Communicate Your Business" },
+                { "t": "txt", "tag": "h2", "box": [89, 1255, 270], "f": [22, 700, 24, "O"], "c": "#fff", "text": "Communicate Your Business" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [87, 1256, 239],
+                  "box": [89, 1279, 239],
                   "f": [23, 700, 24, "O", -0.03],
                   "c": "#fff",
                   "em": "#ff7a1c",
                   "text": "Clearly with *CRETECH*"
                 },
-                { "t": "rect", "box": [396, 1240, 1, 40], "bg": "rgba(255,255,255,.45)", "m": 0 },
+                { "t": "rect", "box": [398, 1263, 1, 40], "bg": "rgba(255,255,255,.45)", "m": 0 },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [435, 1236.5, 291],
+                  "box": [437, 1259.5, 291],
                   "f": [12.5, 400, 14.5, "L"],
                   "c": "#fff",
                   "text": "Share your website, topic or content brief with us.\nWe will understand what you need and discuss\na suitable content writing approach."
@@ -3111,7 +3145,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [782, 1241, 173, 36],
+                  "box": [784, 1264, 173, 36],
                   "f": [14.5, 700, 0, "O"],
                   "label": "Get Started Today",
                   "href": "contact?service=Content%20Writing"
@@ -3121,18 +3155,18 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1298, 1536],
+          "y": [1320, 1558],
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1299.5, 1024],
+            "box": [0, 1321.5, 1024],
             "lines": [72, 28, 272],
             "al": "c",
             "f": [21, 700, 26, "O"],
             "c": "#4a0838",
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1333,
+          "rowsY": 1355,
           "rowH": 22,
           "rowGap": 1.66,
           "bottom": 51,
@@ -3212,7 +3246,7 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": false,
-          "y": [44, 296],
+          "y": [44, 332],
           "image": "assets/images/svc/graphic-design-creative-content/hero.jpg",
           "alt": "Tablet showing a design app, paint brushes in a jar and colour swatches on a desk",
           "items": [
@@ -3220,25 +3254,25 @@ window.SITE_CONFIG = {
               "t": "txt",
               "tag": "p",
               "up": 1,
-              "box": [96, 54.5, 295.5],
+              "box": [96, 72.5, 295.5],
               "f": [12.5, 600, 16, "O"],
               "c": "#ff5f0f",
               "text": "Graphic Design & Creative Content Services"
             },
-            { "t": "rect", "box": [398, 62, 53, 1.5], "bg": "#ff8a4c", "m": 0 },
+            { "t": "rect", "box": [398, 80, 53, 1.5], "bg": "#ff8a4c", "m": 0 },
             {
               "t": "txt",
               "tag": "h1",
-              "box": [95, 72.5, 293],
+              "box": [95, 90.5, 293],
               "f": [27, 700, 30, "O"],
               "c": "#4a0838",
               "text": "Graphic Design and\nCreative Content"
             },
-            { "t": "txt", "tag": "p", "box": [95, 131.5, 262], "f": [34, 700, 36, "O", -0.03], "text": "*for Your Brand*" },
+            { "t": "txt", "tag": "p", "box": [95, 149.5, 262], "f": [34, 700, 36, "O", -0.03], "text": "*for Your Brand*" },
             {
               "t": "txt",
               "tag": "p",
-              "box": [96, 175, 330.5],
+              "box": [96, 193, 330.5],
               "f": [14, 500, 16.75, "L"],
               "c": "#1f1b22",
               "text": "Visual designs that communicate your message\nclearly, strengthen your brand identity and\ncreate a lasting impression across digital platforms."
@@ -3246,7 +3280,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "o",
-              "box": [95, 240, 178, 35],
+              "box": [95, 258, 178, 35],
               "f": [13.5, 600, 0, "O"],
               "label": "Discuss Your Project",
               "href": "contact?service=Graphic%20Design%20%26%20Creative%20Content"
@@ -3254,7 +3288,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "plum",
-              "box": [288, 240, 131, 35],
+              "box": [288, 258, 131, 35],
               "f": [13.5, 600, 0, "O"],
               "label": "Our Services",
               "href": "services",
@@ -3263,7 +3297,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [296, 1329],
+          "y": [296, 1325],
           "items": [
             {
               "t": "txt",
@@ -3282,9 +3316,10 @@ window.SITE_CONFIG = {
             },
             {
               "t": "img",
-              "box": [474, 308, 242, 138],
+              "box": [474, 308, 242, 121],
               "src": "assets/images/svc/graphic-design-creative-content/intro.jpg",
-              "alt": "Hand drawing on a tablet with a stylus"
+              "alt": "Hand drawing on a tablet with a stylus",
+              "cls": "rd"
             },
             {
               "t": "card",
@@ -3370,14 +3405,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 566, 476, 138],
+              "box": [30, 566, 480, 136],
               "src": "assets/images/svc/graphic-design-creative-content/c1.jpg",
               "alt": "Website banner mockups",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [59, 579, 159],
+                  "box": [59, 578, 159],
                   "f": [18.5, 700, 20, "O"],
                   "c": "#4a0838",
                   "text": "Website Graphics\n*and Banner Design*"
@@ -3385,7 +3420,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [59, 622.6, 216],
+                  "box": [59, 621.6, 216],
                   "f": [12.5, 500, 14.5, "L"],
                   "text": "Eye-catching and relevant banners,\nsection visuals and website graphics\nthat support your content and\nimprove the overall look of your site."
                 }
@@ -3394,14 +3429,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 566, 478, 138],
+              "box": [514, 566, 480, 136],
               "src": "assets/images/svc/graphic-design-creative-content/c2.jpg",
               "alt": "Phone showing a social media post",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [545, 575, 141],
+                  "box": [545, 574, 141],
                   "f": [18.5, 700, 19, "O"],
                   "c": "#4a0838",
                   "text": "Social Media\n*Creative Design*"
@@ -3409,7 +3444,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [545, 620, 196],
+                  "box": [545, 619, 196],
                   "f": [12.5, 500, 15, "L"],
                   "text": "Platform-specific designs for\nInstagram, Facebook, Linkedin\nand more, including posts,\ncarousels, stories and\ncampaign creatives."
                 }
@@ -3418,14 +3453,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 712, 476, 146],
+              "box": [30, 710, 480, 136],
               "src": "assets/images/svc/graphic-design-creative-content/c3.jpg",
               "alt": "Special Offer sign with shopping bags",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [59, 720, 173.6],
+                  "box": [59, 713, 173.6],
                   "f": [18.5, 700, 19, "O"],
                   "c": "#4a0838",
                   "text": "Promotional and\n*Marketing Graphics*"
@@ -3433,7 +3468,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [59, 764.5, 176],
+                  "box": [59, 757.5, 176],
                   "f": [12.5, 500, 15.1, "L"],
                   "text": "Visuals for offers, product\nhighlights, service promotion,\nevents and special campaigns\nto help you communicate\nmore effectively."
                 }
@@ -3442,14 +3477,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 712, 478, 146],
+              "box": [514, 710, 480, 136],
               "src": "assets/images/svc/graphic-design-creative-content/c4.jpg",
               "alt": "Photo cards with a glowing light bulb",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [545, 720, 180.5],
+                  "box": [545, 713, 180.5],
                   "f": [18.5, 700, 19, "O"],
                   "c": "#4a0838",
                   "text": "Creative Content\n*for Digital Platforms*"
@@ -3457,7 +3492,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [545, 764.5, 215],
+                  "box": [545, 757.5, 215],
                   "f": [12.5, 500, 15.1, "L"],
                   "text": "A mix of visuals and short, clear\nmessaging for business updates,\nservice explanations, festival\nposts, announcements and\ncampaigns."
                 }
@@ -3466,14 +3501,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 856, 476, 140],
+              "box": [30, 854, 480, 136],
               "src": "assets/images/svc/graphic-design-creative-content/c5.jpg",
               "alt": "Business card with the CRETECH logo and colour swatches",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [59, 865, 201.5],
+                  "box": [59, 861, 201.5],
                   "f": [18.5, 700, 19.5, "O"],
                   "c": "#4a0838",
                   "text": "Brand Identity\n*and Visual Consistency*"
@@ -3481,7 +3516,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [59, 909.5, 202.6],
+                  "box": [59, 905.5, 202.6],
                   "f": [12.5, 500, 14.9, "L"],
                   "text": "Designs that follow your logo,\ncolours, typography and brand\nstyle to maintain a consistent\nand professional look\nacross all platforms."
                 }
@@ -3490,14 +3525,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 856, 478, 140],
+              "box": [514, 854, 480, 136],
               "src": "assets/images/svc/graphic-design-creative-content/c6.jpg",
               "alt": "Typography card with Aa and colour swatches",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [545, 865, 207],
+                  "box": [545, 861, 207],
                   "f": [18.5, 700, 19.5, "O"],
                   "c": "#4a0838",
                   "text": "Design Layout,\n*Typography and Colour*"
@@ -3505,7 +3540,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [545, 909.5, 213],
+                  "box": [545, 905.5, 213],
                   "f": [12.5, 500, 14.9, "L"],
                   "text": "Well-structured layouts, readable\ntypography and balanced colour\ncombinations that make your\nmessage easy to understand\nand visually appealing."
                 }
@@ -3514,7 +3549,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 1002, 1024],
+              "box": [0, 996, 1024],
               "lines": [120, 24, 283.5],
               "al": "c",
               "f": [21, 700, 26, "O"],
@@ -3523,13 +3558,13 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [34, 1030, 958, 102],
+              "box": [34, 1024, 958, 102],
               "src": "assets/images/svc/graphic-design-creative-content/proc.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [81.5, 1053, 62.5],
+                  "box": [81.5, 1047, 62.5],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -3538,7 +3573,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [235, 1053, 78],
+                  "box": [235, 1047, 78],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -3547,27 +3582,27 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [401, 1053, 79],
+                  "box": [401, 1047, 79],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
                   "text": "Creative\nDevelopment"
                 },
-                { "t": "txt", "tag": "h3", "box": [586, 1053, 40.5], "al": "c", "f": [13, 700, 13.5, "O"], "c": "#1e1a22", "text": "Design\nReview" },
+                { "t": "txt", "tag": "h3", "box": [586, 1047, 40.5], "al": "c", "f": [13, 700, 13.5, "O"], "c": "#1e1a22", "text": "Design\nReview" },
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [728.5, 1056.5, 65.5],
+                  "box": [728.5, 1050.5, 65.5],
                   "al": "c",
                   "f": [13, 700, 13.5, "O"],
                   "c": "#1e1a22",
                   "text": "Finalisation"
                 },
-                { "t": "txt", "tag": "h3", "box": [892.5, 1056.5, 48.5], "al": "c", "f": [13, 700, 13.5, "O"], "c": "#1e1a22", "text": "Delivery" },
+                { "t": "txt", "tag": "h3", "box": [892.5, 1050.5, 48.5], "al": "c", "f": [13, 700, 13.5, "O"], "c": "#1e1a22", "text": "Delivery" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [56, 1084.8, 114],
+                  "box": [56, 1078.8, 114],
                   "al": "c",
                   "f": [10.5, 500, 12.25, "L"],
                   "text": "We understand your\nrequirements, purpose\nand design expectations."
@@ -3575,7 +3610,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [222, 1084.8, 103.5],
+                  "box": [222, 1078.8, 103.5],
                   "al": "c",
                   "f": [10.5, 500, 12.25, "L"],
                   "text": "We review your brand\nidentity, references\nand required formats."
@@ -3583,7 +3618,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [393, 1084.8, 95.5],
+                  "box": [393, 1078.8, 95.5],
                   "al": "c",
                   "f": [10.5, 500, 12.25, "L"],
                   "text": "We create the visual\nlayout, colours and\ndesign elements."
@@ -3591,7 +3626,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [558, 1084.8, 97],
+                  "box": [558, 1078.8, 97],
                   "al": "c",
                   "f": [10.5, 500, 12.25, "L"],
                   "text": "We share the design\nfor your feedback\nand changes."
@@ -3599,7 +3634,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [712.5, 1084.8, 97.5],
+                  "box": [712.5, 1078.8, 97.5],
                   "al": "c",
                   "f": [10.5, 500, 12.25, "L"],
                   "text": "We refine the design\nand prepare the\nfinal version."
@@ -3607,7 +3642,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [867.5, 1081.5, 96.5],
+                  "box": [867.5, 1075.5, 96.5],
                   "al": "c",
                   "f": [10.5, 500, 12.25, "L"],
                   "text": "You receive the\nfinal graphics in the\nagreed formats."
@@ -3617,14 +3652,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [30, 1138, 478, 106],
+              "box": [30, 1132, 480, 110],
               "src": "assets/images/svc/graphic-design-creative-content/biz.jpg",
               "alt": "Tablet showing a gallery of graphic designs",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [249, 1148.5, 165],
+                  "box": [249, 1144.5, 165],
                   "f": [17.5, 700, 18, "O"],
                   "c": "#4a0838",
                   "text": "Graphic Design for\n*Different Businesses*"
@@ -3632,7 +3667,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [249, 1188.5, 197],
+                  "box": [249, 1184.5, 197],
                   "f": [12, 500, 13.75, "L"],
                   "text": "We create visuals for startups, small\nbusinesses, established companies\nand individual professionals."
                 }
@@ -3641,14 +3676,14 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [514, 1138, 478, 106],
+              "box": [514, 1132, 480, 110],
               "src": "assets/images/svc/graphic-design-creative-content/cost.jpg",
               "alt": "Hourglass",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [656.5, 1146.5, 267.5],
+                  "box": [656.5, 1142.5, 267.5],
                   "f": [18, 700, 21, "O"],
                   "c": "#4a0838",
                   "text": "Graphic Design *Cost and Timeline*"
@@ -3656,7 +3691,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [656.5, 1174.5, 313.5],
+                  "box": [656.5, 1170.5, 313.5],
                   "f": [12, 500, 13.8, "L"],
                   "text": "The cost depends on the type of design, number\nof creatives, complexity, dimensions and revision scope.\nThe estimated cost and delivery timeline are discussed\nbefore the project begins."
                 }
@@ -3665,23 +3700,22 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [26, 1253, 974, 76],
-              "src": "assets/images/svc/graphic-design-creative-content/cta.jpg",
+              "box": [28, 1251, 968, 74],
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [76.5, 1265, 278.5],
+                  "box": [78.5, 1262, 278.5],
                   "f": [21, 700, 21, "O"],
                   "c": "#fff",
                   "em": "#ff7a1c",
                   "text": "Give Your Brand a Clear\nVisual Identity with *CRETECH*"
                 },
-                { "t": "rect", "box": [391, 1272, 1, 37], "bg": "rgba(255,255,255,.45)", "m": 0 },
+                { "t": "rect", "box": [393, 1269, 1, 37], "bg": "rgba(255,255,255,.45)", "m": 0 },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [426, 1267, 325],
+                  "box": [428, 1264, 325],
                   "f": [12, 400, 14, "L"],
                   "c": "#fff",
                   "text": "Share your design idea, brand references and requirements\nwith us. We will understand your needs and discuss\na suitable creative direction."
@@ -3689,7 +3723,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [783, 1271, 177, 36],
+                  "box": [785, 1268, 177, 36],
                   "f": [14.5, 700, 0, "O"],
                   "label": "Get Started Today",
                   "href": "contact?service=Graphic%20Design%20%26%20Creative%20Content"
@@ -3699,18 +3733,18 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1329, 1536],
+          "y": [1325, 1532],
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1328, 1024],
+            "box": [0, 1324, 1024],
             "lines": [80, 28, 281.5],
             "al": "c",
             "f": [21, 700, 26, "O"],
             "c": "#4a0838",
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1363,
+          "rowsY": 1359,
           "rowH": 18,
           "rowGap": 1.6,
           "bottom": 45,
@@ -3791,7 +3825,7 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": false,
-          "y": [44, 284],
+          "y": [44, 332],
           "image": "assets/images/svc/website-security-backup/hero.jpg",
           "alt": "Glowing security shield with a padlock in front of servers and a cloud backup icon",
           "items": [
@@ -3799,7 +3833,7 @@ window.SITE_CONFIG = {
               "t": "txt",
               "tag": "p",
               "up": 1,
-              "box": [78, 52, 253],
+              "box": [78, 76, 253],
               "f": [12.5, 600, 15, "O"],
               "c": "#fe6a2a",
               "text": "Website Security & Backup Services"
@@ -3807,21 +3841,21 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h1",
-              "box": [78, 73, 362],
+              "box": [78, 97, 362],
               "f": [30, 700, 32, "O", -0.01],
               "text": "Protect Your Website,\nData and *Digital Business*"
             },
             {
               "t": "txt",
               "tag": "p",
-              "box": [78, 144, 277],
+              "box": [78, 168, 277],
               "f": [14.5, 400, 16.7, "L"],
               "text": "Keep your website secure, up to date and\nrecoverable with reliable security and\nbackup solutions."
             },
             {
               "t": "btn",
               "kind": "o",
-              "box": [81, 211, 182, 35],
+              "box": [81, 235, 182, 35],
               "f": [13, 600, 0, "O"],
               "label": "Discuss Your Project",
               "href": "contact?service=Website%20Security%20%26%20Backup"
@@ -3829,7 +3863,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "plum",
-              "box": [280, 211, 133, 35],
+              "box": [280, 235, 133, 35],
               "f": [13, 600, 0, "O"],
               "label": "Our Services",
               "href": "services",
@@ -3838,7 +3872,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [284, 1300],
+          "y": [284, 1340],
           "items": [
             { "t": "txt", "tag": "h2", "box": [57, 291, 287], "f": [28, 700, 28, "O"], "text": "A Safer and\nMore *Reliable Website*" },
             {
@@ -3850,9 +3884,10 @@ window.SITE_CONFIG = {
             },
             {
               "t": "img",
-              "box": [382, 288, 336, 160],
+              "box": [382, 288, 320, 160],
               "src": "assets/images/svc/website-security-backup/intro.jpg",
-              "alt": "Laptop showing a shield with Secure, Updated and Backed Up checks"
+              "alt": "Laptop showing a shield with Secure, Updated and Backed Up checks",
+              "cls": "rd"
             },
             {
               "t": "card",
@@ -3910,15 +3945,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [26, 484, 484, 128],
+              "box": [30, 484, 480, 136],
               "src": "assets/images/svc/website-security-backup/c1.jpg",
               "alt": "Website checklist under a magnifying glass",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [57.5, 492.4, 154], "f": [19, 700, 20.5, "O"], "text": "Website Security\n*Assessment*" },
+                { "t": "txt", "tag": "h2", "box": [61.5, 496.4, 154], "f": [19, 700, 20.5, "O"], "text": "Website Security\n*Assessment*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [57.5, 538.8, 201],
+                  "box": [61.5, 542.8, 201],
                   "f": [13, 400, 15.7, "L"],
                   "text": "Review your website, identify\npotential risks and suggest\nsuitable security improvements."
                 }
@@ -3927,15 +3962,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [516, 484, 482, 128],
+              "box": [514, 484, 480, 136],
               "src": "assets/images/svc/website-security-backup/c2.jpg",
               "alt": "Laptop screen with a crossed-out bug icon",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [542.5, 492.4, 171], "f": [19, 700, 20.5, "O"], "text": "Malware Detection\n*and Removal*" },
+                { "t": "txt", "tag": "h2", "box": [540.5, 496.4, 171], "f": [19, 700, 20.5, "O"], "text": "Malware Detection\n*and Removal*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [542.5, 538.8, 187.5],
+                  "box": [540.5, 542.8, 187.5],
                   "f": [13, 400, 15.7, "L"],
                   "text": "Check for malware, remove\naffected files and secure your\nwebsite from similar threats."
                 }
@@ -3944,15 +3979,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [26, 616, 484, 130],
+              "box": [30, 624, 480, 136],
               "src": "assets/images/svc/website-security-backup/c3.jpg",
               "alt": "Browser address bar with a padlock and https next to a shield",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [57.5, 625, 136], "f": [19, 700, 20.5, "O"], "text": "SSL Certificate\n*Setup*" },
+                { "t": "txt", "tag": "h2", "box": [61.5, 636, 136], "f": [19, 700, 20.5, "O"], "text": "SSL Certificate\n*Setup*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [57.5, 669.3, 168],
+                  "box": [61.5, 680.3, 168],
                   "f": [13, 400, 15.7, "L"],
                   "text": "Install SSL and configure\nHTTPS to create a secure\nand encrypted connection\nfor your website."
                 }
@@ -3961,15 +3996,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [516, 616, 482, 130],
+              "box": [514, 624, 480, 136],
               "src": "assets/images/svc/website-security-backup/c4.jpg",
               "alt": "Login form window with a padlock shield",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [547.5, 625, 167.5], "f": [19, 700, 20.5, "O"], "text": "Login and\n*Access Protection*" },
+                { "t": "txt", "tag": "h2", "box": [545.5, 636, 167.5], "f": [19, 700, 20.5, "O"], "text": "Login and\n*Access Protection*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [547.5, 669.3, 186],
+                  "box": [545.5, 680.3, 186],
                   "f": [13, 400, 15.7, "L"],
                   "text": "Strengthen website access\nwith secure login settings,\nuser permissions and\nadditional protection options."
                 }
@@ -3978,15 +4013,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [26, 748, 484, 128],
+              "box": [30, 762, 480, 136],
               "src": "assets/images/svc/website-security-backup/c5.jpg",
               "alt": "Screen showing an update in progress with a gear",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [57.5, 756.4, 141], "f": [19, 700, 20.3, "O"], "text": "Software and\n*Plugin Updates*" },
+                { "t": "txt", "tag": "h2", "box": [61.5, 774.4, 141], "f": [19, 700, 20.3, "O"], "text": "Software and\n*Plugin Updates*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [57.5, 800.2, 186],
+                  "box": [61.5, 818.2, 186],
                   "f": [13, 400, 16, "L"],
                   "text": "Review and apply important\nupdates for your website\nplatform, themes and plugins\nto keep it secure and stable."
                 }
@@ -3995,15 +4030,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [516, 748, 482, 128],
+              "box": [514, 762, 480, 136],
               "src": "assets/images/svc/website-security-backup/c6.jpg",
               "alt": "Cloud with an upload arrow above a backup server",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [547.5, 756.4, 147.5], "f": [19, 700, 20.3, "O"], "text": "Website Backup\n*Configuration*" },
+                { "t": "txt", "tag": "h2", "box": [545.5, 774.4, 147.5], "f": [19, 700, 20.3, "O"], "text": "Website Backup\n*Configuration*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [547.5, 800.2, 179],
+                  "box": [545.5, 818.2, 179],
                   "f": [13, 400, 16, "L"],
                   "text": "Set up regular backups of\nwebsite files, database and\nimportant content based on\nyour requirements."
                 }
@@ -4012,15 +4047,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [26, 878, 972, 110],
+              "box": [26, 900, 972, 110],
               "src": "assets/images/svc/website-security-backup/c7.jpg",
               "alt": "Browser windows with a restore icon",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [80, 885.7, 274], "f": [22, 700, 26, "O"], "text": "Website *Recovery Support*" },
+                { "t": "txt", "tag": "h2", "box": [80, 907.7, 274], "f": [22, 700, 26, "O"], "text": "Website *Recovery Support*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [80, 917.8, 234],
+                  "box": [80, 939.8, 234],
                   "f": [13, 400, 15.8, "L"],
                   "text": "Help you restore your website from a\nbackup if it faces data loss, update\nissues or technical problems."
                 }
@@ -4029,7 +4064,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 995, 1024],
+              "box": [0, 1017, 1024],
               "lines": [84, 34, 331],
               "al": "c",
               "f": [21, 700, 26, "O"],
@@ -4037,13 +4072,13 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [28, 1024, 970, 108],
+              "box": [28, 1046, 970, 108],
               "src": "assets/images/svc/website-security-backup/proc.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [84, 1048.5, 50],
+                  "box": [84, 1070.5, 50],
                   "al": "c",
                   "f": [13.5, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -4052,7 +4087,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [64, 1081.5, 92],
+                  "box": [64, 1103.5, 92],
                   "al": "c",
                   "f": [11, 400, 12.3, "L"],
                   "text": "Understand your\nwebsite, platform\nand current setup."
@@ -4060,7 +4095,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [229, 1048.5, 84.5],
+                  "box": [229, 1070.5, 84.5],
                   "al": "c",
                   "f": [13.5, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -4069,7 +4104,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [220, 1081.5, 103],
+                  "box": [220, 1103.5, 103],
                   "al": "c",
                   "f": [11, 400, 12.3, "L"],
                   "text": "Review security risks\nand backup needs\nfor your website."
@@ -4077,7 +4112,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [392.5, 1048.5, 84],
+                  "box": [392.5, 1070.5, 84],
                   "al": "c",
                   "f": [13.5, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -4086,7 +4121,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [377.5, 1081.5, 113.5],
+                  "box": [377.5, 1103.5, 113.5],
                   "al": "c",
                   "f": [11, 400, 12.3, "L"],
                   "text": "Apply suitable security\nmeasures and access\ncontrols."
@@ -4094,7 +4129,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [576, 1048.5, 45],
+                  "box": [576, 1070.5, 45],
                   "al": "c",
                   "f": [13.5, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -4103,7 +4138,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [550, 1081.5, 98],
+                  "box": [550, 1103.5, 98],
                   "al": "c",
                   "f": [11, 400, 12.3, "L"],
                   "text": "Configure a reliable\nbackup system as\nper your needs."
@@ -4111,7 +4146,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [726, 1048.5, 71],
+                  "box": [726, 1070.5, 71],
                   "al": "c",
                   "f": [13.5, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -4120,7 +4155,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [702.5, 1081.5, 116.5],
+                  "box": [702.5, 1103.5, 116.5],
                   "al": "c",
                   "f": [11, 400, 12.3, "L"],
                   "text": "Check security, backup\nand key website\nfunctions."
@@ -4128,7 +4163,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [896.5, 1048.5, 51],
+                  "box": [896.5, 1070.5, 51],
                   "al": "c",
                   "f": [13.5, 700, 13.5, "O"],
                   "c": "#1e1a22",
@@ -4137,7 +4172,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [862.5, 1081.5, 118.5],
+                  "box": [862.5, 1103.5, 118.5],
                   "al": "c",
                   "f": [11, 400, 12.3, "L"],
                   "text": "Provide periodic checks\nand update assistance\nas per the plan."
@@ -4147,15 +4182,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [26, 1133, 484, 94],
+              "box": [30, 1155, 480, 110],
               "src": "assets/images/svc/website-security-backup/i1.jpg",
               "alt": "Glowing shield with a check mark",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [189, 1143, 233.5], "f": [17, 700, 20, "O"], "text": "Suitable for *Different Websites*" },
+                { "t": "txt", "tag": "h2", "box": [193, 1173, 233.5], "f": [17, 700, 20, "O"], "text": "Suitable for *Different Websites*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [189, 1166.2, 253.5],
+                  "box": [193, 1196.2, 253.5],
                   "f": [12, 400, 14.3, "L"],
                   "text": "For business websites, e-commerce platforms,\ncompany portals, educational sites, blogs\nand custom web applications."
                 }
@@ -4164,15 +4199,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [516, 1133, 482, 94],
+              "box": [514, 1155, 480, 110],
               "src": "assets/images/svc/website-security-backup/i2.jpg",
               "alt": "Calendar and a stopwatch",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [689, 1143, 198.5], "f": [17, 700, 20, "O"], "text": "Service Scope and *Pricing*" },
+                { "t": "txt", "tag": "h2", "box": [687, 1173, 198.5], "f": [17, 700, 20, "O"], "text": "Service Scope and *Pricing*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [689, 1166.2, 286],
+                  "box": [687, 1196.2, 286],
                   "f": [12, 400, 14.3, "L"],
                   "text": "The cost depends on your website platform,\ncomplexity and required security and backup setup.\nWe discuss the scope and quotation before starting."
                 }
@@ -4181,13 +4216,12 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [24, 1230, 976, 72],
-              "src": "assets/images/svc/website-security-backup/cta.jpg",
+              "box": [28, 1268, 968, 74],
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [73.5, 1242, 295],
+                  "box": [77.5, 1281, 295],
                   "f": [21, 700, 21.5, "O"],
                   "c": "#fff",
                   "em": "#ffb22a",
@@ -4196,7 +4230,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [431, 1243.8, 288],
+                  "box": [435, 1282.8, 288],
                   "f": [12, 400, 14, "L"],
                   "c": "#fff",
                   "text": "Share your website URL and requirements with us.\nWe will review your needs and discuss a suitable\nsecurity and backup plan."
@@ -4204,7 +4238,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [783, 1246, 184, 36],
+                  "box": [787, 1285, 184, 36],
                   "r": 18,
                   "f": [14.5, 700, 0, "O"],
                   "label": "Get Started Today",
@@ -4215,17 +4249,17 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1300, 1536],
+          "y": [1340, 1576],
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1302, 1024],
+            "box": [0, 1342, 1024],
             "lines": [86, 33, 278],
             "al": "c",
             "f": [22, 700, 26, "O"],
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1333.5,
+          "rowsY": 1373.5,
           "rowH": 18,
           "rowGap": 1.8,
           "bottom": 51.5,
@@ -4315,7 +4349,7 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": false,
-          "y": [44, 288],
+          "y": [44, 332],
           "image": "assets/images/svc/website-maintenance-support/hero.jpg",
           "alt": "Laptop showing a website health check with updates, security, performance and backup ticked, next to a coffee mug",
           "items": [
@@ -4323,30 +4357,30 @@ window.SITE_CONFIG = {
               "t": "txt",
               "tag": "p",
               "up": 1,
-              "box": [95, 55, 242],
+              "box": [95, 77, 242],
               "f": [11.7, 600, 14, "O"],
               "c": "#f2581a",
               "text": "Website Maintenance & Support"
             },
-            { "t": "rect", "box": [343, 63, 26, 1.5], "bg": "linear-gradient(90deg, #ff6a1a, rgba(255,106,26,0))", "m": 0 },
+            { "t": "rect", "box": [343, 85, 26, 1.5], "bg": "linear-gradient(90deg, #ff6a1a, rgba(255,106,26,0))", "m": 0 },
             {
               "t": "txt",
               "tag": "h1",
-              "box": [95, 71.5, 365],
+              "box": [95, 93.5, 365],
               "f": [32, 700, 34, "O", -0.01],
               "text": "Website Maintenance\nand *Support Services*"
             },
             {
               "t": "txt",
               "tag": "p",
-              "box": [95, 151.5, 334],
+              "box": [95, 173.5, 334],
               "f": [14.5, 400, 16.6, "L"],
               "text": "Keep your website updated, secure and running\nsmoothly with reliable maintenance and\nongoing support."
             },
             {
               "t": "btn",
               "kind": "o",
-              "box": [95, 219.5, 177, 33],
+              "box": [95, 241.5, 177, 33],
               "f": [13, 600, 0, "O"],
               "label": "Discuss Your Project",
               "href": "contact?service=Website%20Maintenance%20%26%20Support"
@@ -4354,7 +4388,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "plum",
-              "box": [289, 218.5, 127, 34],
+              "box": [289, 240.5, 127, 34],
               "f": [13, 600, 0, "O"],
               "label": "Our Services",
               "href": "services",
@@ -4363,7 +4397,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [288, 1284],
+          "y": [288, 1263],
           "items": [
             { "t": "txt", "tag": "h2", "box": [63, 295, 274], "f": [25, 700, 27, "O", -0.01], "text": "Keep Your Website\nAlways in *Good Shape*" },
             {
@@ -4375,9 +4409,10 @@ window.SITE_CONFIG = {
             },
             {
               "t": "img",
-              "box": [388, 295, 322, 164],
+              "box": [388, 295, 320, 160],
               "src": "assets/images/svc/website-maintenance-support/intro.jpg",
-              "alt": "Notebook checklist: update content, check functions, ensure security, keep backup"
+              "alt": "Notebook checklist: update content, check functions, ensure security, keep backup",
+              "cls": "rd"
             },
             {
               "t": "card",
@@ -4399,7 +4434,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 468, 1024],
+              "box": [0, 467, 1024],
               "lines": [88, 19, 353],
               "al": "c",
               "f": [22, 700, 26, "O"],
@@ -4408,15 +4443,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 503, 476, 145],
+              "box": [30, 502, 480, 136],
               "src": "assets/images/svc/website-maintenance-support/c1.jpg",
               "alt": "Books and a pen holder on a desk",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [62, 513, 146], "f": [19, 700, 21, "O"], "text": "Website Content\n*Updates*" },
+                { "t": "txt", "tag": "h2", "box": [60, 507.5, 146], "f": [19, 700, 21, "O"], "text": "Website Content\n*Updates*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [62, 561.5, 181],
+                  "box": [60, 556, 181],
                   "f": [12.3, 400, 15.2, "L"],
                   "text": "Update text, images, banners,\nservices, contact details and\nother website content as per\nyour business needs."
                 }
@@ -4425,15 +4460,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [513, 503, 478, 145],
+              "box": [514, 502, 480, 136],
               "src": "assets/images/svc/website-maintenance-support/c2.jpg",
               "alt": "Laptop showing website code",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [544, 513, 156], "f": [19, 700, 21, "O"], "text": "Technical Website\n*Maintenance*" },
+                { "t": "txt", "tag": "h2", "box": [545, 507.5, 156], "f": [19, 700, 21, "O"], "text": "Technical Website\n*Maintenance*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [544, 561.5, 185.5],
+                  "box": [545, 556, 185.5],
                   "f": [12.3, 400, 15.2, "L"],
                   "text": "Check and update plugins,\nthemes and key website\nfunctions to keep the site\nstable and working properly."
                 }
@@ -4442,15 +4477,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 647, 476, 141],
+              "box": [30, 637, 480, 136],
               "src": "assets/images/svc/website-maintenance-support/c3.jpg",
               "alt": "Glass cloud with a sync symbol",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [63, 657, 170.5], "f": [19, 700, 21, "O"], "text": "Backup and\n*Recovery Support*" },
+                { "t": "txt", "tag": "h2", "box": [61, 644.5, 170.5], "f": [19, 700, 21, "O"], "text": "Backup and\n*Recovery Support*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [63, 705.5, 190],
+                  "box": [61, 693, 190],
                   "f": [12.3, 400, 15.2, "L"],
                   "text": "Create and maintain regular\nbackups and provide support\nfor restoration from available\nbackups when required."
                 }
@@ -4459,15 +4494,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [513, 647, 478, 141],
+              "box": [514, 637, 480, 136],
               "src": "assets/images/svc/website-maintenance-support/c4.jpg",
               "alt": "Glass shield with a padlock",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [544, 657, 157], "f": [19, 700, 21, "O"], "text": "Website Security\n*and Checks*" },
+                { "t": "txt", "tag": "h2", "box": [545, 644.5, 157], "f": [19, 700, 21, "O"], "text": "Website Security\n*and Checks*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [544, 703.6, 192],
+                  "box": [545, 691.1, 192],
                   "f": [12.3, 400, 14.8, "L"],
                   "text": "Review security settings,\nmanage supported updates\nand check for potential issues\nto help keep your website\nmore secure."
                 }
@@ -4476,15 +4511,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 792, 476, 140],
+              "box": [30, 777, 480, 136],
               "src": "assets/images/svc/website-maintenance-support/c5.jpg",
               "alt": "Wooden block with the WordPress logo",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [63, 800.5, 222], "f": [19, 700, 21, "O"], "text": "WordPress and\n*Other Website Support*" },
+                { "t": "txt", "tag": "h2", "box": [61, 783.5, 222], "f": [19, 700, 21, "O"], "text": "WordPress and\n*Other Website Support*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [63, 846.7, 206],
+                  "box": [61, 829.7, 206],
                   "f": [12.3, 400, 14.4, "L"],
                   "text": "Maintenance and support for\nWordPress and other websites,\nincluding content changes,\nfunction checks and basic\nissue resolution."
                 }
@@ -4493,15 +4528,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [513, 792, 478, 140],
+              "box": [514, 777, 480, 136],
               "src": "assets/images/svc/website-maintenance-support/c6.jpg",
               "alt": "Glass speed gauge",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [544, 800.5, 167], "f": [19, 700, 21, "O"], "text": "Performance and\n*Function Review*" },
+                { "t": "txt", "tag": "h2", "box": [545, 783.5, 167], "f": [19, 700, 21, "O"], "text": "Performance and\n*Function Review*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [544, 847, 209],
+                  "box": [545, 830, 209],
                   "f": [12.3, 400, 14.85, "L"],
                   "text": "Review key website functions,\ncheck for errors, fix broken links\nand ensure a smooth browsing\nexperience."
                 }
@@ -4510,7 +4545,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 937, 1024],
+              "box": [0, 918, 1024],
               "lines": [116, 26, 326],
               "al": "c",
               "f": [22, 700, 26, "O"],
@@ -4518,14 +4553,14 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [36, 968, 954, 118],
+              "box": [36, 949, 954, 118],
               "src": "assets/images/svc/website-maintenance-support/proc.jpg",
               "kids": [
-                { "t": "txt", "tag": "h3", "box": [94, 997, 46], "al": "c", "f": [12.5, 700, 13, "O"], "c": "#1e1a22", "text": "Website\nReview" },
+                { "t": "txt", "tag": "h3", "box": [94, 978, 46], "al": "c", "f": [12.5, 700, 13, "O"], "c": "#1e1a22", "text": "Website\nReview" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [66.7, 1029, 102],
+                  "box": [66.7, 1010, 102],
                   "al": "c",
                   "f": [10.2, 400, 12.5, "L"],
                   "text": "We understand your\nwebsite, platform and\ncurrent needs."
@@ -4533,7 +4568,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [239.7, 997, 66],
+                  "box": [239.7, 978, 66],
                   "al": "c",
                   "f": [12.5, 700, 13, "O"],
                   "c": "#1e1a22",
@@ -4542,7 +4577,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [234, 1026, 83.5],
+                  "box": [234, 1007, 83.5],
                   "al": "c",
                   "f": [10.2, 400, 12, "L"],
                   "text": "We identify the\nrequired updates\nand maintenance\ntasks."
@@ -4550,7 +4585,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [398.7, 997, 72],
+                  "box": [398.7, 978, 72],
                   "al": "c",
                   "f": [12.5, 700, 13, "O"],
                   "c": "#1e1a22",
@@ -4559,7 +4594,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [386, 1029, 97],
+                  "box": [386, 1010, 97],
                   "al": "c",
                   "f": [10.2, 400, 12.5, "L"],
                   "text": "We discuss the work\nscope, access and\nschedule."
@@ -4567,7 +4602,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [560, 997, 72.5],
+                  "box": [560, 978, 72.5],
                   "al": "c",
                   "f": [12.5, 700, 13, "O"],
                   "c": "#1e1a22",
@@ -4576,7 +4611,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [541, 1029, 111.5],
+                  "box": [541, 1010, 111.5],
                   "al": "c",
                   "f": [10.2, 400, 12.5, "L"],
                   "text": "We complete the\nagreed content updates\nand technical tasks."
@@ -4584,7 +4619,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [726.7, 997, 53.3],
+                  "box": [726.7, 978, 53.3],
                   "al": "c",
                   "f": [12.5, 700, 13, "O"],
                   "c": "#1e1a22",
@@ -4593,7 +4628,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [702.5, 1029, 105],
+                  "box": [702.5, 1010, 105],
                   "al": "c",
                   "f": [10.2, 400, 12.5, "L"],
                   "text": "We check the updated\nsections and key\nfunctions."
@@ -4601,7 +4636,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [873.75, 997, 75],
+                  "box": [873.75, 978, 75],
                   "al": "c",
                   "f": [12.5, 700, 13, "O"],
                   "c": "#1e1a22",
@@ -4610,7 +4645,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [858, 1029, 106.6],
+                  "box": [858, 1010, 106.6],
                   "al": "c",
                   "f": [10.2, 400, 12.5, "L"],
                   "text": "We share the work\ndetails and any further\nrecommendations."
@@ -4620,21 +4655,21 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [34, 1094, 474, 110],
+              "box": [30, 1075, 480, 110],
               "src": "assets/images/svc/website-maintenance-support/i1.jpg",
               "alt": "Desk calendar",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [228.75, 1104.5, 193.5],
+                  "box": [224.75, 1085.5, 193.5],
                   "f": [15, 700, 17, "O"],
                   "text": "Website Maintenance for\n*Different Businesses*"
                 },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [228.75, 1143.5, 259.5],
+                  "box": [224.75, 1124.5, 259.5],
                   "f": [11.3, 400, 15, "L"],
                   "text": "We support startups, small businesses,\ne-commerce websites and established\norganisations with suitable maintenance plans."
                 }
@@ -4643,15 +4678,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [522, 1094, 470, 110],
+              "box": [514, 1075, 480, 110],
               "src": "assets/images/svc/website-maintenance-support/i2.jpg",
               "alt": "Stacked stones with a green leaf",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [697.5, 1104.5, 154], "f": [15, 700, 17, "O"], "text": "Maintenance Cost\n*and Support Plans*" },
+                { "t": "txt", "tag": "h2", "box": [689.5, 1085.5, 154], "f": [15, 700, 17, "O"], "text": "Maintenance Cost\n*and Support Plans*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [697.5, 1143.5, 277.5],
+                  "box": [689.5, 1124.5, 277.5],
                   "f": [11.3, 400, 15, "L"],
                   "text": "The cost depends on the website size, platform,\nupdate frequency and technical requirements.\nCustom plans can be discussed as per your needs."
                 }
@@ -4660,13 +4695,12 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [28, 1210, 968, 76],
-              "src": "assets/images/svc/website-maintenance-support/cta.jpg",
+              "box": [28, 1191, 968, 74],
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [84, 1219.7, 273],
+                  "box": [84, 1199.7, 273],
                   "f": [21.5, 700, 23.7, "O", -0.01],
                   "c": "#fff",
                   "em": "#ff9a1a",
@@ -4675,7 +4709,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [438.6, 1226, 304],
+                  "box": [438.6, 1206, 304],
                   "f": [11.5, 400, 13.75, "L"],
                   "c": "#fff",
                   "text": "Share your website URL and maintenance requirements\nwith us. We will review your website and discuss a\nsuitable maintenance approach."
@@ -4683,7 +4717,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [784, 1230, 168, 35],
+                  "box": [784, 1210, 168, 35],
                   "f": [13.4, 700, 0, "O"],
                   "label": "Get Started Today",
                   "href": "contact?service=Website%20Maintenance%20%26%20Support"
@@ -4693,17 +4727,17 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1284, 1536],
+          "y": [1263, 1515],
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1289, 1024],
+            "box": [0, 1268, 1024],
             "lines": [81, 27, 276],
             "al": "c",
             "f": [21, 700, 24, "O"],
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1322.5,
+          "rowsY": 1301.5,
           "rowH": 19,
           "rowGap": 3,
           "bottom": 72,
@@ -4784,7 +4818,7 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": false,
-          "y": [44, 292],
+          "y": [44, 332],
           "image": "assets/images/svc/landing-page-development/hero.jpg",
           "alt": "Landing page with a Get a Free Consultation form next to a target and a rising growth chart",
           "items": [
@@ -4792,23 +4826,23 @@ window.SITE_CONFIG = {
               "t": "txt",
               "tag": "p",
               "up": 1,
-              "box": [86.5, 53.5, 211],
+              "box": [86.5, 73.5, 211],
               "f": [13, 600, 15, "O"],
               "c": "#fe6a2a",
               "text": "Landing Page Development"
             },
-            { "t": "txt", "tag": "h1", "box": [87.5, 71.5, 356.5], "f": [33, 700, 34, "O", -0.01], "text": "Landing Page\nDevelopment *Services*" },
+            { "t": "txt", "tag": "h1", "box": [87.5, 91.5, 356.5], "f": [33, 700, 34, "O", -0.01], "text": "Landing Page\nDevelopment *Services*" },
             {
               "t": "txt",
               "tag": "p",
-              "box": [87.5, 151.5, 283.5],
+              "box": [87.5, 171.5, 283.5],
               "f": [14.5, 400, 16.5, "L"],
               "text": "Create focused landing pages that turn\nvisitors into enquiries, registrations\nand real business opportunities."
             },
             {
               "t": "btn",
               "kind": "o",
-              "box": [89, 220, 180, 35],
+              "box": [89, 240, 180, 35],
               "f": [13, 600, 0, "O"],
               "label": "Discuss Your Project",
               "href": "contact?service=Landing%20Page%20Development"
@@ -4816,7 +4850,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "plum",
-              "box": [287, 220, 133, 35],
+              "box": [287, 240, 133, 35],
               "f": [13, 600, 0, "O"],
               "label": "Our Services",
               "href": "services",
@@ -4825,7 +4859,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [292, 1262],
+          "y": [292, 1266],
           "items": [
             { "t": "txt", "tag": "h2", "box": [62.5, 299.5, 301], "f": [30, 700, 30, "O"], "text": "Build High-Converting\n*Landing Pages*" },
             {
@@ -4837,9 +4871,10 @@ window.SITE_CONFIG = {
             },
             {
               "t": "img",
-              "box": [382, 300, 330, 168],
+              "box": [382, 300, 320, 160],
               "src": "assets/images/svc/landing-page-development/intro.jpg",
-              "alt": "Stacked landing page layouts with a mountain banner"
+              "alt": "Stacked landing page layouts with a mountain banner",
+              "cls": "rd"
             },
             {
               "t": "card",
@@ -4897,15 +4932,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 507, 474, 136],
+              "box": [30, 507, 480, 136],
               "src": "assets/images/svc/landing-page-development/c1.jpg",
               "alt": "Landing page plan notebook with goal, audience, sections and CTA ticked",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [61, 517.7, 129], "f": [20, 700, 21, "O"], "text": "Landing Page\n*Planning*" },
+                { "t": "txt", "tag": "h2", "box": [59, 517.7, 129], "f": [20, 700, 21, "O"], "text": "Landing Page\n*Planning*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [61, 563, 197.5],
+                  "box": [59, 563, 197.5],
                   "f": [13.5, 400, 15.2, "L"],
                   "text": "Understand your campaign\ngoal and plan a focused page\nstructure that supports the\ndesired action."
                 }
@@ -4914,15 +4949,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [512, 507, 480, 136],
+              "box": [514, 507, 480, 136],
               "src": "assets/images/svc/landing-page-development/c2.jpg",
               "alt": "Page design layout with typography and colour swatches",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [540.5, 516.7, 154], "f": [20, 700, 21, "O"], "text": "Custom Landing\n*Page Design*" },
+                { "t": "txt", "tag": "h2", "box": [542.5, 516.7, 154], "f": [20, 700, 21, "O"], "text": "Custom Landing\n*Page Design*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [540.5, 562, 165.5],
+                  "box": [542.5, 562, 165.5],
                   "f": [13.5, 400, 15.2, "L"],
                   "text": "Create a clean, attractive\nand brand-aligned design\nwith a clear visual flow\nand message."
                 }
@@ -4931,15 +4966,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 645, 474, 133],
+              "box": [30, 645, 480, 136],
               "src": "assets/images/svc/landing-page-development/c3.jpg",
               "alt": "Content blocks for benefits, features and FAQs",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [61, 656.7, 173.5], "f": [20, 700, 21, "O"], "text": "Content Structure\n*for Conversion*" },
+                { "t": "txt", "tag": "h2", "box": [59, 658.2, 173.5], "f": [20, 700, 21, "O"], "text": "Content Structure\n*for Conversion*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [61, 700.4, 186.5],
+                  "box": [59, 701.9, 186.5],
                   "f": [13.5, 400, 15.3, "L"],
                   "text": "Organise key information\nsuch as benefits, features,\nFAQs and calls to action for\nbetter engagement."
                 }
@@ -4948,15 +4983,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [512, 645, 480, 133],
+              "box": [514, 645, 480, 136],
               "src": "assets/images/svc/landing-page-development/c4.jpg",
               "alt": "Enquiry form with name, email and requirement fields",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [540.5, 655.2, 131.5], "f": [20, 700, 21, "O"], "text": "Enquiry Form\n*Integration*" },
+                { "t": "txt", "tag": "h2", "box": [542.5, 656.7, 131.5], "f": [20, 700, 21, "O"], "text": "Enquiry Form\n*Integration*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [540.5, 699.4, 205],
+                  "box": [542.5, 700.9, 205],
                   "f": [13.5, 400, 15.5, "L"],
                   "text": "Add easy-to-use forms with\nrelevant fields and enquiry\nnotifications for your business."
                 }
@@ -4965,15 +5000,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 777, 474, 137],
+              "box": [30, 780, 480, 136],
               "src": "assets/images/svc/landing-page-development/c5.jpg",
               "alt": "Smartphone showing a landing page",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [61, 786.4, 184.5], "f": [20, 700, 20.5, "O"], "text": "Mobile-Responsive\n*Pages*" },
+                { "t": "txt", "tag": "h2", "box": [59, 788.9, 184.5], "f": [20, 700, 20.5, "O"], "text": "Mobile-Responsive\n*Pages*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [61, 831.4, 187.5],
+                  "box": [59, 833.9, 187.5],
                   "f": [13.5, 400, 15.5, "L"],
                   "text": "Develop landing pages that\nwork smoothly on desktops,\ntablets and smartphones."
                 }
@@ -4982,15 +5017,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [512, 777, 480, 137],
+              "box": [514, 780, 480, 136],
               "src": "assets/images/svc/landing-page-development/c6.jpg",
               "alt": "Analytics dashboard with a line chart",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [542, 786.4, 155], "f": [20, 700, 20.5, "O"], "text": "Tracking and\n*Analytics Setup*" },
+                { "t": "txt", "tag": "h2", "box": [544, 788.9, 155], "f": [20, 700, 20.5, "O"], "text": "Tracking and\n*Analytics Setup*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [542, 831.4, 203],
+                  "box": [544, 833.9, 203],
                   "f": [13.5, 400, 15.5, "L"],
                   "text": "Integrate supported analytics\nand campaign tracking to\nmeasure page visits, enquiries\nand user actions."
                 }
@@ -4999,7 +5034,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 923, 1024],
+              "box": [0, 925, 1024],
               "lines": [82, 16.5, 429.5],
               "al": "c",
               "f": [22, 700, 26, "O"],
@@ -5007,13 +5042,13 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [32, 950, 962, 120],
+              "box": [32, 952, 962, 120],
               "src": "assets/images/svc/landing-page-development/proc.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [68.5, 977, 89.5],
+                  "box": [68.5, 979, 89.5],
                   "al": "c",
                   "f": [14, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -5022,7 +5057,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [62.5, 1016.6, 100],
+                  "box": [62.5, 1018.6, 100],
                   "al": "c",
                   "f": [11.5, 400, 13, "L"],
                   "text": "Learn about your\ngoal, audience and\nrequirements."
@@ -5030,7 +5065,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [244, 977, 59.5],
+                  "box": [244, 979, 59.5],
                   "al": "c",
                   "f": [14, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -5039,7 +5074,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [222.5, 1016.6, 105],
+                  "box": [222.5, 1018.6, 105],
                   "al": "c",
                   "f": [11.5, 400, 13, "L"],
                   "text": "Decide the sections,\ncontent and\npage flow."
@@ -5047,7 +5082,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [398.5, 977, 67.5],
+                  "box": [398.5, 979, 67.5],
                   "al": "c",
                   "f": [14, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -5056,7 +5091,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [385, 1016.6, 96],
+                  "box": [385, 1018.6, 96],
                   "al": "c",
                   "f": [11.5, 400, 13, "L"],
                   "text": "Create a focused\nand brand-aligned\npage design."
@@ -5064,7 +5099,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [561.5, 977, 56.5],
+                  "box": [561.5, 979, 56.5],
                   "al": "c",
                   "f": [14, 700, 15, "O"],
                   "c": "#1e1a22",
@@ -5073,25 +5108,25 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [541.5, 1016.6, 97],
+                  "box": [541.5, 1018.6, 97],
                   "al": "c",
                   "f": [11.5, 400, 13, "L"],
                   "text": "Build the landing\npage with required\nfeatures."
                 },
-                { "t": "txt", "tag": "h3", "box": [719, 977, 58.5], "al": "c", "f": [14, 700, 15, "O"], "c": "#1e1a22", "text": "Test &\nIntegrate" },
+                { "t": "txt", "tag": "h3", "box": [719, 979, 58.5], "al": "c", "f": [14, 700, 15, "O"], "c": "#1e1a22", "text": "Test &\nIntegrate" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [692.5, 1016.6, 112.5],
+                  "box": [692.5, 1018.6, 112.5],
                   "al": "c",
                   "f": [11.5, 400, 13, "L"],
                   "text": "Check design, forms\nand add tracking\nor other integrations."
                 },
-                { "t": "txt", "tag": "h3", "box": [885, 977, 53.5], "al": "c", "f": [14, 700, 15, "O"], "c": "#1e1a22", "text": "Final\nDelivery" },
+                { "t": "txt", "tag": "h3", "box": [885, 979, 53.5], "al": "c", "f": [14, 700, 15, "O"], "c": "#1e1a22", "text": "Final\nDelivery" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [860.5, 1016.6, 104],
+                  "box": [860.5, 1018.6, 104],
                   "al": "c",
                   "f": [11.5, 400, 13, "L"],
                   "text": "Share the live page\nafter testing\nand approval."
@@ -5101,15 +5136,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 1077, 474, 108],
+              "box": [30, 1079, 480, 110],
               "src": "assets/images/svc/landing-page-development/i1.jpg",
               "alt": "Stacked landing page templates",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [205, 1085.5, 218.5], "f": [19, 700, 20, "O"], "text": "Types of Landing Pages\n*We Develop*" },
+                { "t": "txt", "tag": "h2", "box": [203, 1088.5, 218.5], "f": [19, 700, 20, "O"], "text": "Types of Landing Pages\n*We Develop*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [205, 1128, 247.5],
+                  "box": [203, 1131, 247.5],
                   "f": [13, 400, 15.5, "L"],
                   "text": "Lead generation, product, service, event\nregistration, campaign and app/software\nlanding pages."
                 }
@@ -5118,15 +5153,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [518, 1077, 476, 108],
+              "box": [514, 1079, 480, 110],
               "src": "assets/images/svc/landing-page-development/i2.jpg",
               "alt": "Group of three people icons",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [692, 1090.5, 166.5], "f": [20, 700, 24, "O"], "text": "Who Can Benefit?" },
+                { "t": "txt", "tag": "h2", "box": [688, 1093.5, 166.5], "f": [20, 700, 24, "O"], "text": "Who Can Benefit?" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [692, 1118.7, 285],
+                  "box": [688, 1121.7, 285],
                   "f": [13, 400, 16, "L"],
                   "text": "Startups, small businesses, consultants,\neducational institutes, real estate, e-commerce\nand event organisers."
                 }
@@ -5135,13 +5170,12 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [28, 1192, 966, 74],
-              "src": "assets/images/svc/landing-page-development/cta.jpg",
+              "box": [28, 1196, 968, 74],
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [76, 1204.7, 290.5],
+                  "box": [76, 1208.7, 290.5],
                   "f": [21, 700, 21, "O"],
                   "c": "#fff",
                   "em": "#ffb22a",
@@ -5150,7 +5184,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [428.5, 1206.6, 306],
+                  "box": [428.5, 1210.6, 306],
                   "f": [12, 400, 14.5, "L"],
                   "c": "#fff",
                   "text": "Share your campaign idea and requirements with us.\nWe will plan and develop a landing page that matches\nyour goal and audience."
@@ -5158,7 +5192,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [776, 1210, 182, 38],
+                  "box": [776, 1214, 182, 38],
                   "r": 19,
                   "f": [14.5, 700, 0, "O"],
                   "label": "Get Started Today",
@@ -5169,17 +5203,17 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1262, 1536],
+          "y": [1266, 1540],
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1267, 1024],
+            "box": [0, 1271, 1024],
             "lines": [80, 27.5, 283],
             "al": "c",
             "f": [22, 700, 26, "O"],
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1299,
+          "rowsY": 1303,
           "rowH": 20,
           "rowGap": 2.5,
           "bottom": 68,
@@ -5269,24 +5303,24 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": false,
-          "y": [44, 282],
+          "y": [44, 332],
           "image": "assets/images/svc/domain-hosting-setup/hero.jpg",
           "alt": "Glass cloud with a domain search bar showing www.yourdomain.com next to a stack of server units",
           "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [88, 53, 173.6], "f": [11.7, 600, 14, "O"], "c": "#f2581a", "text": "Domain & Hosting Setup" },
-            { "t": "rect", "box": [271, 61, 57, 1.5], "bg": "linear-gradient(90deg, #ff6a1a, rgba(255,106,26,0))", "m": 0 },
-            { "t": "txt", "tag": "h1", "box": [88, 70, 320], "f": [31, 700, 32, "O", -0.01], "text": "Domain and Hosting\nSetup *Services*" },
+            { "t": "txt", "tag": "p", "up": 1, "box": [88, 78, 173.6], "f": [11.7, 600, 14, "O"], "c": "#f2581a", "text": "Domain & Hosting Setup" },
+            { "t": "rect", "box": [271, 86, 57, 1.5], "bg": "linear-gradient(90deg, #ff6a1a, rgba(255,106,26,0))", "m": 0 },
+            { "t": "txt", "tag": "h1", "box": [88, 95, 320], "f": [31, 700, 32, "O", -0.01], "text": "Domain and Hosting\nSetup *Services*" },
             {
               "t": "txt",
               "tag": "p",
-              "box": [88, 145.6, 262],
+              "box": [88, 170.6, 262],
               "f": [14, 400, 16.4, "L"],
               "text": "Get your website online with the right\ndomain, reliable hosting and\nproper configuration."
             },
             {
               "t": "btn",
               "kind": "o",
-              "box": [90, 213, 178, 35],
+              "box": [90, 238, 178, 35],
               "f": [13, 600, 0, "O"],
               "label": "Discuss Your Project",
               "href": "contact?service=Domain%20%26%20Hosting%20Setup"
@@ -5294,7 +5328,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "plum",
-              "box": [284.5, 213, 131, 35],
+              "box": [284.5, 238, 131, 35],
               "f": [13, 600, 0, "O"],
               "label": "Our Services",
               "href": "services",
@@ -5303,7 +5337,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [282, 1263],
+          "y": [282, 1260],
           "items": [
             { "t": "txt", "tag": "h2", "box": [62.7, 290, 212], "f": [25, 700, 27, "O", -0.01], "text": "Build a Stronger\n*Online Presence*" },
             {
@@ -5317,7 +5351,8 @@ window.SITE_CONFIG = {
               "t": "img",
               "box": [376, 284, 316, 158],
               "src": "assets/images/svc/domain-hosting-setup/intro.jpg",
-              "alt": "Tablet on a stand showing a website, next to a potted plant"
+              "alt": "Tablet on a stand showing a website, next to a potted plant",
+              "cls": "rd"
             },
             {
               "t": "card",
@@ -5348,15 +5383,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 485, 476, 133],
+              "box": [30, 485, 480, 136],
               "src": "assets/images/svc/domain-hosting-setup/c1.jpg",
               "alt": "Glass search bar with www and a mouse pointer",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [61, 493, 189.5], "f": [19, 700, 21, "O"], "text": "Domain Registration\n*Assistance*" },
+                { "t": "txt", "tag": "h2", "box": [59, 494.5, 189.5], "f": [19, 700, 21, "O"], "text": "Domain Registration\n*Assistance*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [61, 542.8, 214.5],
+                  "box": [59, 544.3, 214.5],
                   "f": [12.3, 400, 14.7, "L"],
                   "text": "Help you choose a suitable domain\nname, check availability and\ncomplete the registration process\nwith the preferred extension."
                 }
@@ -5365,15 +5400,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [513, 485, 478, 133],
+              "box": [514, 485, 480, 136],
               "src": "assets/images/svc/domain-hosting-setup/c2.jpg",
               "alt": "Rows of server racks",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [543.8, 493, 167.3], "f": [19, 700, 21, "O"], "text": "Web Hosting\n*Selection & Setup*" },
+                { "t": "txt", "tag": "h2", "box": [544.8, 494.5, 167.3], "f": [19, 700, 21, "O"], "text": "Web Hosting\n*Selection & Setup*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [543.8, 542.8, 216],
+                  "box": [544.8, 544.3, 216],
                   "f": [12.3, 400, 14.7, "L"],
                   "text": "Recommend and set up a suitable\nhosting plan based on your website\ntechnology, resources and\nbusiness needs."
                 }
@@ -5382,15 +5417,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 625, 476, 133],
+              "box": [30, 628, 480, 136],
               "src": "assets/images/svc/domain-hosting-setup/c3.jpg",
               "alt": "Glass globe with a connection network",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [61, 634, 194], "f": [19, 700, 21, "O"], "text": "Domain and\n*Hosting Connection*" },
+                { "t": "txt", "tag": "h2", "box": [59, 638.5, 194], "f": [19, 700, 21, "O"], "text": "Domain and\n*Hosting Connection*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [61, 684.5, 207.6],
+                  "box": [59, 689, 207.6],
                   "f": [12.3, 400, 14.85, "L"],
                   "text": "Configure nameservers and DNS\nrecords, map your domain to the\nhosting and ensure the website\nis accessible online."
                 }
@@ -5399,15 +5434,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [513, 625, 478, 133],
+              "box": [514, 628, 480, 136],
               "src": "assets/images/svc/domain-hosting-setup/c4.jpg",
               "alt": "Laptop showing code next to a plant",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [543.8, 634, 195.5], "f": [19, 700, 21, "O"], "text": "Website Deployment\n*and Configuration*" },
+                { "t": "txt", "tag": "h2", "box": [544.8, 638.5, 195.5], "f": [19, 700, 21, "O"], "text": "Website Deployment\n*and Configuration*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [543.8, 684.5, 208],
+                  "box": [544.8, 689, 208],
                   "f": [12.3, 400, 14.85, "L"],
                   "text": "Upload website files, configure\ndatabases and set up the website\non the hosting environment\naccording to the project."
                 }
@@ -5416,15 +5451,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 765, 476, 136],
+              "box": [30, 771, 480, 136],
               "src": "assets/images/svc/domain-hosting-setup/c5.jpg",
               "alt": "Glass shield with a padlock and HTTPS",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [61, 775, 131.8], "f": [19, 700, 21, "O"], "text": "SSL and\n*HTTPS Setup*" },
+                { "t": "txt", "tag": "h2", "box": [59, 781, 131.8], "f": [19, 700, 21, "O"], "text": "SSL and\n*HTTPS Setup*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [61, 824.5, 193.6],
+                  "box": [59, 830.5, 193.6],
                   "f": [12.3, 400, 15.45, "L"],
                   "text": "Install and configure an SSL\ncertificate to enable a secure\nHTTPS connection for your\nwebsite."
                 }
@@ -5433,15 +5468,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [513, 765, 478, 136],
+              "box": [514, 771, 480, 136],
               "src": "assets/images/svc/domain-hosting-setup/c6.jpg",
               "alt": "Glass envelope with an at sign",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [544.7, 774, 178.6], "f": [19, 700, 21, "O"], "text": "Business Email\n*and Domain Setup*" },
+                { "t": "txt", "tag": "h2", "box": [545.7, 780, 178.6], "f": [19, 700, 21, "O"], "text": "Business Email\n*and Domain Setup*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [544.7, 824.5, 204.5],
+                  "box": [545.7, 830.5, 204.5],
                   "f": [12.3, 400, 15.45, "L"],
                   "text": "Set up domain-based email\naccounts, configure MX records\nand review basic email delivery\nsettings."
                 }
@@ -5450,7 +5485,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 906, 1024],
+              "box": [0, 912, 1024],
               "lines": [89, 22, 407],
               "al": "c",
               "f": [22, 700, 26, "O"],
@@ -5458,13 +5493,13 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [34, 937, 958, 126],
+              "box": [34, 943, 958, 126],
               "src": "assets/images/svc/domain-hosting-setup/proc.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [72.9, 964, 85.4],
+                  "box": [72.9, 970, 85.4],
                   "al": "c",
                   "f": [12.5, 700, 14, "O"],
                   "c": "#1e1a22",
@@ -5473,16 +5508,16 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [54.2, 998, 124],
+                  "box": [54.2, 1004, 124],
                   "al": "c",
                   "f": [10.2, 400, 13.5, "L"],
                   "text": "Understand your website\ntype, domain and\nhosting needs."
                 },
-                { "t": "txt", "tag": "h3", "box": [253.75, 962, 50], "al": "c", "f": [12.5, 700, 14, "O"], "c": "#1e1a22", "text": "Domain\nReview" },
+                { "t": "txt", "tag": "h3", "box": [253.75, 968, 50], "al": "c", "f": [12.5, 700, 14, "O"], "c": "#1e1a22", "text": "Domain\nReview" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [237.5, 995, 83],
+                  "box": [237.5, 1001, 83],
                   "al": "c",
                   "f": [10.2, 400, 13.3, "L"],
                   "text": "Discuss suitable\ndomain options\nand registration\nrequirements."
@@ -5490,7 +5525,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [404, 962, 60.4],
+                  "box": [404, 968, 60.4],
                   "al": "c",
                   "f": [12.5, 700, 14, "O"],
                   "c": "#1e1a22",
@@ -5499,7 +5534,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [379, 995, 111],
+                  "box": [379, 1001, 111],
                   "al": "c",
                   "f": [10.2, 400, 13.3, "L"],
                   "text": "Review and choose\nthe right hosting plan\nbased on your\nrequirements."
@@ -5507,7 +5542,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [545.4, 967.5, 89.6],
+                  "box": [545.4, 973.5, 89.6],
                   "al": "c",
                   "f": [12.5, 700, 14, "O"],
                   "c": "#1e1a22",
@@ -5516,7 +5551,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [551.7, 994, 78.3],
+                  "box": [551.7, 1000, 78.3],
                   "al": "c",
                   "f": [10.2, 400, 13.6, "L"],
                   "text": "Set up domain,\nhosting and\nrelevant DNS\nsettings."
@@ -5524,7 +5559,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [710.8, 962, 75],
+                  "box": [710.8, 968, 75],
                   "al": "c",
                   "f": [12.5, 700, 14, "O"],
                   "c": "#1e1a22",
@@ -5533,7 +5568,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [694.6, 996, 109],
+                  "box": [694.6, 1002, 109],
                   "al": "c",
                   "f": [10.2, 400, 13.3, "L"],
                   "text": "Connect the domain,\ndeploy the website\nand configure\nrequired settings."
@@ -5541,7 +5576,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [874, 962, 73.3],
+                  "box": [874, 968, 73.3],
                   "al": "c",
                   "f": [12.5, 700, 14, "O"],
                   "c": "#1e1a22",
@@ -5550,7 +5585,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [860.8, 996, 103.3],
+                  "box": [860.8, 1002, 103.3],
                   "al": "c",
                   "f": [10.2, 400, 13.3, "L"],
                   "text": "Check website\naccessibility, HTTPS\nsetup and other\nagreed details."
@@ -5560,21 +5595,21 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 1066, 478, 117],
+              "box": [30, 1072, 480, 110],
               "src": "assets/images/svc/domain-hosting-setup/i1.jpg",
               "alt": "Laptop showing a website next to a plant",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [238.3, 1080.2, 180.4],
+                  "box": [236.3, 1082.7, 180.4],
                   "f": [15, 700, 17.5, "O"],
                   "text": "Domain and Hosting for\n*Different Websites*"
                 },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [238.3, 1117.5, 250],
+                  "box": [236.3, 1120, 250],
                   "f": [11.3, 400, 14.2, "L"],
                   "text": "Support for new websites, existing websites,\ndomain connections, hosting migration and\nconfiguration updates."
                 }
@@ -5583,15 +5618,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [516, 1066, 474, 117],
+              "box": [514, 1072, 480, 110],
               "src": "assets/images/svc/domain-hosting-setup/i2.jpg",
               "alt": "Glass bar chart",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [713.3, 1078.5, 172], "f": [15, 700, 17.5, "O"], "text": "Domain and Hosting\n*Cost and Plans*" },
+                { "t": "txt", "tag": "h2", "box": [711.3, 1081, 172], "f": [15, 700, 17.5, "O"], "text": "Domain and Hosting\n*Cost and Plans*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [713.3, 1115.5, 258.3],
+                  "box": [711.3, 1118, 258.3],
                   "f": [11.3, 400, 14.6, "L"],
                   "text": "The cost depends on the domain extension,\nhosting plan, website technology and\nconfiguration requirements. We discuss the\nscope and estimated charges before starting."
                 }
@@ -5600,13 +5635,12 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [26, 1187, 972, 76],
-              "src": "assets/images/svc/domain-hosting-setup/cta.jpg",
+              "box": [28, 1186, 968, 74],
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [80.7, 1198, 243],
+                  "box": [82.7, 1196, 243],
                   "f": [21.5, 700, 23, "O", -0.01],
                   "c": "#fff",
                   "em": "#ff9a1a",
@@ -5615,7 +5649,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [415, 1202.4, 299],
+                  "box": [417, 1200.4, 299],
                   "f": [11.5, 400, 14, "L"],
                   "c": "#fff",
                   "text": "Share your domain and hosting requirements with us.\nWe will review your needs and suggest a suitable\nsetup plan for your website."
@@ -5623,7 +5657,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [783, 1206, 175, 37],
+                  "box": [785, 1204, 175, 37],
                   "f": [13.4, 700, 0, "O"],
                   "label": "Get Started Today",
                   "href": "contact?service=Domain%20%26%20Hosting%20Setup"
@@ -5633,17 +5667,17 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1263, 1536],
+          "y": [1260, 1533],
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1265.3, 1024],
+            "box": [0, 1262.3, 1024],
             "lines": [90, 14, 280],
             "al": "c",
             "f": [21, 700, 24, "O"],
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1298.4,
+          "rowsY": 1295.4,
           "rowH": 21,
           "rowGap": 2,
           "bottom": 64,
@@ -5729,7 +5763,7 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": false,
-          "y": [44, 290],
+          "y": [44, 332],
           "image": "assets/images/svc/business-automation-integration/hero.jpg",
           "alt": "Business Automation notepad with ticked tasks next to connected app icons for email, team, data, calendar and reports",
           "items": [
@@ -5737,7 +5771,7 @@ window.SITE_CONFIG = {
               "t": "txt",
               "tag": "p",
               "up": 1,
-              "box": [84, 52, 233],
+              "box": [84, 73, 233],
               "f": [12, 600, 14, "O"],
               "c": "#fe6a2a",
               "text": "Business Automation & Integration"
@@ -5745,21 +5779,21 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h1",
-              "box": [84, 67, 348],
+              "box": [84, 88, 348],
               "f": [30, 700, 30, "O", -0.01],
               "text": "Simplify Repetitive Work\nand Connect Your\n*Business Tools*"
             },
             {
               "t": "txt",
               "tag": "p",
-              "box": [84, 167, 295],
+              "box": [84, 188, 295],
               "f": [13.5, 400, 15.5, "L"],
               "text": "Automate daily tasks, integrate your business\napplications and keep your workflow organised\nand efficient."
             },
             {
               "t": "btn",
               "kind": "o",
-              "box": [86, 228, 176, 34],
+              "box": [86, 249, 176, 34],
               "f": [13, 600, 0, "O"],
               "label": "Discuss Your Project",
               "href": "contact?service=Business%20Automation%20%26%20Integration"
@@ -5767,7 +5801,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "plum",
-              "box": [280, 228, 130, 34],
+              "box": [280, 249, 130, 34],
               "f": [13, 600, 0, "O"],
               "label": "Our Services",
               "href": "services",
@@ -5776,7 +5810,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [290, 1298],
+          "y": [290, 1394],
           "items": [
             { "t": "txt", "tag": "h2", "box": [57, 295, 250], "f": [27, 700, 26.5, "O"], "text": "Make Your Business\nWork *Smarter*" },
             {
@@ -5788,14 +5822,15 @@ window.SITE_CONFIG = {
             },
             {
               "t": "img",
-              "box": [330, 286, 664, 156],
+              "box": [574, 286, 420, 210],
               "src": "assets/images/svc/business-automation-integration/intro.jpg",
-              "alt": "Connected icons for forms, email, CRM, calendar and reports along a flowing line with a paper plane"
+              "alt": "Connected icons for forms, email, CRM, calendar and reports along a flowing line with a paper plane",
+              "cls": "rd"
             },
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 446, 1024],
+              "box": [0, 500, 1024],
               "lines": [108, 24, 354],
               "al": "c",
               "f": [21, 700, 26, "O"],
@@ -5804,15 +5839,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [28, 478, 484, 133],
+              "box": [30, 532, 480, 136],
               "src": "assets/images/svc/business-automation-integration/c1.jpg",
               "alt": "Enquiry form sending data to email, CRM and a spreadsheet",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [62, 490, 123], "f": [19, 700, 20, "O"], "text": "Website Form\n*Automation*" },
+                { "t": "txt", "tag": "h2", "box": [64, 545.5, 123], "f": [19, 700, 20, "O"], "text": "Website Form\n*Automation*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [62, 533, 200],
+                  "box": [64, 588.5, 200],
                   "f": [12.5, 400, 15.5, "L"],
                   "text": "Connect your website forms with\nemail, CRM, spreadsheets and\nother tools to manage leads\nautomatically."
                 }
@@ -5821,15 +5856,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [512, 478, 484, 133],
+              "box": [514, 532, 480, 136],
               "src": "assets/images/svc/business-automation-integration/c2.jpg",
               "alt": "Open envelope with a notification bell",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [545, 490, 107], "f": [19, 700, 20, "O"], "text": "Email\n*Automation*" },
+                { "t": "txt", "tag": "h2", "box": [547, 545.5, 107], "f": [19, 700, 20, "O"], "text": "Email\n*Automation*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [545, 533, 185],
+                  "box": [547, 588.5, 185],
                   "f": [12.5, 400, 15.5, "L"],
                   "text": "Send automatic emails such as\nconfirmations, reminders and\nnotifications based on\nspecific actions."
                 }
@@ -5838,15 +5873,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [28, 611, 484, 133],
+              "box": [30, 668, 480, 136],
               "src": "assets/images/svc/business-automation-integration/c3.jpg",
               "alt": "CRM contact records",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [62, 621, 113], "f": [19, 700, 20, "O"], "text": "CRM\n*Integration*" },
+                { "t": "txt", "tag": "h2", "box": [64, 679.5, 113], "f": [19, 700, 20, "O"], "text": "CRM\n*Integration*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [62, 666, 189],
+                  "box": [64, 724.5, 189],
                   "f": [12.5, 400, 15.5, "L"],
                   "text": "Automatically transfer enquiry\nor customer details to your\nCRM for better lead and\ncustomer management."
                 }
@@ -5855,15 +5890,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [512, 611, 484, 133],
+              "box": [514, 668, 480, 136],
               "src": "assets/images/svc/business-automation-integration/c4.jpg",
               "alt": "Puzzle pieces joined by a link icon",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [545, 621, 108], "f": [19, 700, 20, "O"], "text": "Application\n*Integration*" },
+                { "t": "txt", "tag": "h2", "box": [547, 679.5, 108], "f": [19, 700, 20, "O"], "text": "Application\n*Integration*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [545, 666, 183],
+                  "box": [547, 724.5, 183],
                   "f": [12.5, 400, 15.5, "L"],
                   "text": "Connect different applications\nsuch as CRM, email, project\nmanagement, payment and\nother business tools."
                 }
@@ -5872,15 +5907,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [28, 744, 484, 126],
+              "box": [30, 804, 480, 136],
               "src": "assets/images/svc/business-automation-integration/c5.jpg",
               "alt": "Spreadsheet with an arrow pointing to a chart",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [62, 751, 155], "f": [19, 700, 20, "O"], "text": "Spreadsheet and\n*Data Automation*" },
+                { "t": "txt", "tag": "h2", "box": [64, 816, 155], "f": [19, 700, 20, "O"], "text": "Spreadsheet and\n*Data Automation*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [62, 795, 191],
+                  "box": [64, 860, 191],
                   "f": [12.5, 400, 15.5, "L"],
                   "text": "Automate data transfer, record\nupdates and notifications in\nspreadsheets based on your\nbusiness workflow."
                 }
@@ -5889,15 +5924,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [512, 744, 484, 126],
+              "box": [514, 804, 480, 136],
               "src": "assets/images/svc/business-automation-integration/c6.jpg",
               "alt": "Desk calendar with ticked days and a bell",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [545, 751, 180], "f": [19, 700, 20, "O"], "text": "Appointment and\n*Booking Automation*" },
+                { "t": "txt", "tag": "h2", "box": [547, 816, 180], "f": [19, 700, 20, "O"], "text": "Appointment and\n*Booking Automation*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [545, 795, 180],
+                  "box": [547, 860, 180],
                   "f": [12.5, 400, 15.5, "L"],
                   "text": "Set up automated booking\nworkflows with confirmations,\ncalendar integration and\nreminder messages."
                 }
@@ -5906,15 +5941,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [28, 870, 484, 128],
+              "box": [30, 940, 480, 136],
               "src": "assets/images/svc/business-automation-integration/c7.jpg",
               "alt": "Shopping cart with a payment card and an order confirmation",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [62, 878, 159], "f": [19, 700, 20, "O"], "text": "Payment and\n*Order Workflow*" },
+                { "t": "txt", "tag": "h2", "box": [64, 952, 159], "f": [19, 700, 20, "O"], "text": "Payment and\n*Order Workflow*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [62, 920, 189],
+                  "box": [64, 994, 189],
                   "f": [12.5, 400, 15.5, "L"],
                   "text": "Connect your e-commerce or\nservice platform with payment\nupdates, order notifications\nand related workflows."
                 }
@@ -5923,15 +5958,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [512, 870, 484, 128],
+              "box": [514, 940, 480, 136],
               "src": "assets/images/svc/business-automation-integration/c8.jpg",
               "alt": "Workflow diagram with connected blocks",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [545, 878, 193], "f": [19, 700, 20, "O"], "text": "Custom\n*Workflow Automation*" },
+                { "t": "txt", "tag": "h2", "box": [547, 952, 193], "f": [19, 700, 20, "O"], "text": "Custom\n*Workflow Automation*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [545, 920, 210],
+                  "box": [547, 994, 210],
                   "f": [12.5, 400, 15.5, "L"],
                   "text": "Create tailor-made automation\nworkflows based on your specific\nbusiness process and tool\nrequirements."
                 }
@@ -5940,7 +5975,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 998, 1024],
+              "box": [0, 1076, 1024],
               "lines": [108, 22, 332],
               "al": "c",
               "f": [21, 700, 26, "O"],
@@ -5948,13 +5983,13 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [28, 1022, 968, 110],
+              "box": [28, 1100, 968, 110],
               "src": "assets/images/svc/business-automation-integration/proc.jpg",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [69, 1042, 86],
+                  "box": [69, 1120, 86],
                   "al": "c",
                   "f": [13, 700, 14, "O"],
                   "c": "#1e1a22",
@@ -5963,7 +5998,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [65, 1075.5, 95],
+                  "box": [65, 1153.5, 95],
                   "al": "c",
                   "f": [11, 400, 12.5, "L"],
                   "text": "Learn about your\nexisting process\nand requirements."
@@ -5971,7 +6006,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [222, 1042, 101],
+                  "box": [222, 1120, 101],
                   "al": "c",
                   "f": [13, 700, 14, "O"],
                   "c": "#1e1a22",
@@ -5980,16 +6015,16 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [224, 1075.5, 96],
+                  "box": [224, 1153.5, 96],
                   "al": "c",
                   "f": [11, 400, 12.5, "L"],
                   "text": "Find tasks that can\nbe automated for\nbetter efficiency."
                 },
-                { "t": "txt", "tag": "h3", "box": [395, 1042, 76], "al": "c", "f": [13, 700, 14, "O"], "c": "#1e1a22", "text": "Plan\nthe Workflow" },
+                { "t": "txt", "tag": "h3", "box": [395, 1120, 76], "al": "c", "f": [13, 700, 14, "O"], "c": "#1e1a22", "text": "Plan\nthe Workflow" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [384, 1075.5, 97],
+                  "box": [384, 1153.5, 97],
                   "al": "c",
                   "f": [11, 400, 12.5, "L"],
                   "text": "Define the steps,\ntools and expected\noutcomes."
@@ -5997,7 +6032,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [559, 1045, 77],
+                  "box": [559, 1123, 77],
                   "al": "c",
                   "f": [13, 700, 14, "O"],
                   "c": "#1e1a22",
@@ -6006,16 +6041,16 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [538, 1077, 119],
+                  "box": [538, 1155, 119],
                   "al": "c",
                   "f": [11, 400, 12.5, "L"],
                   "text": "Set up the automation\nusing suitable tools\nand integrations."
                 },
-                { "t": "txt", "tag": "h3", "box": [735, 1044, 47], "al": "c", "f": [13, 700, 14, "O"], "c": "#1e1a22", "text": "Test and\nVerify" },
+                { "t": "txt", "tag": "h3", "box": [735, 1122, 47], "al": "c", "f": [13, 700, 14, "O"], "c": "#1e1a22", "text": "Test and\nVerify" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [700, 1074, 117],
+                  "box": [700, 1152, 117],
                   "al": "c",
                   "f": [11, 400, 12.5, "L"],
                   "text": "Check the workflow\nwith relevant scenarios\nto ensure it works\nproperly."
@@ -6023,7 +6058,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [883, 1042, 71],
+                  "box": [883, 1120, 71],
                   "al": "c",
                   "f": [13, 700, 14, "O"],
                   "c": "#1e1a22",
@@ -6032,7 +6067,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [859, 1074, 118],
+                  "box": [859, 1152, 118],
                   "al": "c",
                   "f": [11, 400, 12.5, "L"],
                   "text": "Provide the final setup,\nexplain the workflow\nand offer support\nas agreed."
@@ -6042,15 +6077,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [28, 1134, 480, 96],
+              "box": [30, 1212, 480, 110],
               "src": "assets/images/svc/business-automation-integration/i1.jpg",
               "alt": "Target with arrows in the bullseye",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [190, 1142, 172], "f": [17, 700, 16.5, "O"], "text": "Examples of\n*Business Automation*" },
+                { "t": "txt", "tag": "h2", "box": [192, 1227, 172], "f": [17, 700, 16.5, "O"], "text": "Examples of\n*Business Automation*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [190, 1180, 259],
+                  "box": [192, 1265, 259],
                   "f": [11.5, 400, 13, "L"],
                   "text": "Enquiry management, appointment booking,\norder notifications and internal task assignment\nare some common use cases."
                 }
@@ -6059,15 +6094,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [512, 1134, 484, 96],
+              "box": [514, 1212, 480, 110],
               "src": "assets/images/svc/business-automation-integration/i2.jpg",
               "alt": "Rising bar chart with an arrow",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [682, 1143, 136], "f": [17, 700, 20, "O"], "text": "Who Can *Benefit?*" },
+                { "t": "txt", "tag": "h2", "box": [684, 1228, 136], "f": [17, 700, 20, "O"], "text": "Who Can *Benefit?*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [682, 1169, 294],
+                  "box": [684, 1254, 294],
                   "f": [11.5, 400, 14, "L"],
                   "text": "Startups, small businesses, agencies,\ne-commerce stores, educational institutions,\nreal estate companies, consultants and growing teams."
                 }
@@ -6076,13 +6111,12 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [26, 1230, 972, 70],
-              "src": "assets/images/svc/business-automation-integration/cta.jpg",
+              "box": [28, 1322, 968, 74],
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [71, 1240, 288],
+                  "box": [73, 1334, 288],
                   "f": [20, 700, 22, "O"],
                   "c": "#fff",
                   "em": "#ffb22a",
@@ -6091,7 +6125,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [423, 1241.5, 312],
+                  "box": [425, 1335.5, 312],
                   "f": [11, 400, 13, "L"],
                   "c": "#fff",
                   "text": "Share your business process and tool requirements with us.\nWe will review your workflow and suggest a suitable\nautomation solution."
@@ -6099,7 +6133,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [783, 1247, 179, 34],
+                  "box": [785, 1341, 179, 34],
                   "r": 17,
                   "f": [14, 700, 0, "O"],
                   "label": "Get Started Today",
@@ -6110,17 +6144,17 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1298, 1536],
+          "y": [1394, 1632],
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1297, 1024],
+            "box": [0, 1393, 1024],
             "lines": [88, 28, 283],
             "al": "c",
             "f": [22, 700, 26, "O"],
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1328,
+          "rowsY": 1424,
           "rowH": 18.5,
           "rowGap": 2.5,
           "bottom": 48,
@@ -6210,7 +6244,7 @@ window.SITE_CONFIG = {
         "theme": "",
         "hero": {
           "dark": false,
-          "y": [44, 278],
+          "y": [44, 332],
           "image": "assets/images/svc/website-speed-optimization/hero.jpg",
           "alt": "Glass screen with a speed gauge reading Fast Loading and a rocket",
           "items": [
@@ -6218,24 +6252,24 @@ window.SITE_CONFIG = {
               "t": "txt",
               "tag": "p",
               "up": 1,
-              "box": [78, 55, 201],
+              "box": [78, 82, 201],
               "f": [11.7, 600, 14, "O"],
               "c": "#f2581a",
               "text": "Website Speed Optimization"
             },
-            { "t": "rect", "box": [288, 63, 60, 1.5], "bg": "linear-gradient(90deg, #ff6a1a, rgba(255,106,26,0))", "m": 0 },
-            { "t": "txt", "tag": "h1", "box": [78, 75.5, 363.6], "f": [32, 700, 33, "O", -0.01], "text": "Website Speed\nOptimization *Services*" },
+            { "t": "rect", "box": [288, 90, 60, 1.5], "bg": "linear-gradient(90deg, #ff6a1a, rgba(255,106,26,0))", "m": 0 },
+            { "t": "txt", "tag": "h1", "box": [78, 102.5, 363.6], "f": [32, 700, 33, "O", -0.01], "text": "Website Speed\nOptimization *Services*" },
             {
               "t": "txt",
               "tag": "p",
-              "box": [78, 150.3, 319],
+              "box": [78, 177.3, 319],
               "f": [14.5, 400, 18, "L"],
               "text": "Make your website faster, smoother and\nmore efficient for a better user experience."
             },
             {
               "t": "btn",
               "kind": "o",
-              "box": [78, 207, 180, 35],
+              "box": [78, 234, 180, 35],
               "f": [13, 600, 0, "O"],
               "label": "Discuss Your Project",
               "href": "contact?service=Website%20Speed%20Optimization"
@@ -6243,7 +6277,7 @@ window.SITE_CONFIG = {
             {
               "t": "btn",
               "kind": "plum",
-              "box": [277, 207, 133, 35],
+              "box": [277, 234, 133, 35],
               "f": [13, 600, 0, "O"],
               "label": "Our Services",
               "href": "services",
@@ -6252,7 +6286,7 @@ window.SITE_CONFIG = {
           ]
         },
         "body": {
-          "y": [278, 1256],
+          "y": [278, 1259],
           "items": [
             {
               "t": "txt",
@@ -6270,9 +6304,10 @@ window.SITE_CONFIG = {
             },
             {
               "t": "img",
-              "box": [388, 286, 334, 158],
+              "box": [388, 286, 320, 160],
               "src": "assets/images/svc/website-speed-optimization/intro.jpg",
-              "alt": "Two browser windows showing a fast loading web page, next to plants"
+              "alt": "Two browser windows showing a fast loading web page, next to plants",
+              "cls": "rd"
             },
             {
               "t": "card",
@@ -6294,7 +6329,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 450, 1024],
+              "box": [0, 452, 1024],
               "lines": [75, 22, 440.6],
               "al": "c",
               "f": [22, 700, 26, "O"],
@@ -6303,15 +6338,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 488, 476, 136],
+              "box": [30, 490, 480, 136],
               "src": "assets/images/svc/website-speed-optimization/c1.jpg",
               "alt": "Browser window with a performance chart, score 72 and a magnifying glass",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [59.5, 498, 172.8], "f": [19, 700, 21, "O"], "text": "Performance\n*Analysis & Review*" },
+                { "t": "txt", "tag": "h2", "box": [57.5, 500, 172.8], "f": [19, 700, 21, "O"], "text": "Performance\n*Analysis & Review*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [59.5, 546.2, 194.5],
+                  "box": [57.5, 548.2, 194.5],
                   "f": [12.3, 400, 16.2, "L"],
                   "text": "Check your website’s current\nspeed, find the issues and\nidentify the areas that need\nimprovement."
                 }
@@ -6320,15 +6355,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [518, 488, 474, 136],
+              "box": [514, 490, 480, 136],
               "src": "assets/images/svc/website-speed-optimization/c2.jpg",
               "alt": "Image frames with a WebP label",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [546, 498, 123.6], "f": [19, 700, 21, "O"], "text": "Image\n*Optimization*" },
+                { "t": "txt", "tag": "h2", "box": [542, 500, 123.6], "f": [19, 700, 21, "O"], "text": "Image\n*Optimization*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [546, 546.2, 176],
+                  "box": [542, 548.2, 176],
                   "f": [12.3, 400, 16, "L"],
                   "text": "Resize, compress and use\nmodern formats to reduce\nfile size while keeping\ngood visual quality."
                 }
@@ -6337,15 +6372,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 630, 476, 135],
+              "box": [30, 632, 480, 136],
               "src": "assets/images/svc/website-speed-optimization/c3.jpg",
               "alt": "Code editor window with a gear icon",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [59.5, 639, 186.4], "f": [19, 700, 21, "O"], "text": "CSS and JavaScript\n*Optimization*" },
+                { "t": "txt", "tag": "h2", "box": [57.5, 641.5, 186.4], "f": [19, 700, 21, "O"], "text": "CSS and JavaScript\n*Optimization*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [59.5, 687.2, 177.3],
+                  "box": [57.5, 689.7, 177.3],
                   "f": [12.3, 400, 15.9, "L"],
                   "text": "Clean unnecessary code,\nminify files and optimize\nresource loading for\nfaster performance."
                 }
@@ -6354,15 +6389,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [518, 630, 474, 135],
+              "box": [514, 632, 480, 136],
               "src": "assets/images/svc/website-speed-optimization/c4.jpg",
               "alt": "Stacked glowing layers with a lightning bolt",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [546, 638, 186.3], "f": [19, 700, 21, "O"], "text": "Browser Caching\n*& Resource Delivery*" },
+                { "t": "txt", "tag": "h2", "box": [542, 640.5, 186.3], "f": [19, 700, 21, "O"], "text": "Browser Caching\n*& Resource Delivery*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [546, 684.7, 188],
+                  "box": [542, 687.2, 188],
                   "f": [12.3, 400, 16.2, "L"],
                   "text": "Configure caching and\nresource delivery to reduce\nrepeated loading and\nimprove site speed."
                 }
@@ -6371,15 +6406,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 771, 476, 135],
+              "box": [30, 774, 480, 136],
               "src": "assets/images/svc/website-speed-optimization/c5.jpg",
               "alt": "Server units under a glass cloud",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [61, 780, 221.3], "f": [19, 700, 21, "O"], "text": "Server and\n*Database Performance*" },
+                { "t": "txt", "tag": "h2", "box": [59, 783.5, 221.3], "f": [19, 700, 21, "O"], "text": "Server and\n*Database Performance*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [61, 826.6, 228],
+                  "box": [59, 830.1, 228],
                   "f": [12.3, 400, 15.9, "L"],
                   "text": "Review server response, database\nactivity and resource usage to\nmake the website more efficient\nand stable."
                 }
@@ -6388,15 +6423,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [518, 771, 474, 135],
+              "box": [514, 774, 480, 136],
               "src": "assets/images/svc/website-speed-optimization/c6.jpg",
               "alt": "Phone showing a speed gauge",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [546, 780, 128], "f": [19, 700, 21, "O"], "text": "Mobile Speed\n*Optimization*" },
+                { "t": "txt", "tag": "h2", "box": [542, 783.5, 128], "f": [19, 700, 21, "O"], "text": "Mobile Speed\n*Optimization*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [546, 826.6, 172],
+                  "box": [542, 830.1, 172],
                   "f": [12.3, 400, 16.4, "L"],
                   "text": "Improve loading, layout\nand resource delivery\nfor a smoother and faster\nmobile experience."
                 }
@@ -6405,7 +6440,7 @@ window.SITE_CONFIG = {
             {
               "t": "txt",
               "tag": "h2",
-              "box": [0, 915, 1024],
+              "box": [0, 919, 1024],
               "lines": [93, 16.5, 447.5],
               "al": "c",
               "f": [22, 700, 26, "O"],
@@ -6413,14 +6448,14 @@ window.SITE_CONFIG = {
             },
             {
               "t": "grp",
-              "box": [32, 945, 960, 114],
+              "box": [32, 949, 960, 114],
               "src": "assets/images/svc/website-speed-optimization/proc.jpg",
               "kids": [
-                { "t": "txt", "tag": "h3", "box": [77, 972.6, 85.4], "al": "c", "f": [12.5, 700, 13, "O"], "c": "#1e1a22", "text": "Initial Review" },
+                { "t": "txt", "tag": "h3", "box": [77, 976.6, 85.4], "al": "c", "f": [12.5, 700, 13, "O"], "c": "#1e1a22", "text": "Initial Review" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [54.2, 1004, 133],
+                  "box": [54.2, 1008, 133],
                   "al": "c",
                   "f": [10.2, 400, 13.75, "L"],
                   "text": "Understand your website,\nplatform and\nperformance concerns."
@@ -6428,7 +6463,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [250, 968.4, 77],
+                  "box": [250, 972.4, 77],
                   "al": "c",
                   "f": [12.5, 700, 13, "O"],
                   "c": "#1e1a22",
@@ -6437,7 +6472,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [239.6, 1004, 98.7],
+                  "box": [239.6, 1008, 98.7],
                   "al": "c",
                   "f": [10.2, 400, 13.75, "L"],
                   "text": "Analyse key pages\nusing relevant\nperformance tools."
@@ -6445,7 +6480,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [404, 968.4, 82],
+                  "box": [404, 972.4, 82],
                   "al": "c",
                   "f": [12.5, 700, 13, "O"],
                   "c": "#1e1a22",
@@ -6454,7 +6489,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [391.7, 1004, 108.3],
+                  "box": [391.7, 1008, 108.3],
                   "al": "c",
                   "f": [10.2, 400, 13.75, "L"],
                   "text": "Find the main causes\nof slow loading and\nprioritise fixes."
@@ -6462,7 +6497,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [568.3, 968.4, 78.3],
+                  "box": [568.3, 972.4, 78.3],
                   "al": "c",
                   "f": [12.5, 700, 13, "O"],
                   "c": "#1e1a22",
@@ -6471,7 +6506,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [543.3, 1004, 129],
+                  "box": [543.3, 1008, 129],
                   "al": "c",
                   "f": [10.2, 400, 13.75, "L"],
                   "text": "Apply agreed\nimprovements to images,\ncode, caching and more."
@@ -6479,7 +6514,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [733, 968.4, 70],
+                  "box": [733, 972.4, 70],
                   "al": "c",
                   "f": [12.5, 700, 13, "O"],
                   "c": "#1e1a22",
@@ -6488,7 +6523,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [714, 1004, 109.6],
+                  "box": [714, 1008, 109.6],
                   "al": "c",
                   "f": [10.2, 400, 13.75, "L"],
                   "text": "Check website\nfunctionality and\nloading performance."
@@ -6496,7 +6531,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "h3",
-                  "box": [880.8, 968.4, 78],
+                  "box": [880.8, 972.4, 78],
                   "al": "c",
                   "f": [12.5, 700, 13, "O"],
                   "c": "#1e1a22",
@@ -6505,7 +6540,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [876.7, 1004, 85.4],
+                  "box": [876.7, 1008, 85.4],
                   "al": "c",
                   "f": [10.2, 400, 13.75, "L"],
                   "text": "Share the results\nand relevant\nobservations."
@@ -6515,21 +6550,21 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [32, 1067, 478, 110],
+              "box": [30, 1071, 480, 110],
               "src": "assets/images/svc/website-speed-optimization/i1.jpg",
               "alt": "Laptop showing a speed gauge",
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [243.3, 1079.7, 172],
+                  "box": [241.3, 1083.7, 172],
                   "f": [15, 700, 16.7, "O"],
                   "text": "Speed Optimization for\n*Different Platforms*"
                 },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [243.3, 1117.5, 225],
+                  "box": [241.3, 1121.5, 225],
                   "f": [11.3, 400, 14.6, "L"],
                   "text": "Optimisation for WordPress, e-commerce\nand custom websites based on their\nspecific requirements."
                 }
@@ -6538,15 +6573,15 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat",
-              "box": [520, 1067, 472, 110],
+              "box": [514, 1071, 480, 110],
               "src": "assets/images/svc/website-speed-optimization/i2.jpg",
               "alt": "Glass bar chart with a rising arrow",
               "kids": [
-                { "t": "txt", "tag": "h2", "box": [723.3, 1079.7, 147], "f": [15, 700, 16.7, "O"], "text": "Optimization *Cost*\n*and Timeline*" },
+                { "t": "txt", "tag": "h2", "box": [717.3, 1083.7, 147], "f": [15, 700, 16.7, "O"], "text": "Optimization *Cost*\n*and Timeline*" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [723.3, 1117.5, 250],
+                  "box": [717.3, 1121.5, 250],
                   "f": [11.3, 400, 14.6, "L"],
                   "text": "The cost and timeline depend on the website\nsize, platform, current performance and\nrequired changes."
                 }
@@ -6555,13 +6590,12 @@ window.SITE_CONFIG = {
             {
               "t": "card",
               "cls": "flat dk",
-              "box": [26, 1181, 974, 75],
-              "src": "assets/images/svc/website-speed-optimization/cta.jpg",
+              "box": [28, 1185, 968, 74],
               "kids": [
                 {
                   "t": "txt",
                   "tag": "h2",
-                  "box": [75.7, 1191.6, 288.6],
+                  "box": [77.7, 1195.1, 288.6],
                   "f": [21.5, 700, 23.4, "O", -0.01],
                   "c": "#fff",
                   "em": "#ff9a1a",
@@ -6570,7 +6604,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [429.3, 1194.6, 285.7],
+                  "box": [431.3, 1198.1, 285.7],
                   "f": [11.5, 400, 14.5, "L"],
                   "c": "#fff",
                   "text": "Share your website URL and performance concerns\nwith us. We will review your website and discuss\na suitable optimization plan."
@@ -6578,7 +6612,7 @@ window.SITE_CONFIG = {
                 {
                   "t": "btn",
                   "kind": "cream",
-                  "box": [781, 1199, 176, 37],
+                  "box": [783, 1202.5, 176, 37],
                   "f": [13.4, 700, 0, "O"],
                   "label": "Get Started Today",
                   "href": "contact?service=Website%20Speed%20Optimization"
@@ -6588,17 +6622,17 @@ window.SITE_CONFIG = {
           ]
         },
         "faq": {
-          "y": [1256, 1536],
+          "y": [1259, 1539],
           "title": {
             "t": "txt",
             "tag": "h2",
-            "box": [0, 1261.3, 1024],
+            "box": [0, 1264.3, 1024],
             "lines": [100, 23, 303.6],
             "al": "c",
             "f": [21, 700, 24, "O"],
             "text": "Frequently *Asked Questions*"
           },
-          "rowsY": 1295.8,
+          "rowsY": 1298.8,
           "rowH": 21,
           "rowGap": 2,
           "bottom": 67,

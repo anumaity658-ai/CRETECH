@@ -1874,7 +1874,7 @@ a.wk-btn:hover { transform: translateY(-2px); }
 /* 01 hero: picture under the header (full width), text on the left */
 .wd-hero {
   position: relative; isolation: isolate; display: flex; align-items: center;
-  padding-top: var(--hh); min-height: calc(var(--hh) + max(330 * var(--u), 100vw * 330 / 1024));
+  padding-top: var(--hh); min-height: calc(var(--hh) + max(288 * var(--u), 100vw * 288 / 1024)); /* same banner height as every service page */
   background: linear-gradient(180deg, #fbe9df var(--hh), #1c1f30 var(--hh)); font-family: Poppins, var(--wd-head);
 }
 .wd-hero-img { position: absolute; z-index: -1; left: 0; right: 0; bottom: 0; top: var(--hh); width: 100%; height: calc(100% - var(--hh)); object-fit: cover; object-position: 62% 100%; }
@@ -1897,13 +1897,13 @@ a.wk-btn:hover { transform: translateY(-2px); }
 .wd-btn-o:hover, .wd-btn-line:hover { transform: translateY(-2px); }
 
 /* 02 intro: text left, mockup picture right */
-.wd-intro-in { display: grid; grid-template-columns: calc(445 * var(--u)) calc(419 * var(--u)); column-gap: calc(33 * var(--u)); align-items: start; padding: calc(6 * var(--u)) 0 0 calc(68 * var(--u)); }
+.wd-intro-in { display: grid; grid-template-columns: calc(445 * var(--u)) calc(420 * var(--u)); column-gap: calc(33 * var(--u)); align-items: start; padding: calc(6 * var(--u)) 0 0 calc(68 * var(--u)); }
 .wd-intro-copy h2 { font-size: calc(26.7 * var(--u)); line-height: 1.15; }
 .wd-intro-copy p { font: 400 calc(12.4 * var(--u))/1.155 var(--wd-body); letter-spacing: -.01em; color: var(--wd-text); }
 .wd-intro-copy h2 + p { margin-top: calc(9 * var(--u)); }
 .wd-dash { display: block; width: calc(42 * var(--u)); height: max(calc(1.5 * var(--u)), 1px); margin: calc(6 * var(--u)) 0 calc(5 * var(--u)); background: var(--wd-o); }
 .wd-intro-pic { margin-top: calc(18 * var(--u)); border-radius: calc(18 * var(--u)); overflow: hidden; box-shadow: 0 calc(8 * var(--u)) calc(20 * var(--u)) rgba(170, 110, 140, .18); }
-.wd-intro-img { display: block; width: 100%; aspect-ratio: 419 / 211; object-fit: cover; }
+.wd-intro-img { display: block; width: 100%; aspect-ratio: 2 / 1; object-fit: cover; } /* intro pictures are 2 : 1 on every service page */
 
 /* 03 eight website types */
 .wd-types { padding-top: calc(17 * var(--u)); }
@@ -2118,6 +2118,14 @@ a.wk-btn:hover { transform: translateY(-2px); }
 .cv-card-img { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .cv-kids { position: absolute; inset: 0; }
 .cv-card.flat { border-radius: 0; box-shadow: none; overflow: visible; }
+/* CTA bar: drawn with CSS, the same on every service page */
+.cv-card.flat.dk { overflow: hidden; border-radius: calc(14 * var(--u)); background: linear-gradient(90deg, #3f1a67 0%, #5b2b5f 20%, #822c58 40%, #a1305b 55%, #c9454a 70%, #f0662c 88%, #f7782a 100%); box-shadow: 0 calc(8 * var(--u)) calc(20 * var(--u)) rgba(120, 50, 70, .22); }
+.cv-card.flat.dk::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(255, 255, 255, .14), transparent 45%); }
+/* every card picture fills its box (pictures are made at one standard size) */
+.cv-card.flat > .cv-card-img { object-position: center; }
+/* rounded corners + soft shadow come from CSS, so the pictures themselves are plain rectangles */
+.cv-card.flat:not(.dk) { overflow: hidden; border-radius: calc(14 * var(--u)); box-shadow: 0 calc(6 * var(--u)) calc(18 * var(--u)) rgba(190, 110, 80, .16); }
+.cv-img.rd { border-radius: calc(14 * var(--u)); box-shadow: 0 calc(6 * var(--u)) calc(18 * var(--u)) rgba(190, 110, 80, .16); }
 /* group: picture + labels that always move together (category strips, process strips) */
 .cv-grp { isolation: isolate; }
 .cv-grp > .cv-card-img { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; object-fit: cover; }
