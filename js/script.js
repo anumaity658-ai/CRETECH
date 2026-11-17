@@ -131,7 +131,7 @@
   if (canvas) {
     var fitText = function () {
       var wide = window.matchMedia("(min-width: 981px)").matches;
-      var u = Math.min(window.innerWidth / 1040, 1);
+      var wrap = canvas.querySelector(".cv-wrap"), u = wrap ? wrap.getBoundingClientRect().width / 1024 : 1; // 1 reference px
       canvas.querySelectorAll(".cv-t:not(.cv-list)").forEach(function (el) {
         el.style.removeProperty("--k");
         if (!wide && !el.closest(".cv-grp")) return;

@@ -993,7 +993,7 @@
         (it.al === "c" ? " ac" : it.al === "r" ? " ar" : "") + (it.lines ? " ln" : "") + (it.up ? " up" : "");
       if (it.lines) style += "--lw:" + cvNum(it.lines[0]) + ";--lg:" + cvNum(it.lines[1] || 12) + ";";
       if (it.em) style += "--em:" + cvColor(it.em) + ";";
-      return "<" + tag + ' class="' + cls + '" style="' + style + cvFont(f) + '"' + (it.lines && it.lines[2] ? ' data-tw="' + cvNum(it.lines[2]) + '"' : "") + ">" + (it.lines ? "<span>" + rich(cvLines(it.text)) + "</span>" : rich(cvLines(it.text))) + "</" + tag + ">";
+      return "<" + tag + ' class="' + cls + '" style="' + style + cvFont(f) + '"' + (it.lines && it.lines[2] ? ' data-tw="' + cvNum(it.lines[2]) + '"' : "") + ">" + (it.lines ? "<span>" + rich(cvLines(it.text)) + "</span>" : (it.bold ? "<b>" + esc(it.bold) + "</b> " : "") + rich(cvLines(it.text))) + "</" + tag + ">";
     }
     if (t === "list") {
       var lf = it.f || [];

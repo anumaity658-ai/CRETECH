@@ -845,29 +845,21 @@ window.SITE_CONFIG = {
               "alt": "",
               "kids": [
                 { "t": "txt", "tag": "h2", "box": [529, 749, 300], "f": [20, 700, 22, "O"], "text": "Understanding *UI and UX Design*" },
-                { "t": "txt", "tag": "p", "box": [572, 781, 122], "f": [11, 600, 15, "L"], "c": "#1e1a22", "text": "User Interface (UI) Design" },
-                { "t": "txt", "tag": "p", "box": [697, 781, 205], "f": [11, 400, 15, "L"], "text": "focuses on the visual elements users" },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [572, 796, 403],
+                  "box": [572, 781, 403],
                   "f": [11, 400, 15, "L"],
-                  "text": "see and interact with, such as layouts, colours, typography, buttons and icons."
-                },
-                { "t": "txt", "tag": "p", "box": [572, 824, 154], "f": [11, 600, 15, "L"], "c": "#1e1a22", "text": "User Experience (UX) Design" },
-                {
-                  "t": "txt",
-                  "tag": "p",
-                  "box": [729, 824, 249],
-                  "f": [11, 400, 15, "L"],
-                  "text": "focuses on how users interact with the product,"
+                  "bold": "User Interface (UI) Design",
+                  "text": "focuses on the visual elements users\nsee and interact with, such as layouts, colours, typography, buttons and icons."
                 },
                 {
                   "t": "txt",
                   "tag": "p",
-                  "box": [572, 839, 373],
+                  "box": [572, 824, 406],
                   "f": [11, 400, 15, "L"],
-                  "text": "including navigation, information flow and the ease of completing tasks."
+                  "bold": "User Experience (UX) Design",
+                  "text": "focuses on how users interact with the product,\nincluding navigation, information flow and the ease of completing tasks."
                 }
               ]
             },

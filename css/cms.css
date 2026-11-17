@@ -1838,7 +1838,7 @@ a.wk-btn:hover { transform: translateY(-2px); }
    narrow screens). Hero and "Designed Around Your Brand" pictures stretch to the full screen width;
    everything else sits in the 1024 px column. Pictures: assets/images/webdev/ (replaceable). */
 .wd-page {
-  --u: min(calc(100vw / 1024 * .985), 1px);
+  --u: min(calc(94vw / 1024), 1.5px); /* same as the other service pages */
   --wd-ink: #26122c; --wd-text: #1f1b22; --wd-o: #ff5f0f;
   --wd-head: Outfit, "DM Sans", Arial, sans-serif; --wd-body: Lexend, "DM Sans", Arial, sans-serif;
   --hh: calc(clamp(64px, 5.3vw, 94px) + 4px);
@@ -2023,6 +2023,12 @@ a.wk-btn:hover { transform: translateY(-2px); }
 .wd-q summary svg { flex: 0 0 calc(13 * var(--u)); height: calc(13 * var(--u)); fill: none; stroke: #ff5a0c; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s; }
 .wd-q[open] summary svg { transform: rotate(180deg); }
 .wd-q p { padding: 0 calc(20 * var(--u)) calc(9 * var(--u)); font: 400 calc(10.5 * var(--u))/1.4 var(--wd-body); color: #3a3340; }
+@media (min-width: 981px) {
+  .wd-faq-col { row-gap: 7px; }
+  .wd-q summary { height: auto; min-height: calc(21.5 * var(--u)); padding-top: 9px; padding-bottom: 9px; font-size: max(calc(11.6 * var(--u)), 15.5px); line-height: 1.3; }
+  .wd-q summary svg { flex-basis: 15px; height: 15px; }
+  .wd-q p { font-size: 15px; line-height: 1.55; padding-bottom: 12px; }
+}
 .wd-q summary:focus-visible { outline: 2px solid var(--wd-o); outline-offset: 2px; border-radius: calc(12 * var(--u)); }
 
 /* tablets and phones: stacked, readable sizes */
@@ -2036,7 +2042,7 @@ a.wk-btn:hover { transform: translateY(-2px); }
   .wd-hero h1 { font-size: clamp(30px, 6vw, 40px); }
   .wd-hero-text { width: auto; max-width: 420px; font-size: 14px; }
   .wd-intro-in, .wd-row1, .wd-row2, .wd-row3 { grid-template-columns: 1fr; row-gap: 18px; }
-  .wd-intro-copy p, .wd-brand-copy p, .wd-resp-copy p, .wd-ux-copy p, .wd-info p, .wd-info.cost p { font-size: 15px; line-height: 1.45; letter-spacing: 0; }
+  .wd-intro-copy p, .wd-brand-copy p, .wd-resp-copy p, .wd-ux-copy p, .wd-info p, .wd-info.cost p { font-size: 16px; line-height: 1.55; letter-spacing: 0; }
   .wd-intro-pic { max-width: 560px; }
   .wd-types { padding-top: 34px; }
   .wd-type-grid { width: auto; margin-left: 0; grid-template-columns: repeat(4, 1fr); }
@@ -2075,8 +2081,8 @@ a.wk-btn:hover { transform: translateY(-2px); }
   .wd-faq { padding: 30px 0 40px; }
   .wd-faq-grid { grid-template-columns: 1fr; row-gap: 8px; margin-left: 0; }
   .wd-faq-col { row-gap: 8px; }
-  .wd-q summary { height: auto; min-height: 44px; padding: 10px 14px 10px 16px; font-size: 14px; line-height: 1.3; gap: 10px; }
-  .wd-q p { font-size: 14px; padding: 0 16px 12px; }
+  .wd-q summary { height: auto; min-height: 50px; padding: 10px 14px 10px 16px; font-size: 15.5px; line-height: 1.3; gap: 10px; }
+  .wd-q p { font-size: 15px; line-height: 1.55; padding: 0 16px 12px; }
   .wd-lined, .wd-lined.sm { font-size: 22px; }
   .wd-line { flex-basis: 24px !important; }
   .wd-row1 h2, .wd-row2 .wd-ux h2, .wd-feat h2, .wd-info h2, .wd-info.cost h2 { font-size: 20px; line-height: 1.15; }
@@ -2093,7 +2099,7 @@ a.wk-btn:hover { transform: translateY(-2px); }
    reference position (n * --u, 1 reference px); the 1024 px column is centred, the hero picture
    stretches to the full width. Below 981px the items stack in order. */
 .cv-page {
-  --u: min(calc(100vw / 1040), 1px);
+  --u: min(calc(94vw / 1024), 1.5px); /* the whole design grows with the screen: 94% of its width, at most 1.5x */
   --hh: calc(clamp(64px, 5.3vw, 94px) + 4px);
   --ink: #2b1233; --txt: #1f1b22; --org: #ff5f0f;
   overflow: hidden; color: var(--txt);
@@ -2164,6 +2170,14 @@ a.wk-btn:hover { transform: translateY(-2px); }
 .cv-q summary svg { flex: 0 0 calc(13 * var(--u)); height: calc(13 * var(--u)); fill: none; stroke: #ff5a0c; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s; }
 .cv-q[open] summary svg { transform: rotate(180deg); }
 .cv-q p { padding: 0 calc(20 * var(--u)) calc(9 * var(--u)); font: 400 calc(10.5 * var(--u))/1.4 Lexend, "DM Sans", Arial, sans-serif; color: #3a3340; }
+.cv-t b { font-weight: 600; color: #1e1a22; }
+/* bigger, easier to read FAQ: rows grow with the text */
+@media (min-width: 981px) {
+  .cv-faq-col { row-gap: 7px; }
+  .cv-q summary { height: auto; min-height: calc(var(--rh) * var(--u)); padding-top: 9px; padding-bottom: 9px; font-size: max(calc(var(--fs) * var(--u)), 15.5px); line-height: 1.3; }
+  .cv-q summary svg { flex-basis: 15px; height: 15px; }
+  .cv-q p { font-size: 15px; line-height: 1.55; padding-bottom: 12px; }
+}
 .cv-q summary:focus-visible { outline: 2px solid var(--org); outline-offset: 2px; border-radius: calc(12 * var(--u)); }
 
 @media (max-width: 980px) {
@@ -2177,9 +2191,9 @@ a.wk-btn:hover { transform: translateY(-2px); }
   .cv-hero-img { object-position: 75% 50%; }
   .cv-hero .cv-wrap { padding-top: 34px; }
   .cv-t { white-space: normal; }
-  .cv-t.th { font-size: max(calc(var(--fs) * 1px), 19px); line-height: 1.15; }
+  .cv-t.th { font-size: max(calc(var(--fs) * 1.1px), 21px); line-height: 1.15; }
   .cv-hero h1.cv-t { font-size: clamp(30px, 7vw, 40px); }
-  .cv-t.tp { font-size: max(calc(var(--fs) * 1px), 14.5px); line-height: 1.45; white-space: normal; }
+  .cv-t.tp { font-size: max(calc(var(--fs) * 1px), 16px); line-height: 1.55; white-space: normal; }
   .cv-t.ln::before, .cv-t.ln::after { flex-basis: 20px; }
   .cv-t br { display: none; }
   .cv-hero h1 br, .cv-t.th br { display: initial; }
@@ -2201,7 +2215,7 @@ a.wk-btn:hover { transform: translateY(-2px); }
   .cv-card.dk .cv-t { color: #fff; }
   /* strips keep their design and scroll sideways */
   .cv-scroll { position: relative; margin: 0 -20px; padding: 0 20px 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .cv-grp, .cv-grp.hh { --u: .8px; position: relative; width: calc(var(--w) * var(--u)); height: calc(var(--h) * var(--u)); max-width: none; }
+  .cv-grp, .cv-grp.hh { --u: .95px; position: relative; width: calc(var(--w) * var(--u)); height: calc(var(--h) * var(--u)); max-width: none; }
   .cv-grp .cv-i, .cv-grp .cv-i.hh { position: absolute; left: calc(var(--x) * var(--u)); top: calc(var(--y) * var(--u)); width: calc(var(--w) * var(--u)); }
   .cv-grp .cv-t.tp, .cv-grp .cv-t.th { font-size: calc(var(--fs) * var(--k, 1) * var(--u)); line-height: calc(var(--lh) * var(--u)); white-space: nowrap; }
   .cv-grp .cv-t br { display: initial; }
@@ -2209,6 +2223,6 @@ a.wk-btn:hover { transform: translateY(-2px); }
   .cv-faq-in > .cv-i { margin-bottom: 18px; }
   .cv-faq-grid { flex-direction: column; gap: 8px; }
   .cv-faq-col { flex: none; width: 100%; margin: 0; row-gap: 8px; }
-  .cv-q summary { height: auto; min-height: 44px; padding: 10px 14px 10px 16px; font-size: 14px; line-height: 1.3; }
-  .cv-q p { font-size: 14px; padding: 0 16px 12px; }
+  .cv-q summary { height: auto; min-height: 50px; padding: 10px 14px 10px 16px; font-size: 15.5px; line-height: 1.3; }
+  .cv-q p { font-size: 15px; line-height: 1.55; padding: 0 16px 12px; }
 }
