@@ -54,6 +54,7 @@
   pages["service-detail"] = function () {
     var service = findService(pageData.slug || params.get("slug"));
     if (!service) return pages["not-found"]();
+    if (service.page && service.page.hero) return C.serviceLanding(service, service.page); // service with its own design
     var d = data.serviceDetail;
     var others = (data.services || []).filter(function (s) { return s.slug !== service.slug; }).slice(0, 5);
 

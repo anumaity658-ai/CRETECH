@@ -79,7 +79,111 @@ window.SITE_CONFIG = {
       "summary": "Business websites, portfolio websites, landing pages and custom web solutions.",
       "image": "photo-1498050108023-c5249f4df085",
       "intro": "A website is often the first place people learn about you. We build websites that are clear, responsive and easy to manage, based on what your project needs.",
-      "features": ["Business and corporate websites", "Personal and portfolio websites", "Landing pages for campaigns and launches", "Responsive layouts for mobile, tablet and desktop", "Custom web solutions for specific requirements"]
+      "features": ["Business and corporate websites", "Personal and portfolio websites", "Landing pages for campaigns and launches", "Responsive layouts for mobile, tablet and desktop", "Custom web solutions for specific requirements"],
+      "page": {
+        "_note": "Own design for this service (recreated from the 1024 px reference). *word* = orange. Images in assets/images/webdev/.",
+        "hero": {
+          "eyebrow": "Website Development",
+          "title": "Website Development\nServices for\n*Your Business*",
+          "tagline": ["Design", "Develop", "Launch", "Grow"],
+          "text": "Custom, scalable and user-friendly websites that build your brand, engage your audience and support your business goals.",
+          "primary": { "label": "Get Started", "href": "contact?service=Website%20Development" },
+          "secondary": { "label": "Our Services", "href": "services" },
+          "image": "assets/images/webdev/wd-hero.jpg",
+          "imageAlt": "Desktop monitor showing a website design and code editor on a desk"
+        },
+        "intro": {
+          "title": "Build a Powerful *Online Presence*",
+          "paragraphs": [
+            "A website is often the first place where people learn about a business, explore its services and decide whether they want to connect. A well-developed website helps present your work clearly, builds trust and gives visitors an easy way to understand what you offer.",
+            "Every business has different requirements. Some need a simple website to introduce their services, while others require a detailed platform with multiple pages, enquiry forms, product listings or additional functionality.",
+            "Our focus is to create websites that are visually appealing, easy to navigate and practical to use. From the initial discussion to the final handover, we keep the development process organised so that you understand what is being created and how it will support your goals."
+          ],
+          "image": "assets/images/webdev/wd-intro.jpg",
+          "imageAlt": "Overlapping website interface mockups"
+        },
+        "types": {
+          "title": "Custom Website Development for *Different Requirements*",
+          "items": [
+            { "icon": "cart", "title": "E-commerce\nWebsites" },
+            { "icon": "business", "title": "Business\nWebsites" },
+            { "icon": "corporate", "title": "Corporate\nWebsites" },
+            { "icon": "education", "title": "Educational\nWebsites" },
+            { "icon": "blog", "title": "Blog &\nContent Websites" },
+            { "icon": "portfolio", "title": "Portfolio\nWebsites" },
+            { "icon": "rocket", "title": "Landing\nPages" },
+            { "icon": "gear", "title": "Service-Based\nWebsites" }
+          ]
+        },
+        "brand": {
+          "title": "A Website Designed Around *Your Brand*",
+          "text": "Your website should communicate the identity and purpose of your business. Its layout, colours, typography, images and written content all contribute to the overall experience.",
+          "image": "assets/images/webdev/wd-brand.jpg",
+          "imageAlt": "Website design workspace with a monitor, pen holder and plants"
+        },
+        "responsive": {
+          "title": "Responsive\n*Website Development*",
+          "text": "People access websites through different devices, including desktop computers, laptops, tablets and smartphones. A website that works well on all screen sizes creates a better and more comfortable experience for your visitors.",
+          "image": "assets/images/webdev/wd-devices.jpg",
+          "imageAlt": "The same website shown on a desktop, laptop and smartphone"
+        },
+        "features": {
+          "title": "Website Features and Functionality",
+          "items": [
+            "Contact and enquiry forms.",
+            "Service and product pages.",
+            "Image galleries and portfolios.",
+            "Blog and article sections.",
+            "Navigation menus and dropdowns.",
+            "Social media links.",
+            "WhatsApp or other integrations.",
+            "Search functionality.",
+            "Admin panel and content management.",
+            "Suitable third-party integrations."
+          ]
+        },
+        "ux": {
+          "title": "User Experience and\n*Website Performance*",
+          "text": "A good website should not only look attractive but should also be comfortable to use. Visitors should be able to understand the page structure, locate important information and complete actions such as submitting an enquiry.",
+          "score": "98%",
+          "scoreLabel": "Website Performance"
+        },
+        "process": {
+          "title": "Our Website Development Process",
+          "steps": ["Initial\nDiscussion", "Requirement\nPlanning", "Design &\nDevelopment", "Review &\nTesting", "Final\nHandover"]
+        },
+        "audience": {
+          "title": "Website Development for\nIndividuals, Startups and Businesses",
+          "text": "You do not need to be a large company to have a professional website. Individuals may need a portfolio, students may want to present their projects, startups may need an online introduction, and established businesses may want to improve their existing website.",
+          "icon": "assets/images/webdev/wd-people.png"
+        },
+        "cost": {
+          "title": "Project Cost and Timeline",
+          "text": "Website development cost depends on the number of pages, design requirements, functionality, integrations, content requirements and overall complexity. A simple informational website and a feature-rich e-commerce platform involve different levels of work and timeline.",
+          "icon": "assets/images/webdev/wd-coins.png"
+        },
+        "cta": {
+          "title": "Build Your Website with",
+          "highlight": "CRETECH",
+          "text": "Your website should give visitors a clear understanding of who you are, what you offer and how they can connect with you. CRETECH helps turn your requirements into a practical website that supports your online presence.",
+          "button": { "label": "Get Started Today", "href": "contact?service=Website%20Development" }
+        },
+        "faq": {
+          "title": "Frequently *Asked Questions*",
+          "items": [
+            { "q": "What types of websites does CRETECH develop?", "a": "We develop business, corporate, e-commerce, educational, blog and content, portfolio, landing page and service-based websites, planned around what your project needs." },
+            { "q": "Can I request a website for my small business or startup?", "a": "Yes. You do not need to be a large company. We build websites for individuals, students, startups, small businesses and established companies." },
+            { "q": "Can you develop a website according to my design reference?", "a": "Yes. Share your reference, and we will discuss the layout, colours and features with you before development begins." },
+            { "q": "Will my website work on mobile phones?", "a": "Yes. Every website is built to be responsive, so it works on desktop computers, laptops, tablets and smartphones." },
+            { "q": "Can I update website content after development?", "a": "Yes. If your website includes an admin panel or content management, you can update text and images yourself. We can also help with updates." },
+            { "q": "Do you provide website domain and hosting?", "a": "We can guide you in choosing a domain and hosting and help set them up for your website. Their cost depends on the provider and plan you choose." },
+            { "q": "How much does website development cost?", "a": "The cost depends on the number of pages, design requirements, functionality, integrations, content requirements and overall complexity. We share an estimate after understanding your requirements." },
+            { "q": "How long does it take to develop a website?", "a": "The timeline depends on the size and complexity of the website. A simple informational website takes less time than a feature-rich e-commerce platform. We confirm the timeline before work begins." },
+            { "q": "Can I request changes during development?", "a": "Yes. We share the work with you during the process so you can review it, and agreed changes are made before the final handover." },
+            { "q": "How can I start my website development project?", "a": "Contact us through the enquiry form, email or phone with your requirements. We will discuss your project and suggest the best way forward." }
+          ]
+        }
+      }
     },
     {
       "slug": "app-development",

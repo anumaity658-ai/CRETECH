@@ -855,6 +855,98 @@
       hero + form + features + touch + details + "</div></div>";
   }
 
+  /* ---------- Service landing page (Website Development, from the 1024 px reference) ----------
+     Used when a service has its own "page" data; other services keep the shared detail layout. */
+  var WD_ICONS = {
+    cart: '<path class="o" d="M5 9h5.5l5 20.5h20.5l4.5-14H12.5"/><circle class="o" cx="18.5" cy="36.5" r="3"/><circle class="o" cx="33" cy="36.5" r="3"/>',
+    business: '<path class="p" d="M5 41h38M9 41V22h11M20 41V10l12 4v27M32 22h8v19"/><path class="p d" d="M24.5 17.5h.1M28 18.5h.1M24.5 23h.1M28 23h.1M24.5 28.5h.1M28 28.5h.1M24.5 34h.1M28 34h.1"/>',
+    corporate: '<path class="p" d="M5 41h38M8 41V24h9M17 41V12l7-5 7 5v29M31 24h9v17"/><path class="p d" d="M21 16h.1M24 16h.1M27 16h.1M21 21h.1M24 21h.1M27 21h.1M21 26h.1M24 26h.1M27 26h.1M21 31h.1M24 31h.1M27 31h.1M21 36h.1M27 36h.1M11.5 29h.1M11.5 34h.1M35.5 29h.1M35.5 34h.1"/>',
+    education: '<path class="p" d="M3 18 24 9l21 9-21 9Z"/><path class="p" d="M11.5 22.5V32c0 2.5 5.5 5.5 12.5 5.5S36.5 34.5 36.5 32v-9.5"/><path class="p" d="M24 18h.1"/><path class="o" d="M42 19.5v10"/>',
+    blog: '<path class="o" d="M33 23v15a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3V10a3 3 0 0 1 3-3h20a3 3 0 0 1 3 3v2M12.5 15h14M12.5 21h11M12.5 27h7"/><path class="o" d="m26 33 1-6L41 13l5 5-14 14Z M38.5 15.5l5 5"/>',
+    portfolio: '<rect class="p" x="6" y="8" width="36" height="32" rx="3"/><path class="p" d="m6 33 11-11 9 9 6-6 10 10"/><circle class="o" cx="16" cy="16" r="3.2"/>',
+    rocket: '<path class="o" d="M41 7c-8 0-15 4-20 11l-4 6 7 7 6-4c7-5 11-12 11-20Z"/><circle class="o" cx="31.5" cy="16.5" r="3"/><path class="o" d="M17 24H10l-4 5 8 2M24 31v7l-5 4-2-8M14 34c-3 0-5 2-6 7 5-1 7-3 7-6"/>',
+    gear: '<circle class="o" cx="24" cy="24" r="6"/><path class="o" d="M21 4h6l1 5 4 2 4.5-3 4.3 4.3-3 4.5 2 4 5 1v6l-5 1-2 4 3 4.5-4.3 4.3-4.5-3-4 2-1 5h-6l-1-5-4-2-4.5 3-4.3-4.3 3-4.5-2-4-5-1v-6l5-1 2-4-3-4.5L11.5 8l4.5 3 4-2Z"/>'
+  };
+
+  function serviceLanding(service, p) {
+    var h = p.hero || {}, it = p.intro || {}, ty = p.types || {}, br = p.brand || {}, rs = p.responsive || {},
+      ft = p.features || {}, ux = p.ux || {}, pr = p.process || {}, au = p.audience || {}, co = p.cost || {},
+      c = p.cta || {}, fq = p.faq || {};
+    function img(src, cls, alt, eager) {
+      return src ? '<img class="' + cls + '" src="' + esc(image(src, 2000)) + '" alt="' + esc(alt || "") + '"' + (eager ? ' fetchpriority="high"' : ' loading="lazy"') + ' decoding="async">' : "";
+    }
+    function lined(title, cls) {
+      return '<h2 class="wd-lined ' + (cls || "") + '"><span class="wd-line l" aria-hidden="true"></span><span>' + rich(title) + '</span><span class="wd-line r" aria-hidden="true"></span></h2>';
+    }
+
+    var hero = '<section class="wd-hero">' + img(h.image, "wd-hero-img", h.imageAlt, true) +
+      '<div class="wd-wrap wd-hero-in"><p class="wd-eyebrow">' + esc(h.eyebrow) + "</p>" +
+      "<h1>" + rich(h.title) + "</h1>" +
+      (h.tagline && h.tagline.length ? '<p class="wd-tagline">' + h.tagline.map(function (t) { return "<span>" + esc(t) + "</span>"; }).join('<i aria-hidden="true">·</i>') + "</p>" : "") +
+      (h.text ? '<p class="wd-hero-text">' + esc(h.text) + "</p>" : "") +
+      '<div class="wd-btns">' +
+      (h.primary && h.primary.label ? '<a class="wd-btn-o" href="' + link(h.primary.href) + '">' + esc(h.primary.label) + " " + SVC_ARROW + "</a>" : "") +
+      (h.secondary && h.secondary.label ? '<a class="wd-btn-line" href="' + link(h.secondary.href) + '">' + esc(h.secondary.label) + "</a>" : "") +
+      "</div></div></section>";
+
+    var intro = '<section class="wd-intro"><div class="wd-wrap wd-intro-in"><div class="wd-intro-copy"><h2>' + rich(it.title) + "</h2>" +
+      (it.paragraphs || []).map(function (t) { return "<p>" + esc(t) + "</p>"; }).join('<span class="wd-dash" aria-hidden="true"></span>') + "</div>" +
+      '<div class="wd-intro-pic">' + img(it.image, "wd-intro-img", it.imageAlt) + "</div></div></section>";
+
+    var types = '<section class="wd-types"><div class="wd-wrap">' + lined(ty.title) + '<ul class="wd-type-grid">' +
+      (ty.items || []).map(function (t) {
+        return '<li class="wd-type"><svg viewBox="0 0 48 48" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (WD_ICONS[t.icon] || WD_ICONS.gear) + "</svg><b>" + rich(t.title) + "</b></li>";
+      }).join("") + "</ul></div></section>";
+
+    var brand = '<section class="wd-brand">' + img(br.image, "wd-brand-img", br.imageAlt) +
+      '<div class="wd-wrap wd-brand-in"><div class="wd-brand-copy wd-bar"><h2>' + rich(br.title) + "</h2><p>" + esc(br.text) + "</p></div></div></section>";
+
+    var items = ft.items || [], half = Math.ceil(items.length / 2);
+    function checks(list) {
+      return "<ul>" + list.map(function (t) { return '<li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m2.5 8.5 3.5 3.5 7.5-8"/></svg>' + esc(t) + "</li>"; }).join("") + "</ul>";
+    }
+    var row1 = '<div class="wd-wrap wd-row1"><div class="wd-resp"><div class="wd-resp-copy wd-bar"><h2>' + rich(rs.title) + "</h2><p>" + esc(rs.text) + "</p></div>" +
+      img(rs.image, "wd-resp-img", rs.imageAlt) + "</div>" +
+      '<div class="wd-feat wd-card"><h2>' + rich(ft.title) + '</h2><div class="wd-feat-cols">' + checks(items.slice(0, half)) + '<span class="wd-vline" aria-hidden="true"></span>' + checks(items.slice(half)) + "</div></div></div>";
+
+    var ticks = "";
+    for (var k = 1; k < 8; k++) {
+      var a = Math.PI - k * Math.PI / 8, x1 = 65 + 43.5 * Math.cos(a), y1 = 66 - 43.5 * Math.sin(a), x2 = 65 + 56.5 * Math.cos(a), y2 = 66 - 56.5 * Math.sin(a);
+      ticks += '<line x1="' + x1.toFixed(1) + '" y1="' + y1.toFixed(1) + '" x2="' + x2.toFixed(1) + '" y2="' + y2.toFixed(1) + '"/>';
+    }
+    var gauge = '<div class="wd-gauge"><svg viewBox="0 0 130 72" aria-hidden="true"><defs><linearGradient id="wdG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9a5cf0"/><stop offset=".38" stop-color="#ee4f9a"/><stop offset=".7" stop-color="#ff7a2e"/><stop offset="1" stop-color="#ff9a12"/></linearGradient></defs>' +
+      '<path class="wd-g-arc" d="M15 66a50 50 0 0 1 100 0"/><g class="wd-g-ticks">' + ticks + "</g>" +
+      '<path class="wd-g-needle" d="M80 52 92 34"/></svg><b>' + esc(ux.score) + "</b><span>" + esc(ux.scoreLabel) + "</span></div>";
+    var steps = pr.steps || [];
+    var row2 = '<div class="wd-wrap wd-row2"><div class="wd-ux wd-card"><div class="wd-ux-copy wd-bar"><h2>' + rich(ux.title) + "</h2><p>" + esc(ux.text) + "</p></div>" + gauge + "</div>" +
+      '<div class="wd-process">' + lined(pr.title, "sm") + '<ol class="wd-steps">' + steps.map(function (s, i) {
+        return '<li class="wd-step"><span class="wd-num">' + String(i + 1).padStart(2, "0") + "</span><b>" + rich(s) + "</b></li>" +
+          (i < steps.length - 1 ? '<li class="wd-arrow" aria-hidden="true">' + SVC_ARROW + "</li>" : "");
+      }).join("") + "</ol></div></div>";
+
+    function infoCard(d, cls) {
+      return '<div class="wd-info wd-card ' + cls + '"><span class="wd-info-ic">' + (d.icon ? '<img src="' + esc(image(d.icon, 300)) + '" alt="" loading="lazy">' : "") + "</span>" +
+        '<div class="wd-info-copy"><h2>' + rich(d.title) + "</h2><p>" + esc(d.text) + "</p></div></div>";
+    }
+    var row3 = '<div class="wd-wrap wd-row3">' + infoCard(au, "aud") + infoCard(co, "cost") + "</div>";
+
+    var cta = '<div class="wd-wrap"><div class="wd-cta"><h2>' + esc(c.title) + "<b>" + esc(c.highlight) + '</b></h2><span class="wd-cta-line" aria-hidden="true"></span>' +
+      '<p>' + esc(c.text) + "</p>" +
+      (c.button && c.button.label ? '<a class="wd-cta-btn" href="' + link(c.button.href) + '">' + esc(c.button.label) + " " + SVC_ARROW + "</a>" : "") + "</div></div>";
+
+    var qs = fq.items || [], qh = Math.ceil(qs.length / 2);
+    function faqCol(list) {
+      return '<div class="wd-faq-col">' + list.map(function (q) {
+        return '<details class="wd-q"><summary>' + esc(q.q) + '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 6 4.5 4.5L12.5 6"/></svg></summary><p>' + esc(q.a) + "</p></details>";
+      }).join("") + "</div>";
+    }
+    var faq = '<section class="wd-faq"><span class="wd-wave l" aria-hidden="true"></span><span class="wd-wave r" aria-hidden="true"></span><div class="wd-wrap">' + lined(fq.title, "sm") +
+      '<div class="wd-faq-grid">' + faqCol(qs.slice(0, qh)) + faqCol(qs.slice(qh)) + "</div></div></section>";
+
+    return '<div class="wd-page">' + hero + intro + types + brand +
+      '<section class="wd-body">' + row1 + row2 + row3 + cta + "</section>" + faq + "</div>";
+  }
+
   function notice(message, isError) {
     return '<div class="notice' + (isError ? " error" : "") + '" role="' + (isError ? "alert" : "status") + '">' + esc(message) + "</div>";
   }
@@ -862,7 +954,7 @@
   window.SiteComponents = {
     esc: esc, rich: rich, link: link, image: image, button: button, brand: brand,
     header: header, footer: footer, heroSlider: heroSlider, subHero: subHero, sectionHeading: sectionHeading,
-    serviceCard: serviceCard, homeServices: homeServices, homeWork: homeWork, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, contactPage: contactPage, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
+    serviceCard: serviceCard, homeServices: homeServices, homeWork: homeWork, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, contactPage: contactPage, serviceLanding: serviceLanding, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
     cta: cta, notice: notice
   };
 })();

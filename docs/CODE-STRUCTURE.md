@@ -132,6 +132,10 @@ All text, services, FAQs, steps and image links are in `content/site-config.js`.
   `homeFaq()` in js/site-components.js, the open/close in js/script.js (one answer at a time),
   styles under "Frequently Asked Questions" in css/cms.css. Images: `assets/images/faq/`.
 - Logos: `assets/images/logo.svg` (light backgrounds) and `logo-white.svg` (dark).
+- Website Development has its own page design: `services[0].page` (hero, intro, types, brand,
+  responsive, features, ux, process, audience, cost, cta, faq). Any service with a `page` object uses
+  this layout (`serviceLanding()` in js/site-components.js, styles under "Service landing" in
+  css/cms.css); the others keep the shared detail layout. Images: `assets/images/webdev/`.
 - A new service needs only a new item in `"services"` with a unique `slug`;
   its page, footer link, sitemap entry and contact-form option appear automatically.
 
