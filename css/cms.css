@@ -1286,6 +1286,8 @@
 }
 /* real <img> (replaceable from the admin) under the glass layers */
 .svp-img { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+/* card showing its detail page banner (32:9, text on the left): show the right-hand picture part, full height */
+.svp-img-banner { object-position: right center; }
 .svp-grid.last-2 .svp-card:nth-last-child(-n+2), .svp-grid.last-1 .svp-card:last-child { width: calc(var(--cw) * 391 / 292); aspect-ratio: 391 / 222; }
 /* glossy glass: top sheen, soft tone wash at the bottom, thin inner edge */
 .svp-card::before {

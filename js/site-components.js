@@ -693,7 +693,18 @@
   /* ---------- Services page (from the 1024 px reference) ---------- */
   var SVC_ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6.5 18.5 12 13 17.5"/></svg>';
 
-  function servicesPage(sp) {
+  // The banner (hero) picture of a card's own detail page, so each card shows the same picture as its banner.
+  function serviceBanner(href, services) {
+    var m = /^\/?services\/([a-z0-9-]+)\/?$/.exec(String(href || ""));
+    if (!m) return "";
+    for (var i = 0; i < (services || []).length; i++) {
+      var s = services[i];
+      if (s.slug === m[1]) return (s.page && s.page.hero && s.page.hero.image) || "";
+    }
+    return "";
+  }
+
+  function servicesPage(sp, services) {
     sp = sp || {};
     var b = sp.banner || {}, c = sp.cta || {}, cards = sp.cards || [];
     var tones = ["orange", "purple", "blue", "green", "amber", "pink", "teal"];
@@ -712,9 +723,9 @@
 
     var grid = '<section class="svp-grid-sec" id="all-services"><div class="svp-wrap"><div class="svp-grid' + (lastRow ? " last-" + lastRow : "") + '">' + cards.map(function (s, i) {
       var tone = tones.indexOf(s.tone) !== -1 ? s.tone : "orange";
-      var tag = s.href ? "a" : "div";
+      var tag = s.href ? "a" : "div", heroPic = serviceBanner(s.href, services), pic = heroPic || s.image;
       return "<" + tag + ' class="svp-card t-' + tone + '"' + (s.href ? ' href="' + link(s.href) + '"' : "") + ">" +
-        (s.image ? '<img class="svp-img" src="' + esc(image(s.image, 900)) + '" alt="' + esc(s.imageAlt || String(s.title || "").replace(/\n/g, " ")) + '" loading="lazy" decoding="async">' : "") +
+        (pic ? '<img class="svp-img' + (heroPic ? " svp-img-banner" : "") + '" src="' + esc(image(pic, 1400)) + '" alt="' + esc(s.imageAlt || String(s.title || "").replace(/\n/g, " ")) + '" loading="lazy" decoding="async">' : "") +
         '<div class="svp-body">' +
         '<span class="svp-num">' + String(i + 1).padStart(2, "0") + "</span>" +
         "<h2>" + rich(s.title) + "</h2><p>" + esc(s.text) + "</p></div>" +

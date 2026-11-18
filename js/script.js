@@ -48,7 +48,7 @@
   };
 
   pages.services = function () {
-    return C.servicesPage(data.servicesPage);
+    return C.servicesPage(data.servicesPage, data.services);
   };
 
   pages["service-detail"] = function () {

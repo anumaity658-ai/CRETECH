@@ -22,6 +22,22 @@ file) and the page shows it, no code change needed.
   plat.jpg, types.jpg), process strip (proc.jpg), checklist box (check.jpg / checks.jpg),
   Website Development page bands.
 
+
+## Services page cards use the banner
+
+Each card on the Services page shows the **banner (hero.jpg) of its own detail page**,
+automatically. There is no separate card picture to make. If a service has no banner yet,
+the card falls back to its old card photo (assets/images/services-page/svc-XX.jpg).
+
+The card is narrower than the banner, so it shows only the **right-hand part** of the banner,
+at full height. When making a banner (3072 x 864):
+
+- Put the main object (laptop, phone, icon...) inside the **right 1024 px** (x 2048 to 3072).
+  That part shows in every card, on laptop and on phone.
+- Keep the most important part of that object in the **top ~60%**: the card title and text sit on
+  the bottom of the card.
+- The left ~45% stays empty for the banner text, as before.
+
 ## Card pictures per page
 
 ### Website Development

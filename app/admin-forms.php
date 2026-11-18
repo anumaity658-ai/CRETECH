@@ -94,7 +94,7 @@ function service_sections(int $i): array
     if (!isset($cards[$i])) {
         return [];
     }
-    $sections = ['card' => [['servicesPage', 'cards', $i], 'Card on the Services page', 'Title, short text and photo.']];
+    $sections = ['card' => [['servicesPage', 'cards', $i], 'Card on the Services page', 'Title and short text. The card photo is the banner of its detail page (set automatically); this photo is used only when the service has no detail page banner.']];
     $j = service_detail_index($cards[$i]);
     if ($j !== null) {
         $sections['detail'] = [['services', $j], 'Detail page', 'Text, features and photo of its own page.'];
