@@ -32,7 +32,7 @@ $data = cms_public_data();
 foreach ($data['services'] ?? [] as $i => $service) {
     if (is_array($service) && ($service['slug'] ?? '') !== $route['slug']) {
         // keep only the banner picture: the Services page cards show it
-        $data['services'][$i]['heroImage'] = (string) ($service['page']['hero']['image'] ?? '');
+        $data['services'][$i]['heroImage'] = (string) ($service['page']['hero']['image'] ?? $service['hero']['image'] ?? '');
         unset($data['services'][$i]['page']);
     }
 }

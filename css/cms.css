@@ -1873,30 +1873,6 @@ a.wk-btn:hover { transform: translateY(-2px); }
 .wd-line.l { background: linear-gradient(90deg, rgba(255, 95, 15, 0), var(--wd-o)); }
 .wd-line.r { background: linear-gradient(90deg, var(--wd-o), rgba(255, 95, 15, 0)); }
 
-/* 01 hero: picture under the header (full width), text on the left */
-.wd-hero {
-  position: relative; isolation: isolate; display: flex; align-items: center;
-  padding-top: var(--hh); min-height: calc(var(--hh) + max(288 * var(--u), 100vw * 288 / 1024)); /* same banner height as every service page */
-  background: linear-gradient(180deg, #fbe9df var(--hh), #1c1f30 var(--hh)); font-family: Poppins, var(--wd-head);
-}
-.wd-hero-img { position: absolute; z-index: -1; left: 0; right: 0; bottom: 0; top: var(--hh); width: 100%; height: calc(100% - var(--hh)); object-fit: cover; object-position: 62% 100%; }
-.wd-hero-in { padding: calc(4 * var(--u)) 0 calc(36 * var(--u)) calc(100 * var(--u)); }
-.wd-eyebrow { font: 600 calc(13.6 * var(--u))/1 Poppins, var(--wd-head); letter-spacing: .005em; text-transform: uppercase; color: #ff8a1c; }
-.wd-hero h1 { margin-top: calc(9 * var(--u)); font: 600 calc(33.6 * var(--u))/1.06 Poppins, var(--wd-head); letter-spacing: -.012em; color: #fff; }
-.wd-hero h1 em { font-style: normal; background: linear-gradient(180deg, #fdd0ad, #f3a06b); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.wd-tagline { display: flex; align-items: center; margin-top: calc(13 * var(--u)); font: 400 calc(14.4 * var(--u))/1.2 Poppins, var(--wd-head); color: #fff; letter-spacing: .01em; }
-.wd-tagline i { margin: 0 calc(15 * var(--u)); font-style: normal; font-weight: 700; }
-.wd-hero-text { width: calc(300 * var(--u)); margin-top: calc(12 * var(--u)); font: 400 calc(11.8 * var(--u))/1.23 Poppins, var(--wd-head); color: rgba(255, 255, 255, .93); }
-.wd-btns { display: flex; flex-wrap: wrap; gap: calc(21 * var(--u)); margin-top: calc(18 * var(--u)); }
-.wd-btn-o, .wd-btn-line {
-  display: inline-flex; align-items: center; justify-content: center; gap: calc(6 * var(--u));
-  height: calc(30 * var(--u)); min-height: 30px; border-radius: 99px;
-  font: 500 max(calc(11.2 * var(--u)), 11.5px)/1 Poppins, var(--wd-head); white-space: nowrap; transition: transform .2s, box-shadow .2s;
-}
-.wd-btn-o { width: calc(124 * var(--u)); color: #fff; background: linear-gradient(180deg, #ff8a2b, #ec5d12); box-shadow: 0 0 calc(14 * var(--u)) rgba(255, 120, 30, .45); }
-.wd-btn-o svg { width: 1.05em; height: 1.05em; }
-.wd-btn-line { width: calc(118 * var(--u)); color: #fff; border: 1.5px solid rgba(255, 255, 255, .9); }
-.wd-btn-o:hover, .wd-btn-line:hover { transform: translateY(-2px); }
 
 /* 02 intro: text left, mockup picture right */
 .wd-intro-in { display: grid; grid-template-columns: calc(445 * var(--u)) calc(420 * var(--u)); column-gap: calc(33 * var(--u)); align-items: start; padding: calc(6 * var(--u)) 0 0 calc(68 * var(--u)); }
@@ -2037,12 +2013,6 @@ a.wk-btn:hover { transform: translateY(-2px); }
 @media (max-width: 980px) {
   .wd-page { --u: 1px; }
   .wd-wrap { width: auto; padding-left: 20px !important; padding-right: 20px; margin: 0; }
-  .wd-hero { min-height: 0; padding-bottom: 40px; }
-  .wd-hero-img { object-position: 75% 50%; }
-  .wd-hero::after { content: ""; position: absolute; z-index: -1; inset: var(--hh) 0 0; background: linear-gradient(90deg, rgba(20, 24, 42, .88), rgba(20, 24, 42, .55)); }
-  .wd-hero-in { padding-top: 34px; padding-bottom: 20px; }
-  .wd-hero h1 { font-size: clamp(30px, 6vw, 40px); }
-  .wd-hero-text { width: auto; max-width: 420px; font-size: 14px; }
   .wd-intro-in, .wd-row1, .wd-row2, .wd-row3 { grid-template-columns: 1fr; row-gap: 18px; }
   .wd-intro-copy p, .wd-brand-copy p, .wd-resp-copy p, .wd-ux-copy p, .wd-info p, .wd-info.cost p { font-size: 16px; line-height: 1.55; letter-spacing: 0; }
   .wd-intro-pic { max-width: 560px; }
@@ -2163,11 +2133,6 @@ a.wk-btn:hover { transform: translateY(-2px); }
 .cv-btn.k-cream { color: #f1580f; background: linear-gradient(180deg, #fffaf6, #ffeee2); box-shadow: 0 calc(4 * var(--u)) calc(10 * var(--u)) rgba(120, 40, 0, .18); }
 
 /* hero: picture under the header, full width; items on the 1024 px column */
-.cv-hero { position: relative; isolation: isolate; display: flex; align-items: center; padding-top: var(--hh); min-height: calc(var(--hh) + max(var(--H) * var(--u), 100vw * var(--H) / 1024)); background: linear-gradient(180deg, #fbe9df var(--hh), #f6ddd0 var(--hh)); }
-.cv-hero.dark { background: linear-gradient(180deg, #fbe9df var(--hh), #1c1f30 var(--hh)); }
-.cv-hero-img { position: absolute; z-index: -1; left: 0; right: 0; bottom: 0; top: var(--hh); width: 100%; height: calc(100% - var(--hh)); object-fit: cover; object-position: 60% 100%; }
-.cv-hero.dark .cv-t.tp { color: rgba(255, 255, 255, .93); }
-.cv-hero.dark .cv-t.th { color: #fff; }
 
 /* FAQ: real accordions, two columns; the section grows when an answer opens */
 .cv-faq { position: relative; }
@@ -2195,18 +2160,12 @@ a.wk-btn:hover { transform: translateY(-2px); }
   .cv-wrap { width: auto; height: auto; display: flex; flex-direction: column; gap: 14px; padding: 28px 20px; }
   .cv-i, .cv-i.hh { position: relative; left: auto; top: auto; width: auto; height: auto; max-width: 100%; }
   .cv-i.nm { display: none; }
-  .cv-hero { min-height: 0; padding-bottom: 10px; }
-  .cv-hero::after { content: ""; position: absolute; z-index: -1; inset: var(--hh) 0 0; background: linear-gradient(90deg, rgba(252, 240, 233, .94), rgba(252, 240, 233, .7)); }
-  .cv-hero.dark::after { background: linear-gradient(90deg, rgba(20, 24, 42, .9), rgba(20, 24, 42, .6)); }
-  .cv-hero-img { object-position: 75% 50%; }
-  .cv-hero .cv-wrap { padding-top: 34px; }
   .cv-t { white-space: normal; }
   .cv-t.th { font-size: max(calc(var(--fs) * 1.1px), 21px); line-height: 1.15; }
-  .cv-hero h1.cv-t { font-size: clamp(30px, 7vw, 40px); }
   .cv-t.tp { font-size: max(calc(var(--fs) * 1px), 16px); line-height: 1.55; white-space: normal; }
   .cv-t.ln::before, .cv-t.ln::after { flex-basis: 20px; }
   .cv-t br { display: none; }
-  .cv-hero h1 br, .cv-t.th br { display: initial; }
+  .cv-t.th br { display: initial; }
   .cv-img { width: 100% !important; max-width: 560px; aspect-ratio: var(--w) / var(--h); height: auto !important; }
   .cv-card { min-height: 150px; padding: 18px 18px 20px; }
   .cv-card-img { object-position: right center; }
@@ -2235,4 +2194,50 @@ a.wk-btn:hover { transform: translateY(-2px); }
   .cv-faq-col { flex: none; width: 100%; margin: 0; row-gap: 8px; }
   .cv-q summary { height: auto; min-height: 50px; padding: 10px 14px 10px 16px; font-size: 15.5px; line-height: 1.3; }
   .cv-q p { font-size: 15px; line-height: 1.55; padding: 0 16px 12px; }
+}
+
+/* ---------- Service banner: one design for every service page (serviceHero in site-components.js) ----------
+   Picture area is always 32:9 on laptops (make pictures 3072 x 864), text on the left half,
+   straight bottom edge. Light picture + dark text; a soft cream wash on the left keeps text readable. */
+.svh {
+  --u: min(calc(94vw / 1024), 1.5px);
+  --hh: calc(clamp(64px, 5.3vw, 94px) + 4px);
+  --svh-ink: #26122c; --svh-o: #ff5f0f;
+  position: relative; isolation: isolate; display: flex; align-items: center;
+  padding-top: var(--hh); height: calc(var(--hh) + 100vw * 9 / 32); /* same height on every service page */
+  background: #fbe9df; font-family: Poppins, Outfit, "DM Sans", Arial, sans-serif; color: var(--svh-ink);
+}
+.svh :where(h1, p) { margin: 0; }
+.svh-img { position: absolute; z-index: -2; left: 0; right: 0; bottom: 0; top: var(--hh); width: 100%; height: calc(100% - var(--hh)); object-fit: cover; object-position: right center; }
+.svh::before { content: ""; position: absolute; z-index: -1; inset: var(--hh) 0 0; pointer-events: none; background: linear-gradient(90deg, rgba(252, 236, 226, .78) 0%, rgba(252, 236, 226, .5) 32%, rgba(252, 236, 226, 0) 50%); }
+.svh-in { width: calc(1024 * var(--u)); max-width: 100%; margin: 0 auto; padding: 0 calc(490 * var(--u)) 0 calc(80 * var(--u)); box-sizing: border-box; }
+.svh-eyebrow { font: 600 max(calc(13 * var(--u)), 12px)/1.2 Poppins, Outfit, sans-serif; letter-spacing: .02em; text-transform: uppercase; color: var(--svh-o); }
+.svh h1 { margin-top: calc(9 * var(--u)); font: 600 calc(32 * var(--u))/1.1 Poppins, Outfit, sans-serif; letter-spacing: -.015em; color: var(--svh-ink); }
+.svh h1 em { font-style: normal; color: var(--svh-o); }
+.svh-tagline { display: flex; align-items: center; margin-top: calc(12 * var(--u)); font: 500 max(calc(14 * var(--u)), 14px)/1.2 Poppins, sans-serif; color: var(--svh-ink); }
+.svh-tagline i { margin: 0 calc(12 * var(--u)); font-style: normal; font-weight: 700; color: var(--svh-o); }
+.svh-text { max-width: calc(340 * var(--u)); margin-top: calc(12 * var(--u)); font: 400 max(calc(12.5 * var(--u)), 14px)/1.45 Poppins, sans-serif; color: #3d3442; }
+.svh-btns { display: flex; flex-wrap: wrap; gap: calc(16 * var(--u)); margin-top: calc(20 * var(--u)); }
+.svh-btn-o, .svh-btn-line {
+  display: inline-flex; align-items: center; justify-content: center; gap: calc(6 * var(--u));
+  height: max(calc(34 * var(--u)), 40px); padding: 0 max(calc(20 * var(--u)), 18px); border-radius: 99px;
+  font: 500 max(calc(12 * var(--u)), 13.5px)/1 Poppins, sans-serif; white-space: nowrap; text-decoration: none; transition: transform .2s, box-shadow .2s;
+}
+.svh-btn-o { color: #fff; background: linear-gradient(180deg, #ff8a2b, #ec5d12); box-shadow: 0 calc(6 * var(--u)) calc(16 * var(--u)) rgba(236, 93, 18, .35); }
+.svh-btn-o svg { width: 1.05em; height: 1.05em; }
+.svh-btn-line { color: var(--svh-ink); border: 1.5px solid var(--svh-ink); background: rgba(255, 255, 255, .35); }
+.svh-btn-o:hover, .svh-btn-line:hover { transform: translateY(-2px); }
+
+/* tablets and phones: text stacked on top of the picture (right side of the picture stays visible) */
+@media (max-width: 980px) {
+  .svh { height: auto; }
+  .svh::before { background: linear-gradient(90deg, rgba(252, 236, 226, .92) 0%, rgba(252, 236, 226, .72) 60%, rgba(252, 236, 226, .35) 100%); }
+  .svh-in { width: auto; padding: 36px 20px 40px; }
+  .svh h1 { font-size: clamp(30px, 6.5vw, 40px); }
+  .svh-text { max-width: 440px; font-size: 15px; }
+}
+/* small laptops: let a long text grow the banner instead of overflowing it */
+@media (min-width: 981px) and (max-width: 1199px) {
+  .svh { height: auto; min-height: calc(var(--hh) + 100vw * 9 / 32); }
+  .svh-in { padding-top: 20px; padding-bottom: 24px; }
 }

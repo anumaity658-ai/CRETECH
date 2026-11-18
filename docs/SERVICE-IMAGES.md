@@ -15,7 +15,9 @@ file) and the page shows it, no code change needed.
 - Rounded corners and the soft shadow of every card come from the code: make the pictures as
   plain rectangles, without corners or shadow.
 - Keep the text area empty, the text is real text on top:
-  - banner: left ~45% (heading, text, buttons);
+  - banner: left half (heading, text, buttons). Every service page uses the same banner design
+    (same height, text style and buttons), so make every banner the same way: light, soft picture,
+    no wave or curve at the bottom (the banner ends in a straight line), no text in the picture;
   - service and info cards: left ~55% (card title and text); the picture goes on the right.
   - intro picture: no text on it.
 - Not part of the standard (kept from the reference, no need to make): category strip (cats.jpg,
@@ -36,7 +38,7 @@ at full height. When making a banner (3072 x 864):
   That part shows in every card, on laptop and on phone.
 - Keep the most important part of that object in the **top ~60%**: the card title and text sit on
   the bottom of the card.
-- The left ~45% stays empty for the banner text, as before.
+- The left half stays empty for the banner text.
 
 ## Card pictures per page
 

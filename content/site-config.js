@@ -91,7 +91,6 @@ window.SITE_CONFIG = {
         "hero": {
           "eyebrow": "Website Development",
           "title": "Website Development\nServices for\n*Your Business*",
-          "tagline": ["Design", "Develop", "Launch", "Grow"],
           "text": "Custom, scalable and user-friendly websites that build your brand, engage your audience and support your business goals.",
           "primary": { "label": "Get Started", "href": "contact?service=Website%20Development" },
           "secondary": { "label": "Our Services", "href": "services" },
@@ -241,46 +240,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/app-development/",
         "theme": "",
         "hero": {
-          "dark": true,
-          "y": [44, 332],
+          "eyebrow": "App Development Services",
+          "title": "App Development\nServices for\n*Your Ideas*",
+          "text": "Turn your app idea into a functional, user-friendly and reliable application for your business, startup or organisation.",
+          "primary": {
+            "label": "Discuss Your Idea",
+            "href": "contact?service=App%20Development"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/app-development/hero.jpg",
-          "alt": "Two smartphones showing a mobile app with services, booking, products and profile screens",
-          "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [114, 63, 177], "f": [12, 600, 15, "P"], "c": "#ff8a1c", "text": "App Development Services" },
-            {
-              "t": "txt",
-              "tag": "h1",
-              "box": [113, 80, 333],
-              "f": [37, 600, 37.2, "P"],
-              "em": "#ff8a1c",
-              "text": "App Development\nServices for\n*Your Ideas*"
-            },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [114, 200, 337],
-              "f": [14.5, 400, 17.6, "P"],
-              "c": "#fff",
-              "text": "Turn your app idea into a functional, user-friendly\nand reliable application for your business,\nstartup or organisation."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [113, 264, 157, 33],
-              "f": [12.6, 500, 0, "P"],
-              "label": "Discuss Your Idea",
-              "href": "contact?service=App%20Development"
-            },
-            {
-              "t": "btn",
-              "kind": "line",
-              "box": [299, 264, 134, 32],
-              "f": [12.6, 500, 0, "P"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Two smartphones showing a mobile app with services, booking, products and profile screens"
         },
         "body": {
           "y": [330, 1474],
@@ -710,40 +682,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/ui-ux-design/",
         "theme": "",
         "hero": {
-          "dark": true,
-          "y": [44, 332],
+          "eyebrow": "UI/UX Design Services",
+          "title": "UI/UX Design Services\nfor Better Digital\n*Experiences*",
+          "text": "Create clear, attractive and user-friendly interfaces for websites and applications that your users will enjoy and use with ease.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=UI%2FUX%20Design"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/ui-ux-design/hero.jpg",
-          "alt": "Laptop showing a UI design layout with floating UI and UX icons",
-          "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [100, 57, 158], "f": [13, 600, 15, "P"], "c": "#f0891c", "text": "UI/UX Design Services" },
-            { "t": "txt", "tag": "h1", "box": [100, 79.5, 379], "f": [33, 600, 32, "P", -0.01], "text": "UI/UX Design Services\nfor Better Digital" },
-            { "t": "txt", "tag": "span", "box": [100, 147, 267], "f": [32, 600, 41, "P", -0.01], "c": "#f8b083", "text": "Experiences" },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [100, 201, 294],
-              "f": [14, 400, 17.3, "P"],
-              "c": "#fff",
-              "text": "Create clear, attractive and user-friendly\ninterfaces for websites and applications that\nyour users will enjoy and use with ease."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [100, 267, 172, 32],
-              "f": [12.6, 500, 0, "P"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=UI%2FUX%20Design"
-            },
-            {
-              "t": "btn",
-              "kind": "line",
-              "box": [295, 267, 130, 32],
-              "f": [12.6, 500, 0, "P"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Laptop showing a UI design layout with floating UI and UX icons"
         },
         "body": {
           "y": [340, 1308.2],
@@ -1158,40 +1109,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/seo-services/",
         "theme": "",
         "hero": {
-          "dark": true,
-          "y": [44, 332],
+          "eyebrow": "SEO Services",
+          "title": "SEO Services to Improve\nYour Website’s\n*Search Visibility*",
+          "text": "Improve your website’s search presence, reach the right audience and build a stronger online foundation with CRETECH’s SEO services.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=SEO%20Services"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/seo-services/hero.jpg",
-          "alt": "Laptop showing a search page with a magnifying glass, a target and a growth chart",
-          "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [100, 61, 85], "f": [12, 600, 15, "P"], "c": "#f0891c", "text": "SEO Services" },
-            { "t": "txt", "tag": "h1", "box": [100, 83, 402], "f": [28.5, 600, 27.6, "P", -0.01], "text": "SEO Services to Improve\nYour Website’s" },
-            { "t": "txt", "tag": "span", "box": [100, 147, 326], "f": [32, 600, 37, "P", -0.01], "c": "#f98719", "text": "Search Visibility" },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [100, 194, 362],
-              "f": [14, 400, 17.2, "P"],
-              "c": "#fff",
-              "text": "Improve your website’s search presence, reach the\nright audience and build a stronger online foundation\nwith CRETECH’s SEO services."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [100, 262, 176, 33],
-              "f": [12.6, 500, 0, "P"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=SEO%20Services"
-            },
-            {
-              "t": "btn",
-              "kind": "line",
-              "box": [293, 262, 134, 33],
-              "f": [12.6, 500, 0, "P"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Laptop showing a search page with a magnifying glass, a target and a growth chart"
         },
         "body": {
           "y": [330, 1350],
@@ -1594,47 +1524,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/google-ads-services/",
         "theme": "",
         "hero": {
-          "dark": false,
-          "y": [44, 332],
+          "eyebrow": "Google Ads Services",
+          "title": "Grow Your Business\nwith *Google Ads*",
+          "text": "Reach the right audience, generate quality enquiries and promote your products or services with targeted Google Ads campaigns.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=Google%20Ads%20Services"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/google-ads-services/hero.jpg",
-          "alt": "Google Ads search screen with a rising bar chart, a target and a note listing Target Audience, Quality Leads, More Enquiries and Business Growth",
-          "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [74, 63, 162.5], "f": [13, 600, 16, "O"], "c": "#ff5f0f", "text": "Google Ads Services" },
-            { "t": "rect", "box": [244, 70.5, 106, 1.5], "bg": "#ff8a4c", "m": 0 },
-            {
-              "t": "txt",
-              "tag": "h1",
-              "box": [73.5, 89.5, 332],
-              "f": [33, 700, 36, "O"],
-              "c": "#4a0838",
-              "text": "Grow Your Business\nwith *Google Ads*"
-            },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [74, 176, 345],
-              "f": [14.5, 500, 19, "L"],
-              "c": "#1f1b22",
-              "text": "Reach the right audience, generate quality\nenquiries and promote your products\nor services with targeted Google Ads campaigns."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [76, 254, 180, 35],
-              "f": [13.5, 600, 0, "O"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=Google%20Ads%20Services"
-            },
-            {
-              "t": "btn",
-              "kind": "plum",
-              "box": [272, 254, 118, 35],
-              "f": [13.5, 600, 0, "O"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Google Ads search screen with a rising bar chart, a target and a note listing Target Audience, Quality Leads, More Enquiries and Business Growth"
         },
         "body": {
           "y": [328, 1278],
@@ -2089,54 +1991,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/social-media-marketing/",
         "theme": "",
         "hero": {
-          "dark": true,
-          "y": [44, 332],
+          "eyebrow": "Social Media Marketing Services",
+          "title": "Social Media Marketing\nServices to Build Your\n*Online Presence*",
+          "text": "Plan, create and manage your social media presence with the right content, visuals and communication that reflects your brand and reaches the right audience.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=Social%20Media%20Marketing"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/social-media-marketing/hero.jpg",
-          "alt": "Laptop showing a social media marketing dashboard with a phone and social media icons",
-          "items": [
-            {
-              "t": "txt",
-              "tag": "p",
-              "up": 1,
-              "box": [100, 67, 248],
-              "f": [12, 600, 15, "P"],
-              "c": "#f5a623",
-              "text": "Social Media Marketing Services"
-            },
-            {
-              "t": "txt",
-              "tag": "h1",
-              "box": [100, 89, 373],
-              "f": [28.5, 600, 27.6, "P", -0.01],
-              "text": "Social Media Marketing\nServices to Build Your"
-            },
-            { "t": "txt", "tag": "span", "box": [100, 149, 322.4], "f": [32, 600, 36, "P", -0.01], "c": "#fd8604", "text": "Online Presence" },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [100, 193, 341],
-              "f": [13, 400, 15.5, "P"],
-              "c": "#fff",
-              "text": "Plan, create and manage your social media presence\nwith the right content, visuals and communication\nthat reflects your brand and reaches the right audience."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [100, 254, 176, 33],
-              "f": [12.6, 500, 0, "P"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=Social%20Media%20Marketing"
-            },
-            {
-              "t": "btn",
-              "kind": "line",
-              "box": [290, 254, 129, 33],
-              "f": [12.6, 500, 0, "P"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Laptop showing a social media marketing dashboard with a phone and social media icons"
         },
         "body": {
           "y": [306, 1296],
@@ -2678,48 +2545,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/content-writing/",
         "theme": "",
         "hero": {
-          "dark": false,
-          "y": [44, 332],
+          "eyebrow": "Content Writing Services",
+          "title": "Content Writing Services\nfor Websites and\n*Digital Platforms*",
+          "text": "Well-structured, clear and relevant content that explains your business, engages your audience and supports your online goals.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=Content%20Writing"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/content-writing/hero.jpg",
-          "alt": "Notebook titled Content Writing with ticked items, a pen, a plant and a stack of books",
-          "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [95, 67, 187], "f": [13, 600, 16, "O"], "c": "#ff5f0f", "text": "Content Writing Services" },
-            { "t": "rect", "box": [290, 75, 52, 1.5], "bg": "#ff8a4c", "m": 0 },
-            {
-              "t": "txt",
-              "tag": "h1",
-              "box": [94, 83, 372],
-              "f": [29, 700, 31.5, "O"],
-              "c": "#4a0838",
-              "text": "Content Writing Services\nfor Websites and"
-            },
-            { "t": "txt", "tag": "p", "box": [94, 146, 311], "f": [36, 700, 40, "O", -0.03], "text": "*Digital Platforms*" },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [95, 195, 310],
-              "f": [14.5, 500, 16, "L"],
-              "c": "#1f1b22",
-              "text": "Well-structured, clear and relevant content that\nexplains your business, engages your audience\nand supports your online goals."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [95, 256, 178, 36],
-              "f": [13.5, 600, 0, "O"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=Content%20Writing"
-            },
-            {
-              "t": "btn",
-              "kind": "plum",
-              "box": [288, 256, 130, 36],
-              "f": [13.5, 600, 0, "O"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Notebook titled Content Writing with ticked items, a pen, a plant and a stack of books"
         },
         "body": {
           "y": [302, 1320],
@@ -3245,56 +3083,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/graphic-design-creative-content/",
         "theme": "",
         "hero": {
-          "dark": false,
-          "y": [44, 332],
+          "eyebrow": "Graphic Design & Creative Content Services",
+          "title": "Graphic Design and\nCreative Content\n*for Your Brand*",
+          "text": "Visual designs that communicate your message clearly, strengthen your brand identity and create a lasting impression across digital platforms.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=Graphic%20Design%20%26%20Creative%20Content"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/graphic-design-creative-content/hero.jpg",
-          "alt": "Tablet showing a design app, paint brushes in a jar and colour swatches on a desk",
-          "items": [
-            {
-              "t": "txt",
-              "tag": "p",
-              "up": 1,
-              "box": [96, 72.5, 295.5],
-              "f": [12.5, 600, 16, "O"],
-              "c": "#ff5f0f",
-              "text": "Graphic Design & Creative Content Services"
-            },
-            { "t": "rect", "box": [398, 80, 53, 1.5], "bg": "#ff8a4c", "m": 0 },
-            {
-              "t": "txt",
-              "tag": "h1",
-              "box": [95, 90.5, 293],
-              "f": [27, 700, 30, "O"],
-              "c": "#4a0838",
-              "text": "Graphic Design and\nCreative Content"
-            },
-            { "t": "txt", "tag": "p", "box": [95, 149.5, 262], "f": [34, 700, 36, "O", -0.03], "text": "*for Your Brand*" },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [96, 193, 330.5],
-              "f": [14, 500, 16.75, "L"],
-              "c": "#1f1b22",
-              "text": "Visual designs that communicate your message\nclearly, strengthen your brand identity and\ncreate a lasting impression across digital platforms."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [95, 258, 178, 35],
-              "f": [13.5, 600, 0, "O"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=Graphic%20Design%20%26%20Creative%20Content"
-            },
-            {
-              "t": "btn",
-              "kind": "plum",
-              "box": [288, 258, 131, 35],
-              "f": [13.5, 600, 0, "O"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Tablet showing a design app, paint brushes in a jar and colour swatches on a desk"
         },
         "body": {
           "y": [296, 1325],
@@ -3824,52 +3625,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/website-security-backup/",
         "theme": "",
         "hero": {
-          "dark": false,
-          "y": [44, 332],
+          "eyebrow": "Website Security & Backup Services",
+          "title": "Protect Your Website,\nData and *Digital Business*",
+          "text": "Keep your website secure, up to date and recoverable with reliable security and backup solutions.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=Website%20Security%20%26%20Backup"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/website-security-backup/hero.jpg",
-          "alt": "Glowing security shield with a padlock in front of servers and a cloud backup icon",
-          "items": [
-            {
-              "t": "txt",
-              "tag": "p",
-              "up": 1,
-              "box": [78, 76, 253],
-              "f": [12.5, 600, 15, "O"],
-              "c": "#fe6a2a",
-              "text": "Website Security & Backup Services"
-            },
-            {
-              "t": "txt",
-              "tag": "h1",
-              "box": [78, 97, 362],
-              "f": [30, 700, 32, "O", -0.01],
-              "text": "Protect Your Website,\nData and *Digital Business*"
-            },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [78, 168, 277],
-              "f": [14.5, 400, 16.7, "L"],
-              "text": "Keep your website secure, up to date and\nrecoverable with reliable security and\nbackup solutions."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [81, 235, 182, 35],
-              "f": [13, 600, 0, "O"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=Website%20Security%20%26%20Backup"
-            },
-            {
-              "t": "btn",
-              "kind": "plum",
-              "box": [280, 235, 133, 35],
-              "f": [13, 600, 0, "O"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Glowing security shield with a padlock in front of servers and a cloud backup icon"
         },
         "body": {
           "y": [284, 1340],
@@ -4348,53 +4116,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/website-maintenance-support/",
         "theme": "",
         "hero": {
-          "dark": false,
-          "y": [44, 332],
+          "eyebrow": "Website Maintenance & Support",
+          "title": "Website Maintenance\nand *Support Services*",
+          "text": "Keep your website updated, secure and running smoothly with reliable maintenance and ongoing support.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=Website%20Maintenance%20%26%20Support"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/website-maintenance-support/hero.jpg",
-          "alt": "Laptop showing a website health check with updates, security, performance and backup ticked, next to a coffee mug",
-          "items": [
-            {
-              "t": "txt",
-              "tag": "p",
-              "up": 1,
-              "box": [95, 77, 242],
-              "f": [11.7, 600, 14, "O"],
-              "c": "#f2581a",
-              "text": "Website Maintenance & Support"
-            },
-            { "t": "rect", "box": [343, 85, 26, 1.5], "bg": "linear-gradient(90deg, #ff6a1a, rgba(255,106,26,0))", "m": 0 },
-            {
-              "t": "txt",
-              "tag": "h1",
-              "box": [95, 93.5, 365],
-              "f": [32, 700, 34, "O", -0.01],
-              "text": "Website Maintenance\nand *Support Services*"
-            },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [95, 173.5, 334],
-              "f": [14.5, 400, 16.6, "L"],
-              "text": "Keep your website updated, secure and running\nsmoothly with reliable maintenance and\nongoing support."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [95, 241.5, 177, 33],
-              "f": [13, 600, 0, "O"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=Website%20Maintenance%20%26%20Support"
-            },
-            {
-              "t": "btn",
-              "kind": "plum",
-              "box": [289, 240.5, 127, 34],
-              "f": [13, 600, 0, "O"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Laptop showing a website health check with updates, security, performance and backup ticked, next to a coffee mug"
         },
         "body": {
           "y": [288, 1263],
@@ -4817,46 +4551,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/landing-page-development/",
         "theme": "",
         "hero": {
-          "dark": false,
-          "y": [44, 332],
+          "eyebrow": "Landing Page Development",
+          "title": "Landing Page\nDevelopment *Services*",
+          "text": "Create focused landing pages that turn visitors into enquiries, registrations and real business opportunities.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=Landing%20Page%20Development"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/landing-page-development/hero.jpg",
-          "alt": "Landing page with a Get a Free Consultation form next to a target and a rising growth chart",
-          "items": [
-            {
-              "t": "txt",
-              "tag": "p",
-              "up": 1,
-              "box": [86.5, 73.5, 211],
-              "f": [13, 600, 15, "O"],
-              "c": "#fe6a2a",
-              "text": "Landing Page Development"
-            },
-            { "t": "txt", "tag": "h1", "box": [87.5, 91.5, 356.5], "f": [33, 700, 34, "O", -0.01], "text": "Landing Page\nDevelopment *Services*" },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [87.5, 171.5, 283.5],
-              "f": [14.5, 400, 16.5, "L"],
-              "text": "Create focused landing pages that turn\nvisitors into enquiries, registrations\nand real business opportunities."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [89, 240, 180, 35],
-              "f": [13, 600, 0, "O"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=Landing%20Page%20Development"
-            },
-            {
-              "t": "btn",
-              "kind": "plum",
-              "box": [287, 240, 133, 35],
-              "f": [13, 600, 0, "O"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Landing page with a Get a Free Consultation form next to a target and a rising growth chart"
         },
         "body": {
           "y": [292, 1266],
@@ -5302,39 +5009,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/domain-hosting-setup/",
         "theme": "",
         "hero": {
-          "dark": false,
-          "y": [44, 332],
+          "eyebrow": "Domain & Hosting Setup",
+          "title": "Domain and Hosting\nSetup *Services*",
+          "text": "Get your website online with the right domain, reliable hosting and proper configuration.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=Domain%20%26%20Hosting%20Setup"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/domain-hosting-setup/hero.jpg",
-          "alt": "Glass cloud with a domain search bar showing www.yourdomain.com next to a stack of server units",
-          "items": [
-            { "t": "txt", "tag": "p", "up": 1, "box": [88, 78, 173.6], "f": [11.7, 600, 14, "O"], "c": "#f2581a", "text": "Domain & Hosting Setup" },
-            { "t": "rect", "box": [271, 86, 57, 1.5], "bg": "linear-gradient(90deg, #ff6a1a, rgba(255,106,26,0))", "m": 0 },
-            { "t": "txt", "tag": "h1", "box": [88, 95, 320], "f": [31, 700, 32, "O", -0.01], "text": "Domain and Hosting\nSetup *Services*" },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [88, 170.6, 262],
-              "f": [14, 400, 16.4, "L"],
-              "text": "Get your website online with the right\ndomain, reliable hosting and\nproper configuration."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [90, 238, 178, 35],
-              "f": [13, 600, 0, "O"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=Domain%20%26%20Hosting%20Setup"
-            },
-            {
-              "t": "btn",
-              "kind": "plum",
-              "box": [284.5, 238, 131, 35],
-              "f": [13, 600, 0, "O"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Glass cloud with a domain search bar showing www.yourdomain.com next to a stack of server units"
         },
         "body": {
           "y": [282, 1260],
@@ -5762,52 +5449,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/business-automation-integration/",
         "theme": "",
         "hero": {
-          "dark": false,
-          "y": [44, 332],
+          "eyebrow": "Business Automation & Integration",
+          "title": "Simplify Repetitive Work\nand Connect Your\n*Business Tools*",
+          "text": "Automate daily tasks, integrate your business applications and keep your workflow organised and efficient.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=Business%20Automation%20%26%20Integration"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/business-automation-integration/hero.jpg",
-          "alt": "Business Automation notepad with ticked tasks next to connected app icons for email, team, data, calendar and reports",
-          "items": [
-            {
-              "t": "txt",
-              "tag": "p",
-              "up": 1,
-              "box": [84, 73, 233],
-              "f": [12, 600, 14, "O"],
-              "c": "#fe6a2a",
-              "text": "Business Automation & Integration"
-            },
-            {
-              "t": "txt",
-              "tag": "h1",
-              "box": [84, 88, 348],
-              "f": [30, 700, 30, "O", -0.01],
-              "text": "Simplify Repetitive Work\nand Connect Your\n*Business Tools*"
-            },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [84, 188, 295],
-              "f": [13.5, 400, 15.5, "L"],
-              "text": "Automate daily tasks, integrate your business\napplications and keep your workflow organised\nand efficient."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [86, 249, 176, 34],
-              "f": [13, 600, 0, "O"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=Business%20Automation%20%26%20Integration"
-            },
-            {
-              "t": "btn",
-              "kind": "plum",
-              "box": [280, 249, 130, 34],
-              "f": [13, 600, 0, "O"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Business Automation notepad with ticked tasks next to connected app icons for email, team, data, calendar and reports"
         },
         "body": {
           "y": [290, 1394],
@@ -6243,47 +5897,19 @@ window.SITE_CONFIG = {
         "_note": "Own design recreated from its 1024 px reference. Box = [x, y, w, h] in reference px. Pictures: assets/images/svc/website-speed-optimization/",
         "theme": "",
         "hero": {
-          "dark": false,
-          "y": [44, 332],
+          "eyebrow": "Website Speed Optimization",
+          "title": "Website Speed\nOptimization *Services*",
+          "text": "Make your website faster, smoother and more efficient for a better user experience.",
+          "primary": {
+            "label": "Discuss Your Project",
+            "href": "contact?service=Website%20Speed%20Optimization"
+          },
+          "secondary": {
+            "label": "Our Services",
+            "href": "services"
+          },
           "image": "assets/images/svc/website-speed-optimization/hero.jpg",
-          "alt": "Glass screen with a speed gauge reading Fast Loading and a rocket",
-          "items": [
-            {
-              "t": "txt",
-              "tag": "p",
-              "up": 1,
-              "box": [78, 82, 201],
-              "f": [11.7, 600, 14, "O"],
-              "c": "#f2581a",
-              "text": "Website Speed Optimization"
-            },
-            { "t": "rect", "box": [288, 90, 60, 1.5], "bg": "linear-gradient(90deg, #ff6a1a, rgba(255,106,26,0))", "m": 0 },
-            { "t": "txt", "tag": "h1", "box": [78, 102.5, 363.6], "f": [32, 700, 33, "O", -0.01], "text": "Website Speed\nOptimization *Services*" },
-            {
-              "t": "txt",
-              "tag": "p",
-              "box": [78, 177.3, 319],
-              "f": [14.5, 400, 18, "L"],
-              "text": "Make your website faster, smoother and\nmore efficient for a better user experience."
-            },
-            {
-              "t": "btn",
-              "kind": "o",
-              "box": [78, 234, 180, 35],
-              "f": [13, 600, 0, "O"],
-              "label": "Discuss Your Project",
-              "href": "contact?service=Website%20Speed%20Optimization"
-            },
-            {
-              "t": "btn",
-              "kind": "plum",
-              "box": [277, 234, 133, 35],
-              "f": [13, 600, 0, "O"],
-              "label": "Our Services",
-              "href": "services",
-              "arrow": false
-            }
-          ]
+          "imageAlt": "Glass screen with a speed gauge reading Fast Loading and a rocket"
         },
         "body": {
           "y": [278, 1259],

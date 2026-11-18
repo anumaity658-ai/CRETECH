@@ -699,7 +699,7 @@
     if (!m) return "";
     for (var i = 0; i < (services || []).length; i++) {
       var s = services[i];
-      if (s.slug === m[1]) return s.heroImage || (s.page && s.page.hero && s.page.hero.image) || "";
+      if (s.slug === m[1]) return s.heroImage || (s.page && s.page.hero && s.page.hero.image) || (s.hero && s.hero.image) || "";
     }
     return "";
   }
@@ -879,6 +879,24 @@
     gear: '<circle class="o" cx="24" cy="24" r="6"/><path class="o" d="M21 4h6l1 5 4 2 4.5-3 4.3 4.3-3 4.5 2 4 5 1v6l-5 1-2 4 3 4.5-4.3 4.3-4.5-3-4 2-1 5h-6l-1-5-4-2-4.5 3-4.3-4.3 3-4.5-2-4-5-1v-6l5-1 2-4-3-4.5L11.5 8l4.5 3 4-2Z"/>'
   };
 
+  /* ---------- Service banner: one design for every service page ----------
+     Picture 32:9 (make it 3072 x 864), text on the left 45%, straight bottom edge.
+     h = { eyebrow, title (*word* = orange), tagline [optional], text, primary, secondary, image, imageAlt } */
+  function serviceHero(h) {
+    h = h || {};
+    return '<section class="svh">' +
+      (h.image ? '<img class="svh-img" src="' + esc(image(h.image, 2400)) + '" alt="' + esc(h.imageAlt || h.alt || "") + '" fetchpriority="high" decoding="async">' : "") +
+      '<div class="svh-in">' +
+      (h.eyebrow ? '<p class="svh-eyebrow">' + esc(h.eyebrow) + "</p>" : "") +
+      "<h1>" + rich(h.title) + "</h1>" +
+      (h.tagline && h.tagline.length ? '<p class="svh-tagline">' + h.tagline.map(function (t) { return "<span>" + esc(t) + "</span>"; }).join('<i aria-hidden="true">·</i>') + "</p>" : "") +
+      (h.text ? '<p class="svh-text">' + esc(h.text) + "</p>" : "") +
+      '<div class="svh-btns">' +
+      (h.primary && h.primary.label ? '<a class="svh-btn-o" href="' + link(h.primary.href) + '">' + esc(h.primary.label) + " " + SVC_ARROW + "</a>" : "") +
+      (h.secondary && h.secondary.label ? '<a class="svh-btn-line" href="' + link(h.secondary.href) + '">' + esc(h.secondary.label) + "</a>" : "") +
+      "</div></div></section>";
+  }
+
   function serviceLanding(service, p) {
     var h = p.hero || {}, it = p.intro || {}, ty = p.types || {}, br = p.brand || {}, rs = p.responsive || {},
       ft = p.features || {}, ux = p.ux || {}, pr = p.process || {}, au = p.audience || {}, co = p.cost || {},
@@ -890,15 +908,7 @@
       return '<h2 class="wd-lined ' + (cls || "") + '"><span class="wd-line l" aria-hidden="true"></span><span>' + rich(title) + '</span><span class="wd-line r" aria-hidden="true"></span></h2>';
     }
 
-    var hero = '<section class="wd-hero">' + img(h.image, "wd-hero-img", h.imageAlt, true) +
-      '<div class="wd-wrap wd-hero-in"><p class="wd-eyebrow">' + esc(h.eyebrow) + "</p>" +
-      "<h1>" + rich(h.title) + "</h1>" +
-      (h.tagline && h.tagline.length ? '<p class="wd-tagline">' + h.tagline.map(function (t) { return "<span>" + esc(t) + "</span>"; }).join('<i aria-hidden="true">·</i>') + "</p>" : "") +
-      (h.text ? '<p class="wd-hero-text">' + esc(h.text) + "</p>" : "") +
-      '<div class="wd-btns">' +
-      (h.primary && h.primary.label ? '<a class="wd-btn-o" href="' + link(h.primary.href) + '">' + esc(h.primary.label) + " " + SVC_ARROW + "</a>" : "") +
-      (h.secondary && h.secondary.label ? '<a class="wd-btn-line" href="' + link(h.secondary.href) + '">' + esc(h.secondary.label) + "</a>" : "") +
-      "</div></div></section>";
+    var hero = serviceHero(h);
 
     var intro = '<section class="wd-intro"><div class="wd-wrap wd-intro-in"><div class="wd-intro-copy"><h2>' + rich(it.title) + "</h2>" +
       (it.paragraphs || []).map(function (t) { return "<p>" + esc(t) + "</p>"; }).join('<span class="wd-dash" aria-hidden="true"></span>') + "</div>" +
@@ -1030,9 +1040,7 @@
   function serviceCanvas(service, p) {
     var h = p.hero || {}, b = p.body || {}, fq = p.faq || {};
     var hy = h.y || [44, 330], by = b.y || [hy[1], hy[1]];
-    var hero = '<section class="cv-hero' + (h.dark ? " dark" : "") + '" style="--H:' + cvNum(hy[1] - hy[0]) + '">' +
-      (h.image ? '<img class="cv-hero-img" src="' + esc(image(h.image, 2400)) + '" alt="' + esc(h.alt || "") + '" fetchpriority="high" decoding="async">' : "") +
-      '<div class="cv-wrap" style="--H:' + cvNum(hy[1] - hy[0]) + '">' + (h.items || []).map(function (it) { return cvItem(it, 0, hy[0]); }).join("") + "</div></section>";
+    var hero = serviceHero(h);
 
     var body = '<section class="cv-body"><div class="cv-wrap" style="--H:' + cvNum(by[1] - by[0]) + '">' +
       (b.items || []).map(function (it) { return cvItem(it, 0, by[0]); }).join("") + "</div></section>";
@@ -1061,7 +1069,7 @@
   window.SiteComponents = {
     esc: esc, rich: rich, link: link, image: image, button: button, brand: brand,
     header: header, footer: footer, heroSlider: heroSlider, subHero: subHero, sectionHeading: sectionHeading,
-    serviceCard: serviceCard, homeServices: homeServices, homeWork: homeWork, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, contactPage: contactPage, serviceLanding: serviceLanding, serviceCanvas: serviceCanvas, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
+    serviceCard: serviceCard, homeServices: homeServices, homeWork: homeWork, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, contactPage: contactPage, serviceHero: serviceHero, serviceLanding: serviceLanding, serviceCanvas: serviceCanvas, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
     cta: cta, notice: notice
   };
 })();

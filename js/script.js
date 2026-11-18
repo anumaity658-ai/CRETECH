@@ -59,9 +59,13 @@
     var d = data.serviceDetail;
     var others = (data.services || []).filter(function (s) { return s.slug !== service.slug; }).slice(0, 5);
 
-    return '<section class="sub-hero detail-hero"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="./">Home</a> / <a href="services">Services</a> / <span>' +
-      esc(service.title) + "</span></nav><h1>" + esc(service.title) + "</h1><p>" + esc(service.summary) + "</p>" +
-      '<div class="hero-actions">' + C.button({ label: d.button, href: "contact?service=" + encodeURIComponent(service.title) }, "btn-orange") + "</div></section>" +
+    // same banner as every other service page; service.hero (optional) can override any part of it
+    var hero = Object.assign({
+      eyebrow: service.title, title: service.title, text: service.summary || service.short,
+      primary: { label: d.button, href: "contact?service=" + encodeURIComponent(service.title) },
+      secondary: { label: "Our Services", href: "services" }
+    }, service.hero || {});
+    return C.serviceHero(hero) +
       '<section class="section detail-layout"><div class="detail-copy"><p class="detail-intro">' + esc(service.intro) + "</p>" +
       "<h2>" + rich(d.includedTitle) + '</h2><ul class="check-list">' +
       (service.features || []).map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + "</ul></div>" +

@@ -223,7 +223,7 @@ function admin_cms_post(string $page): void
                 $slug = $base . '-' . $n;
             }
             $template = $details[0];
-            $detail = ['slug' => $slug, 'title' => $title, 'short' => (string) ($cards[$i]['text'] ?? ''), 'summary' => '', 'intro' => '', 'image' => (string) ($cards[$i]['image'] ?? ''), 'features' => []]
+            $detail = ['slug' => $slug, 'title' => $title, 'short' => (string) ($cards[$i]['text'] ?? ''), 'summary' => '', 'intro' => '', 'image' => (string) ($cards[$i]['image'] ?? ''), 'features' => [], 'hero' => ['image' => '', 'imageAlt' => '']]
                 + array_map(static fn ($v) => is_string($v) ? '' : (is_array($v) ? [] : $v), $template);
             $detail['icon'] = (string) ($template['icon'] ?? '');
             $details[] = $detail;
