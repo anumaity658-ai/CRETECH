@@ -2218,23 +2218,28 @@ a.wk-btn:hover { transform: translateY(-2px); }
 .svh-tagline i { margin: 0 calc(12 * var(--u)); font-style: normal; font-weight: 700; color: var(--svh-o); }
 .svh-text { max-width: calc(340 * var(--u)); margin-top: calc(12 * var(--u)); font: 400 max(calc(12.5 * var(--u)), 14px)/1.45 Poppins, sans-serif; color: #3d3442; }
 .svh-btns { display: flex; flex-wrap: wrap; gap: calc(16 * var(--u)); margin-top: calc(20 * var(--u)); }
-/* Get Started: square, deep see-through frosted glass with an orange tint and a glossy top; goes to the Contact page */
+/* Get Started: square, see-through glass (the banner shows through); a colourful light keeps
+   going round its line (white, orange, pink, purple). White text on a dark banner, dark on a light one. Goes to Contact. */
+@property --svh-a { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
 .svh-btn {
-  position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: calc(8 * var(--u));
-  height: max(calc(38 * var(--u)), 44px); padding: 0 max(calc(24 * var(--u)), 22px); border-radius: 6px;
-  font: 600 max(calc(12.5 * var(--u)), 14px)/1 Poppins, sans-serif; letter-spacing: .01em; white-space: nowrap; text-decoration: none; color: #fff;
-  background: linear-gradient(180deg, rgba(255, 140, 50, .82), rgba(236, 90, 14, .72));
-  -webkit-backdrop-filter: blur(14px) saturate(160%); backdrop-filter: blur(14px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, .55);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7), inset 0 -1px 0 rgba(120, 40, 0, .25), 0 calc(8 * var(--u)) calc(22 * var(--u)) rgba(200, 70, 10, .3);
-  text-shadow: 0 1px 2px rgba(120, 40, 0, .35); transition: transform .2s, box-shadow .2s, background .2s;
+  position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; gap: calc(8 * var(--u));
+  height: max(calc(38 * var(--u)), 46px); padding: 0 max(calc(24 * var(--u)), 24px); border-radius: 6px;
+  font: 600 max(calc(12.5 * var(--u)), 14.5px)/1 Poppins, sans-serif; letter-spacing: .01em; white-space: nowrap; text-decoration: none;
+  color: var(--svh-ink); background: rgba(255, 255, 255, .07);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: transform .2s, background .2s;
 }
-.svh-btn::before { content: ""; position: absolute; inset: 0 0 50% 0; background: linear-gradient(180deg, rgba(255, 255, 255, .38), rgba(255, 255, 255, .06)); pointer-events: none; }
-.svh-btn svg { position: relative; width: 1.05em; height: 1.05em; }
-.svh-btn:hover { transform: translateY(-2px); background: linear-gradient(180deg, rgba(255, 150, 70, .75), rgba(236, 88, 14, .62)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), 0 calc(12 * var(--u)) calc(28 * var(--u)) rgba(200, 70, 10, .4); }
-/* light banner: deeper orange glass so the white text stays readable */
-.svh:not(.on-dark) .svh-btn { background: linear-gradient(180deg, rgba(255, 128, 40, .9), rgba(226, 78, 8, .84)); border-color: rgba(255, 255, 255, .7); }
-.svh:not(.on-dark) .svh-btn:hover { background: linear-gradient(180deg, rgba(255, 140, 55, .95), rgba(226, 78, 8, .9)); }
+.svh-btn::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 2px; pointer-events: none;
+  background: conic-gradient(from var(--svh-a), #fff, #ff8a2b, #ff4fa0, #a46bff, #fff 60%, #fff);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: svh-spin 4s linear infinite;
+}
+@keyframes svh-spin { to { --svh-a: 360deg; } }
+.svh-btn svg { width: 1.05em; height: 1.05em; }
+.svh-btn:hover { transform: translateY(-2px); background: rgba(255, 255, 255, .14); }
+.svh.on-dark .svh-btn { color: #fff; }
+@media (prefers-reduced-motion: reduce) { .svh-btn::after { animation: none; } }
 
 /* tablets and phones: text stacked on top of the picture (right side of the picture stays visible) */
 @media (max-width: 980px) {
