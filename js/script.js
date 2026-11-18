@@ -54,10 +54,15 @@
   pages["service-detail"] = function () {
     var service = findService(pageData.slug || params.get("slug"));
     if (!service) return pages["not-found"]();
-    if (service.page && service.page.layout === "canvas") return C.serviceCanvas(service, service.page); // own design, item by item
-    if (service.page && service.page.hero) return C.serviceLanding(service, service.page); // service with its own design
+    // "Other services" slider: just before the FAQ on designed pages (at the end when there is no FAQ)
+    var others = C.otherServices(service.slug, data.servicesPage, data.services);
+    function withOthers(html) {
+      var at = html.search(/<section class="(wd|cv)-faq"/);
+      return at === -1 ? html + others : html.slice(0, at) + others + html.slice(at);
+    }
+    if (service.page && service.page.layout === "canvas") return withOthers(C.serviceCanvas(service, service.page)); // own design, item by item
+    if (service.page && service.page.hero) return withOthers(C.serviceLanding(service, service.page)); // service with its own design
     var d = data.serviceDetail;
-    var others = (data.services || []).filter(function (s) { return s.slug !== service.slug; }).slice(0, 5);
 
     // same banner as every other service page; service.hero (optional) can override any part of it
     var hero = Object.assign({
@@ -70,9 +75,7 @@
       (service.features || []).map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("") + "</ul></div>" +
       '<img class="detail-image" src="' + esc(image(service.image, 900)) + '" alt="' + esc(service.title) + '" loading="lazy"></section>' +
       '<section class="section detail-process"><h2>' + rich(d.processTitle) + "</h2>" + C.processSteps(data.process.steps) + "</section>" +
-      '<section class="section services-section">' + C.sectionHeading(d.otherTitle, "", data.home.servicesSection.button) +
-      '<div class="service-grid">' + others.map(function (s) { return C.serviceCard(s); }).join("") + "</div></section>" +
-      C.cta(data);
+      others + C.cta(data);
   };
 
   pages.about = function () {
@@ -147,6 +150,17 @@
   fill("header", C.header(data, page));
   if (main) main.innerHTML = (pages[page] || pages["not-found"])();
   heroTextColour();
+
+  // "Other services" slider arrows: move by one card
+  document.querySelectorAll(".osv-slider").forEach(function (s) {
+    var row = s.querySelector(".osv-row");
+    function step() {
+      var c = row.querySelector(".osv-card");
+      return c ? c.getBoundingClientRect().width + parseFloat(getComputedStyle(row).columnGap || 14) : 300;
+    }
+    s.querySelector(".prev").addEventListener("click", function () { row.scrollBy({ left: -step(), behavior: "smooth" }); });
+    s.querySelector(".next").addEventListener("click", function () { row.scrollBy({ left: step(), behavior: "smooth" }); });
+  });
   fill("footer", C.footer(data));
 
   /* ---------- Service canvas pages: fit each text block to its reference width ----------

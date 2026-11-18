@@ -1062,6 +1062,34 @@
     return '<div class="cv-page' + (p.theme ? " th-" + String(p.theme).replace(/[^a-z0-9-]/gi, "") : "") + '">' + hero + body + faq + "</div>";
   }
 
+  /* ---------- "Other services" slider at the end of every service page ----------
+     Cards = the Services page list minus the open service; each card photo is that service's
+     banner (right part, so the subject is never cut). Heading from servicesPage.others. */
+  var OSV_DROPS = [[6, 18, 22, 0], [12, 72, 12, 1.2], [88, 22, 16, .6], [94, 64, 26, 2], [50, 6, 10, 1.6], [72, 90, 14, .3], [24, 92, 18, 2.4], [36, 14, 9, 3], [64, 12, 12, .9], [3, 45, 14, 1.9], [97, 40, 10, 2.8]];
+  function otherServices(currentSlug, sp, services) {
+    sp = sp || {};
+    var o = sp.others || {}, here = "services/" + currentSlug;
+    var cards = (sp.cards || []).filter(function (c) { return c.href && c.href !== here; });
+    if (!cards.length) return "";
+    var drops = OSV_DROPS.map(function (d, i) {
+      return '<span class="osv-dew ' + (i % 3 === 0 ? "pop" : "hop") + '" style="left:' + d[0] + "%;top:" + d[1] + "%;width:" + d[2] + "px;height:" + d[2] + "px;--t:" + d[3] + 's"></span>';
+    }).join("");
+    return '<section class="osv" aria-label="Other services"><span class="osv-blobs" aria-hidden="true"><i></i><i></i><i></i></span>' +
+      '<span class="osv-drops" aria-hidden="true">' + drops + "</span>" +
+      '<div class="osv-head"><span class="osv-eyebrow">' + esc(o.eyebrow || "Our Services") + "</span>" +
+      "<h2>" + rich(o.title || "Explore Our *Other Services*") + "</h2>" +
+      (o.text !== "" ? '<p class="osv-sub">' + esc(o.text || "Everything your business needs to grow online, from one trusted team.") + "</p>" : "") + "</div>" +
+      '<div class="osv-slider"><button class="osv-nav prev" type="button" aria-label="Previous services">&#8249;</button><div class="osv-row">' +
+      cards.map(function (c) {
+        var title = String(c.title || "").replace(/\n/g, " "), pic = serviceBanner(c.href, services) || c.image;
+        return '<a class="osv-card" href="' + link(c.href) + '">' +
+          '<span class="osv-pic">' + (pic ? '<img src="' + esc(image(pic, 1000)) + '" alt="' + esc(title) + '" loading="lazy" decoding="async">' : "") + "</span>" +
+          '<span class="osv-under"><span><strong>' + esc(title) + '</strong><span class="osv-text">' + esc(c.text) + "</span></span>" +
+          '<span class="osv-go" aria-hidden="true">' + SVC_ARROW + "</span></span></a>";
+      }).join("") +
+      '</div><button class="osv-nav next" type="button" aria-label="Next services">&#8250;</button></div></section>';
+  }
+
   function notice(message, isError) {
     return '<div class="notice' + (isError ? " error" : "") + '" role="' + (isError ? "alert" : "status") + '">' + esc(message) + "</div>";
   }
@@ -1069,7 +1097,7 @@
   window.SiteComponents = {
     esc: esc, rich: rich, link: link, image: image, button: button, brand: brand,
     header: header, footer: footer, heroSlider: heroSlider, subHero: subHero, sectionHeading: sectionHeading,
-    serviceCard: serviceCard, homeServices: homeServices, homeWork: homeWork, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, contactPage: contactPage, serviceHero: serviceHero, serviceLanding: serviceLanding, serviceCanvas: serviceCanvas, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
+    serviceCard: serviceCard, homeServices: homeServices, homeWork: homeWork, homeJourney: homeJourney, homeBuild: homeBuild, homeWhy: homeWhy, homeDifferent: homeDifferent, homeFlow: homeFlow, homeFaq: homeFaq, aboutPage: aboutPage, servicesPage: servicesPage, processPage: processPage, contactPage: contactPage, serviceHero: serviceHero, serviceLanding: serviceLanding, serviceCanvas: serviceCanvas, otherServices: otherServices, plainCard: plainCard, faqItem: faqItem, processSteps: processSteps,
     cta: cta, notice: notice
   };
 })();

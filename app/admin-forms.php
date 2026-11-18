@@ -60,6 +60,7 @@ function form_pages(): array
         'services' => [
             'banner' => [['servicesPage', 'banner'], 'Services page banner', 'Top of the Services page.'],
             'cta' => [['servicesPage', 'cta'], 'Services page CTA', 'The box at the end of the Services page.'],
+            'others' => [['servicesPage', 'others'], '"Other services" slider', 'Heading of the slider shown near the end of every service page. The cards come from the Services page list by themselves.'],
             'detail' => [['serviceDetail'], 'Service detail page headings', 'Headings used on every service detail page.'],
         ],
         'process' => [

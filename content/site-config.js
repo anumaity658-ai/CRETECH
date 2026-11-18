@@ -6846,6 +6846,7 @@ window.SITE_CONFIG = {
       { "title": "Landing Page Development", "text": "Create high-converting landing pages for campaigns, products and lead generation.", "tone": "orange", "image": "assets/images/services-page/svc-13.jpg", "href": "services/landing-page-development" },
       { "title": "Business Automation &\nIntegration", "text": "Automate your processes and integrate the right tools to save time and improve efficiency.", "tone": "purple", "image": "assets/images/services-page/svc-14.jpg", "href": "services/business-automation-integration" }
     ],
+    "others": { "eyebrow": "Our Services", "title": "Explore Our *Other Services*", "text": "Everything your business needs to grow online, from one trusted team." },
     "cta": {
       "title": "Have an Idea?",
       "highlight": "Let’s Make It Happen.",
