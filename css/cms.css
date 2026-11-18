@@ -2241,3 +2241,13 @@ a.wk-btn:hover { transform: translateY(-2px); }
   .svh { height: auto; min-height: calc(var(--hh) + 100vw * 9 / 32); }
   .svh-in { padding-top: 20px; padding-bottom: 24px; }
 }
+/* dark banner picture: white text like before (class set by heroTextColour in script.js) */
+.svh.on-dark::before { background: linear-gradient(90deg, rgba(18, 14, 34, .55) 0%, rgba(18, 14, 34, .3) 35%, rgba(18, 14, 34, 0) 52%); }
+.svh.on-dark h1 { color: #fff; }
+.svh.on-dark h1 em { color: #ff8a1c; }
+.svh.on-dark .svh-eyebrow { color: #ff9a3c; }
+.svh.on-dark .svh-text, .svh.on-dark .svh-tagline { color: rgba(255, 255, 255, .92); }
+.svh.on-dark .svh-btn-line { color: #fff; border-color: rgba(255, 255, 255, .9); background: rgba(255, 255, 255, .08); }
+@media (max-width: 980px) {
+  .svh.on-dark::before { background: linear-gradient(90deg, rgba(18, 14, 34, .82) 0%, rgba(18, 14, 34, .6) 60%, rgba(18, 14, 34, .3) 100%); }
+}

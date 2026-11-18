@@ -884,7 +884,8 @@
      h = { eyebrow, title (*word* = orange), tagline [optional], text, primary, secondary, image, imageAlt } */
   function serviceHero(h) {
     h = h || {};
-    return '<section class="svh">' +
+    var tc = h.textColor === "light" ? " on-dark" : h.textColor === "dark" ? " on-light" : "";
+    return '<section class="svh' + tc + '">' +
       (h.image ? '<img class="svh-img" src="' + esc(image(h.image, 2400)) + '" alt="' + esc(h.imageAlt || h.alt || "") + '" fetchpriority="high" decoding="async">' : "") +
       '<div class="svh-in">' +
       (h.eyebrow ? '<p class="svh-eyebrow">' + esc(h.eyebrow) + "</p>" : "") +

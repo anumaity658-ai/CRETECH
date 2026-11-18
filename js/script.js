@@ -123,9 +123,31 @@
     if (el) el.outerHTML = html;
   }
 
+  // Service banner: white text on a dark picture, dark text on a light one. Looks at the text side
+  // (left 45%) of the picture, so any new picture from the admin gets the right text colour by itself.
+  // A banner with "textColor": "light" or "dark" in its data keeps that colour instead.
+  function heroTextColour() {
+    var hero = document.querySelector(".svh:not(.on-dark):not(.on-light)");
+    var pic = hero && hero.querySelector(".svh-img");
+    if (!pic) return;
+    function check() {
+      try {
+        var w = 48, h = 14, cv = document.createElement("canvas");
+        cv.width = w; cv.height = h;
+        var ctx = cv.getContext("2d");
+        ctx.drawImage(pic, 0, 0, pic.naturalWidth * 0.45, pic.naturalHeight, 0, 0, w, h);
+        var px = ctx.getImageData(0, 0, w, h).data, sum = 0;
+        for (var i = 0; i < px.length; i += 4) sum += 0.2126 * px[i] + 0.7152 * px[i + 1] + 0.0722 * px[i + 2];
+        if (sum / (px.length / 4) < 140) hero.classList.add("on-dark");
+      } catch (e) { /* picture from another site: keep dark text */ }
+    }
+    if (pic.complete && pic.naturalWidth) check(); else pic.addEventListener("load", check);
+  }
+
   var main = document.querySelector('[data-slot="page"]');
   fill("header", C.header(data, page));
   if (main) main.innerHTML = (pages[page] || pages["not-found"])();
+  heroTextColour();
   fill("footer", C.footer(data));
 
   /* ---------- Service canvas pages: fit each text block to its reference width ----------
