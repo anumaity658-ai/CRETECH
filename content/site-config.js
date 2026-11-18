@@ -1133,9 +1133,9 @@ window.SITE_CONFIG = {
             },
             {
               "t": "card",
-              "cls": "flat",
+              "cls": "flat ckb fr",
               "box": [796, 344, 182, 154],
-              "src": "assets/images/svc/seo-services/checks.jpg",
+              "v": { "il": 0, "it": 15, "ir": 18, "ib": 19, "fl": -30, "ft": 4, "fr": 7, "fb": 4, "tw": 14.5, "th": 11, "tg": 10 },
               "kids": [
                 {
                   "t": "txt",
@@ -2014,9 +2014,9 @@ window.SITE_CONFIG = {
             },
             {
               "t": "card",
-              "cls": "flat",
+              "cls": "flat ckb tb",
               "box": [740, 320, 232, 148],
-              "src": "assets/images/svc/social-media-marketing/checks.jpg",
+              "v": { "il": 5, "it": 6.5, "ir": 6, "ib": 7, "tw": 15.5, "th": 11.5, "tg": 15 },
               "alt": "",
               "kids": [
                 {
@@ -2565,9 +2565,9 @@ window.SITE_CONFIG = {
             },
             {
               "t": "card",
-              "cls": "flat",
+              "cls": "flat ckb",
               "box": [726, 318, 252, 140],
-              "src": "assets/images/svc/content-writing/checks.jpg",
+              "v": { "il": 8, "it": 5, "ir": 8, "ib": 8 },
               "kids": [
                 {
                   "t": "list",
@@ -3099,9 +3099,9 @@ window.SITE_CONFIG = {
             },
             {
               "t": "card",
-              "cls": "flat",
+              "cls": "flat ckb",
               "box": [724, 306, 254, 142],
-              "src": "assets/images/svc/graphic-design-creative-content/checks.jpg",
+              "v": { "il": 6, "it": 5, "ir": 6, "ib": 6 },
               "kids": [
                 {
                   "t": "list",
@@ -3630,9 +3630,9 @@ window.SITE_CONFIG = {
             },
             {
               "t": "card",
-              "cls": "flat",
+              "cls": "flat ckb",
               "box": [722, 288, 280, 152],
-              "src": "assets/images/svc/website-security-backup/checks.jpg",
+              "v": { "il": 6, "it": 7.5, "ir": 6, "ib": 10, "tw": 17.5, "th": 12, "tg": 14.5 },
               "kids": [
                 {
                   "t": "txt",
@@ -4117,9 +4117,9 @@ window.SITE_CONFIG = {
             },
             {
               "t": "card",
-              "cls": "flat",
+              "cls": "flat ckb",
               "box": [726, 300, 246, 158],
-              "src": "assets/images/svc/website-maintenance-support/check.jpg",
+              "v": { "il": 8, "it": 7, "ir": 13, "ib": 10 },
               "kids": [
                 {
                   "t": "list",
@@ -4548,9 +4548,9 @@ window.SITE_CONFIG = {
             },
             {
               "t": "card",
-              "cls": "flat",
+              "cls": "flat ckb",
               "box": [716, 302, 266, 166],
-              "src": "assets/images/svc/landing-page-development/checks.jpg",
+              "v": { "il": 8, "it": 4, "ir": 7, "ib": 7, "tw": 16.5, "th": 12.5, "tg": 14.5 },
               "kids": [
                 {
                   "t": "txt",
@@ -5002,9 +5002,9 @@ window.SITE_CONFIG = {
             },
             {
               "t": "card",
-              "cls": "flat",
+              "cls": "flat ckb",
               "box": [700, 284, 280, 156],
-              "src": "assets/images/svc/domain-hosting-setup/check.jpg",
+              "v": { "il": 5, "it": 5, "ir": 6, "ib": 5 },
               "kids": [
                 {
                   "t": "list",
@@ -5888,9 +5888,9 @@ window.SITE_CONFIG = {
             },
             {
               "t": "card",
-              "cls": "flat",
+              "cls": "flat ckb",
               "box": [734, 285, 248, 152],
-              "src": "assets/images/svc/website-speed-optimization/check.jpg",
+              "v": { "il": 6, "it": 7, "ir": 6, "ib": 6 },
               "kids": [
                 {
                   "t": "list",

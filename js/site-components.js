@@ -1054,6 +1054,7 @@
     var style = cvBox(box, ox, oy), col = cvColor(it.c);
     if (col) style += "color:" + col + ";";
     if (it.r != null) style += "--r:" + cvNum(it.r) + ";";
+    if (it.v) Object.keys(it.v).forEach(function (k) { if (/^[a-z]{1,4}$/.test(k)) style += "--" + k + ":" + cvNum(it.v[k]) + ";"; }); // extra size values for CSS (e.g. checklist panel)
     if (t === "img") {
       return '<img class="' + cls + ' cv-img" style="' + style + '" src="' + esc(image(it.src, 1600)) + '" alt="' + esc(it.alt || "") + '" loading="lazy" decoding="async">';
     }

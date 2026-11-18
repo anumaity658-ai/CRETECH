@@ -2117,6 +2117,29 @@ a.wk-btn:hover { transform: translateY(-2px); }
   box-shadow: 0 calc(4 * var(--u)) calc(10 * var(--u)) rgba(206, 130, 92, .25), inset 0 -2px 6px rgba(255, 150, 90, .25); }
 /* plain cards without an icon (label-only strips) */
 .cv-tile.pl { background: linear-gradient(180deg, rgba(255, 249, 246, .95), rgba(252, 232, 228, .85)); }
+/* checklist panel next to the intro (drawn in code, no picture): soft outer glass + whiter inner card + orange ticks.
+   Card values (it.v): il/it/ir/ib = inner card inset, fl/ft/fr/fb = optional outer frame, tw/th/tg = tick width/height/gap */
+.cv-card.ckb { background: linear-gradient(135deg, #fdece7, #fbe2df); }
+@media (min-width: 981px) {
+  .cv-card.ckb::before { content: ""; position: absolute; z-index: 0; pointer-events: none; display: var(--fd, none);
+    left: calc(var(--fl, 0) * var(--u)); top: calc(var(--ft, 0) * var(--u)); right: calc(var(--fr, 0) * var(--u)); bottom: calc(var(--fb, 0) * var(--u));
+    border-radius: calc(18 * var(--u)); border: 1px solid rgba(255, 255, 255, .9); background: linear-gradient(135deg, rgba(255, 244, 240, .7), rgba(252, 226, 224, .6)); }
+  .cv-card.ckb.fr { background: #fbe6e1; --fd: block; }
+  .cv-card.ckb::after { content: ""; position: absolute; z-index: 0; pointer-events: none;
+    left: calc(var(--il) * var(--u)); top: calc(var(--it) * var(--u)); right: calc(var(--ir) * var(--u)); bottom: calc(var(--ib) * var(--u));
+    border-radius: calc(14 * var(--u)); border: 1px solid rgba(255, 255, 255, .95);
+    background: linear-gradient(135deg, #fff8f4 0%, #fdeeea 55%, #fce4e4 100%);
+    box-shadow: 0 calc(4 * var(--u)) calc(12 * var(--u)) rgba(214, 140, 120, .2), inset 0 1px 0 #fff; }
+  .cv-card.ckb > .cv-kids { z-index: 1; }
+  .cv-card.ckb .cv-t.ck { overflow: visible; }
+  .cv-card.ckb .cv-t.ck::before { content: ""; position: absolute; top: 50%; margin-top: calc(1 * var(--u));
+    left: calc(-1 * (var(--tg) + var(--tw)) * var(--u)); width: calc(var(--tw) * var(--u)); height: calc(var(--th) * var(--u)); transform: translateY(-50%);
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 13' preserveAspectRatio='none'%3E%3Cpath d='M2 6.6 6.6 11 16 1.8' fill='none' stroke='%23ff5a0c' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% 100% no-repeat; }
+  /* ticks sitting on a small peach square (Social Media page) */
+  .cv-card.ckb.tb .cv-t.ck::after { content: ""; position: absolute; z-index: -1; top: 50%; margin-top: calc(.5 * var(--u));
+    left: calc(-1 * (var(--tg) + var(--tw) + 1.5) * var(--u)); width: calc(18 * var(--u)); height: calc(17 * var(--u)); transform: translateY(-50%);
+    border-radius: calc(4 * var(--u)); background: linear-gradient(135deg, #ffe3d3, #fbd6c8); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8); }
+}
 .cv-t { white-space: nowrap; font-size: calc(var(--fs) * var(--k, 1) * var(--u)); font-weight: var(--fw); line-height: calc(var(--lh) * var(--u)); letter-spacing: var(--ls, 0); }
 .cv-t.fL { font-family: Lexend, "DM Sans", Arial, sans-serif; }
 .cv-t.fO, .cv-btn.fO { font-family: Outfit, "DM Sans", Arial, sans-serif; }
