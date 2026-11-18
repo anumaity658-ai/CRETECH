@@ -2117,6 +2117,14 @@ a.wk-btn:hover { transform: translateY(-2px); }
   box-shadow: 0 calc(4 * var(--u)) calc(10 * var(--u)) rgba(206, 130, 92, .25), inset 0 -2px 6px rgba(255, 150, 90, .25); }
 /* plain cards without an icon (label-only strips) */
 .cv-tile.pl { background: linear-gradient(180deg, rgba(255, 249, 246, .95), rgba(252, 232, 228, .85)); }
+/* process strip drawn in code: cards, "01" badges, arrows, optional small icon (top-left) */
+.cv-ptile .cv-tile-ic { left: calc(var(--ix) * var(--u)); transform: none; stroke-width: 3.6; }
+.cv-pnum { position: absolute; left: calc(var(--x) * var(--u)); top: calc(var(--y) * var(--u)); width: calc(var(--w) * var(--u)); height: calc(var(--h) * var(--u));
+  display: grid; place-items: center; border-radius: calc(5 * var(--u)); background: linear-gradient(180deg, #ff8b2a, #f05a0a);
+  box-shadow: 0 calc(3 * var(--u)) calc(7 * var(--u)) rgba(240, 90, 10, .3), inset 0 1px 0 rgba(255, 255, 255, .35);
+  font: 700 calc(min(var(--h) * .58, 11.5) * var(--u))/1 Outfit, "DM Sans", Arial, sans-serif; letter-spacing: .02em; color: #fff; }
+.cv-parr { position: absolute; left: calc(var(--x) * var(--u)); top: calc(var(--y) * var(--u)); width: calc(var(--w) * var(--u)); height: calc(var(--h) * var(--u)); }
+.cv-pa { display: block; width: 100%; height: 100%; fill: none; stroke: #ff5a0c; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
 /* checklist panel next to the intro (drawn in code, no picture): soft outer glass + whiter inner card + orange ticks.
    Card values (it.v): il/it/ir/ib = inner card inset, fl/ft/fr/fb = optional outer frame, tw/th/tg = tick width/height/gap */
 .cv-card.ckb { background: linear-gradient(135deg, #fdece7, #fbe2df); }

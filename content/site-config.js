@@ -519,7 +519,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [36, 1312, 955, 78],
-              "src": "assets/images/svc/app-development/proc.jpg",
+              "proc": {"arrows": [156.5,316.5,477,638,801], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [27,18.5,9.5], "arrow": [16.5,12.5,34]},
               "kids": [
                 {
                   "t": "txt",
@@ -919,7 +919,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [36, 1140.2, 954, 86],
-              "src": "assets/images/svc/ui-ux-design/proc.jpg",
+              "proc": {"arrows": [157.5,320,477.5,632,793.5], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [27.5,16.5,16], "arrow": [14.5,10.5,40], "icons": ["chat", "layers", "browser", "penTool", "play", "download"], "ix": 13, "iy": 15, "is": 18},
               "kids": [
                 {
                   "t": "txt",
@@ -1321,7 +1321,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [34, 1080, 956, 76],
-              "src": "assets/images/svc/seo-services/proc.jpg",
+              "proc": {"arrows": [160,318.5,484.5,645.5,804], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [29,17.5,12], "arrow": [16.5,10.5,32], "icons": ["monitor", "search", "doc", "code", "bars", "refresh"], "ix": 13, "iy": 12, "is": 18},
               "kids": [
                 { "t": "txt", "tag": "h3", "box": [110, 1113, 45], "al": "c", "f": [12, 600, 13.5, "O"], "c": "#1e1a22", "text": "Website\nReview" },
                 {
@@ -1710,7 +1710,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [30, 966, 966, 112],
-              "src": "assets/images/svc/google-ads-services/proc.jpg",
+              "proc": {"arrows": [161,323,483,643,807], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [31.5,15,7], "arrow": [14,9,36.5]},
               "kids": [
                 {
                   "t": "txt",
@@ -2276,7 +2276,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [42, 1036, 936, 72],
-              "src": "assets/images/svc/social-media-marketing/proc.jpg",
+              "proc": {"arrows": [160.5,315,469.5,624,777.5], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [33.5,17.5,11], "arrow": [12.5,10.5,32]},
               "kids": [
                 {
                   "t": "txt",
@@ -2781,7 +2781,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [36, 1018, 952, 114],
-              "src": "assets/images/svc/content-writing/proc.jpg",
+              "proc": {"arrows": [165,322.5,479,636.5,789], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [20,13.5,9], "arrow": [13.5,10.5,31]},
               "kids": [
                 {
                   "t": "txt",
@@ -3335,7 +3335,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [34, 1024, 958, 102],
-              "src": "assets/images/svc/graphic-design-creative-content/proc.jpg",
+              "proc": {"arrows": [157,322.5,491.5,648,805.5], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [28.5,13.5,6.5], "arrow": [12.5,9.5,31]},
               "kids": [
                 {
                   "t": "txt",
@@ -3812,7 +3812,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [28, 1046, 970, 108],
-              "src": "assets/images/svc/website-security-backup/proc.jpg",
+              "proc": {"arrows": [161,324,487,650.5,814], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [32.5,14,7.5], "arrow": [13.5,10,32]},
               "kids": [
                 {
                   "t": "txt",
@@ -4255,7 +4255,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [36, 949, 954, 118],
-              "src": "assets/images/svc/website-maintenance-support/proc.jpg",
+              "proc": {"arrows": [159.5,314,478.5,639,791.5], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [27.5,14,12], "arrow": [12.5,9.5,38]},
               "kids": [
                 { "t": "txt", "tag": "h3", "box": [94, 978, 46], "al": "c", "f": [12.5, 700, 13, "O"], "c": "#1e1a22", "text": "Website\nReview" },
                 {
@@ -4713,7 +4713,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [32, 952, 962, 120],
-              "src": "assets/images/svc/landing-page-development/proc.jpg",
+              "proc": {"arrows": [161,321.5,478,635.5,796.5], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [30.5,14.5,9.5], "arrow": [14,10.5,38]},
               "kids": [
                 {
                   "t": "txt",
@@ -5140,7 +5140,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [34, 943, 958, 126],
-              "src": "assets/images/svc/domain-hosting-setup/proc.jpg",
+              "proc": {"arrows": [164,322.5,477.5,632.5,794.5], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [31.5,14.5,7.5], "arrow": [15.5,11.5,37]},
               "kids": [
                 {
                   "t": "txt",
@@ -5593,7 +5593,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [28, 1100, 968, 110],
-              "src": "assets/images/svc/business-automation-integration/proc.jpg",
+              "proc": {"arrows": [164,324.5,485.5,648,809], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [29.5,12,5], "arrow": [13.5,9.5,34]},
               "kids": [
                 {
                   "t": "txt",
@@ -6026,7 +6026,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [32, 949, 960, 114],
-              "src": "assets/images/svc/website-speed-optimization/proc.jpg",
+              "proc": {"arrows": [176,335,490,660,811.5], "m": 4, "my": 5, "mb": 4, "g": 10, "r": 14, "badge": [26.5,13,7.5], "arrow": [14,10,32.5]},
               "kids": [
                 { "t": "txt", "tag": "h3", "box": [77, 976.6, 85.4], "al": "c", "f": [12.5, 700, 13, "O"], "c": "#1e1a22", "text": "Initial Review" },
                 {

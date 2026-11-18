@@ -910,6 +910,15 @@
     gCart: '<path d="M4 8h6l5 22h21.5L41 14H11.5" stroke="#ff5a0c" stroke-width="3.2"/><path d="M15.5 19.5h22M17 25h18M22 14.5v15M28 14.5v15M34 14.5v15" stroke="#ff5a0c" stroke-width="2"/><circle cx="18" cy="37" r="3.2" fill="#e8331c"/><circle cx="33" cy="37" r="3.2" fill="#e8331c"/>',
     gLayers: '<path d="M24 31.5 5 23.5l-1 1L24 34l20-9.5-1-1Z" fill="#7a4fd8"/><path d="m24 40-19-8-1 1L24 42.5 44 33l-1-1Z" fill="#6a3fc8"/><path d="M24 6 4 15.5 24 25l20-9.5Z" fill="#8f66e6"/><path d="M24 26.5 5.5 18 4 19.5 24 29l20-9.5L42.5 18Z" fill="#7a4fd8"/>',
     gPhone: '<rect x="13" y="4" width="22" height="40" rx="4.5" fill="#6a3fc8"/><rect x="16.5" y="9.5" width="15" height="26" rx="1.5" fill="#c4b0f6"/><circle cx="24" cy="39.5" r="1.8" fill="#fff"/>',
+    /* small process-step icons */
+    chat: '<path class="o" d="M24 8c10.5 0 19 6.7 19 15s-8.5 15-19 15c-2.6 0-5-.4-7.3-1.1L8 41l2.2-8C7 30.3 5 26.8 5 23 5 14.7 13.5 8 24 8Z"/><path class="o" d="M16.5 23h.1M24 23h.1M31.5 23h.1"/>',
+    penTool: '<path class="o" d="M24 7 13 25l11 16 11-16Z"/><circle class="o" cx="24" cy="25" r="3"/><path class="o" d="M24 7v15M5 13h8M35 13h8"/><circle class="o" cx="5" cy="13" r="2"/><circle class="o" cx="43" cy="13" r="2"/>',
+    play: '<rect class="o" x="5" y="9" width="38" height="30" rx="3.5"/><path class="o" d="M20 17.5v13l10.5-6.5Z"/>',
+    download: '<path class="o" d="M24 6v24M14 21l10 10 10-10M7 33v7h34v-7"/>',
+    doc: '<path class="o" d="M28 5H12a3 3 0 0 0-3 3v32a3 3 0 0 0 3 3h24a3 3 0 0 0 3-3V16Z"/><path class="o" d="M28 5v11h11M16 24h16M16 30h16M16 36h10"/>',
+    code: '<path class="o" d="M15 14 5 24l10 10M33 14l10 10-10 10M28 9l-8 30"/>',
+    bars: '<path class="o" d="M7 42h34"/><rect class="o" x="9" y="30" width="6" height="9" rx="1"/><rect class="o" x="21" y="21" width="6" height="18" rx="1"/><rect class="o" x="33" y="9" width="6" height="30" rx="1"/>',
+    refresh: '<path class="o" d="M40 21a16 16 0 0 0-29-7M8 27a16 16 0 0 0 29 7"/><path class="o" d="M11 5v9h9M37 43v-9h-9"/>',
     /* social platforms */
     instagram: '<defs><radialGradient id="cvIg" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".08" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285aeb"/></radialGradient></defs><rect x="4" y="4" width="40" height="40" rx="11" fill="url(#cvIg)"/><rect x="12" y="12" width="24" height="24" rx="7.5" stroke="#fff" stroke-width="3"/><circle cx="24" cy="24" r="5.8" stroke="#fff" stroke-width="3"/><circle cx="31.8" cy="16.2" r="1.9" fill="#fff"/>',
     facebook: '<circle cx="24" cy="24" r="20" fill="#1877f2"/><path d="M26.6 44V30.2h4.7l.8-5.6h-5.5v-3.5c0-1.6.6-2.8 2.9-2.8h2.8v-5c-.5-.1-2.3-.3-4.3-.3-4.4 0-7.2 2.6-7.2 7.5v4.1h-4.7v5.6h4.7V44Z" fill="#fff"/>',
@@ -936,6 +945,23 @@
         cvIcon((T.icons || [])[i]) + "</span>";
     }
     if (T.shelf) out += '<span class="cv-shelf" style="--x:' + cvNum(mx) + ";--y:" + cvNum(T.shelf[0]) + ";--w:" + cvNum(W - 2 * mx) + ";--h:" + cvNum(T.shelf[1]) + '"></span>';
+    return out;
+  }
+  /* Process strip drawn in code: cards split at the arrows, an orange "01" badge on each, arrows between,
+     optional small icon at the top-left of each card.
+     P = { arrows: [x of each arrow centre], m: outer margin, my/mb: top/bottom margin, g: gap, r: radius,
+           badge: [w, h, top], arrow: [w, h, top], icons: [...], ix/iy: icon left/top, is: icon size } */
+  var CV_ARROW = '<svg class="cv-pa" viewBox="0 0 16 12" aria-hidden="true"><path d="M1.5 6h12M9 1.5 13.5 6 9 10.5"/></svg>';
+  function cvProc(P, W, H) {
+    var cuts = P.arrows || [], n = cuts.length + 1, m = P.m || 0, g = P.g || 0, top = P.my || 0, h = H - top - (P.mb || 0);
+    var b = P.badge || [26, 15, 10], a = P.arrow || [14, 10, 32], out = "";
+    for (var i = 0; i < n; i++) {
+      var x0 = i === 0 ? m : cuts[i - 1] + g / 2, x1 = i === n - 1 ? W - m : cuts[i] - g / 2, w = x1 - x0;
+      out += '<span class="cv-tile cv-ptile" style="--x:' + cvNum(x0) + ";--y:" + cvNum(top) + ";--w:" + cvNum(w) + ";--h:" + cvNum(h) + ";--r:" + cvNum(P.r || 14) + ";--iy:" + cvNum(P.iy || 12) + ";--is:" + cvNum(P.is || 18) + ";--ix:" + cvNum(P.ix || 12) + '">' +
+        cvIcon((P.icons || [])[i]) + "</span>" +
+        '<span class="cv-pnum" style="--x:' + cvNum(x0 + w / 2 - b[0] / 2) + ";--y:" + cvNum(b[2]) + ";--w:" + cvNum(b[0]) + ";--h:" + cvNum(b[1]) + '">' + (i < 9 ? "0" : "") + (i + 1) + "</span>";
+      if (i < n - 1) out += '<span class="cv-parr" style="--x:' + cvNum(cuts[i] - a[0] / 2) + ";--y:" + cvNum(a[2]) + ";--w:" + cvNum(a[0]) + ";--h:" + cvNum(a[1]) + '">' + CV_ARROW + "</span>";
+    }
     return out;
   }
 
@@ -1065,7 +1091,7 @@
     }
     if (t === "grp") {
       return '<div class="cv-scroll"><div class="' + cls + ' cv-grp" style="' + style + '">' +
-        (it.tiles ? cvTiles(it.tiles, box[2], box[3]) :
+        (it.tiles ? cvTiles(it.tiles, box[2], box[3]) : it.proc ? cvProc(it.proc, box[2], box[3]) :
           it.src ? '<img class="cv-card-img" src="' + esc(image(it.src, 2000)) + '" alt="' + esc(it.alt || "") + '" loading="lazy" decoding="async">' : "") +
         (it.kids || []).map(function (k) { return cvItem(k, box[0], box[1]); }).join("") + "</div></div>";
     }
