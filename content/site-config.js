@@ -92,8 +92,10 @@ window.SITE_CONFIG = {
           "eyebrow": "Website Development",
           "title": "Website Development\nServices for\n*Your Business*",
           "text": "Custom, scalable and user-friendly websites that build your brand, engage your audience and support your business goals.",
-          "primary": { "label": "Get Started", "href": "contact?service=Website%20Development" },
-          "secondary": { "label": "Our Services", "href": "services" },
+          "primary": {
+            "label": "Get Started",
+            "href": "contact?service=Website%20Development"
+          },
           "image": "assets/images/webdev/wd-hero.jpg",
           "imageAlt": "Desktop monitor showing a website design and code editor on a desk"
         },
@@ -244,12 +246,8 @@ window.SITE_CONFIG = {
           "title": "App Development\nServices for\n*Your Ideas*",
           "text": "Turn your app idea into a functional, user-friendly and reliable application for your business, startup or organisation.",
           "primary": {
-            "label": "Discuss Your Idea",
+            "label": "Get Started",
             "href": "contact?service=App%20Development"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/app-development/hero.jpg",
           "imageAlt": "Two smartphones showing a mobile app with services, booking, products and profile screens"
@@ -686,12 +684,8 @@ window.SITE_CONFIG = {
           "title": "UI/UX Design Services\nfor Better Digital\n*Experiences*",
           "text": "Create clear, attractive and user-friendly interfaces for websites and applications that your users will enjoy and use with ease.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=UI%2FUX%20Design"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/ui-ux-design/hero.jpg",
           "imageAlt": "Laptop showing a UI design layout with floating UI and UX icons"
@@ -1113,12 +1107,8 @@ window.SITE_CONFIG = {
           "title": "SEO Services to Improve\nYour Website’s\n*Search Visibility*",
           "text": "Improve your website’s search presence, reach the right audience and build a stronger online foundation with CRETECH’s SEO services.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=SEO%20Services"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/seo-services/hero.jpg",
           "imageAlt": "Laptop showing a search page with a magnifying glass, a target and a growth chart"
@@ -1528,12 +1518,8 @@ window.SITE_CONFIG = {
           "title": "Grow Your Business\nwith *Google Ads*",
           "text": "Reach the right audience, generate quality enquiries and promote your products or services with targeted Google Ads campaigns.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=Google%20Ads%20Services"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/google-ads-services/hero.jpg",
           "imageAlt": "Google Ads search screen with a rising bar chart, a target and a note listing Target Audience, Quality Leads, More Enquiries and Business Growth"
@@ -1995,12 +1981,8 @@ window.SITE_CONFIG = {
           "title": "Social Media Marketing\nServices to Build Your\n*Online Presence*",
           "text": "Plan, create and manage your social media presence with the right content, visuals and communication that reflects your brand and reaches the right audience.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=Social%20Media%20Marketing"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/social-media-marketing/hero.jpg",
           "imageAlt": "Laptop showing a social media marketing dashboard with a phone and social media icons"
@@ -2549,12 +2531,8 @@ window.SITE_CONFIG = {
           "title": "Content Writing Services\nfor Websites and\n*Digital Platforms*",
           "text": "Well-structured, clear and relevant content that explains your business, engages your audience and supports your online goals.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=Content%20Writing"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/content-writing/hero.jpg",
           "imageAlt": "Notebook titled Content Writing with ticked items, a pen, a plant and a stack of books"
@@ -3087,12 +3065,8 @@ window.SITE_CONFIG = {
           "title": "Graphic Design and\nCreative Content\n*for Your Brand*",
           "text": "Visual designs that communicate your message clearly, strengthen your brand identity and create a lasting impression across digital platforms.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=Graphic%20Design%20%26%20Creative%20Content"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/graphic-design-creative-content/hero.jpg",
           "imageAlt": "Tablet showing a design app, paint brushes in a jar and colour swatches on a desk"
@@ -3629,12 +3603,8 @@ window.SITE_CONFIG = {
           "title": "Protect Your Website,\nData and *Digital Business*",
           "text": "Keep your website secure, up to date and recoverable with reliable security and backup solutions.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=Website%20Security%20%26%20Backup"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/website-security-backup/hero.jpg",
           "imageAlt": "Glowing security shield with a padlock in front of servers and a cloud backup icon"
@@ -4120,12 +4090,8 @@ window.SITE_CONFIG = {
           "title": "Website Maintenance\nand *Support Services*",
           "text": "Keep your website updated, secure and running smoothly with reliable maintenance and ongoing support.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=Website%20Maintenance%20%26%20Support"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/website-maintenance-support/hero.jpg",
           "imageAlt": "Laptop showing a website health check with updates, security, performance and backup ticked, next to a coffee mug"
@@ -4555,12 +4521,8 @@ window.SITE_CONFIG = {
           "title": "Landing Page\nDevelopment *Services*",
           "text": "Create focused landing pages that turn visitors into enquiries, registrations and real business opportunities.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=Landing%20Page%20Development"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/landing-page-development/hero.jpg",
           "imageAlt": "Landing page with a Get a Free Consultation form next to a target and a rising growth chart"
@@ -5013,12 +4975,8 @@ window.SITE_CONFIG = {
           "title": "Domain and Hosting\nSetup *Services*",
           "text": "Get your website online with the right domain, reliable hosting and proper configuration.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=Domain%20%26%20Hosting%20Setup"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/domain-hosting-setup/hero.jpg",
           "imageAlt": "Glass cloud with a domain search bar showing www.yourdomain.com next to a stack of server units"
@@ -5453,12 +5411,8 @@ window.SITE_CONFIG = {
           "title": "Simplify Repetitive Work\nand Connect Your\n*Business Tools*",
           "text": "Automate daily tasks, integrate your business applications and keep your workflow organised and efficient.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=Business%20Automation%20%26%20Integration"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/business-automation-integration/hero.jpg",
           "imageAlt": "Business Automation notepad with ticked tasks next to connected app icons for email, team, data, calendar and reports"
@@ -5901,12 +5855,8 @@ window.SITE_CONFIG = {
           "title": "Website Speed\nOptimization *Services*",
           "text": "Make your website faster, smoother and more efficient for a better user experience.",
           "primary": {
-            "label": "Discuss Your Project",
+            "label": "Get Started",
             "href": "contact?service=Website%20Speed%20Optimization"
-          },
-          "secondary": {
-            "label": "Our Services",
-            "href": "services"
           },
           "image": "assets/images/svc/website-speed-optimization/hero.jpg",
           "imageAlt": "Glass screen with a speed gauge reading Fast Loading and a rocket"

@@ -881,7 +881,7 @@
 
   /* ---------- Service banner: one design for every service page ----------
      Picture 32:9 (make it 3072 x 864), text on the left 45%, straight bottom edge.
-     h = { eyebrow, title (*word* = orange), tagline [optional], text, primary, secondary, image, imageAlt } */
+     h = { eyebrow, title (*word* = orange), tagline [optional], text, primary (the Get Started button), image, imageAlt } */
   function serviceHero(h) {
     h = h || {};
     var tc = h.textColor === "light" ? " on-dark" : h.textColor === "dark" ? " on-light" : "";
@@ -893,8 +893,7 @@
       (h.tagline && h.tagline.length ? '<p class="svh-tagline">' + h.tagline.map(function (t) { return "<span>" + esc(t) + "</span>"; }).join('<i aria-hidden="true">·</i>') + "</p>" : "") +
       (h.text ? '<p class="svh-text">' + esc(h.text) + "</p>" : "") +
       '<div class="svh-btns">' +
-      (h.primary && h.primary.label ? '<a class="svh-btn-o" href="' + link(h.primary.href) + '">' + esc(h.primary.label) + " " + SVC_ARROW + "</a>" : "") +
-      (h.secondary && h.secondary.label ? '<a class="svh-btn-line" href="' + link(h.secondary.href) + '">' + esc(h.secondary.label) + "</a>" : "") +
+      (function (b) { return '<a class="svh-btn" href="' + link(b.href || "contact") + '">' + esc(b.label || "Get Started") + " " + SVC_ARROW + "</a>"; })(h.primary || {}) +
       "</div></div></section>";
   }
 

@@ -62,8 +62,7 @@
     // same banner as every other service page; service.hero (optional) can override any part of it
     var hero = Object.assign({
       eyebrow: service.title, title: service.title, text: service.summary || service.short,
-      primary: { label: d.button, href: "contact?service=" + encodeURIComponent(service.title) },
-      secondary: { label: "Our Services", href: "services" }
+      primary: { label: "Get Started", href: "contact?service=" + encodeURIComponent(service.title) }
     }, service.hero || {});
     return C.serviceHero(hero) +
       '<section class="section detail-layout"><div class="detail-copy"><p class="detail-intro">' + esc(service.intro) + "</p>" +
