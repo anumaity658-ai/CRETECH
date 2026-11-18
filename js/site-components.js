@@ -699,7 +699,7 @@
     if (!m) return "";
     for (var i = 0; i < (services || []).length; i++) {
       var s = services[i];
-      if (s.slug === m[1]) return (s.page && s.page.hero && s.page.hero.image) || "";
+      if (s.slug === m[1]) return s.heroImage || (s.page && s.page.hero && s.page.hero.image) || "";
     }
     return "";
   }

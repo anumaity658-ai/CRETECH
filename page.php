@@ -31,6 +31,8 @@ $data = cms_public_data();
 // A service's own page design ("page") is large: send it only on that service's page.
 foreach ($data['services'] ?? [] as $i => $service) {
     if (is_array($service) && ($service['slug'] ?? '') !== $route['slug']) {
+        // keep only the banner picture: the Services page cards show it
+        $data['services'][$i]['heroImage'] = (string) ($service['page']['hero']['image'] ?? '');
         unset($data['services'][$i]['page']);
     }
 }
