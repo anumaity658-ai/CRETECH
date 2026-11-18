@@ -879,6 +879,66 @@
     gear: '<circle class="o" cx="24" cy="24" r="6"/><path class="o" d="M37.6 18.9L42.5 19.9L42.5 28.1L37.6 29.1L37.2 30.0L40.0 34.2L34.2 40.0L30.0 37.2L29.1 37.6L28.1 42.5L19.9 42.5L18.9 37.6L18.0 37.2L13.8 40.0L8.0 34.2L10.8 30.0L10.4 29.1L5.5 28.1L5.5 19.9L10.4 18.9L10.8 18.0L8.0 13.8L13.8 8.0L18.0 10.8L18.9 10.4L19.9 5.5L28.1 5.5L29.1 10.4L30.0 10.8L34.2 8.0L40.0 13.8L37.2 18.0Z"/>'
   };
 
+  /* Icons for the category cards on the other service pages (drawn in code, 48 x 48).
+     Line icons: class "o" = orange line, "p" = purple line. Others carry their own colours.
+     An entry can be { vb: "viewBox", w: width ratio, d: "svg" } for wide icons. */
+  var CV_ICONS = {
+    briefcase: '<rect class="o" x="6" y="15" width="36" height="24" rx="3"/><path class="o" d="M18 15v-3.5a2.5 2.5 0 0 1 2.5-2.5h7a2.5 2.5 0 0 1 2.5 2.5V15M6 25.5h36"/><rect class="o" x="21" y="22.5" width="6" height="5.5" rx="1"/>',
+    cart: WD_ICONS.cart,
+    calendar: '<rect class="o" x="7" y="10" width="34" height="31" rx="3.5"/><path class="o" d="M7 18.5h34M15.5 6v8M32.5 6v8M17.5 29l5 5 8.5-8.5"/>',
+    education: '<path class="p" d="M3 18 24 9l21 9-21 9Z" fill="#a98ae6" fill-opacity=".55"/><path class="p" d="M11.5 22.5V32c0 2.5 5.5 5.5 12.5 5.5S36.5 34.5 36.5 32v-9.5"/><path class="o" d="M42 19.5v10"/><circle cx="42" cy="31" r="2" fill="#ff5a0c"/>',
+    user: '<circle class="o" cx="24" cy="15.5" r="7.5"/><path class="o" d="M9.5 41c0-8 6.5-13 14.5-13s14.5 5 14.5 13Z"/>',
+    users: '<circle class="o" cx="24" cy="15" r="6"/><path class="o" d="M13.5 39c0-6.5 4.7-11 10.5-11s10.5 4.5 10.5 11"/><circle class="o" cx="11.5" cy="18.5" r="4.5"/><path class="o" d="M3.5 36c0-5.3 3.5-9 8-9"/><circle class="o" cx="36.5" cy="18.5" r="4.5"/><path class="o" d="M44.5 36c0-5.3-3.5-9-8-9"/>',
+    layers: '<path class="o" d="M24 7 5 16l19 9 19-9Z"/><path class="o" d="m5 24.5 19 9 19-9M5 32.5l19 9 19-9"/>',
+    monitor: '<rect class="o" x="5" y="8" width="38" height="25" rx="2.5"/><path class="o" d="M24 33v6M15.5 40h17"/>',
+    phone: '<rect class="o" x="14" y="5" width="20" height="38" rx="3.5"/><path class="o" d="M21 10h6M22.5 37.5h3"/>',
+    grid: '<rect class="o" x="7" y="7" width="14.5" height="14.5" rx="2.5"/><rect class="o" x="26.5" y="7" width="14.5" height="14.5" rx="2.5"/><rect class="o" x="7" y="26.5" width="14.5" height="14.5" rx="2.5"/><rect class="o" x="26.5" y="26.5" width="14.5" height="14.5" rx="2.5"/>',
+    browser: '<rect class="o" x="5" y="8" width="38" height="32" rx="2.5"/><path class="o" d="M5 15.5h38M10 11.8h.1M14 11.8h.1M11.5 23h22M11.5 28.5h10M11.5 34h15"/>',
+    browserPen: '<path class="o" d="M33 34v4a2.5 2.5 0 0 1-2.5 2.5h-23A2.5 2.5 0 0 1 5 38V10.5A2.5 2.5 0 0 1 7.5 8h23a2.5 2.5 0 0 1 2.5 2.5v4M5 15.5h28M10 11.8h.1M14 11.8h.1M11 23h12M11 28.5h8"/><path class="o" d="m25 37 1.5-6.5L41 16l5 5-14.5 14.5Z"/>',
+    search: '<circle class="o" cx="20.5" cy="20.5" r="12.5"/><path class="o" d="m30 30 12 12"/>',
+    docSearch: '<path class="o" d="M38 22V10.5A2.5 2.5 0 0 0 35.5 8h-28A2.5 2.5 0 0 0 5 10.5v23A2.5 2.5 0 0 0 7.5 36H23M11 15.5h16M11 21.5h10M11 27.5h7"/><circle class="o" cx="33" cy="32" r="6.5"/><path class="o" d="m37.8 36.8 5.2 5.2"/>',
+    gear: WD_ICONS.gear,
+    docPen: WD_ICONS.blog,
+    link: '<path class="o" d="M21.5 26.5a8 8 0 0 0 11.3 0l6.5-6.5a8 8 0 0 0-11.3-11.3l-2.6 2.6"/><path class="o" d="M26.5 21.5a8 8 0 0 0-11.3 0l-6.5 6.5a8 8 0 0 0 11.3 11.3l2.6-2.6"/>',
+    pin: '<path class="o" d="M24 43s14-13 14-23.5a14 14 0 0 0-28 0C10 30 24 43 24 43Z"/><circle class="o" cx="24" cy="19.5" r="4.5"/>',
+    growth: '<g fill="#ff5a0c"><rect x="6" y="31" width="7.5" height="11" rx="1"/><rect x="17.5" y="25" width="7.5" height="17" rx="1"/><rect x="29" y="19" width="7.5" height="23" rx="1"/></g><path class="o" d="m6 24 10-8 7 5 16-14M32 7h7v7"/>',
+    target: '<circle class="o" cx="22" cy="26" r="16"/><circle class="o" cx="22" cy="26" r="9.5"/><circle cx="22" cy="26" r="3.5" fill="#ff5a0c"/><path class="o" d="M22 26 40 8M34 7.5h6.5V14"/>',
+    /* Google Ads: filled colour icons */
+    gSearch: '<circle cx="20.5" cy="20.5" r="11.5" stroke="#7a4fd8" stroke-width="4.5"/><path d="m29.5 29.5 11 11" stroke="#7a4fd8" stroke-width="5.5"/>',
+    gImage: '<rect x="5" y="9" width="38" height="30" rx="3.5" fill="#8657e0"/><rect x="9" y="13" width="30" height="22" rx="1.5" fill="#c9b5f5"/><path d="m9 35 10-11 7 7 4.5-4.5L39 35Z" fill="#8657e0"/><circle cx="17" cy="19.5" r="3" fill="#8657e0"/><circle cx="31" cy="19.5" r="3" fill="#8657e0"/>',
+    youtube: '<rect x="4" y="10" width="40" height="28" rx="6" fill="#e62117"/><path d="M20 17.5v13l11.5-6.5Z" fill="#fff"/>',
+    gCart: '<path d="M4 8h6l5 22h21.5L41 14H11.5" stroke="#ff5a0c" stroke-width="3.2"/><path d="M15.5 19.5h22M17 25h18M22 14.5v15M28 14.5v15M34 14.5v15" stroke="#ff5a0c" stroke-width="2"/><circle cx="18" cy="37" r="3.2" fill="#e8331c"/><circle cx="33" cy="37" r="3.2" fill="#e8331c"/>',
+    gLayers: '<path d="M24 31.5 5 23.5l-1 1L24 34l20-9.5-1-1Z" fill="#7a4fd8"/><path d="m24 40-19-8-1 1L24 42.5 44 33l-1-1Z" fill="#6a3fc8"/><path d="M24 6 4 15.5 24 25l20-9.5Z" fill="#8f66e6"/><path d="M24 26.5 5.5 18 4 19.5 24 29l20-9.5L42.5 18Z" fill="#7a4fd8"/>',
+    gPhone: '<rect x="13" y="4" width="22" height="40" rx="4.5" fill="#6a3fc8"/><rect x="16.5" y="9.5" width="15" height="26" rx="1.5" fill="#c4b0f6"/><circle cx="24" cy="39.5" r="1.8" fill="#fff"/>',
+    /* social platforms */
+    instagram: '<defs><radialGradient id="cvIg" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".08" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285aeb"/></radialGradient></defs><rect x="4" y="4" width="40" height="40" rx="11" fill="url(#cvIg)"/><rect x="12" y="12" width="24" height="24" rx="7.5" stroke="#fff" stroke-width="3"/><circle cx="24" cy="24" r="5.8" stroke="#fff" stroke-width="3"/><circle cx="31.8" cy="16.2" r="1.9" fill="#fff"/>',
+    facebook: '<circle cx="24" cy="24" r="20" fill="#1877f2"/><path d="M26.6 44V30.2h4.7l.8-5.6h-5.5v-3.5c0-1.6.6-2.8 2.9-2.8h2.8v-5c-.5-.1-2.3-.3-4.3-.3-4.4 0-7.2 2.6-7.2 7.5v4.1h-4.7v5.6h4.7V44Z" fill="#fff"/>',
+    linkedin: '<rect x="4" y="4" width="40" height="40" rx="5" fill="#0a66c2"/><rect x="11" y="19.5" width="5.6" height="17" fill="#fff"/><circle cx="13.8" cy="13.4" r="3.2" fill="#fff"/><path d="M21 19.5h5.4V22c.8-1.5 2.8-2.9 5.7-2.9 5.6 0 6.6 3.6 6.6 8.3v9.1h-5.6v-8c0-1.9 0-4.4-2.7-4.4s-3.1 2.1-3.1 4.3v8.1H21Z" fill="#fff"/>',
+    socialMore: { vb: "0 0 112 36", w: 3.1, d:
+      '<circle cx="16" cy="18" r="16" fill="#111"/><path d="m9.5 10 13 16M22.5 10l-13 16" stroke="#fff" stroke-width="2.4"/>' +
+      '<circle cx="56" cy="18" r="16" fill="#e60023"/><path d="M53.5 31.5 56.4 19M55.3 23.5c4.5 1.3 8.7-1.7 8.7-6.6 0-4.2-3.4-7.4-8-7.4-5.2 0-8.4 3.5-8.4 7.2 0 1.8.7 3.4 2 4" stroke="#fff" stroke-width="2.6"/>' +
+      '<rect x="80" y="2" width="32" height="32" rx="7" fill="#fffc00"/><path d="M96 8.5c-3.6 0-6 2.6-6 6.3v3l-2.2.3c-.6.2-.4 1 .2 1.2l1.8.6c-.5 1.8-2.1 3.5-4 4.2-.5.2-.4.9.1 1.1 1.2.4 2.4.5 2.8 1 .3.6.1 1.5.8 1.6 1-.1 2.2-.6 3.6 0 1.2.6 1.9 1.6 2.9 1.6s1.7-1 2.9-1.6c1.4-.6 2.6-.1 3.6 0 .7-.1.5-1 .8-1.6.4-.5 1.6-.6 2.8-1 .5-.2.6-.9.1-1.1-1.9-.7-3.5-2.4-4-4.2l1.8-.6c.6-.2.8-1 .2-1.2l-2.2-.3v-3c0-3.7-2.4-6.3-6-6.3Z" fill="#fff" stroke="#222" stroke-width="1.2"/>' }
+  };
+  function cvIcon(name) {
+    var ic = CV_ICONS[name];
+    if (!ic) return "";
+    if (typeof ic === "string") ic = { d: ic };
+    return '<svg class="cv-tile-ic" viewBox="' + (ic.vb || "0 0 48 48") + '" style="--iw:' + (ic.w || 1) + '" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ic.d + "</svg>";
+  }
+  /* Coded cards behind a group's labels (instead of a picture), so nothing on the strip is an image.
+     T = { icons: [...] (or n), mx, my: outer margin, g: gap, r: corner radius, iy: icon top, is: icon size, cls, shelf } */
+  function cvTiles(T, W, H) {
+    var n = T.n || (T.icons || []).length, mx = T.mx || 0, my = T.my || 0, g = T.g || 0, th = T.h || (H - 2 * my);
+    var w = (W - 2 * mx - (n - 1) * g) / n, out = "";
+    for (var i = 0; i < n; i++) {
+      out += '<span class="cv-tile' + (T.cls ? " " + String(T.cls).replace(/[^a-z0-9 _-]/gi, "") : "") + '" style="--x:' + cvNum(mx + i * (w + g)) + ";--y:" + cvNum(my) +
+        ";--w:" + cvNum(w) + ";--h:" + cvNum(th) + ";--r:" + cvNum(T.r || 12) + ";--iy:" + cvNum(T.iy || 10) + ";--is:" + cvNum(T.is || 32) + '">' +
+        cvIcon((T.icons || [])[i]) + "</span>";
+    }
+    if (T.shelf) out += '<span class="cv-shelf" style="--x:' + cvNum(mx) + ";--y:" + cvNum(T.shelf[0]) + ";--w:" + cvNum(W - 2 * mx) + ";--h:" + cvNum(T.shelf[1]) + '"></span>';
+    return out;
+  }
+
   /* ---------- Service banner: one design for every service page ----------
      Picture 32:9 (make it 3072 x 864), text on the left 45%, straight bottom edge.
      h = { eyebrow, title (*word* = orange), tagline [optional], text, primary (the Get Started button), image, imageAlt } */
@@ -1004,7 +1064,8 @@
     }
     if (t === "grp") {
       return '<div class="cv-scroll"><div class="' + cls + ' cv-grp" style="' + style + '">' +
-        (it.src ? '<img class="cv-card-img" src="' + esc(image(it.src, 2000)) + '" alt="' + esc(it.alt || "") + '" loading="lazy" decoding="async">' : "") +
+        (it.tiles ? cvTiles(it.tiles, box[2], box[3]) :
+          it.src ? '<img class="cv-card-img" src="' + esc(image(it.src, 2000)) + '" alt="' + esc(it.alt || "") + '" loading="lazy" decoding="async">' : "") +
         (it.kids || []).map(function (k) { return cvItem(k, box[0], box[1]); }).join("") + "</div></div>";
     }
     if (t === "txt") {

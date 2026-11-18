@@ -298,7 +298,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [36, 615, 954, 94],
-              "src": "assets/images/svc/app-development/cats.jpg",
+              "tiles": { "icons": ["briefcase", "cart", "calendar", "education", "user", "users", "layers"], "mx": 5, "my": 1, "g": 4.5, "r": 12, "iy": 10, "is": 32 },
               "kids": [
                 {
                   "t": "txt",
@@ -734,7 +734,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [38, 604.2, 950, 112],
-              "src": "assets/images/svc/ui-ux-design/cats.jpg",
+              "tiles": { "icons": ["monitor", "phone", "grid", "browser", "cart", "layers", "browserPen"], "mx": 6, "my": 4, "g": 6, "r": 13, "iy": 13, "is": 33 },
               "kids": [
                 {
                   "t": "txt",
@@ -1179,7 +1179,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [38, 532, 948, 100],
-              "src": "assets/images/svc/seo-services/cats.jpg",
+              "tiles": { "icons": ["search", "docSearch", "gear", "docPen", "link", "pin", "growth", "target"], "mx": 5, "my": 5, "g": 6, "r": 12, "iy": 12, "is": 33 },
               "kids": [
                 { "t": "txt", "tag": "h3", "box": [72, 585, 54], "al": "c", "f": [12.5, 600, 15, "O"], "c": "#1e1a22", "text": "Keyword\nResearch" },
                 { "t": "txt", "tag": "h3", "box": [195.5, 585, 53], "al": "c", "f": [12.5, 600, 15, "O"], "c": "#1e1a22", "text": "On-Page\nSEO" },
@@ -1545,7 +1545,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [350, 340, 650, 128],
-              "src": "assets/images/svc/google-ads-services/types.jpg",
+              "tiles": { "icons": ["gSearch", "gImage", "youtube", "gCart", "gLayers", "gPhone"], "cls": "gl", "mx": 11, "my": 11, "h": 92, "g": 15, "r": 10, "iy": 16, "is": 35, "shelf": [110, 12] },
               "alt": "Icons for Search, Display, Video, Shopping, Performance Max and App campaigns",
               "kids": [
                 { "t": "txt", "tag": "h3", "box": [386.5, 411, 41], "al": "c", "f": [12.5, 700, 15, "O"], "c": "#1e1a22", "text": "Search" },
@@ -2070,7 +2070,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [46, 500, 930, 92],
-              "src": "assets/images/svc/social-media-marketing/plat.jpg",
+              "tiles": { "icons": ["instagram", "facebook", "linkedin", "youtube", "socialMore"], "mx": 6, "my": 5, "g": 14.5, "r": 14, "iy": 7, "is": 33 },
               "kids": [
                 {
                   "t": "txt",
@@ -2594,7 +2594,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [46, 492, 936, 68],
-              "src": "assets/images/svc/content-writing/cats.jpg",
+              "tiles": { "n": 6, "cls": "pl", "mx": 8, "my": 5, "g": 12.4, "r": 15 },
               "kids": [
                 {
                   "t": "txt",
@@ -3128,7 +3128,7 @@ window.SITE_CONFIG = {
             {
               "t": "grp",
               "box": [42, 482, 940, 68],
-              "src": "assets/images/svc/graphic-design-creative-content/cats.jpg",
+              "tiles": { "n": 6, "cls": "pl", "mx": 6, "my": 4, "g": 7, "r": 15 },
               "kids": [
                 { "t": "txt", "tag": "h3", "box": [99.5, 499, 51], "al": "c", "f": [12.5, 700, 15, "O"], "c": "#1e1a22", "text": "Website\nBanners" },
                 {

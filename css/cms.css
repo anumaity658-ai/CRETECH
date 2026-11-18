@@ -2101,6 +2101,22 @@ a.wk-btn:hover { transform: translateY(-2px); }
 /* group: picture + labels that always move together (category strips, process strips) */
 .cv-grp { isolation: isolate; }
 .cv-grp > .cv-card-img { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* coded category cards (no picture): same soft peach card as the Website Development page */
+.cv-tile { position: absolute; left: calc(var(--x) * var(--u)); top: calc(var(--y) * var(--u)); width: calc(var(--w) * var(--u)); height: calc(var(--h) * var(--u));
+  border-radius: calc(var(--r) * var(--u)); border: 1px solid rgba(255, 255, 255, .95); background: linear-gradient(180deg, #fff6f1, #fdece3);
+  box-shadow: 0 calc(5 * var(--u)) calc(12 * var(--u)) rgba(206, 130, 92, .16), inset 0 1px 0 #fff; }
+.cv-tile-ic { position: absolute; left: 50%; top: calc(var(--iy) * var(--u)); height: calc(var(--is) * var(--u)); width: calc(var(--is) * var(--iw, 1) * var(--u));
+  transform: translateX(-50%); stroke-width: 2.5; overflow: visible; shape-rendering: geometricPrecision; }
+.cv-tile-ic .o { stroke: #ff5a0c; }
+.cv-tile-ic .p { stroke: #6a2fae; }
+/* glass cards (Google Ads types) and the glass shelf under them */
+.cv-tile.gl { background: linear-gradient(180deg, rgba(255, 255, 255, .8), rgba(255, 238, 242, .6)); border-color: #fff;
+  box-shadow: 0 calc(6 * var(--u)) calc(14 * var(--u)) rgba(190, 110, 140, .18), inset 0 1px 0 #fff; }
+.cv-shelf { position: absolute; left: calc(var(--x) * var(--u)); top: calc(var(--y) * var(--u)); width: calc(var(--w) * var(--u)); height: calc(var(--h) * var(--u));
+  border-radius: 99px; background: linear-gradient(180deg, rgba(255, 255, 255, .85), rgba(255, 226, 214, .6)); border: 1px solid #fff;
+  box-shadow: 0 calc(4 * var(--u)) calc(10 * var(--u)) rgba(206, 130, 92, .25), inset 0 -2px 6px rgba(255, 150, 90, .25); }
+/* plain cards without an icon (label-only strips) */
+.cv-tile.pl { background: linear-gradient(180deg, rgba(255, 249, 246, .95), rgba(252, 232, 228, .85)); }
 .cv-t { white-space: nowrap; font-size: calc(var(--fs) * var(--k, 1) * var(--u)); font-weight: var(--fw); line-height: calc(var(--lh) * var(--u)); letter-spacing: var(--ls, 0); }
 .cv-t.fL { font-family: Lexend, "DM Sans", Arial, sans-serif; }
 .cv-t.fO, .cv-btn.fO { font-family: Outfit, "DM Sans", Arial, sans-serif; }
