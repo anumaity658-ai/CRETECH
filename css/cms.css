@@ -1893,10 +1893,10 @@ a.wk-btn:hover { transform: translateY(-2px); }
   box-shadow: 0 calc(5 * var(--u)) calc(12 * var(--u)) rgba(206, 130, 92, .16), inset 0 1px 0 #fff;
   text-align: center;
 }
-.wd-type svg { width: calc(48 * var(--u)); height: calc(48 * var(--u)); margin-top: calc(-3 * var(--u)); stroke-width: 3.3; }
+.wd-type svg { width: max(calc(38 * var(--u)), 34px); height: max(calc(38 * var(--u)), 34px); margin: calc(3 * var(--u)) 0 calc(2 * var(--u)); stroke-width: 2.5; shape-rendering: geometricPrecision; overflow: visible; }
 .wd-type svg .o { stroke: #ff5a0c; }
 .wd-type svg .p { stroke: #6a2fae; }
-.wd-type svg .d { stroke-width: 3.2; }
+.wd-type svg .d { stroke-width: 3.4; }
 .wd-type b { margin-top: calc(3 * var(--u)); font: 700 calc(13 * var(--u))/1.18 var(--wd-head); color: #1e1a22; white-space: nowrap; letter-spacing: -.01em; }
 
 /* 04 "Designed Around Your Brand": picture band, text on its right part */
