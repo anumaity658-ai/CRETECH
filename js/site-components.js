@@ -61,7 +61,7 @@
       var active = item.page === activePage;
       var attrs = active ? ' class="active" aria-current="page"' : "";
       if (item.dropdown === "services" && (data.services || []).length) {
-        var items = data.services.map(function (s) {
+        var items = data.services.filter(function (s) { return !s.hideFromMenu; }).map(function (s) { // "hideFromMenu": true keeps a service out of the dropdown
           return '<a href="services/' + esc(s.slug) + '">' + esc(s.title) + "</a>";
         }).join("");
         return '<div class="nav-item has-dropdown"><a href="' + link(item.href) + '"' + attrs + ">" + esc(item.label) + " " + ICONS.chevronDown + "</a>" +

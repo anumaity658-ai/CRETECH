@@ -2500,6 +2500,7 @@ window.SITE_CONFIG = {
     {
       "slug": "email-creation-setup",
       "title": "Email Creation & Setup",
+      "hideFromMenu": true,
       "icon": "✉",
       "short": "Create professional email accounts and manage business communication.",
       "summary": "Professional business email creation and setup assistance.",
